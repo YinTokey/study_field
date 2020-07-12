@@ -86,4 +86,49 @@ func main() {
 从主观上来说，使用处理器函数更简洁易懂。二者之间存在转化关系，处理器函数 ，可以被转化为处理器（结构体）。
 也就是说处理器函数是一种创建处理器的简便方法。但是如果是更复杂的场景，需要做模块化，那么还是使用处理器更强大一点。
 
+`横切关注点`（cross-cutting concern）: 日志记录，安全检查，错误处理
+
+Go 语言可以实现 函数作为另一个函数的参数或者返回值。
+
+
+`ServeMux`：http的请求多路复用器，是一个结构体，里面有 url-handler 映射表
+`DefaultServeMux`: serveMux 的一个实例，它是 net/http 标准库写好的一个默认实例。就像单例对象，名字都定好了。当然本质上不能当它是单例。
+
+ServeMux本质上也是处理器。
+
+ServeMux的缺点是不能做URL模式匹配，特别不适合处理带参数的GET请求。`HttpRouter`更适合处理这种。
+
+`包管理`
+通过执行命令，就可以把包从github下载到本地 go/src/github 默认包统一存储路径
+```
+go get github.com/julienschmidt/httprouter
+```
+当然不止github, 其他地方也可以
+```
+go get ”golang.org/x/net/http2” 
+```
+
+# Chapter 4
+请求的表单，就是键值对形式存储数据在HTML中。标准库就支持解析表单了
+http.ResponseWriter 用它来响应客户端
+
+# Chapter 5
+```
+t ’ err := template.ParseF工les (”tmpl.html”) 
+```
+表示解析模板，结果赋值给 t, 如果解析发生错误，结果赋值给err。 判断err 是否有值，来判断解析成功还是失败。这是 Go 常见的一种写法
+
+上面等价于
+```
+t : = template .New(”tmpl.html”) t , err : = t.ParseFiles (”tmpl.html”) 
+
+```
+
+有点类似于iOS的便利构造方法。
+
+
+
+
+
+
 
