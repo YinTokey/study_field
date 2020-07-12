@@ -1,36 +1,36 @@
 package main
 
+
 import (
 	"net/http"
-	"html/template"
 )
 
+type HelloHandler struct {}
 
-func handler(writer http.ResponseWriter,request *http.Request){
-	print("haha")
+func (h *HelloHandler) ServeHTTP(writer http.ResponseWriter,request *http.Request){
+	print("xx")
 }
 
-func index(writer http.ResponseWriter,request *http.Request){
-	files := []string{"templates/layout.html","templates/navbar.html","templates/index.html"}
-	templates := template.Must(template.ParseFiles(files...))
-	threads, err := data.Threads();if err == nil {
-		templates.ExecuteTemplate(w,"layout",threads)
-	}
-	print("response")
+type WorldHandler struct {
+
 }
+
+func (h *WorldHandler) ServeHTTP(writer http.ResponseWriter,request *http.Request){
+	print("aaaa")
+}
+
 
 func main() {
 
-	mux := http.NewServeMux()
-	files := http.FileServer(http.Dir("/public"))
-	mux.Handle("/static/",http.StripPrefix("/static/",files))
-	mux.HandleFunc("/",index)
+	heHandler := HelloHandler{}
+	woHandler := WorldHandler{}
 
-	server := &http.Server{
-		Addr: "0.0.0.0:8000",
-		Handler:mux,
+	server := http.Server{
+		Addr:    "0.0.0.0:8080",
 	}
 
+	http.Handle("/hello",&heHandler)
+	http.Handle("/world",&woHandler)
 
 	server.ListenAndServe()
 }
