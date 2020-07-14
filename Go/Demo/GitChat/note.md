@@ -126,6 +126,20 @@ t : = template .New(”tmpl.html”) t , err : = t.ParseFiles (”tmpl.html”
 
 有点类似于iOS的便利构造方法。
 
+# Chapter 6
+文件存储格式  CSV,  gob。 
+gob是Go特有的，能将内存中的数据结构转换成二进制形式，实现数据持久化存储。有点类似iOS的归档解档。
+
+`ORM` 对象关系映射，将对象转换为数据库存储。从iOS角度来说，就是对FMDB进一步封装，让model可以便利地存储到数据库中。
+
+# Chapter 7
+`SOAP`: XML
+`RESTFUL` : JSON。 显然SOAP是比较笨重过时的
+
+# Chapter 10
+项目部署方法，更推荐 Docker 和独立服务器，而不是 Heroku, GAE
+
+
 
 
 
