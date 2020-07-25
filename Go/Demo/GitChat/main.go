@@ -1,6 +1,7 @@
 package main
 
 import (
+	"./database"
 	"./router"
 	"fmt"
 	"github.com/gin-gonic/gin"
@@ -8,10 +9,13 @@ import (
 )
 
 func main() {
+
+	database.InitMySql()
+
 	router := router.InitRouter()
 
 	router.Static("/static","./static")
-	
+
 	router.Run(":8080")
 
 
