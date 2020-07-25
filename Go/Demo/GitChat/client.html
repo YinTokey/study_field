@@ -1,14 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Go Web Programming</title>
+    <meta charset="UTF-8">
+    <title>登录</title>
 </head>
 <body>
-<form action="http://0.0.0.0:8080/process?hello=world&thread=123" method="post" enctype="multipart/form-data">
-    <input type="text" name="hello" value="sau sheong"/>
-    <input type="text" name="post" value="456"/>
-    <input type="file" name="uploaded">
-    <input type="submit">
+<form action="http://0.0.0.0:8080/form" method="post" enctype="application/x-www-form-urlencoded">
+    用户名：<input type="text" name="username">
+    <br>
+    密&nbsp&nbsp&nbsp码：<input type="password" name="password">
+    <br>
+    兴&nbsp&nbsp&nbsp趣：
+    <input type="checkbox" value="girl" name="hobby">女人
+    <input type="checkbox" value="game" name="hobby">游戏
+    <input type="checkbox" value="money" name="hobby">金钱
+    <br>
+    <input type="submit" value="登录">
 </form>
 </body>
 </html>
