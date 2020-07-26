@@ -2,12 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/database/database.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/util.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/vibo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/databases/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/routers/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vibo/views/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GitChat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/register_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goroutine_test.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../gin_proj/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/util.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +99,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build main.go" />
       <item itemvalue="Go Build.go build data.go" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
@@ -97,26 +120,34 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="416" y="242" key="#Go_Modules/0.23.1280.777@0.23.1280.777" timestamp="1594735037390" />
-    <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1595664011262">
+    <state x="242" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595684523203">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="242" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1595684523203" />
+    <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1595732624488">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1182" height="164" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486074" />
-    <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1595664011262" />
-    <state width="1234" height="169" key="GridCell.Tab.0.center" timestamp="1595664011261">
+    <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1595732624488" />
+    <state width="1234" height="169" key="GridCell.Tab.0.center" timestamp="1595732624487">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1182" height="164" key="GridCell.Tab.0.center/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486073" />
-    <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1595664011261" />
-    <state width="1234" height="169" key="GridCell.Tab.0.left" timestamp="1595664011261">
+    <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1595732624487" />
+    <state width="1234" height="169" key="GridCell.Tab.0.left" timestamp="1595732624487">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1182" height="164" key="GridCell.Tab.0.left/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486072" />
-    <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1595664011261" />
-    <state width="1234" height="169" key="GridCell.Tab.0.right" timestamp="1595664011261">
+    <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1595732624487" />
+    <state width="1234" height="169" key="GridCell.Tab.0.right" timestamp="1595732624488">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1182" height="164" key="GridCell.Tab.0.right/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486073" />
-    <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595664011261" />
+    <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595732624488" />
+    <state width="243" height="539" key="HiddenNamespacesPopup" timestamp="1595684543759">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state width="243" height="539" key="HiddenNamespacesPopup/0.23.1280.777@0.23.1280.777" timestamp="1595684543759" />
     <state x="145" y="50" key="SettingsEditor" timestamp="1595650136145">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

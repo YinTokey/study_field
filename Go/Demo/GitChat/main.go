@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./database"
-	"./router"
+	"GitChat/database"
+	"GitChat/routers"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -12,7 +12,7 @@ func main() {
 
 	database.InitMySql()
 
-	router := router.InitRouter()
+	router := routers.InitRouter()
 
 	router.Static("/static","./static")
 

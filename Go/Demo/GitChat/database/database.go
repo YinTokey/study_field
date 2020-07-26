@@ -3,8 +3,10 @@ package database
 import (
 	"database/sql"
 	"fmt"
+	"github.com/go-sql-driver/mysql"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
+	"time"
 )
 
 var db *sql.DB
@@ -14,15 +16,39 @@ func InitMySql() {
 	fmt.Println("init mysql")
 	if db == nil {
 
-		db, err = sql.Open("mysql", "root:123456@tcp(127.0.0.1:3306)/gitchat?charset=utf8")
-		if err != nil {
-			panic(err.Error())
-		}
+		//db, err = sql.Open("mysql", "root:12345678@tcp(127.0.0.1:3306)/gitch?charset=utf8")
+		//if err != nil {
+		//	panic(err.Error())
+		//}
+		openConnector()
+
 		CreateTableWithUser()
 		CreateTableWithAlbum()
 		CreateTableWithArticle()
 	}
 }
+
+func openConnector() {
+	Connector, err := mysql.NewConnector(&mysql.Config{
+		User:   "root",
+		Passwd: "12345678",
+		Net:    "tcp",
+		Addr:   "127.0.0.1:3306",
+		DBName: "gitchat",
+		AllowNativePasswords:true,
+		Collation:"utf8_general_ci",
+		ParseTime:true,
+		Loc:time.Local,
+	})
+	if err != nil {
+		panic(err)
+	}
+	db = sql.OpenDB(Connector)
+	if err = db.Ping();err != nil{
+		panic(err)
+	}
+}
+
 
 func CreateTableWithUser() {
 	sqlstr := `CREATE TABLE IF NOT EXISTS users(
