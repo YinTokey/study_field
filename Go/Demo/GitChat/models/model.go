@@ -1,8 +1,8 @@
 package model
 
 import (
-	"GitChat/database"
 	"fmt"
+	"gitchat/database"
 )
 
 type User struct {

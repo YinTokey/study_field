@@ -2,35 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/model.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/util.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/vibo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/databases/mysql.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/routers/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vibo/views/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GitChat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/register_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/add_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/add_article_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/exit_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/exit_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/home_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/home_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/register_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/session_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/session_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goroutine_test.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/util.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/article_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/article_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/.idea/beblog.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/conf/app.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/controllers/default.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/routers/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/static/js/reload.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/tests/default_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../beblog/views/index.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/$CACHE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/vibo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/databases/mysql.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/routers/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vibo/views/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/$CACHE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/gin_proj.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../gin_proj/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +88,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
@@ -71,10 +98,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -115,6 +143,9 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
     <state x="416" y="242" key="#Go_Modules" timestamp="1594735037390">
       <screen x="0" y="23" width="1280" height="777" />
@@ -124,33 +155,37 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="242" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1595684523203" />
-    <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1595732624488">
+    <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1596027584136">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1182" height="164" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486074" />
-    <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1595732624488" />
-    <state width="1234" height="169" key="GridCell.Tab.0.center" timestamp="1595732624487">
+    <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584136" />
+    <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1595943277924" />
+    <state width="1234" height="169" key="GridCell.Tab.0.center" timestamp="1596027584134">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1182" height="164" key="GridCell.Tab.0.center/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486073" />
-    <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1595732624487" />
-    <state width="1234" height="169" key="GridCell.Tab.0.left" timestamp="1595732624487">
+    <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584134" />
+    <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1595943277923" />
+    <state width="1234" height="169" key="GridCell.Tab.0.left" timestamp="1596027584130">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1182" height="164" key="GridCell.Tab.0.left/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486072" />
-    <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1595732624487" />
-    <state width="1234" height="169" key="GridCell.Tab.0.right" timestamp="1595732624488">
+    <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584130" />
+    <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1595943277922" />
+    <state width="1234" height="169" key="GridCell.Tab.0.right" timestamp="1596027584135">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state width="1182" height="164" key="GridCell.Tab.0.right/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1594553486073" />
-    <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595732624488" />
+    <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584135" />
+    <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595943277923" />
     <state width="243" height="539" key="HiddenNamespacesPopup" timestamp="1595684543759">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="243" height="539" key="HiddenNamespacesPopup/0.23.1280.777@0.23.1280.777" timestamp="1595684543759" />
-    <state x="145" y="50" key="SettingsEditor" timestamp="1595650136145">
+    <state x="69" y="48" key="SettingsEditor" timestamp="1595735542481">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="145" y="50" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1595650136145" />
+    <state x="69" y="48" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1595735542481" />
+    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1595770564507">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1595770564507" />
   </component>
 </project>
