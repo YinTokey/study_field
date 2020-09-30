@@ -69,3 +69,4 @@ func GetFileSize(filename string) int64 {
 	})
 	return result
 }
+

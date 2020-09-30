@@ -2,59 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/add_article_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/add_article_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/exit_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/exit_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/home_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/home_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/login_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/register_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/register_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/session_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/session_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/article_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/article_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/.idea/beblog.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/conf/app.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/controllers/default.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/routers/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/static/js/reload.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/tests/default_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../beblog/views/index.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/$CACHE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/vibo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/databases/mysql.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/routers/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vibo/views/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/$CACHE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/gin_proj.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../gin_proj/main.go" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../filestore/handler/handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../filestore/meta/filemeta.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../filestore/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../filestore/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../filestore/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +49,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -179,9 +130,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="243" height="539" key="HiddenNamespacesPopup/0.23.1280.777@0.23.1280.777" timestamp="1595684543759" />
-    <state x="69" y="48" key="SettingsEditor" timestamp="1595735542481">
+    <state x="69" y="48" key="SettingsEditor" timestamp="1596261609960">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
+    <state x="69" y="48" key="SettingsEditor/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596261609960" />
     <state x="69" y="48" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1595735542481" />
     <state x="307" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1595770564507">
       <screen x="0" y="23" width="1280" height="777" />
