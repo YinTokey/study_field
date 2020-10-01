@@ -1,44 +1,31 @@
 package main
 
 import (
-	"AccountServer/router"
-	"errors"
-	"github.com/gin-gonic/gin"
-	"log"
-	"net/http"
-	"time"
+	"encoding/json"
+	"fmt"
+	"github.com/tietang/props/ini"
+	"github.com/tietang/props/kvs"
 )
 
-func main() {
-	g := gin.New()
-	midlewares := []gin.HandlerFunc{}
-
-	router.Load(g,midlewares...)
-
-	// Ping the server to make sure the router is working.
-	go func() {
-		if err := pingServer(); err != nil {
-			log.Fatal("The router has no response, or it might took too long to start up.", err)
-		}
-		log.Print("The router has been deployed successfully.")
-	}()
-
-	log.Printf("Start to listening the incoming requests on http address: %s", ":8080")
-	log.Printf(http.ListenAndServe(":8080", g).Error())
+type User struct {
+	Name string
 }
 
-// pingServer pings the http server to make sure the router is working.
-func pingServer() error {
-	for i := 0; i < 2; i++ {
-		// Ping the server by sending a GET request to `/health`.
-		resp, err := http.Get("http://127.0.0.1:8080" + "/sd/health")
-		if err == nil && resp.StatusCode == 200 {
-			return nil
-		}
-
-		// Sleep for a second to continue the next ping.
-		log.Print("Waiting for the router, retry in 1 second.")
-		time.Sleep(time.Second)
+func main() {
+	u := User{
+		Name: "jack",
 	}
-	return errors.New("Cannot connect to the router.")
+	data, err := json.Marshal(&u)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(data))
+
+	file := kvs.GetCurrentFilePath("config.ini", 1)
+
+	conf := ini.NewIniFileCompositeConfigSource(file)
+	port := conf.GetIntDefault("app.server.port", 18080)
+	fmt.Println(port)
+	fmt.Println(conf.GetDefault("app.name", "unknow"))
+
 }
