@@ -38,11 +38,12 @@ require (
 	github.com/onsi/gomega v1.10.2 // indirect
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5
 	github.com/ryanuber/columnize v2.1.2+incompatible // indirect
+	github.com/segmentio/ksuid v1.0.2
 	github.com/sergi/go-diff v1.1.0 // indirect
-	github.com/shopspring/decimal v1.2.0 // indirect
+	github.com/shopspring/decimal v1.2.0
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/sirupsen/logrus v1.7.0
-	github.com/smartystreets/goconvey v1.6.4 // indirect
+	github.com/smartystreets/goconvey v1.6.4
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/tebeka/strftime v0.1.5 // indirect
 	github.com/tietang/dbx v1.0.1
