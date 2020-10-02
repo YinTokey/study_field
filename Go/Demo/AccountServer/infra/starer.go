@@ -28,9 +28,13 @@ type Starter interface {
 	StartBlocking() bool
 	//4. 资源停止和销毁
 	Stop(StarterContext)
+
+	//PriorityGroup() PriorityGroup
+
+	Priority() int
 }
 
-var _ Starter = new(BaseStarter)
+//var _ Starter = new(BaseStarter)
 
 func (s StarterContext) SetProps(conf kvs.ConfigSource) {
 	s[KeyProps] = conf
@@ -47,5 +51,40 @@ func (b *BaseStarter) StartBlocking() bool      { return false }
 func (b *BaseStarter) Stop(ctx StarterContext)  {}
 
 // register
-type startRegister struct {
+type starterRegister struct {
+	//nonBlockingStarters []Starter
+	//blockingStarters 	[]Starter
+	starters []Starter
+}
+
+func (r *starterRegister) Register(s Starter) {
+	r.starters = append(r.starters, s)
+}
+
+func (r *starterRegister) AllStarters() []Starter {
+	return r.starters
+}
+
+var StarterRegister *starterRegister = new(starterRegister)
+
+func Register(s Starter) {
+	StarterRegister.Register(s)
+}
+
+func SystemRun() {
+
+	ctx := StarterContext{}
+
+	for _, starter := range StarterRegister.AllStarters() {
+		starter.Init(ctx)
+	}
+
+	//2. 安装
+	for _, starter := range StarterRegister.AllStarters() {
+		starter.Setup(ctx)
+	}
+	//2. 启动
+	for _, starter := range StarterRegister.AllStarters() {
+		starter.Start(ctx)
+	}
 }

@@ -13,10 +13,10 @@ func Props() kvs.ConfigSource {
 }
 
 type PropsStarter struct {
-	infra.BaseStarer
+	infra.BaseStarter
 }
 
 func (p *PropsStarter) Init(ctx infra.StarterContext) {
 	props = ctx.Props()
-	fmt.Println("初始化配置")
+	fmt.Println("初始化配置.")
 }
