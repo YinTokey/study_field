@@ -8,6 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/tietang/dbx"
+	"reflect"
 	"testing"
 )
 
@@ -41,4 +42,97 @@ func TestAccountDao_GetOne(t *testing.T) {
 		logrus.Error(err)
 	}
 
+}
+
+func TestAccountDao_UpdateBalance(t *testing.T) {
+	err := base.Tx(func(runner *dbx.TxRunner) error {
+		dao := &AccountDao{
+			runner: runner,
+		}
+		balance := decimal.NewFromFloat(100)
+		Convey("更新账户余额", t, func() {
+			a := &Account{
+				Balance:     balance,
+				Status:      1,
+				AccountNo:   ksuid.New().Next().String(),
+				AccountName: "测试资金账户",
+				UserId:      ksuid.New().Next().String(),
+				Username:    sql.NullString{String: "测试用户", Valid: true},
+			}
+			id, err := dao.Insert(a)
+			So(err, ShouldBeNil)
+			So(id, ShouldBeGreaterThan, 0)
+
+			//1.增加余额
+			Convey("增加余额", func() {
+				amount := decimal.NewFromFloat(10)
+				rows, err := dao.UpdateBalance(a.AccountNo, amount)
+				So(err, ShouldBeNil)
+				So(rows, ShouldEqual, 1)
+				na := dao.GetOne(a.AccountNo)
+				newBalance := balance.Add(amount)
+				So(na, ShouldNotBeNil)
+				So(na.Balance.String(), ShouldEqual, newBalance.String())
+			})
+
+			//2.扣减余额，余额足够
+			Convey("扣减余额，余额足够", func() {
+				amount := decimal.NewFromFloat(-10)
+				rows, err := dao.UpdateBalance(a.AccountNo, amount)
+				So(err, ShouldBeNil)
+				So(rows, ShouldEqual, 1)
+				na := dao.GetOne(a.AccountNo)
+				newBalance := balance.Add(amount)
+				So(na, ShouldNotBeNil)
+				So(na.Balance.String(), ShouldEqual, newBalance.String())
+
+			})
+
+			//3.扣减余额，余额不够
+			Convey("扣减余额，余额不够", func() {
+				a1 := dao.GetOne(a.AccountNo)
+				So(a1, ShouldNotBeNil)
+				amount := decimal.NewFromFloat(-300)
+				rows, err := dao.UpdateBalance(a.AccountNo, amount)
+				So(err, ShouldBeNil)
+				So(rows, ShouldEqual, 0)
+				a2 := dao.GetOne(a.AccountNo)
+				So(a2, ShouldNotBeNil)
+				So(a1.Balance.String(), ShouldEqual, a2.Balance.String())
+			})
+
+		})
+		return nil
+	})
+	if err != nil {
+		logrus.Error(err)
+	}
+}
+
+func TestAccountDao_GetByUserId(t *testing.T) {
+	type fields struct {
+		runner *dbx.TxRunner
+	}
+	type args struct {
+		userId      *string
+		accountType int
+	}
+	tests := []struct {
+		name   string
+		fields fields
+		args   args
+		want   *Account
+	}{
+		// TODO: Add test cases.
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			dao := &AccountDao{
+				runner: tt.fields.runner,
+			}
+			if got := dao.GetByUserId(tt.args.userId, tt.args.accountType); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("GetByUserId() = %v, want %v", got, tt.want)
+			}
+		})
+	}
 }
