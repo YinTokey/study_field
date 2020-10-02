@@ -1,17 +1,14 @@
-package main
+package AccountServer
 
 import (
 	"AccountServer/infra"
 	"AccountServer/infra/base"
 )
 
-type User struct {
-	Name string
-}
-
-func main() {
+func init() {
 	infra.Register(&base.PropsStarter{})
 	infra.Register(&base.DbxDatabaseStarter{})
 	infra.Register(&base.ValidatorStarter{})
 	infra.Register(&base.IrisServerStarter{})
+
 }
