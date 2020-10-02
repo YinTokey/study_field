@@ -2,9 +2,9 @@ package base
 
 import (
 	"AccountServer/infra"
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/middleware/logger"
-	irisrecover "github.com/kataras/iris/middleware/recover"
+	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/middleware/logger"
+	irisrecover "github.com/kataras/iris/v12/middleware/recover"
 	"github.com/sirupsen/logrus"
 	"time"
 )
