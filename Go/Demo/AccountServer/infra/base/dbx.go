@@ -7,31 +7,31 @@ import (
 	"github.com/tietang/props/kvs"
 )
 
+//dbx 数据库实例
 var database *dbx.Database
 
 func DbxDatabase() *dbx.Database {
 	return database
 }
 
-type DbxDataBaseStarter struct {
+//dbx数据库starter，并且设置为全局
+type DbxDatabaseStarter struct {
 	infra.BaseStarter
 }
 
-func (s *DbxDataBaseStarter) Setup(ctx infra.StarterContext) {
-	// 获取初始配置
+func (s *DbxDatabaseStarter) Setup(ctx infra.StarterContext) {
 	conf := ctx.Props()
-
+	//数据库配置
 	settings := dbx.Settings{}
-	// 把配置解析到 settings 结构体中
 	err := kvs.Unmarshal(conf, &settings, "mysql")
 	if err != nil {
 		panic(err)
 	}
 	logrus.Info("mysql.conn url:", settings.ShortDataSourceName())
-	database, err := dbx.Open(settings)
+	dbx, err := dbx.Open(settings)
 	if err != nil {
 		panic(err)
 	}
-	logrus.Info(database.Ping())
-
+	logrus.Info(dbx.Ping())
+	database = dbx
 }

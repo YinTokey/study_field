@@ -6,9 +6,9 @@ const (
 	KeyProps = "_conf"
 )
 
+//基础资源上下结构体
 type StarterContext map[string]interface{}
 
-// 键值对操作
 func (s StarterContext) Props() kvs.ConfigSource {
 	p := s[KeyProps]
 	if p == nil {
@@ -17,6 +17,7 @@ func (s StarterContext) Props() kvs.ConfigSource {
 	return p.(kvs.ConfigSource)
 }
 
+//基础资源启动器接口
 type Starter interface {
 	//1.系统启动，初始化一些基础资源
 	Init(StarterContext)
@@ -28,35 +29,26 @@ type Starter interface {
 	StartBlocking() bool
 	//4. 资源停止和销毁
 	Stop(StarterContext)
-
-	//PriorityGroup() PriorityGroup
-
-	Priority() int
 }
 
-//var _ Starter = new(BaseStarter)
+var _ Starter = new(BaseStarter)
 
-func (s StarterContext) SetProps(conf kvs.ConfigSource) {
-	s[KeyProps] = conf
-}
-
+//基础空启动器实现,为了方便资源启动器的代码实现
 type BaseStarter struct {
 }
 
-// 空实现
 func (b *BaseStarter) Init(ctx StarterContext)  {}
 func (b *BaseStarter) Setup(ctx StarterContext) {}
 func (b *BaseStarter) Start(ctx StarterContext) {}
 func (b *BaseStarter) StartBlocking() bool      { return false }
 func (b *BaseStarter) Stop(ctx StarterContext)  {}
 
-// register
+//启动器注册器
 type starterRegister struct {
-	//nonBlockingStarters []Starter
-	//blockingStarters 	[]Starter
 	starters []Starter
 }
 
+//启动器注册
 func (r *starterRegister) Register(s Starter) {
 	r.starters = append(r.starters, s)
 }
@@ -71,14 +63,13 @@ func Register(s Starter) {
 	StarterRegister.Register(s)
 }
 
+//系统基础资源的启动管理
 func SystemRun() {
-
+	//1. 初始化
 	ctx := StarterContext{}
-
 	for _, starter := range StarterRegister.AllStarters() {
 		starter.Init(ctx)
 	}
-
 	//2. 安装
 	for _, starter := range StarterRegister.AllStarters() {
 		starter.Setup(ctx)
