@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
+	"github.com/go-redis/redis"
 	"io/ioutil"
 	"net/http"
 	"time"
@@ -25,10 +25,22 @@ func main () {
 	var info PxPhotoInfo
 	json.Unmarshal([]byte(jsonStr), &info)
 
-	fmt.Println(info.Feature)
+	//fmt.Println(info.Feature)
+	redis.set
 
 }
 
+var redisDB *redis.Client
+func InitRedis(){
+	//地址，密码
+	host := "localhost:6379"
+	passwd := "" //没有密码
+	redisDB = redis.NewClient(&redis.Options{
+		Addr: host,
+		Password: passwd,
+		DB: 0, //使用默认 DB
+	})
+}
 
 
 type PxPhotoInfo struct {
