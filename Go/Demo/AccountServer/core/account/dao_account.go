@@ -25,7 +25,7 @@ func (dao *AccountDao) GetOne(accountNo string) *Account {
 }
 
 //通过用户ID和账户类型来查询账户信息 (查)
-func (dao *AccountDao) GetByUserId(userId *string, accountType int) *Account {
+func (dao *AccountDao) GetByUserId(userId string, accountType int) *Account {
 	a := &Account{}
 	sql := "select * from account" + " where user_id=? and account_type=? "
 	// runner.Get 第一个参数表示查询结果赋值 这个空的 account 对象上，很C++风格的写法。
