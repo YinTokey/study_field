@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48fac80e-d7fd-49aa-a41b-f17457ca3345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../AccountServer/core/account/dao_account_log_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AccountServer/core/account/domain_account.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AccountServer/core/account/doman_account_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AccountServer/core/account/dao_account.go" beforeDir="false" afterPath="$PROJECT_DIR$/../AccountServer/core/account/dao_account.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AccountServer/core/account/dao_account_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/../AccountServer/core/account/dao_account_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AccountServer/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../AccountServer/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/app/po_photo_info_px.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,11 +35,15 @@
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RunManager">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -67,10 +67,33 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
     <state x="440" y="251" key="#Go_Modules" timestamp="1601804455782">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="440" y="251" key="#Go_Modules/0.0.1280.800@0.0.1280.800" timestamp="1601804455782" />
+    <state width="1193" height="188" key="GridCell.Tab.0.bottom" timestamp="1601807629759">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1193" height="188" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1601807629759" />
+    <state width="1193" height="188" key="GridCell.Tab.0.center" timestamp="1601807629758">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1193" height="188" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1601807629758" />
+    <state width="1193" height="188" key="GridCell.Tab.0.left" timestamp="1601807629757">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1193" height="188" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1601807629757" />
+    <state width="1193" height="188" key="GridCell.Tab.0.right" timestamp="1601807629758">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1193" height="188" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1601807629758" />
+    <state x="0" y="72" key="SettingsEditor" timestamp="1601807662219">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="0" y="72" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1601807662219" />
   </component>
 </project>
