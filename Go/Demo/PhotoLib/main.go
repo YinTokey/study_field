@@ -1,11 +1,10 @@
 package main
 
 import (
-	"encoding/json"
+	"fmt"
 	"github.com/go-redis/redis"
-	"io/ioutil"
-	"net/http"
 	"time"
+	. "PhotoLib/example/gopl"
 	//_ "PhotoLib/internal/app"
 )
 
@@ -13,21 +12,26 @@ import (
 var pupular_url = "https://api.500px.com/v1/photos?feature=popular"
 
 func main () {
+	Runex()
+	//resp, err := http.Get(pupular_url)
+	//if err != nil {
+	//	panic(err)
+	//}
+	//defer resp.Body.Close()
+	//s , err := ioutil.ReadAll(resp.Body)
+	//jsonStr := string(s)
+	//
+	//var info PxPhotoInfo
+	//json.Unmarshal([]byte(jsonStr), &info)
+	//
+	////fmt.Println(info.Feature)
+	//redis.set
 
-	resp, err := http.Get(pupular_url)
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-	s , err := ioutil.ReadAll(resp.Body)
-	jsonStr := string(s)
+}
 
-	var info PxPhotoInfo
-	json.Unmarshal([]byte(jsonStr), &info)
-
-	//fmt.Println(info.Feature)
-	redis.set
-
+func Runex() {
+	re := Sum(1,2,3,4)
+	fmt.Println(re)
 }
 
 var redisDB *redis.Client

@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48fac80e-d7fd-49aa-a41b-f17457ca3345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/gopl/c5_1.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/gopl/c5_1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -46,7 +50,16 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build c5_1.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="PhotoLib" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/example/gopl/c5_1.go" />
+      <package value="PhotoLib" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="PhotoLib" />
       <working_directory value="$PROJECT_DIR$" />
@@ -58,6 +71,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build c5_1.go" />
       </list>
     </recent_temporary>
   </component>
@@ -76,22 +90,22 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="440" y="251" key="#Go_Modules/0.0.1280.800@0.0.1280.800" timestamp="1601804455782" />
-    <state width="1193" height="243" key="GridCell.Tab.0.bottom" timestamp="1601810680930">
+    <state width="1193" height="177" key="GridCell.Tab.0.bottom" timestamp="1601863196804">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1193" height="243" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1601810680930" />
-    <state width="1193" height="243" key="GridCell.Tab.0.center" timestamp="1601810680924">
+    <state width="1193" height="177" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1601863196804" />
+    <state width="1193" height="177" key="GridCell.Tab.0.center" timestamp="1601863196803">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1193" height="243" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1601810680924" />
-    <state width="1193" height="243" key="GridCell.Tab.0.left" timestamp="1601810680923">
+    <state width="1193" height="177" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1601863196803" />
+    <state width="1193" height="177" key="GridCell.Tab.0.left" timestamp="1601863196803">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1193" height="243" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1601810680923" />
-    <state width="1193" height="243" key="GridCell.Tab.0.right" timestamp="1601810680924">
+    <state width="1193" height="177" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1601863196803" />
+    <state width="1193" height="177" key="GridCell.Tab.0.right" timestamp="1601863196803">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1193" height="243" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1601810680924" />
+    <state width="1193" height="177" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1601863196803" />
     <state x="0" y="72" key="SettingsEditor" timestamp="1601807662219">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
