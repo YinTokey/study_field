@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/go-redis/redis"
+	"runtime"
+	"sync"
 	"time"
-	. "PhotoLib/example/gopl"
 	//_ "PhotoLib/internal/app"
 )
 
@@ -12,7 +13,55 @@ import (
 var pupular_url = "https://api.500px.com/v1/photos?feature=popular"
 
 func main () {
-	Runex()
+	testChannel()
+}
+
+func testChannel() {
+	buffered := make(chan string,10)
+
+	buffered <- "Gopher..."
+
+	value := <-buffered
+
+	fmt.Println(value)
+}
+
+func testRoutine() {
+	runtime.GOMAXPROCS(1)
+
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	fmt.Println("start goroutine")
+
+	go func() {
+		defer wg.Done()
+
+		for count := 0; count < 3; count++ {
+			for char := 'a'; char < 'a' + 26; char++ {
+				fmt.Printf("%c",char)
+			}
+		}
+	}()
+
+	go func() {
+		defer wg.Done()
+
+		for count := 0; count < 3; count++ {
+			for char := 'A'; char < 'A' + 26; char++ {
+				fmt.Printf("%c",char)
+			}
+		}
+	}()
+
+	fmt.Println("Waitting to finish")
+	wg.Wait()
+
+	fmt.Println("\n termianting program")
+}
+
+func  fetchData()  {
+	//Runex()
 	//resp, err := http.Get(pupular_url)
 	//if err != nil {
 	//	panic(err)
@@ -26,12 +75,6 @@ func main () {
 	//
 	////fmt.Println(info.Feature)
 	//redis.set
-
-}
-
-func Runex() {
-	re := Sum(1,2,3,4)
-	fmt.Println(re)
 }
 
 var redisDB *redis.Client
