@@ -12,6 +12,8 @@ import (
 
 var pupular_url = "https://api.500px.com/v1/photos?feature=popular"
 
+var wg sync.WaitGroup
+
 func main () {
 	testChannel()
 }

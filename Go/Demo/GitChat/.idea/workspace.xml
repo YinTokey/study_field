@@ -2,10 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../filestore/handler/handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../filestore/meta/filemeta.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../filestore/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../filestore/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../filestore/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/add_article_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/exit_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/home_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/login_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/register_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/session_controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/article_model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/blogsheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/lib/highlight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/lib/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/blog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/lib/jquery.url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381052-color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381589-aa.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381613-1ad5ad6eddc451daee7c5004b6fd5266d1163252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381633-1f9fda8e6306f339408c2dcfe91ac06a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/util.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/aboultme.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/album.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home_block.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/show_article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/tags.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/write_article.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhotoLib/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +88,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/views" />
       <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
@@ -88,8 +123,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -98,14 +134,6 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="242" key="#Go_Modules" timestamp="1594735037390">
-      <screen x="0" y="23" width="1280" height="777" />
-    </state>
-    <state x="416" y="242" key="#Go_Modules/0.23.1280.777@0.23.1280.777" timestamp="1594735037390" />
-    <state x="242" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595684523203">
-      <screen x="0" y="23" width="1280" height="777" />
-    </state>
-    <state x="242" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1595684523203" />
     <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1596027584136">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
@@ -126,15 +154,11 @@
     </state>
     <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584135" />
     <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595943277923" />
-    <state width="243" height="539" key="HiddenNamespacesPopup" timestamp="1595684543759">
-      <screen x="0" y="23" width="1280" height="777" />
-    </state>
-    <state width="243" height="539" key="HiddenNamespacesPopup/0.23.1280.777@0.23.1280.777" timestamp="1595684543759" />
-    <state x="69" y="48" key="SettingsEditor" timestamp="1596261609960">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="69" y="50" key="SettingsEditor" timestamp="1604377988438">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="69" y="48" key="SettingsEditor/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596261609960" />
-    <state x="69" y="48" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1595735542481" />
+    <state x="69" y="50" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1604377988438" />
     <state x="307" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1595770564507">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

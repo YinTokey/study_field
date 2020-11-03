@@ -1,20 +1,37 @@
 package main
 
 import (
-	"gitchat/database"
-	"gitchat/routers"
+	"gitchat/config"
+	"gitchat/router"
+	"github.com/spf13/viper"
 
+	//"gitchat/database"
+	//"gitchat/routers"
+	"github.com/gin-gonic/gin"
+	"github.com/spf13/pflag"
+)
+
+var (
+	cfg = pflag.StringP("config", "c", "", "apiserver config file path.")
 )
 
 func main() {
 
-	database.InitMySql()
+	pflag.Parse()
 
-	router := routers.InitRouter()
+	// init config
+	if err := config.Init(*cfg); err != nil {
+		panic(err)
+	}
 
-	router.Static("/static","./static")
+	gin.SetMode(viper.GetString("runmode"))
 
-	router.Run(":8080")
+	g := gin.New()
+
+	middlewares := []gin.HandlerFunc{}
+
+	router.Load(g,middlewares...)
+
 
 
 }
