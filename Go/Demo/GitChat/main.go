@@ -35,16 +35,17 @@ func main() {
 
 	router.Load(g,middlewares...)
 
+	g.Run()
 	// Ping the server to make sure the router is working.
-	go func() {
-		if err := pingServer(); err != nil {
-			log.Fatal("The router has no response, or it might took too long to start up.", err)
-		}
-		log.Info("The router has been deployed successfully.")
-	}()
-
-	log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
-	log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
+	//go func() {
+	//	if err := pingServer(); err != nil {
+	//		log.Fatal("The router has no response, or it might took too long to start up.", err)
+	//	}
+	//	log.Info("The router has been deployed successfully.")
+	//}()
+	//
+	//log.Infof("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
+	//log.Info(http.ListenAndServe(viper.GetString("addr"), g).Error())
 
 }
 
