@@ -3,44 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/conf.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/add_article_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/exit_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/home_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/login_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/register_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/session_controller.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/article_model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/blogsheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/lib/highlight.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/lib/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/blog.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/lib/jquery-3.3.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/lib/jquery.url.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381052-color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381589-aa.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381613-1ad5ad6eddc451daee7c5004b6fd5266d1163252.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/upload/img/2018/12/21/1545381633-1f9fda8e6306f339408c2dcfe91ac06a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/aboultme.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/album.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home_block.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/show_article.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tags.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/write_article.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PhotoLib/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handler/sd/check.go" beforeDir="false" afterPath="$PROJECT_DIR$/handler/sd/check.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,34 +102,54 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1234" height="169" key="GridCell.Tab.0.bottom" timestamp="1596027584136">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1234" height="181" key="GridCell.Tab.0.bottom" timestamp="1604484743713">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584136" />
     <state width="1234" height="169" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1595943277924" />
-    <state width="1234" height="169" key="GridCell.Tab.0.center" timestamp="1596027584134">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1234" height="181" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1604484743713" />
+    <state width="1234" height="181" key="GridCell.Tab.0.center" timestamp="1604484743710">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584134" />
     <state width="1234" height="169" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1595943277923" />
-    <state width="1234" height="169" key="GridCell.Tab.0.left" timestamp="1596027584130">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1234" height="181" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1604484743710" />
+    <state width="1234" height="181" key="GridCell.Tab.0.left" timestamp="1604484743710">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584130" />
     <state width="1234" height="169" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1595943277922" />
-    <state width="1234" height="169" key="GridCell.Tab.0.right" timestamp="1596027584135">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state width="1234" height="181" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1604484743710" />
+    <state width="1234" height="181" key="GridCell.Tab.0.right" timestamp="1604484743711">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596027584135" />
     <state width="1234" height="169" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1595943277923" />
+    <state width="1234" height="181" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1604484743711" />
     <state x="69" y="50" key="SettingsEditor" timestamp="1604377988438">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="69" y="48" key="SettingsEditor/0.23.1280.777/1280.-188.1920.1057@0.23.1280.777" timestamp="1596261609960" />
     <state x="69" y="50" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1604377988438" />
-    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1595770564507">
-      <screen x="0" y="23" width="1280" height="777" />
+    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1604483181532">
+      <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup/0.23.1280.777@0.23.1280.777" timestamp="1595770564507" />
+    <state x="307" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1604483181532" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/main.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/config/conf.go</url>
+          <line>56</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
