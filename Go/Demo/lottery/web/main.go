@@ -16,7 +16,6 @@ func newApp() *bootstraper.Bootstrapper {
 	return app
 }
 
-
 func main() {
 
 	app := newApp()
