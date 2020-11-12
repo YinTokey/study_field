@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/kataras/iris"
+	_ "github.com/kataras/iris/v12"
 	"lottery/bootstraper"
+	"lottery/routes"
 )
 
 var port = 8080
@@ -11,7 +12,7 @@ var port = 8080
 func newApp() *bootstraper.Bootstrapper {
 	app := bootstraper.New("Go抽奖系统", "Yin")
 	app.Bootstrap()
-	app.Configure()
+	app.Configure(routes.Configure)
 
 	return app
 }
