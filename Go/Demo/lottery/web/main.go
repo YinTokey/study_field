@@ -5,6 +5,7 @@ import (
 	_ "github.com/kataras/iris/v12"
 	"lottery/bootstraper"
 	"lottery/routes"
+	//"github.com/tdewolff/minify/v2"
 )
 
 var port = 8080
