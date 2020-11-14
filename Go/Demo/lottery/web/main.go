@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/kataras/iris/v12"
 	"lottery/bootstraper"
 	"lottery/routes"
 	//"github.com/tdewolff/minify/v2"
