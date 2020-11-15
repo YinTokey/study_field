@@ -5,12 +5,11 @@
 //	"fmt"
 //	"log"
 //	"time"
-//
-//	"imooc.com/lottery/comm"
-//	"imooc.com/lottery/conf"
-//	"imooc.com/lottery/datasource"
-//	"imooc.com/lottery/models"
-//	"imooc.com/lottery/services"
+//	"lottery/comm"
+//	"lottery/conf"
+//	"lottery/datasource"
+//	"lottery/models"
+//	"lottery/services"
 //	"github.com/gomodule/redigo/redis"
 //)
 //
@@ -108,10 +107,10 @@
 //}
 //
 ///**
-// * 根据奖品的发奖计划，把设定的奖品数量放入奖品池
-// * 需要每分钟执行一次
-// * 【难点】定时程序，根据奖品设置的数据，更新奖品池的数据
-// */
+//* 根据奖品的发奖计划，把设定的奖品数量放入奖品池
+//* 需要每分钟执行一次
+//* 【难点】定时程序，根据奖品设置的数据，更新奖品池的数据
+//*/
 //func DistributionGiftPool() int {
 //	totalNum := 0
 //	now := comm.NowUnix()
@@ -222,29 +221,30 @@
 //// 获取当前的缓存中编码数量
 //// 返回，剩余编码数量，缓冲中编码数量
 //func GetCacheCodeNum(id int, codeService services.CodeService) (int, int) {
-//	num := 0
-//	cacheNum := 0
-//	// 统计数据库中有效编码数量
-//	list := codeService.Search(id)
-//	if len(list) > 0 {
-//		for _, data := range list {
-//			if data.SysStatus == 0 {
-//				num++
-//			}
-//		}
-//	}
-//
-//	// redis中缓存的key值
-//	key := fmt.Sprintf("gift_code_%d", id)
-//	cacheObj := datasource.InstanceCache()
-//	rs, err := cacheObj.Do("SCARD", key)
-//	if err != nil {
-//		log.Println("prizedata.RecacheCodes RENAME error=", err)
-//	} else {
-//		cacheNum = int(comm.GetInt64(rs, 0))
-//	}
-//
-//	return num, cacheNum
+//	//num := 0
+//	//cacheNum := 0
+//	//// 统计数据库中有效编码数量
+//	//list := codeService.Search(id)
+//	//if len(list) > 0 {
+//	//	for _, data := range list {
+//	//		if data.SysStatus == 0 {
+//	//			num++
+//	//		}
+//	//	}
+//	//}
+//	//
+//	//// redis中缓存的key值
+//	//key := fmt.Sprintf("gift_code_%d", id)
+//	//cacheObj := datasource.InstanceCache()
+//	//rs, err := cacheObj.Do("SCARD", key)
+//	//if err != nil {
+//	//	log.Println("prizedata.RecacheCodes RENAME error=", err)
+//	//} else {
+//	//	cacheNum = int(comm.GetInt64(rs, 0))
+//	//}
+//	//
+//	//return num, cacheNum
+//	return 0, 0
 //}
 //
 //// 导入新的优惠券编码
