@@ -1,9 +1,10 @@
 package bootstraper
 
 import (
+	"fmt"
 	"github.com/gorilla/securecookie"
-	"github.com/kataras/iris/v12"
 	"github.com/kataras/iris/v12/sessions"
+	"github.com/kataras/iris/v12"
 	"lottery/conf"
 	"time"
 )
@@ -19,7 +20,7 @@ type Configurator func(*Bootstrapper)
 
 
 type Bootstrapper struct {
-	Application *iris.Application
+	*iris.Application // 匿名内嵌机制，相当于继承 iris.Application
 	AppName      string
 	AppOwner     string
 	AppSpawnDate time.Time
@@ -34,6 +35,8 @@ func New(appName, appOwner string, cfgs ... Configurator) *Bootstrapper {
 		AppSpawnDate: time.Now(),
 		Application: iris.New(),
 	}
+	fmt.Println("初始化完毕")
+
 
 	for _, cfg := range cfgs {
 		cfg(b)
@@ -49,9 +52,9 @@ func (b *Bootstrapper) Configure(cs ...Configurator) {
 	}
 }
 
-func (b *Bootstrapper) SetupViews(dir string) *Bootstrapper {
-
-	htmlEngine := iris.HTML(dir,"html").Layout("shared/layout.html")
+func (b *Bootstrapper) SetupViews(viewsDir string) *Bootstrapper {
+	fmt.Println(viewsDir)
+	htmlEngine := iris.HTML(viewsDir, ".html").Layout("shared/layout.html")
 
 	htmlEngine.Reload(true)
 
@@ -63,7 +66,8 @@ func (b *Bootstrapper) SetupViews(dir string) *Bootstrapper {
 		dt := time.Unix(int64(t),int64(0))
 		return dt.Format(conf.SysTimeform)
 	})
-	b.Application.RegisterView(htmlEngine)
+
+	b.RegisterView(htmlEngine)
 
 	return b
 }
@@ -77,7 +81,7 @@ func (b *Bootstrapper) SetupSessions(expires time.Duration, cookieHashKey, cooki
 }
 
 func (b *Bootstrapper) SetupErrorHandlers() {
-	b.Application.OnAnyErrorCode(func(ctx iris.Context) {
+	b.OnAnyErrorCode(func(ctx iris.Context) {
 		err := iris.Map{
 			"app":     b.AppName,
 			"status":  ctx.GetStatusCode(),
@@ -111,7 +115,7 @@ func (b *Bootstrapper) Bootstrap() *Bootstrapper {
 		[]byte("lot-secret-of-characters-big-too"),
 	)
 	b.SetupErrorHandlers()
-	b.Application.Favicon(StaticAssets + Favicon)
+	b.Favicon(StaticAssets + Favicon)
 
 	//b.Application.setu
 
@@ -119,5 +123,5 @@ func (b *Bootstrapper) Bootstrap() *Bootstrapper {
 }
 
 func (b *Bootstrapper) Listen(addr string, cfgs ...iris.Configurator) {
-	b.Application.Run(iris.Addr(addr), cfgs...)
+	b.Run(iris.Addr(addr), cfgs...)
 }

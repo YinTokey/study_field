@@ -95,7 +95,7 @@ func (c *AdminGiftController) GetEdit() mvc.Result {
 func (c *AdminGiftController) PostSave() mvc.Result {
 	data := viewmodels.ViewGift{}
 	err := c.Ctx.ReadForm(&data)
-	//fmt.Printf("%v\n", info)
+	fmt.Printf("Post save %v\n", data)
 	if err != nil {
 		fmt.Println("admin_gift.PostSave ReadForm error=", err)
 		return mvc.Response{

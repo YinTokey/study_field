@@ -3,10 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="a7845aea-1a84-4316-805f-a310e0a72ea3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstraper/bootstraper.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstraper/bootstraper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comm/func_web.go" beforeDir="false" afterPath="$PROJECT_DIR$/comm/func_web.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comm/functions.go" beforeDir="false" afterPath="$PROJECT_DIR$/comm/functions.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/blackip_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/blackip_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/code_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/code_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/gift_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/gift_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/result_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/result_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/user_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/user_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/userday_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/userday_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasource/dbhelper.go" beforeDir="false" afterPath="$PROJECT_DIR$/datasource/dbhelper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_blackip.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_blackip.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_code.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_code.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_gift.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_gift.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_result.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_result.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/lt_userday.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/lt_userday.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/obj_gift_prize.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/obj_gift_prize.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/obj_loginuser.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/obj_loginuser.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/blackip_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/blackip_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/code_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/code_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/gift_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/gift_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/result_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/result_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/user_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/userday_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/userday_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viewmodels/view_gift.go" beforeDir="false" afterPath="$PROJECT_DIR$/viewmodels/view_gift.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/controllers/admin_gift.go" beforeDir="false" afterPath="$PROJECT_DIR$/web/controllers/admin_gift.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +76,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/views/admin" />
+      <recent name="$PROJECT_DIR$/web/controllers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web" />
     </key>
@@ -101,25 +129,49 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="961" height="212" key="GridCell.Tab.0.bottom" timestamp="1605275653050">
+    <state width="1126" height="184" key="GridCell.Tab.0.bottom" timestamp="1605535291869">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="961" height="212" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1605275653050" />
-    <state width="961" height="212" key="GridCell.Tab.0.center" timestamp="1605275653049">
+    <state width="1126" height="184" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1605535291869" />
+    <state width="1126" height="184" key="GridCell.Tab.0.center" timestamp="1605535291868">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="961" height="212" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1605275653049" />
-    <state width="961" height="212" key="GridCell.Tab.0.left" timestamp="1605275653049">
+    <state width="1126" height="184" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1605535291868" />
+    <state width="1126" height="184" key="GridCell.Tab.0.left" timestamp="1605535291867">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="961" height="212" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1605275653049" />
-    <state width="961" height="212" key="GridCell.Tab.0.right" timestamp="1605275653050">
+    <state width="1126" height="184" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1605535291867" />
+    <state width="1126" height="184" key="GridCell.Tab.0.right" timestamp="1605535291868">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="961" height="212" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1605275653050" />
+    <state width="1126" height="184" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1605535291868" />
     <state x="122" y="59" key="SettingsEditor" timestamp="1605275875274">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="122" y="59" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1605275875274" />
+    <state x="286" y="151" width="595" height="522" key="find.popup" timestamp="1605434366321">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="286" y="151" width="595" height="522" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1605434366321" />
+    <state x="249" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1605409472348">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="249" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1605409472348" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/user_service.go</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/web/controllers/index.go</url>
+          <line>27</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

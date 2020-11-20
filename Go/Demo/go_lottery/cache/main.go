@@ -1,6 +1,7 @@
 package cache
 
 import (
+	"fmt"
 	"os"
 	"go_lottery/util"
 	"strconv"
@@ -26,6 +27,8 @@ func Redis() {
 	if err != nil {
 		util.Log().Panic("连接Redis不成功", err)
 	}
+
+	fmt.Println("Redis 连接成功")
 
 	RedisClient = client
 }
