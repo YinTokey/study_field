@@ -1,26 +1,32 @@
 package main
 
 import (
+	"context"
 	"fmt"
-	"net/rpc"
+	"go_lottery/message"
+	"google.golang.org/grpc"
+	"time"
 )
 
 func main() {
 
-	client, err := rpc.DialHTTP("tcp", "localhost:8081")
-
+	conn, err := grpc.Dial("localhost:8091",grpc.WithInsecure())
 	if err != nil {
 		panic(err.Error())
 	}
+	defer conn.Close()
 
-	var req float32 = 5
+	orderServiceClient := message.NewOrderServiceClient(conn)
 
-	var resSync *float32
+	orderRequest := &message.OrderRequest{OrderId: "201908300001", TimeStamp: time.Now().Unix()}
+	orderInfo, err := orderServiceClient.GetOrderInfo(context.Background(), orderRequest)
 
-	syncCall := client.Go("MathUtil.CalculateCircleArea", req, &resSync, nil)
+	if orderInfo != nil {
+		fmt.Println(orderInfo.GetOrderId())
+		fmt.Println(orderInfo.GetOrderName())
+		fmt.Println(orderInfo.GetOrderStatus())
+	} else {
+		fmt.Println(err.Error())
+	}
 
-	replayDone := <-syncCall.Done
-
-	fmt.Println(replayDone)
-	fmt.Println(*resSync)
 }

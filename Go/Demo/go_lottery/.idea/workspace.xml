@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/go_lottery.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/conf.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serializer/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/serializer/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user_login_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user_login_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/user_register_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/user_register_service.go" afterDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +38,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sample/message" />
+    </key>
   </component>
   <component name="RunManager" selected="Go Build.go build client.go">
     <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -110,26 +100,30 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1126" height="190" key="GridCell.Tab.0.bottom" timestamp="1605871938266">
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605933072338">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1605871938266" />
-    <state width="1126" height="190" key="GridCell.Tab.0.center" timestamp="1605871938264">
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1605933072338" />
+    <state width="1126" height="190" key="GridCell.Tab.0.bottom" timestamp="1605935299761">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1605871938264" />
-    <state width="1126" height="190" key="GridCell.Tab.0.left" timestamp="1605871938263">
+    <state width="1126" height="190" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1605935299761" />
+    <state width="1126" height="190" key="GridCell.Tab.0.center" timestamp="1605935299757">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1605871938263" />
-    <state width="1126" height="190" key="GridCell.Tab.0.right" timestamp="1605871938265">
+    <state width="1126" height="190" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1605935299757" />
+    <state width="1126" height="190" key="GridCell.Tab.0.left" timestamp="1605935299756">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1605871938265" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1605535501029">
+    <state width="1126" height="190" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1605935299756" />
+    <state width="1126" height="190" key="GridCell.Tab.0.right" timestamp="1605935299758">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1605535501029" />
+    <state width="1126" height="190" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1605935299758" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1605933039364">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1605933039364" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1605535716365">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
