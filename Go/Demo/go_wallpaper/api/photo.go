@@ -12,8 +12,8 @@ func Fetch500pxPapular(c *gin.Context) {
 	var service service.PxCollectService = service.NewPxCollectService()
 
 	if err := c.ShouldBind(&service); err == nil {
-		service.Papular()
-		c.JSON(200, "res test")
+		res := service.Papular()
+		c.JSON(200, res)
 	} else {
 		c.JSON(200, ErrorResponse(err))
 	}

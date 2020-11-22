@@ -20,7 +20,7 @@ func NewPxCollectService() PxCollectService {
 }
 
 // 拉取 500px 首页
-func (service *PxCollectService) Papular() {
+func (service *PxCollectService) Papular() Page {
 	resp, err := http.Get(pupular_url)
 	if err != nil {
 		panic(err)
@@ -34,5 +34,5 @@ func (service *PxCollectService) Papular() {
 
 	fmt.Println(info.Photos[1].User.Username)
 
-	//return jsonStr
+	return info
 }
