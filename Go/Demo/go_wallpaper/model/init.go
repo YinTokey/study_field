@@ -2,7 +2,6 @@ package model
 
 import (
 	"fmt"
-	"go_wallpaper/util"
 	"time"
 
 	"github.com/jinzhu/gorm"
@@ -22,7 +21,7 @@ func Database(connString string) {
 	fmt.Println(connString)
 	// Error
 	if err != nil {
-		util.Log().Panic("连接数据库不成功", err)
+	//	util.Log().Panic("连接数据库不成功", err)
 	}
 	//设置连接池
 	//空闲

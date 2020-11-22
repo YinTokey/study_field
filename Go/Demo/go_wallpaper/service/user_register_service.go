@@ -46,9 +46,8 @@ func (service *UserRegisterService) valid() *serializer.Response {
 // Register 用户注册
 func (service *UserRegisterService) Register() serializer.Response {
 	user := model.User{
-		Nickname: service.Nickname,
-		UserName: service.UserName,
-		Status:   model.Active,
+		Username: service.UserName,
+		//Status:   model.Active,
 	}
 
 	// 表单验证

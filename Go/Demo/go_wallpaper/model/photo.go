@@ -1,8 +1,12 @@
 package model
 
-import "time"
+import (
+	"github.com/jinzhu/gorm"
+	"time"
+)
 
 type Photo struct {
+	gorm.Model
 	ID                int       `json:"id"`
 	CreatedAt         time.Time `json:"created_at"`
 	Privacy           bool      `json:"privacy"`

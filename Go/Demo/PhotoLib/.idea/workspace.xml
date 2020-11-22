@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48fac80e-d7fd-49aa-a41b-f17457ca3345" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../go_wallpaper/model/fillswitch.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../go_wallpaper/model/page.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../go_wallpaper/model/photo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../go_wallpaper/api/photo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../go_wallpaper/service/px_collect_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../go_wallpaper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/model/fillswitch.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/model/fillswitch.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/model/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/model/page.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/model/page.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/model/photo.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/model/photo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../go_wallpaper/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/serializer/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/serializer/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/server/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/server/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/service/user_register_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/service/user_register_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lottery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lottery/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

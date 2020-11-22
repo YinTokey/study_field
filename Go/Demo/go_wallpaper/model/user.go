@@ -24,16 +24,21 @@ type User struct {
 	AvatarVersion    int       `json:"avatar_version"`
 	RegistrationDate time.Time `json:"registration_date"`
 	Avatars          struct {
+		gorm.Model
 		Tiny struct {
+			gorm.Model
 			HTTPS string `json:"https"`
 		} `json:"tiny"`
 		Small struct {
+			gorm.Model
 			HTTPS string `json:"https"`
 		} `json:"small"`
 		Large struct {
+			gorm.Model
 			HTTPS string `json:"https"`
 		} `json:"large"`
 		Default struct {
+			gorm.Model
 			HTTPS string `json:"https"`
 		} `json:"default"`
 	} `json:"avatars"`

@@ -1,6 +1,9 @@
 package model
 
+import "github.com/jinzhu/gorm"
+
 type Fillswitch struct {
+	gorm.Model
 	AccessDeleted        bool        `json:"access_deleted"`
 	AccessPrivate        bool        `json:"access_private"`
 	IncludeDeleted       bool        `json:"include_deleted"`

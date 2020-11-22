@@ -1,6 +1,9 @@
 package model
 
+import "github.com/jinzhu/gorm"
+
 type Page struct {
+	gorm.Model
 	CurrentPage int    `json:"current_page"`
 	TotalPages  int    `json:"total_pages"`
 	TotalItems  int    `json:"total_items"`
@@ -9,5 +12,4 @@ type Page struct {
 	} `json:"filters"`
 	Photos      []Photo `json:"photos"`
 
-	
 }
