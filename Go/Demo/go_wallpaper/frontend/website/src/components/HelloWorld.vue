@@ -1,13 +1,18 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
 
     <button v-on:click="greet">fetch 500 px pupular</button>
+
+    <ul>
+      <li v-for="v in dataSource" :key="v.value">
+        <img v-bind:src="v.image_url" alt="">
+        <h4>{{v.name}}</h4>
+        <!-- 
+        <p>{{v.id}}</p>
+        -->
+      </li>
+    </ul>
 
   </div>
 
@@ -26,7 +31,7 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
-    info: String,
+    dataSource: [],
   },
 
   methods: {
@@ -39,7 +44,9 @@ export default {
       ax.get(url2, qs.stringify(params))
           .then(response => {
             //this.info = response.data.bpi
-            console.log(response)
+            var info = response.data.photos
+            this.dataSource = info
+            console.log(info)
           })
           .catch(error => {
             console.log(error)
