@@ -3,7 +3,7 @@ package cache
 import (
 	"fmt"
 	"os"
-	"go_lottery/util"
+	"go_wallpaper/util"
 	"strconv"
 
 	"github.com/go-redis/redis"

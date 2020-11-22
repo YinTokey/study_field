@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go_lottery/message"
+	"go_wallpaper/message"
 
 	"context"
 	"errors"

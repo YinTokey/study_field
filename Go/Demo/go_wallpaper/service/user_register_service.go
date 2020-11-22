@@ -1,8 +1,8 @@
 package service
 
 import (
-	"go_lottery/model"
-	"go_lottery/serializer"
+	"go_wallpaper/model"
+	"go_wallpaper/serializer"
 )
 
 // UserRegisterService 管理用户注册服务

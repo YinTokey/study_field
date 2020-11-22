@@ -1,8 +1,8 @@
 package api
 
 import (
-	"go_lottery/serializer"
-	"go_lottery/service"
+	"go_wallpaper/serializer"
+	"go_wallpaper/service"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"

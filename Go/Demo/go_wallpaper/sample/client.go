@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"go_lottery/message"
+	"go_wallpaper/message"
 	"google.golang.org/grpc"
 	"time"
 )

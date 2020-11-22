@@ -2,8 +2,8 @@ package server
 
 import (
 	"os"
-	"go_lottery/api"
-	"go_lottery/middleware"
+	"go_wallpaper/api"
+	"go_wallpaper/middleware"
 
 	"github.com/gin-gonic/gin"
 )

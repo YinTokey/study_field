@@ -2,9 +2,9 @@ package conf
 
 import (
 	"os"
-	"go_lottery/cache"
-	"go_lottery/model"
-	"go_lottery/util"
+	"go_wallpaper/cache"
+	"go_wallpaper/model"
+	"go_wallpaper/util"
 
 	"github.com/joho/godotenv"
 )

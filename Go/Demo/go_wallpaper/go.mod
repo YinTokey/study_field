@@ -1,4 +1,4 @@
-module go_lottery
+module go_wallpaper
 
 go 1.14
 

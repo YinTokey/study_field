@@ -1,6 +1,6 @@
 package serializer
 
-import "go_lottery/model"
+import "go_wallpaper/model"
 
 // User 用户序列化器
 type User struct {

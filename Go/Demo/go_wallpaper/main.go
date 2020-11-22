@@ -1,8 +1,8 @@
 package main
 
 import (
-	"go_lottery/conf"
-	"go_lottery/server"
+	"go_wallpaper/conf"
+	"go_wallpaper/server"
 )
 
 func main() {

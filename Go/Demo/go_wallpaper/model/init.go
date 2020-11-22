@@ -2,7 +2,7 @@ package model
 
 import (
 	"fmt"
-	"go_lottery/util"
+	"go_wallpaper/util"
 	"time"
 
 	"github.com/jinzhu/gorm"

@@ -3,9 +3,9 @@ package api
 import (
 	"encoding/json"
 	"fmt"
-	"go_lottery/conf"
-	"go_lottery/model"
-	"go_lottery/serializer"
+	"go_wallpaper/conf"
+	"go_wallpaper/model"
+	"go_wallpaper/serializer"
 
 	"github.com/gin-gonic/gin"
 	validator "gopkg.in/go-playground/validator.v8"
