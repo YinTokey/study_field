@@ -1,6 +1,7 @@
 package conf
 
 import (
+	"go_wallpaper/model"
 	"go_wallpaper/util"
 	"os"
 
@@ -21,6 +22,6 @@ func Init() {
 	}
 
 	// 连接数据库
-	//model.Database(os.Getenv("MYSQL_DSN"))
+	model.Database(os.Getenv("MYSQL_DSN"))
 	//cache.Redis()
 }

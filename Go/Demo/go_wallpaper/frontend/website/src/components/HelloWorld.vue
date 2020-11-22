@@ -8,7 +8,7 @@
       <li v-for="v in dataSource" :key="v.value">
         <img v-bind:src="v.image_url" alt="">
         <h4>{{v.name}}</h4>
-        <!-- 
+        <!--
         <p>{{v.id}}</p>
         -->
       </li>
@@ -22,7 +22,6 @@
 <script>
 
 import ax from 'axios'
-import qs from 'qs';
 
 ax.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
@@ -38,10 +37,10 @@ export default {
     greet: function (event) {
       // `this` 在方法里指当前 Vue 实例
       console.log(event)
-     // var url1 = "https://api.500px.com/v1/photos?feature=popular"
+      // var url1 = "https://api.500px.com/v1/photos?feature=popular"
       var url2 = "http://127.0.0.1:8080/api/v1/papular"
-      var params = {}
-      ax.get(url2, qs.stringify(params))
+      //var params = {}
+      ax.get(url2)
           .then(response => {
             //this.info = response.data.bpi
             var info = response.data.photos
@@ -52,6 +51,7 @@ export default {
             console.log(error)
             //this.errored = true
           })
+
 
 
 

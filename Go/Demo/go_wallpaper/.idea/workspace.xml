@@ -13,6 +13,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -109,22 +110,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1605933072338" />
-    <state width="1238" height="160" key="GridCell.Tab.0.bottom" timestamp="1606043004944">
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606049859480">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606043004944" />
-    <state width="1238" height="160" key="GridCell.Tab.0.center" timestamp="1606043004943">
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
+    <state width="1238" height="160" key="GridCell.Tab.0.bottom" timestamp="1606054378726">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606043004943" />
-    <state width="1238" height="160" key="GridCell.Tab.0.left" timestamp="1606043004942">
+    <state width="1238" height="160" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606054378726" />
+    <state width="1238" height="160" key="GridCell.Tab.0.center" timestamp="1606054378725">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606043004942" />
-    <state width="1238" height="160" key="GridCell.Tab.0.right" timestamp="1606043004944">
+    <state width="1238" height="160" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606054378725" />
+    <state width="1238" height="160" key="GridCell.Tab.0.left" timestamp="1606054378724">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606043004944" />
+    <state width="1238" height="160" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606054378724" />
+    <state width="1238" height="160" key="GridCell.Tab.0.right" timestamp="1606054378726">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="160" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606054378726" />
     <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
