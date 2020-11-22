@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.idea/go_lottery.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../go_lottery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/api/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/api/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/auth/.keep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/cache/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/conf/conf.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/conf/i18n.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/conf/locales/zh-cn.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/message/message.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/message/message.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/middleware/auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/middleware/cors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/middleware/session.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/model/init.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/model/migration.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/model/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/sample/client.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/sample/server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/serializer/common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/serializer/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/server/router.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/service/user_login_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/service/user_register_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/util/common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../go_lottery/util/logger.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lottery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lottery/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,26 +108,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1605933072338" />
-    <state width="1126" height="190" key="GridCell.Tab.0.bottom" timestamp="1605935693571">
+    <state width="1238" height="190" key="GridCell.Tab.0.bottom" timestamp="1606025653512">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1605935693571" />
-    <state width="1126" height="190" key="GridCell.Tab.0.center" timestamp="1605935693565">
+    <state width="1238" height="190" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606025653512" />
+    <state width="1238" height="190" key="GridCell.Tab.0.center" timestamp="1606025653511">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1605935693565" />
-    <state width="1126" height="190" key="GridCell.Tab.0.left" timestamp="1605935693564">
+    <state width="1238" height="190" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606025653511" />
+    <state width="1238" height="190" key="GridCell.Tab.0.left" timestamp="1606025653510">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1605935693564" />
-    <state width="1126" height="190" key="GridCell.Tab.0.right" timestamp="1605935693566">
+    <state width="1238" height="190" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606025653510" />
+    <state width="1238" height="190" key="GridCell.Tab.0.right" timestamp="1606025653512">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1126" height="190" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1605935693566" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1606025594984">
+    <state width="1238" height="190" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606025653512" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1606025594984" />
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1606025608702" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1605535716365">
       <screen x="0" y="25" width="1280" height="775" />
     </state>

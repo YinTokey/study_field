@@ -3,16 +3,58 @@ package model
 import (
 	"github.com/jinzhu/gorm"
 	"golang.org/x/crypto/bcrypt"
+	"time"
 )
 
 // User 用户模型
+//type User struct {
+//	gorm.Model
+//	UserName       string
+//	PasswordDigest string
+//	Nickname       string
+//	Status         string
+//	Avatar         string `gorm:"size:1000"`
+//}
+
 type User struct {
 	gorm.Model
-	UserName       string
-	PasswordDigest string
-	Nickname       string
-	Status         string
-	Avatar         string `gorm:"size:1000"`
+	ID               int       `json:"id"`
+	Username         string    `json:"username"`
+	Fullname         string    `json:"fullname"`
+	AvatarVersion    int       `json:"avatar_version"`
+	RegistrationDate time.Time `json:"registration_date"`
+	Avatars          struct {
+		Tiny struct {
+			HTTPS string `json:"https"`
+		} `json:"tiny"`
+		Small struct {
+			HTTPS string `json:"https"`
+		} `json:"small"`
+		Large struct {
+			HTTPS string `json:"https"`
+		} `json:"large"`
+		Default struct {
+			HTTPS string `json:"https"`
+		} `json:"default"`
+	} `json:"avatars"`
+	UserpicURL      string `json:"userpic_url"`
+	UserpicHTTPSURL string `json:"userpic_https_url"`
+	Usertype        int    `json:"usertype"`
+	Active          int    `json:"active"`
+	Firstname       string `json:"firstname"`
+	Lastname        string `json:"lastname"`
+	About           string `json:"about"`
+	City            string `json:"city"`
+	State           string `json:"state"`
+	Country         string `json:"country"`
+	CoverURL        string `json:"cover_url"`
+	UpgradeStatus   int    `json:"upgrade_status"`
+	Affection       int    `json:"affection"`
+	FollowersCount  int    `json:"followers_count"`
+	Following       bool   `json:"following"`
+
+	PasswordDigest   string
+
 }
 
 const (
