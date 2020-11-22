@@ -1,10 +1,8 @@
 package conf
 
 import (
-	"os"
-	"go_wallpaper/cache"
-	"go_wallpaper/model"
 	"go_wallpaper/util"
+	"os"
 
 	"github.com/joho/godotenv"
 )
@@ -23,6 +21,6 @@ func Init() {
 	}
 
 	// 连接数据库
-	model.Database(os.Getenv("MYSQL_DSN"))
-	cache.Redis()
+	//model.Database(os.Getenv("MYSQL_DSN"))
+	//cache.Redis()
 }
