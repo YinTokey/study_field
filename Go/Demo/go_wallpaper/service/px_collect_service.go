@@ -32,7 +32,20 @@ func (service *PxCollectService) Papular() Page {
 	var info Page
 	json.Unmarshal([]byte(jsonStr), &info)
 
-	fmt.Println(info.Photos[1].User.Username)
+	//fmt.Println(info.Photos[1].User.Username)
+
+	service.updateToDatabase(info.Photos)
 
 	return info
+}
+
+func (service *PxCollectService) updateToDatabase(photos []Photo) {
+
+	fmt.Println(len(photos))
+
+	for _, photo := range photos {
+		photo.SavePhoto()
+
+
+	}
 }

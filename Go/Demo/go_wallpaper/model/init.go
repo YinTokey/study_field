@@ -13,7 +13,7 @@ import (
 )
 
 // DB 数据库链接单例
-var DB *gorm.DB
+var db *gorm.DB
 
 // Database 在中间件中初始化mysql链接
 func Database(connString string) {
@@ -22,7 +22,8 @@ func Database(connString string) {
 	fmt.Println("开始连接数据库...")
 	fmt.Println(connString)
 
-	db, err := gorm.Open("mysql", connString)
+	opendb, err := gorm.Open("mysql", connString)
+	db = opendb
 	db.LogMode(true)
 
 	fmt.Println("数据库初始化完成...")

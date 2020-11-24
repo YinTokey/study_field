@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhotoLib/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +29,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -114,33 +113,49 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
-    <state width="1238" height="160" key="GridCell.Tab.0.bottom" timestamp="1606054760284">
+    <state width="1238" height="160" key="GridCell.Tab.0.bottom" timestamp="1606228014602">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606054760284" />
-    <state width="1238" height="160" key="GridCell.Tab.0.center" timestamp="1606054760283">
+    <state width="1238" height="160" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606228014602" />
+    <state width="1238" height="160" key="GridCell.Tab.0.center" timestamp="1606228014601">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606054760283" />
-    <state width="1238" height="160" key="GridCell.Tab.0.left" timestamp="1606054760283">
+    <state width="1238" height="160" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606228014601" />
+    <state width="1238" height="160" key="GridCell.Tab.0.left" timestamp="1606228014600">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606054760283" />
-    <state width="1238" height="160" key="GridCell.Tab.0.right" timestamp="1606054760284">
+    <state width="1238" height="160" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606228014600" />
+    <state width="1238" height="160" key="GridCell.Tab.0.right" timestamp="1606228014602">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="160" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606054760284" />
+    <state width="1238" height="160" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606228014602" />
     <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1606025608702" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1606030165988">
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1606226907259">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1606030165988" />
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1606226907259" />
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1606027406693">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1606027406693" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <line>69</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
