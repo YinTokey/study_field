@@ -91,11 +91,12 @@ func FindAllPhotos() []Photo {
 
 	var result []Photo
 
-	createDb := db.Find(&result)
+	createDb := db.Find(&result,)
 	err := createDb.Error
 	if err != nil {
 		fmt.Println("查询所有photo数据错误,err", err)
 		panic(err)
 	}
+	fmt.Println(len(result))
 	return result
 }

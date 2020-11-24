@@ -3,9 +3,9 @@ package service
 import (
 	"encoding/json"
 	"fmt"
+	. "go_wallpaper/model"
 	"io/ioutil"
 	"net/http"
-	. "go_wallpaper/model"
 )
 
 const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
@@ -20,7 +20,31 @@ func NewPxCollectService() PxCollectService {
 }
 
 // 拉取 500px 首页
-func (service *PxCollectService) Papular() Page {
+func (service *PxCollectService) Papular() []Photo {
+
+	var info []Photo
+	info = FindAllPhotos()
+
+
+	return info
+}
+
+
+
+func (service *PxCollectService) updateToDatabase(photos []Photo) {
+
+	fmt.Println(len(photos))
+
+	for _, photo := range photos {
+		photo.SavePhoto()
+
+
+	}
+}
+
+
+func (service *PxCollectService) Request500pxPapuplar() Page {
+
 	resp, err := http.Get(pupular_url)
 	if err != nil {
 		panic(err)
@@ -32,20 +56,5 @@ func (service *PxCollectService) Papular() Page {
 	var info Page
 	json.Unmarshal([]byte(jsonStr), &info)
 
-	//fmt.Println(info.Photos[1].User.Username)
-
-	service.updateToDatabase(info.Photos)
-
 	return info
-}
-
-func (service *PxCollectService) updateToDatabase(photos []Photo) {
-
-	fmt.Println(len(photos))
-
-	for _, photo := range photos {
-		photo.SavePhoto()
-
-
-	}
 }

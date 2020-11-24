@@ -43,7 +43,7 @@ export default {
       ax.get(url2)
           .then(response => {
             //this.info = response.data.bpi
-            var info = response.data.photos
+            var info = response.data
             this.dataSource = info
             console.log(info)
           })
