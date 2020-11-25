@@ -23,10 +23,7 @@ func NewPxCollectService() PxCollectService {
 func (service *PxCollectService) Papular() []Photo {
 
 	var info []Photo
-	//info = FindAllPhotos()
-	service.Request500pxPapuplar()
-	//info = service.Request500pxPapuplar().Photos
-	//service.updateToDatabase(info)
+	info = FindAllPhotos()
 
 	return info
 }
@@ -54,6 +51,7 @@ func (service *PxCollectService) Request500pxPapuplar() []Photo {
 	//}
 	//defer resp.Body.Close()
 
+	// 本地测试json
 	filePtr, err := os.Open("./px.json")
 	if err != nil {
 		fmt.Println("文件打开失败 [Err:%s]", err.Error())
@@ -92,6 +90,8 @@ func (service *PxCollectService) Request500pxPapuplar() []Photo {
 
 		//fmt.Println(str)
 		result = append(result,photo)
+
+		photo.SavePhoto()
 	}
 
 	info = result
