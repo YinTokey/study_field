@@ -26,7 +26,7 @@ type Photo struct {
 	//	URL      string `json:"url"`
 	//	HTTPSURL string `json:"https_url"`
 	//} `json:"images"`
-	ImageURL           string    `json:"image_url"`
+	ImageURL           string     `json:"image_url"`
 	Name               string      `json:"name"`
 	//Description        string      `json:"description"`  长文本考虑二进制存储
 	Category           int         `json:"category"`

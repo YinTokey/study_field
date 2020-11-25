@@ -3,9 +3,9 @@ package service
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/goinggo/mapstructure"
 	. "go_wallpaper/model"
-	"io/ioutil"
-	"net/http"
+	"os"
 )
 
 const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
@@ -23,8 +23,10 @@ func NewPxCollectService() PxCollectService {
 func (service *PxCollectService) Papular() []Photo {
 
 	var info []Photo
-	info = FindAllPhotos()
-
+	//info = FindAllPhotos()
+	service.Request500pxPapuplar()
+	//info = service.Request500pxPapuplar().Photos
+	//service.updateToDatabase(info)
 
 	return info
 }
@@ -38,23 +40,64 @@ func (service *PxCollectService) updateToDatabase(photos []Photo) {
 	for _, photo := range photos {
 		photo.SavePhoto()
 
-
 	}
 }
 
 
-func (service *PxCollectService) Request500pxPapuplar() Page {
+func (service *PxCollectService) Request500pxPapuplar() []Photo {
+	var info []Photo
 
-	resp, err := http.Get(pupular_url)
+	// 网络请求
+	//resp, err := http.Get(pupular_url)
+	//if err != nil {
+	//	panic(err)
+	//}
+	//defer resp.Body.Close()
+
+	filePtr, err := os.Open("./px.json")
 	if err != nil {
-		panic(err)
+		fmt.Println("文件打开失败 [Err:%s]", err.Error())
+		return info
 	}
-	defer resp.Body.Close()
-	s , err := ioutil.ReadAll(resp.Body)
-	jsonStr := string(s)
+	defer filePtr.Close()
 
-	var info Page
-	json.Unmarshal([]byte(jsonStr), &info)
+	// 初始化请求变量结构
+	formData := make(map[string]interface{})
+
+	// 创建json解码器
+	json.NewDecoder(filePtr).Decode(&formData)
+
+	// 调用json包的解析，解析请求body
+	//json.NewDecoder(resp.Body).Decode(&formData)
+
+	// 类型强转
+	var photosMapArr []interface{} = formData["photos"].([]interface{})
+
+	//result :=  make([]Photo,0)
+
+	var result []Photo
+
+	fmt.Println("准备解析")
+	for _, phMap := range photosMapArr {
+		var photo Photo
+		if err := mapstructure.Decode(phMap, &photo); err != nil {
+			fmt.Println(err)
+		}
+
+		realmap := phMap.(map[string]interface{})
+
+		var urls []interface{} = realmap["image_url"].([]interface{})
+		var str string = urls[0].(string)
+		photo.ImageURL = str
+
+		//fmt.Println(str)
+		result = append(result,photo)
+	}
+
+	info = result
+
+
+	//json.Unmarshal([]byte(jsonStr), &info)
 
 	return info
 }
