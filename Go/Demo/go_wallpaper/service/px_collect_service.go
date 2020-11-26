@@ -29,7 +29,6 @@ func (service *PxCollectService) Papular() []Photo {
 }
 
 
-
 func (service *PxCollectService) updateToDatabase(photos []Photo) {
 
 	fmt.Println(len(photos))
