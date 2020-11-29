@@ -1,4 +1,4 @@
-package model
+package models
 
 import (
 	"fmt"
@@ -39,4 +39,8 @@ func Database(connString string) {
 	db.DB().SetConnMaxLifetime(time.Hour)
 
 
+}
+
+func InstanceDB() *gorm.DB {
+	return db
 }

@@ -14,6 +14,5 @@ func NewRouter() *gin.Engine {
 
 	r.POST("add",api.AddPicture)
 
-
 	return r
 }

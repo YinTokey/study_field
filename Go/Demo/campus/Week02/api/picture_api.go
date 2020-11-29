@@ -1,17 +1,44 @@
 package api
 
 import (
+	"Week02/service"
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
 func AddPicture(c *gin.Context) {
-
+	service := service.NewPictureService()
+	err := c.ShouldBind(&service)
+	if err != nil {
+		//c.JSON(200, ErrorResponse(err))
+		return
+	}
+	err = service.AddPicture(nil)
+	if err != nil {
+		// 查询错误
+		fmt.Println(err)
+		return
+	}
+	//c.JSON(200, res)
 
 }
 
 func QueryPicture(c *gin.Context) {
+	service := service.NewPictureService()
+	err := c.ShouldBind(&service)
+	if err != nil {
+		//c.JSON(200, ErrorResponse(err))
+		return;
+	}
+	res, err := service.GetAll()
+	if err != nil {
+		// 查询错误
+		return;
+	}
+	c.JSON(200, res)
 
 }
+
 
 //// UserRegister 用户注册接口
 //func UserRegister(c *gin.Context) {
