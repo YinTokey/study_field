@@ -2,11 +2,12 @@ package conf
 
 import (
 	"Week02/models"
-	"os"
 )
 
 // Init 初始化配置项
 func Init() {
+
 	// 连接数据库
-	models.Database(os.Getenv("MYSQL_DSN"))
+	env := "root:12345678@tcp(127.0.0.1:3306)/week2_db?charset=utf8&parseTime=True&loc=Local"
+	models.Database(env)
 }

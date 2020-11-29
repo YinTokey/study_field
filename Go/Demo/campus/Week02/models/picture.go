@@ -10,7 +10,6 @@ type Picture struct {
 	gorm.Model
 	URL       	string
 	Author      string
-	About       string
 	UserID		string
 }
 

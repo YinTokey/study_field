@@ -12,7 +12,7 @@ func NewRouter() *gin.Engine {
 
 	r.GET("pictures",api.QueryPicture)
 
-	r.POST("add",api.AddPicture)
+	r.GET("add",api.AddPicture)
 
 	return r
 }

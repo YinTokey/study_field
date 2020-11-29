@@ -16,15 +16,19 @@ var db *gorm.DB
 
 // Database 在中间件中初始化mysql链接
 func Database(connString string) {
-
-	fmt.Println("开始连接数据库...")
 	fmt.Println(connString)
 
-	db, err := gorm.Open("mysql", connString)
-	db.LogMode(true)
+	fmt.Println("开始连接数据库...")
+
+	opendb, err := gorm.Open("mysql", connString)
+
+	db = opendb
 
 	// Error
 	if err != nil {
+		fmt.Println("连接数据库不成功 ")
+		fmt.Println(err)
+
 		//util.Log().Panic("连接数据库不成功", err)
 	}
 	//设置连接池
@@ -42,5 +46,7 @@ func Database(connString string) {
 }
 
 func InstanceDB() *gorm.DB {
+	fmt.Println("获取单例")
+	fmt.Println(db)
 	return db
 }
