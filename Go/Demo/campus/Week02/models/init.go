@@ -1,9 +1,8 @@
 package models
 
 import (
+	"database/sql"
 	"fmt"
-	"time"
-
 	//"gorm.io/driver/mysql"
 	//"gorm.io/gorm"
 	//_ "github.com/go-sql-driver/mysql"
@@ -14,15 +13,19 @@ import (
 // DB 数据库链接单例
 var db *gorm.DB
 
+var sqlDB *sql.DB
+
 // Database 在中间件中初始化mysql链接
 func Database(connString string) {
 	fmt.Println(connString)
 
 	fmt.Println("开始连接数据库...")
 
-	opendb, err := gorm.Open("mysql", connString)
+	openDB, err := sql.Open("mysql",connString)
 
-	db = opendb
+	//opendb, err := gorm.Open("mysql", connString)
+	//
+	//db = opendb
 
 	// Error
 	if err != nil {
@@ -31,22 +34,13 @@ func Database(connString string) {
 
 		//util.Log().Panic("连接数据库不成功", err)
 	}
-	//设置连接池
 
-	// SetMaxIdleConns 设置空闲连接池中连接的最大数量
-	db.DB().SetMaxIdleConns(10)
-
-	// SetMaxOpenConns 设置打开数据库连接的最大数量。
-	db.DB().SetMaxOpenConns(100)
-
-	// SetConnMaxLifetime 设置了连接可复用的最大时间。
-	db.DB().SetConnMaxLifetime(time.Hour)
-
+	sqlDB = openDB
 
 }
 
-func InstanceDB() *gorm.DB {
+func InstanceDB() *sql.DB {
 	fmt.Println("获取单例")
 	fmt.Println(db)
-	return db
+	return sqlDB
 }

@@ -22,7 +22,7 @@ func (s *PictureService) AddPicture(data *models.Picture) error {
 }
 
 func (s *PictureService) GetAll() ([]models.Picture, error) {
-
-	return s.dao.GetAll()
+	s.dao.GetAll()
+	return nil, nil
 }
 
