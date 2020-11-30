@@ -23,14 +23,10 @@ func (d *PictureDao) Query(id int) (string, error) {
 
 	err := d.db.QueryRow("select author from pictures where id = ?", id).Scan(&author)
 
-	switch {
-	case err == sql.ErrNoRows:
-		return author, errors.Wrapf(err,"no user with id %d ", id)
-	case err != nil:
-		return author, errors.Wrapf(err,"uery error: %v ", err)
-	default:
+	if err != nil {
+		return author, errors.Wrap(err,"query error")
 	}
 
-	return author, err
+	return author, nil
 
 }

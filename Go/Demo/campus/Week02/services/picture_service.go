@@ -1,4 +1,4 @@
-package service
+package services
 
 import (
 	//"Week02/serializer"

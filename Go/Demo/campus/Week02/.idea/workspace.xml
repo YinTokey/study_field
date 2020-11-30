@@ -52,6 +52,16 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
@@ -89,6 +99,17 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
@@ -113,22 +134,22 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
-    <state width="1238" height="164" key="GridCell.Tab.0.bottom" timestamp="1606749952154">
+    <state width="1238" height="164" key="GridCell.Tab.0.bottom" timestamp="1606751485571">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="164" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606749952154" />
-    <state width="1238" height="164" key="GridCell.Tab.0.center" timestamp="1606749952148">
+    <state width="1238" height="164" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1606751485571" />
+    <state width="1238" height="164" key="GridCell.Tab.0.center" timestamp="1606751485570">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="164" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606749952148" />
-    <state width="1238" height="164" key="GridCell.Tab.0.left" timestamp="1606749952147">
+    <state width="1238" height="164" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1606751485570" />
+    <state width="1238" height="164" key="GridCell.Tab.0.left" timestamp="1606751485569">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="164" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606749952147" />
-    <state width="1238" height="164" key="GridCell.Tab.0.right" timestamp="1606749952148">
+    <state width="1238" height="164" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1606751485569" />
+    <state width="1238" height="164" key="GridCell.Tab.0.right" timestamp="1606751485570">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="164" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606749952148" />
+    <state width="1238" height="164" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1606751485570" />
     <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
