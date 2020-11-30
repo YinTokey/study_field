@@ -6,8 +6,12 @@ import (
 )
 
 func main() {
-	// 从配置文件读取配置
-	conf.Init()
+	// 配置初始化
+	err := conf.Init()
+	if err != nil {
+		panic(err)
+		return
+	}
 
 	// 装载路由
 	r := server.NewRouter()

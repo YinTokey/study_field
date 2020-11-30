@@ -14,15 +14,9 @@ func NewPictureService() *PictureService {
 	return &PictureService{
 		dao: dao.NewPictureDao(models.InstanceDB()),
 	}
-
 }
 
-func (s *PictureService) AddPicture(data *models.Picture) error {
-	return s.dao.AddPicture(data)
-}
-
-func (s *PictureService) GetAll() ([]models.Picture, error) {
-	s.dao.GetAll()
-	return nil, nil
+func (s *PictureService) Query(id int) (string, error) {
+	return s.dao.Query(id)
 }
 
