@@ -4,7 +4,6 @@ import (
 	"Week02/services"
 	"database/sql"
 	"errors"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"strconv"
 )
@@ -34,7 +33,7 @@ func QueryPicture(c *gin.Context) {
 	res, err := service.Query(id)
 
 	if errors.Is(err,sql.ErrNoRows) {
-		c.JSON(404, fmt.Sprint(err))
+		c.JSON(404, "can not find this user")
 	} else if err != nil {
 		c.JSON(404, "query error")
 	} else {
