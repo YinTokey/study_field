@@ -71,7 +71,7 @@ func (photo *Photo) SavePhoto() {
 
 		if err := db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4").CreateTable(&Photo{}).Error; err != nil {
 			fmt.Println("建表错误,err", err)
-			panic(err)
+
 		}
 	}
 
@@ -80,7 +80,7 @@ func (photo *Photo) SavePhoto() {
 	err := createDb.Error
 	if err != nil {
 		fmt.Println("新增照片数据错误,err", err)
-		panic(err)
+		
 	}
 	fmt.Println("插入照片成功")
 	fmt.Println(photo.ImageURL)
@@ -95,7 +95,7 @@ func FindAllPhotos() []Photo {
 	err := createDb.Error
 	if err != nil {
 		fmt.Println("查询所有photo数据错误,err", err)
-		panic(err)
+
 	}
 	fmt.Println(len(result))
 	return result
