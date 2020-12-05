@@ -80,7 +80,7 @@ func (photo *Photo) SavePhoto() {
 	err := createDb.Error
 	if err != nil {
 		fmt.Println("新增照片数据错误,err", err)
-		
+
 	}
 	fmt.Println("插入照片成功")
 	fmt.Println(photo.ImageURL)
