@@ -38,7 +38,8 @@ export default {
       // `this` 在方法里指当前 Vue 实例
       console.log(event)
       // var url1 = "https://api.500px.com/v1/photos?feature=popular"
-      var url2 = "http://127.0.0.1:8080/api/v1/papular"
+      //http://localhost:8080/api/v1/papular
+      var url2 = "http://localhost:8080/api/v1/papular"
       //var params = {}
       ax.get(url2)
           .then(response => {

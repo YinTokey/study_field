@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/goinggo/mapstructure"
 	. "go_wallpaper/model"
-	"os"
+	"net/http"
 )
 
 const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
@@ -44,28 +44,28 @@ func (service *PxCollectService) Request500pxPapuplar() []Photo {
 	var info []Photo
 
 	// 网络请求
-	//resp, err := http.Get(pupular_url)
-	//if err != nil {
-	//	panic(err)
-	//}
-	//defer resp.Body.Close()
+	resp, err := http.Get(pupular_url)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
 
 	// 本地测试json
-	filePtr, err := os.Open("./px.json")
-	if err != nil {
-		fmt.Println("文件打开失败 [Err:%s]", err.Error())
-		return info
-	}
-	defer filePtr.Close()
+	//filePtr, err := os.Open("./px.json")
+	//if err != nil {
+	//	fmt.Println("文件打开失败 [Err:%s]", err.Error())
+	//	return info
+	//}
+	//defer filePtr.Close()
 
 	// 初始化请求变量结构
 	formData := make(map[string]interface{})
 
 	// 创建json解码器
-	json.NewDecoder(filePtr).Decode(&formData)
+	//json.NewDecoder(filePtr).Decode(&formData)
 
 	// 调用json包的解析，解析请求body
-	//json.NewDecoder(resp.Body).Decode(&formData)
+	json.NewDecoder(resp.Body).Decode(&formData)
 
 	// 类型强转
 	var photosMapArr []interface{} = formData["photos"].([]interface{})

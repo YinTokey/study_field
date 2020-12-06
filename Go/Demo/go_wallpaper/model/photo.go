@@ -95,7 +95,6 @@ func FindAllPhotos() []Photo {
 	err := createDb.Error
 	if err != nil {
 		fmt.Println("查询所有photo数据错误,err", err)
-
 	}
 	fmt.Println(len(result))
 	return result
