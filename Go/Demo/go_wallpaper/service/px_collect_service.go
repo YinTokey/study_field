@@ -1,6 +1,7 @@
 package service
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/goinggo/mapstructure"
@@ -9,6 +10,9 @@ import (
 )
 
 const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
+
+var ctx = context.Background()
+
 
 type PxCollectService struct {
 
@@ -22,10 +26,7 @@ func NewPxCollectService() PxCollectService {
 // 拉取 500px 首页
 func (service *PxCollectService) Papular() []Photo {
 
-	var info []Photo
-	info = FindAllPhotos()
-
-	return info
+	return FindAllPhotos()
 }
 
 

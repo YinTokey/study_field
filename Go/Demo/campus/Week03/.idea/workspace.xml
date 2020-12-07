@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../campus/Week03/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GitChat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GitChat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week02/api/picture_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week02/api/picture_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week2_proj/mian.go" beforeDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +17,7 @@
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -64,6 +52,16 @@
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
@@ -101,6 +99,17 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
@@ -121,34 +130,34 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1605933072338" />
-    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606049859480">
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607350937420">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom" timestamp="1607326007149">
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1607350937420" />
+    <state width="1238" height="164" key="GridCell.Tab.0.bottom" timestamp="1607245184444">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607326007149" />
-    <state width="1238" height="120" key="GridCell.Tab.0.center" timestamp="1607326007147">
+    <state width="1238" height="164" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607245184444" />
+    <state width="1238" height="164" key="GridCell.Tab.0.center" timestamp="1607245184442">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607326007147" />
-    <state width="1238" height="120" key="GridCell.Tab.0.left" timestamp="1607326007147">
+    <state width="1238" height="164" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607245184442" />
+    <state width="1238" height="164" key="GridCell.Tab.0.left" timestamp="1607245184437">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607326007147" />
-    <state width="1238" height="120" key="GridCell.Tab.0.right" timestamp="1607326007148">
+    <state width="1238" height="164" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607245184437" />
+    <state width="1238" height="164" key="GridCell.Tab.0.right" timestamp="1607245184443">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607326007148" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
+    <state width="1238" height="164" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607245184443" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1607350994672">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1606025608702" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1607004830895">
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607350994672" />
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1606658804166">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1607004830895" />
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1606658804166" />
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1606027406693">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -159,18 +168,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/model/photo.go</url>
-          <line>69</line>
+          <line>70</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/model/photo.go</url>
-          <line>46</line>
+          <line>47</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/conf/conf.go</url>
-          <line>50</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

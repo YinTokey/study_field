@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="" />
+    <list default="true" id="5b99a814-0264-4d0e-a0fd-5bfb7bde65a9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/Week03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../campus/Week03/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../go_wallpaper/dump.rdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week02/api/picture_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week02/api/picture_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../go_wallpaper/service/px_collect_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../go_wallpaper/service/px_collect_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week2_proj/mian.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +61,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">

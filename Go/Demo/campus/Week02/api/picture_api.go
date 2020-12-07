@@ -33,7 +33,7 @@ func QueryPicture(c *gin.Context) {
 	res, err := service.Query(id)
 
 	if errors.Is(err,sql.ErrNoRows) {
-		c.JSON(404, "can not find this user")
+		c.JSON(404, "can not find this author")
 	} else if err != nil {
 		c.JSON(404, "query error")
 	} else {
