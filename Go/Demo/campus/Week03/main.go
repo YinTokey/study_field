@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"golang.org/x/sync/errgroup"
 	"net/http"
@@ -12,45 +13,61 @@ import (
 
 func main() {
 
-	sigs := make(chan os.Signal, 1)
-	done := make(chan bool, 1)
-
-	// 注册通知
-	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
-
-	go func() {
-		sig := <- sigs
-		fmt.Println(sig)
-		done <- true
-
-	}()
-
-	fmt.Println("awaiting signal")
-	<-done
-	fmt.Println("exiting")
-
-	s1 := http.Server{Addr: "8080"}
-	s2 := http.Server{Addr: "8081"}
-
 	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
+	group, groupCtx := errgroup.WithContext(ctx)
 
-	group, _ := errgroup.WithContext(ctx)
+	server := http.Server{Addr: "127.0.0.1:8081"}
 
+	// 启动http server
 	group.Go(func() error {
-		if err := s1.ListenAndServe(); err != nil {
+		fmt.Printf("启动http监听 \n")
+		err := server.ListenAndServe()
+		if err != nil {
+			fmt.Printf("http server 启动错误 %v",err)
 			cancel()
-			return err
 		}
 		return nil
 	})
 
+	// 监听linux 信号
 	group.Go(func() error {
-		if err := s2.ListenAndServe(); err != nil {
+		fmt.Printf("启动linux信号监听 \n")
+		sigs := make(chan os.Signal, 1)
+		signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+
+		select {
+		case sig := <-sigs:
+			fmt.Printf("收到 linux 信号: %s\n", sig)
 			cancel()
-			return err
+		case <-groupCtx.Done():
+			fmt.Printf("关闭linux信号监听\n")
+			return groupCtx.Err()
+		}
+
+		return nil
+	})
+
+
+	group.Go(func() error {
+		select {
+		case <-ctx.Done():
+			fmt.Printf("http 关闭 \n")
+			err := server.Shutdown(ctx)
+			if err != nil {
+				fmt.Printf(" http关闭错误 %v",err)
+				return err
+			}
 		}
 		return nil
 	})
 
+	err := group.Wait()
+
+	if err !=  nil {
+		if errors.Is(err, context.Canceled) {
+			fmt.Printf("context 取消")
+		} else {
+			fmt.Printf("收到错误 %v\n", err)
+		}
+	}
 }
