@@ -23,7 +23,7 @@ func main() {
 		fmt.Printf("启动http监听 \n")
 		err := server.ListenAndServe()
 		if err != nil {
-			fmt.Printf("http server 启动错误 %v",err)
+			fmt.Printf("http server 发生错误 %v \n",err)
 			cancel()
 		}
 		return nil
@@ -37,10 +37,10 @@ func main() {
 
 		select {
 		case sig := <-sigs:
-			fmt.Printf("收到 linux 信号: %s\n", sig)
+			fmt.Printf("\n 收到 linux 信号: %s\n", sig)
 			cancel()
 		case <-groupCtx.Done():
-			fmt.Printf("关闭linux信号监听\n")
+			fmt.Printf(" \n 关闭linux信号监听\n")
 			return groupCtx.Err()
 		}
 
