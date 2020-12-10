@@ -2,6 +2,7 @@ package service
 
 import (
 	"go_wallpaper/model"
+	"go_wallpaper/pkg"
 	"go_wallpaper/serializer"
 
 	"github.com/gin-contrib/sessions"
@@ -23,7 +24,7 @@ func (service *UserLoginService) setSession(c *gin.Context, user model.User) {
 }
 
 // Login 用户登录函数
-func (service *UserLoginService) Login(c *gin.Context) serializer.Response {
+func (service *UserLoginService) Login(c *gin.Context) pkg.Response {
 	var user model.User
 	//
 	//if err := model.db.Where("user_name = ?", service.UserName).First(&user).Error; err != nil {
@@ -31,7 +32,7 @@ func (service *UserLoginService) Login(c *gin.Context) serializer.Response {
 	//}
 
 	if user.CheckPassword(service.Password) == false {
-		return serializer.ParamErr("账号或密码错误", nil)
+		return pkg.ParamErr("账号或密码错误", nil)
 	}
 
 	// 设置session

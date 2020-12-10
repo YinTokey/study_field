@@ -1,6 +1,9 @@
 package serializer
 
-import "go_wallpaper/model"
+import (
+	"go_wallpaper/model"
+	"go_wallpaper/pkg"
+)
 
 // User 用户序列化器
 type User struct {
@@ -25,8 +28,8 @@ func BuildUser(user model.User) User {
 }
 
 // BuildUserResponse 序列化用户响应
-func BuildUserResponse(user model.User) Response {
-	return Response{
+func BuildUserResponse(user model.User) pkg.Response {
+	return pkg.Response{
 		Data: BuildUser(user),
 	}
 }
