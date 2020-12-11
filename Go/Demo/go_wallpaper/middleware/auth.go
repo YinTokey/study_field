@@ -1,10 +1,11 @@
 package middleware
 
 import (
+	"go_wallpaper/model"
+	"go_wallpaper/serializer"
+
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
-	"go_wallpaper/model"
-	"go_wallpaper/pkg"
 )
 
 // CurrentUser 获取登录用户
@@ -32,7 +33,7 @@ func AuthRequired() gin.HandlerFunc {
 			}
 		}
 
-		c.JSON(200, pkg.CheckLogin())
+		c.JSON(200, serializer.CheckLogin())
 		c.Abort()
 	}
 }

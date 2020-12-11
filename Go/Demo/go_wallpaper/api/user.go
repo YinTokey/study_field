@@ -1,7 +1,6 @@
 package api
 
 import (
-	"go_wallpaper/pkg"
 	"go_wallpaper/serializer"
 	"go_wallpaper/service"
 
@@ -43,7 +42,7 @@ func UserLogout(c *gin.Context) {
 	s := sessions.Default(c)
 	s.Clear()
 	s.Save()
-	c.JSON(200, pkg.Response{
+	c.JSON(200, serializer.Response{
 		Code: 0,
 		Msg:  "登出成功",
 	})

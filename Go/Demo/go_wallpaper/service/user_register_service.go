@@ -1,7 +1,7 @@
 package service
 
 import (
-	"go_wallpaper/pkg"
+	"go_wallpaper/serializer"
 )
 
 // UserRegisterService 管理用户注册服务
@@ -13,9 +13,9 @@ type UserRegisterService struct {
 }
 
 // valid 验证表单
-func (service *UserRegisterService) valid() *pkg.Response {
+func (service *UserRegisterService) valid() *serializer.Response {
 	if service.PasswordConfirm != service.Password {
-		return &pkg.Response{
+		return &serializer.Response{
 			Code: 40001,
 			Msg:  "两次输入的密码不相同",
 		}
@@ -43,7 +43,7 @@ func (service *UserRegisterService) valid() *pkg.Response {
 }
 
 // Register 用户注册
-func (service *UserRegisterService) Register() pkg.Response {
+func (service *UserRegisterService) Register() serializer.Response {
 	//user := model.User{
 	//	Username: service.u,
 	//	ni: service.UserName,
@@ -70,5 +70,5 @@ func (service *UserRegisterService) Register() pkg.Response {
 	//}
 	//
 	//return serializer.BuildUserResponse(user)
-	return pkg.ParamErr("注册失败", nil)
+	return serializer.ParamErr("注册失败", nil)
 }

@@ -1,4 +1,4 @@
-package pkg
+package serializer
 
 import "github.com/gin-gonic/gin"
 
