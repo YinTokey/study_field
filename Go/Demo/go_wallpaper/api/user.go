@@ -3,7 +3,6 @@ package api
 import (
 	"go_wallpaper/serializer"
 	"go_wallpaper/service"
-
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 )
