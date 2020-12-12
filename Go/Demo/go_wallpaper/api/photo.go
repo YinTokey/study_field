@@ -8,8 +8,10 @@ import (
 
 // UserRegister 用户注册接口
 func Fetch500pxPapular(c *gin.Context) {
-	fmt.Println("500px fetch .....")
-	var service service.PxCollectService = service.NewPxCollectService()
+	//fmt.Println("500px fetch .....")
+	//var service service.PxCollectService = service.NewPxCollectService()
+	fmt.Println("unsplash fetch ...")
+	service := service.NewUmCollectService()
 
 	if err := c.ShouldBind(&service); err == nil {
 		res := service.Papular()

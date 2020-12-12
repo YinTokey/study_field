@@ -13,7 +13,6 @@ const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
 
 var ctx = context.Background()
 
-
 type PxCollectService struct {
 
 }
