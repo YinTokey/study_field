@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Nodes/micro_service.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +44,13 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/model/px" />
       <recent name="$PROJECT_DIR$/sample/message" />
     </key>
   </component>
@@ -113,26 +116,30 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
-    <state width="1238" height="142" key="GridCell.Tab.0.bottom" timestamp="1607750045811">
+    <state x="350" y="194" key="EditFileWatcherDialog" timestamp="1607759852956">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="142" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607750045811" />
-    <state width="1238" height="142" key="GridCell.Tab.0.center" timestamp="1607750045809">
+    <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
+    <state width="1238" height="166" key="GridCell.Tab.0.bottom" timestamp="1607768430049">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="142" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607750045809" />
-    <state width="1238" height="142" key="GridCell.Tab.0.left" timestamp="1607750045808">
+    <state width="1238" height="166" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607768430049" />
+    <state width="1238" height="166" key="GridCell.Tab.0.center" timestamp="1607768430047">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="142" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607750045808" />
-    <state width="1238" height="142" key="GridCell.Tab.0.right" timestamp="1607750045810">
+    <state width="1238" height="166" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607768430047" />
+    <state width="1238" height="166" key="GridCell.Tab.0.left" timestamp="1607768430046">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="142" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607750045810" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1606025608702">
+    <state width="1238" height="166" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607768430046" />
+    <state width="1238" height="166" key="GridCell.Tab.0.right" timestamp="1607768430048">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1606025608702" />
+    <state width="1238" height="166" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607768430048" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1607767793700">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607767793700" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1607004830895">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -146,12 +153,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <url>file://$PROJECT_DIR$/model/px/photo.go</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <url>file://$PROJECT_DIR$/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>

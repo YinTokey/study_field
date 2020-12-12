@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/goinggo/mapstructure"
-	. "go_wallpaper/model"
+	"go_wallpaper/model/px"
 	"net/http"
 )
 
@@ -14,34 +14,31 @@ const pupular_url = "https://api.500px.com/v1/photos?feature=popular"
 var ctx = context.Background()
 
 type PxCollectService struct {
-
 }
 
 func NewPxCollectService() PxCollectService {
-	return PxCollectService{
-	}
+	return PxCollectService{}
 }
 
 // 拉取 500px 首页
-func (service *PxCollectService) Papular() []Photo {
+func (service *PxCollectService) Papular() []px.Photo {
 
-	return FindAllPhotos()
+	//return px.FindAllPhotos()
+	return nil
 }
 
-
-func (service *PxCollectService) updateToDatabase(photos []Photo) {
+func (service *PxCollectService) updateToDatabase(photos []px.Photo) {
 
 	fmt.Println(len(photos))
 
-	for _, photo := range photos {
-		photo.SavePhoto()
-
-	}
+	//for _, photo := range photos {
+	//	photo.SavePhoto()
+	//
+	//}
 }
 
-
-func (service *PxCollectService) Request500pxPapuplar() []Photo {
-	var info []Photo
+func (service *PxCollectService) Request500pxPapuplar() []px.Photo {
+	var info []px.Photo
 
 	// 网络请求
 	resp, err := http.Get(pupular_url)
@@ -72,11 +69,11 @@ func (service *PxCollectService) Request500pxPapuplar() []Photo {
 
 	//result :=  make([]Photo,0)
 
-	var result []Photo
+	var result []px.Photo
 
 	fmt.Println("准备解析")
 	for _, phMap := range photosMapArr {
-		var photo Photo
+		var photo px.Photo
 		if err := mapstructure.Decode(phMap, &photo); err != nil {
 			fmt.Println(err)
 		}
@@ -88,13 +85,12 @@ func (service *PxCollectService) Request500pxPapuplar() []Photo {
 		photo.ImageURL = str
 
 		//fmt.Println(str)
-		result = append(result,photo)
+		result = append(result, photo)
 
-		photo.SavePhoto()
+		//photo.SavePhoto()
 	}
 
 	info = result
-
 
 	//json.Unmarshal([]byte(jsonStr), &info)
 

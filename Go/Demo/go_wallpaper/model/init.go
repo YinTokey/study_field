@@ -18,7 +18,6 @@ var db *gorm.DB
 // Database 在中间件中初始化mysql链接
 func Database(connString string) {
 
-
 	fmt.Println("开始连接数据库...")
 	fmt.Println(connString)
 
@@ -42,7 +41,6 @@ func Database(connString string) {
 
 	// SetConnMaxLifetime 设置了连接可复用的最大时间。
 	db.DB().SetConnMaxLifetime(time.Hour)
-
 
 	//migration()
 }

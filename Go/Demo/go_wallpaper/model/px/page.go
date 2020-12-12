@@ -1,4 +1,4 @@
-package model
+package px
 
 import "github.com/jinzhu/gorm"
 
@@ -10,6 +10,5 @@ type Page struct {
 	Feature     string `json:"feature"`
 	Filters     struct {
 	} `json:"filters"`
-	Photos      []Photo `json:"photos"`
-
+	Photos []Photo `json:"photos"`
 }

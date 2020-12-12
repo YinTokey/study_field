@@ -1,4 +1,4 @@
-package model
+package px
 
 import "github.com/jinzhu/gorm"
 
