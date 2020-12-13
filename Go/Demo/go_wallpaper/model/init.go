@@ -44,3 +44,7 @@ func Database(connString string) {
 
 	//migration()
 }
+
+func InstanceDB() *gorm.DB {
+	return db
+}

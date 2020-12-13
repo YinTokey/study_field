@@ -1,8 +1,7 @@
 package service
 
 import (
-	"go_wallpaper/job/unsplash"
-	"go_wallpaper/model/px"
+	"go_wallpaper/model"
 )
 
 // https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
@@ -15,10 +14,10 @@ func NewUmCollectService() UmCollectService {
 	return UmCollectService{}
 }
 
-func (service *UmCollectService) Papular() []px.Photo {
+func (service *UmCollectService) Papular() []model.Picture {
 
-	job := unsplash.NewUnsplashJob()
-	job.FetchPics()
+	//job := unsplash.NewUnsplashJob()
+	//job.FetchPics()
 
 	return nil
 }

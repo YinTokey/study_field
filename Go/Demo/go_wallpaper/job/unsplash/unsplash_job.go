@@ -3,6 +3,7 @@ package unsplash
 import (
 	"encoding/json"
 	"fmt"
+	"go_wallpaper/daos"
 	"go_wallpaper/model"
 	"io/ioutil"
 	"net/http"
@@ -23,10 +24,12 @@ func NewUnsplashJob() *UnsplashJob {
 func (u *UnsplashJob) FetchPics() {
 	key := os.Getenv("UNSPLASH_ACCESS_KEY")
 
-	for i := 0; i < 3; i++ {
+	d := daos.NewPictureDao(model.InstanceDB())
+
+	for i := 100; i < 200; i++ {
 		url := unsplash_base_url + "/photos/" + "?client_id=" + key + "&per_page=100" + "&page=" + strconv.Itoa(i)
 
-		fmt.Println("开始请求数据, url = ", url)
+		fmt.Println("开始请求数据, page = ", i)
 
 		// 网络请求
 		resp, err := http.Get(url)
@@ -54,19 +57,24 @@ func (u *UnsplashJob) FetchPics() {
 			pic.PictureId = picMap["id"].(string)
 			pic.Height = picMap["height"].(float64)
 			pic.Width = picMap["width"].(float64)
-			pic.Name = picMap["alt_description"].(string)
 
 			desc := picMap["description"]
 			if desc != nil {
 				pic.Description = desc.(string)
 			}
 
+			name := picMap["alt_description"]
+			if name != nil {
+				pic.Name = name.(string)
+			}
+
 			pic.Likes = picMap["likes"].(float64)
 			pic.ImageUrl = urls["small"].(string)
 			pic.LargeImageUrl = urls["full"].(string)
 			pic.Author = user["name"].(string)
-			//pic.UpdatedAt = picMap["updated_at"]
 			//pic.Categories = picMap["categories"].([]string)
+
+			d.AddPicture(pic)
 
 			result = append(result, pic)
 		}
