@@ -17,6 +17,8 @@ func Fetch500pxPapular(c *gin.Context) {
 	page, _ := strconv.Atoi(c.Query("page"))
 	pageSize, _ := strconv.Atoi(c.Query("pageSize"))
 
+	fmt.Println("page %s , page sie %s", page, pageSize)
+
 	if err := c.ShouldBind(&service); err == nil {
 		res, err := service.Papular(page, pageSize)
 		if err != nil {

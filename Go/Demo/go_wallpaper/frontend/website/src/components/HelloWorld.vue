@@ -2,9 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
 
-    <button v-on:click="greet">fetch 500 px pupular</button>
-
-    <ul>
+    <ul class="prev">
       <li v-for="v in dataSource" :key="v.value">
         <img v-bind:src="v.image_url" alt="">
         <h4>{{v.name}}</h4>
@@ -14,8 +12,10 @@
       </li>
     </ul>
 
-  </div>
+    <button v-on:click="greet">fetch unsplash pupular</button>
 
+
+  </div>
 
 </template>
 
@@ -25,42 +25,54 @@ import ax from 'axios'
 
 ax.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
-
 export default {
+
   name: 'HelloWorld',
   props: {
     msg: String,
-    dataSource: [],
+    dataSource: Array,
+    pageInfo :{
+      page: 0,
+      pageSize: 0,
+    },
   },
 
   methods: {
     greet: function (event) {
       // `this` 在方法里指当前 Vue 实例
+
       console.log(event)
-      // var url1 = "https://api.500px.com/v1/photos?feature=popular"
-      //http://localhost:8080/api/v1/papular
+
+      if (this.pageInfo === undefined) {
+        this.pageInfo = {page:1,pageSize:10}
+      }
+      if (this.dataSource === undefined) {
+        this.dataSource = new Array()
+      }
+
       var url2 = "http://localhost:8080/api/v1/papular"
-      //var params = {}
-      ax.get(url2)
+      var param = {"page":this.pageInfo.page,"pageSize":this.pageInfo.pageSize}
+
+      console.log(param)
+
+      ax.get(url2,{params:param})
           .then(response => {
             //this.info = response.data.bpi
             var info = response.data
-            this.dataSource = info
+
+            this.dataSource = this.dataSource.concat(info)
             console.log(info)
+            this.pageInfo.page += 1
           })
           .catch(error => {
             console.log(error)
             //this.errored = true
           })
+    },
 
-
-
-
-    }
   }
 
 }
-
 
 
 </script>
