@@ -19,9 +19,16 @@ func NewPictureDao(db *gorm.DB) *PictureDao {
 }
 
 /*查询*/
-func (d *PictureDao) GetPictures(page int, pageSize int) (error, []model.Picture) {
+func (d *PictureDao) GetPictures(page int, pageSize int) ([]model.Picture, error) {
 
-	return nil, nil
+	Pics := []model.Picture{}
+
+	err := d.db.Scopes(Paginate(page, pageSize)).Find(&Pics).Error
+	if err != nil {
+		return nil, err
+	}
+
+	return Pics, nil
 }
 
 /*添加*/
@@ -61,4 +68,23 @@ func (d *PictureDao) CreatePicTable() {
 		}
 	}
 
+}
+
+func Paginate(page int, pageSize int) func(db *gorm.DB) *gorm.DB {
+	//	fmt.Println("page info --- %v ", page, pageSize)
+	return func(db *gorm.DB) *gorm.DB {
+		if page == 0 {
+			page = 1
+		}
+
+		switch {
+		case pageSize > 100:
+			pageSize = 100
+		case pageSize <= 0:
+			pageSize = 10
+		}
+
+		offset := (page - 1) * pageSize
+		return db.Offset(offset).Limit(pageSize)
+	}
 }

@@ -1,6 +1,7 @@
 package service
 
 import (
+	"go_wallpaper/daos"
 	"go_wallpaper/model"
 )
 
@@ -14,10 +15,11 @@ func NewUmCollectService() UmCollectService {
 	return UmCollectService{}
 }
 
-func (service *UmCollectService) Papular() []model.Picture {
+func (service *UmCollectService) Papular(page int, pageSize int) ([]model.Picture, error) {
 
 	//job := unsplash.NewUnsplashJob()
 	//job.FetchPics()
+	d := daos.NewPictureDao(model.InstanceDB())
 
-	return nil
+	return d.GetPictures(page, pageSize)
 }
