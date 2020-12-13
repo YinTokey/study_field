@@ -1,0 +1,30 @@
+syntax = "proto3";
+package message;
+
+//请求参数
+message UnPictureRequest {
+  int64 page = 1;
+  int64 pageSize = 2;
+}
+
+// DTO
+message UnPictureInfo {
+  message Picture {
+    string PictureId = 1;
+    string ImageUrl = 2;
+    string LargeImageUrl = 3;
+    string Description = 4;
+    string Author = 5;
+    string Name = 6;
+    float  Width = 7;
+    float  Height = 8;
+    float  Likes = 9;
+  }
+
+  repeated Picture Piclist = 1;
+}
+
+//订单服务service定义
+service OrderService{
+  rpc GetUnPictureInfo(UnPictureRequest) returns (UnPictureInfo);
+}
