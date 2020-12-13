@@ -6,12 +6,15 @@ import (
 
 type Picture struct {
 	gorm.Model
-	PictureId     int
+	PictureId     string
 	ImageUrl      string
 	LargeImageUrl string
 	Name          string
 	Description   string
 	Author        string
-	Width         int
-	Height        int
+	//UpdateAt      time.Time
+	Width      float64
+	Height     float64
+	Likes      float64
+	Categories []string
 }

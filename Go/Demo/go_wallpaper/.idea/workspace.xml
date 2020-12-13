@@ -33,6 +33,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -108,6 +109,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607832912113">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607832912113" />
     <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605933072338">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -120,25 +125,34 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="166" key="GridCell.Tab.0.bottom" timestamp="1607768430049">
+    <state width="1238" height="155" key="GridCell.Tab.0.bottom" timestamp="1607833185108">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="166" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607768430049" />
-    <state width="1238" height="166" key="GridCell.Tab.0.center" timestamp="1607768430047">
+    <state width="1238" height="155" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607833185108" />
+    <state width="1238" height="241" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1607824918137" />
+    <state width="1238" height="155" key="GridCell.Tab.0.center" timestamp="1607833185106">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="166" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607768430047" />
-    <state width="1238" height="166" key="GridCell.Tab.0.left" timestamp="1607768430046">
+    <state width="1238" height="155" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607833185106" />
+    <state width="1238" height="241" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1607824918128" />
+    <state width="1238" height="155" key="GridCell.Tab.0.left" timestamp="1607833185106">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="166" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607768430046" />
-    <state width="1238" height="166" key="GridCell.Tab.0.right" timestamp="1607768430048">
+    <state width="1238" height="155" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607833185106" />
+    <state width="1238" height="241" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1607824918125" />
+    <state width="1238" height="155" key="GridCell.Tab.0.right" timestamp="1607833185107">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="166" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607768430048" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1607767793700">
+    <state width="1238" height="155" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607833185107" />
+    <state width="1238" height="241" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1607824918137" />
+    <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
+    <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607829811854" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1607830727246">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607830727246" />
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607767793700" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1607004830895">
       <screen x="0" y="25" width="1280" height="775" />
