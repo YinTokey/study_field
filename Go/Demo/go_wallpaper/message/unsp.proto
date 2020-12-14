@@ -25,6 +25,6 @@ message UnPictureInfo {
 }
 
 //订单服务service定义
-service OrderService{
+service UnPictureService{
   rpc GetUnPictureInfo(UnPictureRequest) returns (UnPictureInfo);
 }
