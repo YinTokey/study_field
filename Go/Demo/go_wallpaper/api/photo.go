@@ -12,12 +12,18 @@ func Fetch500pxPapular(c *gin.Context) {
 	//fmt.Println("500px fetch .....")
 	//var service service.PxCollectService = service.NewPxCollectService()
 	fmt.Println("unsplash fetch ...")
-	service := service.NewUmCollectService()
 
 	page, _ := strconv.Atoi(c.Query("page"))
 	pageSize, _ := strconv.Atoi(c.Query("pageSize"))
 
 	fmt.Println("page %s , page sie %s", page, pageSize)
+
+	fetchFromGRPC(c, page, pageSize)
+
+}
+
+func fetchFromServcie(c *gin.Context, page int, pageSize int) {
+	service := service.NewUmCollectService()
 
 	if err := c.ShouldBind(&service); err == nil {
 		res, err := service.Papular(page, pageSize)
@@ -30,4 +36,9 @@ func Fetch500pxPapular(c *gin.Context) {
 	} else {
 		c.JSON(200, ErrorResponse(err))
 	}
+
+}
+
+func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
+
 }
