@@ -2,6 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/OWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.bm.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/application.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/db.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/grpc.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/http.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/memcache.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/redis.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao.bts.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/db.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/mc.cache.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/mc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/redis.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/wire.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/wire_gen.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/app.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/wire.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/wire_gen.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/model/model.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/server/grpc/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/server/http/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/service/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/0_db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/1_data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/application.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/db.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/docker-compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/grpc.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/http.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/memcache.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/redis.toml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Nodes/micro_service.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
