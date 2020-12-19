@@ -1,9 +1,11 @@
 package api
 
 import (
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go_wallpaper/service"
+	"go_wallpaper/internal/service"
+	"google.golang.org/grpc"
 	"strconv"
 )
 
@@ -34,11 +36,29 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 		}
 
 	} else {
-		c.JSON(200, ErrorResponse(err))
+		c.JSON(200, err)
 	}
 
 }
 
 func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 
+	//1、Dail连接
+	conn, err := grpc.Dial("localhost:8090", grpc.WithInsecure())
+	if err != nil {
+		panic(err.Error())
+	}
+	defer conn.Close()
+
+	client := NewUnPictureServiceClient(conn)
+
+	request := &UnPictureRequest{Page: 1, PageSize: 10}
+
+	result, err := client.GetUnPictureInfo(context.Background(), request)
+
+	if err != nil {
+		fmt.Println("grpc 请求错误", err)
+	}
+
+	fmt.Println(result)
 }

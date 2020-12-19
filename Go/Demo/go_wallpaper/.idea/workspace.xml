@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/OWNERS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.bm.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/api.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/api/client.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/cmd/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/application.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/db.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/grpc.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/http.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/memcache.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/configs/redis.toml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../campus/Week04/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../campus/Week04/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao.bts.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/dao_test.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/db.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/mc.cache.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/mc.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/redis.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/wire.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/dao/wire_gen.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/app.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/wire.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/di/wire_gen.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/model/model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/server/grpc/server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/server/http/server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/internal/service/service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/0_db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/1_data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/application.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/db.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/docker-compose.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/grpc.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/http.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/memcache.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/test/redis.toml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Nodes/micro_service.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,18 +52,29 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/model/px" />
-      <recent name="$PROJECT_DIR$/sample/message" />
+      <recent name="$PROJECT_DIR$/cmd" />
+      <recent name="$PROJECT_DIR$/internal" />
+      <recent name="$PROJECT_DIR$/daos" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
+  <component name="RunManager" selected="Go Build.go build go_wallpaper">
     <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/sample/client.go" />
       <package value="go_lottery" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_wallpaper" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/unsplash_server.go" />
+      <package value="go_wallpaper" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -115,7 +87,7 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build server.go" type="GoApplicationRunConfiguration" factoryName="Go Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
       <EXTENSION ID="net.ashald.envfile">
@@ -129,16 +101,27 @@
         </ENTRIES>
       </EXTENSION>
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/sample/server.go" />
-      <package value="go_lottery" />
+      <filePath value="$PROJECT_DIR$/server/unsplash_server.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build unsplash_server.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/unsplash_server.go" />
+      <package value="go_wallpaper" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go_wallpaper" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build unsplash_server.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build client.go" />
-        <item itemvalue="Go Build.go build server.go" />
       </list>
     </recent_temporary>
   </component>
@@ -166,25 +149,25 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1608122878404">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1608349577234">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607844921791" />
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608349577234" />
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1608122878404" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1608122878402">
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1608349577233">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607844921788" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608349577233" />
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1608122878402" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1608122878402">
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1608349577231">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607844921784" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608349577231" />
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1608122878402" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1608122878403">
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1608349577233">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607844921790" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608349577233" />
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1608122878403" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
@@ -208,17 +191,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/model/px/photo.go</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/conf/conf.go</url>
+          <url>file://$PROJECT_DIR$/configs/conf.go</url>
           <line>50</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>

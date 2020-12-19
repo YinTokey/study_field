@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"go_wallpaper/model"
+	"go_wallpaper/internal/model"
 	"go_wallpaper/serializer"
 
 	"github.com/gin-contrib/sessions"
