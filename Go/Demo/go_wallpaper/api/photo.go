@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"go_wallpaper/internal/model"
 	"go_wallpaper/internal/service"
 	"google.golang.org/grpc"
 	"strconv"
@@ -60,5 +61,22 @@ func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 		fmt.Println("grpc 请求错误", err)
 	}
 
-	fmt.Println(result)
+	var list []*model.Picture
+
+	for _, data := range result.Piclist {
+		var pic = &model.Picture{}
+		pic.PictureId = data.PictureId
+		pic.ImageUrl = data.ImageUrl
+		pic.LargeImageUrl = data.LargeImageUrl
+		pic.Author = data.Author
+		pic.Width = float64(data.Width)
+		pic.Height = float64(data.Height)
+		pic.Likes = float64(data.Likes)
+		pic.Name = data.Name
+		pic.Description = data.Description
+		list = append(list, pic)
+	}
+
+	c.JSON(200, list)
+
 }

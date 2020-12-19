@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"go_wallpaper/internal/model"
-	"go_wallpaper/serializer"
+	//"go_wallpaper/serializer"
 
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
@@ -33,7 +33,7 @@ func AuthRequired() gin.HandlerFunc {
 			}
 		}
 
-		c.JSON(200, serializer.CheckLogin())
+		//c.JSON(200, serializer.CheckLogin())
 		c.Abort()
 	}
 }

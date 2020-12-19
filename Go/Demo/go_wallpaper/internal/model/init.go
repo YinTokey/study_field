@@ -25,7 +25,9 @@ func Database(connString string) {
 	db = opendb
 	db.LogMode(true)
 
-	fmt.Println("数据库初始化完成...")
+	fmt.Println("数据库初始化完成... \n")
+
+	fmt.Println(db)
 
 	// Error
 	if err != nil {

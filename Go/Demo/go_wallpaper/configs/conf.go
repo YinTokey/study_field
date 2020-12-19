@@ -34,9 +34,9 @@ func Init() {
 	}
 
 	// 读取翻译文件
-	if err := LoadLocales("configs/locales/zh-cn.yaml"); err != nil {
-		pkg.Log().Panic("翻译文件加载失败", err)
-	}
+	//if err := LoadLocales("configs/locales/zh-cn.yaml"); err != nil {
+	//	pkg.Log().Panic("翻译文件加载失败", err)
+	//}
 
 	dbUsername := viper.Get("db.username")
 	dbPassword := viper.Get("db.password")

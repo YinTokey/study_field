@@ -11,6 +11,7 @@ type PictureDao struct {
 }
 
 func NewPictureDao(db *gorm.DB) *PictureDao {
+	fmt.Println("new picture dao ", db)
 	d := &PictureDao{
 		db: db,
 	}
