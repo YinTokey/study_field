@@ -13,8 +13,6 @@ import (
 type UnPictureServiceImpl struct {
 }
 
-//func (os *OrderServiceImpl) GetOrderInfo(ctx context.Context, request *message.OrderRequest) (*message.OrderInfo, error) {
-
 func (us *UnPictureServiceImpl) GetUnPictureInfo(ctx context.Context, request *api.UnPictureRequest) (*api.UnPictureInfo, error) {
 	page := request.Page
 	pageSize := request.PageSize
