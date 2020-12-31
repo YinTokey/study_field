@@ -1,7 +1,7 @@
 package di
 
 import (
-	"go_wallpaper/internal/server/http"
+	"go_wallpaper/internal/picture/server/http"
 )
 
 func InitApp() error {

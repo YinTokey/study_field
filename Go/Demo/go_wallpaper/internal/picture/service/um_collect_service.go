@@ -1,8 +1,8 @@
 package service
 
 import (
-	"go_wallpaper/internal/dao"
-	"go_wallpaper/internal/model"
+	"go_wallpaper/internal/picture/dao"
+	"go_wallpaper/internal/picture/model"
 )
 
 // https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY

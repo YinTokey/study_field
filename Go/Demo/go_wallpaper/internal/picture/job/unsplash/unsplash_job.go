@@ -3,8 +3,8 @@ package unsplash
 import (
 	"encoding/json"
 	"fmt"
-	"go_wallpaper/internal/dao"
-	"go_wallpaper/internal/model"
+	"go_wallpaper/internal/picture/dao"
+	"go_wallpaper/internal/picture/model"
 	"io/ioutil"
 	"net/http"
 	"os"

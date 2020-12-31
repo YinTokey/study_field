@@ -3,7 +3,7 @@ package dao
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
-	"go_wallpaper/internal/model"
+	"go_wallpaper/internal/picture/model"
 )
 
 type PictureDao struct {

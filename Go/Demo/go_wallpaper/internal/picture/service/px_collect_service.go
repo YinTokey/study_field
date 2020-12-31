@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/goinggo/mapstructure"
-	"go_wallpaper/internal/model/px"
+	"go_wallpaper/internal/picture/model/px"
 	"net/http"
 )
 

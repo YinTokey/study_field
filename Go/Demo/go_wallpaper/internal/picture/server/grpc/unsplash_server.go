@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"go_wallpaper/api"
 	"go_wallpaper/configs"
-	"go_wallpaper/internal/service"
+	"go_wallpaper/internal/picture/service"
 	"google.golang.org/grpc"
 	"net"
 )

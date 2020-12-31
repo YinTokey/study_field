@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go_wallpaper/internal/model"
-	"go_wallpaper/internal/service"
+	"go_wallpaper/internal/picture/model"
+	"go_wallpaper/internal/picture/service"
 	"google.golang.org/grpc"
 	"strconv"
 )

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week04/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week04/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Nodes/micro_service.md" beforeDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,26 +165,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1608362885945">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1609417277139">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608362885945" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1608353113272" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1608362885944">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1609417277139" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1609417277137">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608362885944" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1608353113271" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1608362885943">
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1609417277137" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1609417277133">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608362885943" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1608353113271" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1608362885944">
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1609417277133" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1609417277138">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608362885944" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1608353113272" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1609417277138" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -212,12 +208,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/internal/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/internal/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
