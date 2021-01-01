@@ -1,6 +1,7 @@
 package service
 
 import (
+	"fmt"
 	"go_wallpaper/internal/account/dao"
 	"go_wallpaper/internal/account/model"
 	"go_wallpaper/internal/account/serializer"
@@ -48,14 +49,17 @@ func (service *UserRegisterService) valid() *serializer.Response {
 
 // Register 用户注册
 func (service *UserRegisterService) Register() serializer.Response {
+
 	user := model.User{
-		Nickname: service.Nickname,
-		UserName: service.UserName,
-		Status:   model.Active,
+		Nickname:       service.Nickname,
+		UserName:       service.UserName,
+		PasswordDigest: service.Password,
+		Status:         model.Active,
 	}
 
 	// 表单验证
 	if err := service.valid(); err != nil {
+		fmt.Println(err)
 		return *err
 	}
 

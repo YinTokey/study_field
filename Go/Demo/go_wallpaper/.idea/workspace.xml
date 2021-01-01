@@ -165,26 +165,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1609476151782">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1609480821138">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1609417277139" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1609476151780">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1609480821138" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1609480821136">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1609417277137" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1609476151779">
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1609480821136" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1609480821135">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1609417277133" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1609476151781">
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1609480821135" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1609480821137">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1609417277138" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1609480821137" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -194,10 +194,10 @@
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607767793700" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1607004830895">
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1609480696897">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1607004830895" />
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1609480696897" />
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1608358807628">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -221,6 +221,11 @@
           <url>file://$PROJECT_DIR$/configs/conf.go</url>
           <line>50</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

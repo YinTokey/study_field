@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"go_wallpaper/internal/account/serializer"
@@ -9,14 +10,18 @@ import (
 
 // UserRegister 用户注册接口
 func UserRegister(c *gin.Context) {
-	var service service.UserRegisterService
-	if err := c.ShouldBind(&service); err == nil {
-		res := service.Register()
-		c.JSON(200, res)
-	} else {
-		//c.JSON(200, serializer.ErrorResponse(err))
-		c.JSON(200, err)
+
+	service := service.UserRegisterService{
+		UserName:        c.PostForm("user_name"),
+		Password:        c.PostForm("password"),
+		PasswordConfirm: c.PostForm("password_confirm"),
+		Nickname:        c.PostForm("nickname"),
 	}
+
+	fmt.Println("start register")
+	res := service.Register()
+	c.JSON(200, res)
+
 }
 
 // UserLogin 用户登录接口

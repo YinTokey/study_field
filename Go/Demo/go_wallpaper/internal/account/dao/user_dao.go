@@ -75,6 +75,7 @@ func (d *UserDao) CheckNickNameExist(nickname string) bool {
 
 /// 创建用户
 func (d *UserDao) CreateUser(user *model.User) error {
+	fmt.Println("CreateUser")
 	if err := d.db.Create(&user).Error; err != nil {
 		return err
 	}
