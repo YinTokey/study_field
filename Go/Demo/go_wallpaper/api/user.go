@@ -26,14 +26,14 @@ func UserRegister(c *gin.Context) {
 
 // UserLogin 用户登录接口
 func UserLogin(c *gin.Context) {
-	var service service.UserLoginService
-	if err := c.ShouldBind(&service); err == nil {
-		res := service.Login(c)
-		c.JSON(200, res)
-	} else {
-		//c.JSON(200, serializer.ErrorResponse(err))
-		c.JSON(200, err)
+
+	service := service.UserLoginService{
+		UserName: c.PostForm("user_name"),
+		Password: c.PostForm("password"),
 	}
+	res := service.Login(c)
+	c.JSON(200, res)
+
 }
 
 // UserMe 用户详情
@@ -45,6 +45,7 @@ func UserMe(c *gin.Context) {
 
 // UserLogout 用户登出
 func UserLogout(c *gin.Context) {
+	fmt.Println("用户登出")
 	s := sessions.Default(c)
 	s.Clear()
 	s.Save()

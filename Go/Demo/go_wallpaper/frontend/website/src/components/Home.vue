@@ -1,10 +1,10 @@
 <template>
-  <div class="hello">
+  <div id="Home">
     <h1>{{ msg }}</h1>
 
     <ul class="prev">
       <li v-for="v in dataSource" :key="v.value">
-        <img v-bind:src="v.image_url" alt="">
+        <img v-bind:src="v.image_url" alt="" v-on:click="detail(v)">
         <h4>{{v.name}}</h4>
         <!--
         <p>{{v.id}}</p>
@@ -22,12 +22,17 @@
 <script>
 
 import ax from 'axios'
+//import Detail from "@/components/Detail";
 
+
+// 跨域配置
 ax.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+
 
 export default {
 
-  name: 'HelloWorld',
+  name: 'Home',
+  components: {},
   props: {
     msg: String,
     dataSource: Array,
@@ -69,6 +74,14 @@ export default {
             //this.errored = true
           })
     },
+
+
+    detail: function (event) {
+      console.log(event)
+      //点击传值给父组件，通过$emit传递，第一个参数messageData相当于传播的媒介，Message为需要传递的值，后面也可以传递多个参数
+      this.$emit('messageData',"/detail")
+
+    }
 
   }
 

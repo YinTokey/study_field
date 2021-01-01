@@ -21,8 +21,8 @@ func Fetch500pxPapular(c *gin.Context) {
 
 	fmt.Println("page %s , page sie %s", page, pageSize)
 
-	fetchFromGRPC(c, page, pageSize)
-
+	//fetchFromGRPC(c, page, pageSize)
+	fetchFromServcie(c, page, pageSize)
 }
 
 func fetchFromServcie(c *gin.Context, page int, pageSize int) {

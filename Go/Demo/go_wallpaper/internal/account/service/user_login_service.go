@@ -28,13 +28,13 @@ func (service *UserLoginService) Login(c *gin.Context) serializer.Response {
 	//var user model.User
 	d := dao.NewUserDao(pkg.InstanceDB())
 
-	user, err := d.GetUser(service.UserName)
+	user, err := d.GetUserByName(service.UserName)
 	if err != nil {
-		return serializer.ParamErr("账号或密码错误", nil)
+		return serializer.ParamErr("账号不存在", nil)
 	}
 
 	if d.CheckPassword(user, service.Password) == false {
-		return serializer.ParamErr("账号或密码错误", nil)
+		return serializer.ParamErr("密码错误", nil)
 	}
 
 	// 设置session

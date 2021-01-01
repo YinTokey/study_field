@@ -41,6 +41,13 @@ func (d *UserDao) GetUser(ID interface{}) (model.User, error) {
 	return user, result.Error
 }
 
+func (d *UserDao) GetUserByName(name string) (model.User, error) {
+
+	var user model.User
+	result := d.db.Where("user_name = ?", name).First(&user)
+	return user, result.Error
+}
+
 // SetPassword 设置密码
 func (d *UserDao) SetPassword(user model.User, password string) error {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), model.PassWordCost)
@@ -53,8 +60,9 @@ func (d *UserDao) SetPassword(user model.User, password string) error {
 
 // CheckPassword 校验密码
 func (d *UserDao) CheckPassword(user model.User, password string) bool {
-	err := bcrypt.CompareHashAndPassword([]byte(user.PasswordDigest), []byte(password))
-	return err == nil
+	//err := bcrypt.CompareHashAndPassword([]byte(user.PasswordDigest), []byte(password))
+
+	return user.PasswordDigest == password
 }
 
 /// 检查用户名是否存在
