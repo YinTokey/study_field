@@ -3,6 +3,7 @@ package service
 import (
 	"go_wallpaper/internal/picture/dao"
 	"go_wallpaper/internal/picture/model"
+	"go_wallpaper/pkg"
 )
 
 // https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
@@ -19,7 +20,7 @@ func (service *UmCollectService) Papular(page int, pageSize int) ([]model.Pictur
 
 	//job := unsplash.NewUnsplashJob()
 	//job.FetchPics()
-	d := dao.NewPictureDao(model.InstanceDB())
+	d := dao.NewPictureDao(pkg.InstanceDB())
 
 	return d.GetPictures(page, pageSize)
 }

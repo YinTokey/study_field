@@ -1,7 +1,11 @@
 package middleware
 
 import (
-	"go_wallpaper/internal/picture/model"
+	"go_wallpaper/internal/account/dao"
+	"go_wallpaper/internal/account/serializer"
+	//"go_wallpaper/internal/picture/model"
+	"go_wallpaper/internal/account/model"
+	"go_wallpaper/pkg"
 	//"go_wallpaper/serializer"
 
 	"github.com/gin-contrib/sessions"
@@ -13,8 +17,9 @@ func CurrentUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		session := sessions.Default(c)
 		uid := session.Get("user_id")
+		d := dao.NewUserDao(pkg.InstanceDB())
 		if uid != nil {
-			user, err := model.GetUser(uid)
+			user, err := d.GetUser(uid)
 			if err == nil {
 				c.Set("user", &user)
 			}
@@ -33,7 +38,7 @@ func AuthRequired() gin.HandlerFunc {
 			}
 		}
 
-		//c.JSON(200, serializer.CheckLogin())
+		c.JSON(200, serializer.CheckLogin())
 		c.Abort()
 	}
 }

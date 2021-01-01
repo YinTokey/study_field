@@ -1,8 +1,7 @@
-package model
+package pkg
 
 import (
 	"fmt"
-	"go_wallpaper/pkg"
 	"time"
 
 	//"gorm.io/driver/mysql"
@@ -31,7 +30,7 @@ func Database(connString string) {
 
 	// Error
 	if err != nil {
-		pkg.Log().Panic("连接数据库不成功", err)
+		Log().Panic("连接数据库不成功", err)
 	}
 	//设置连接池
 

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"go_wallpaper/internal/picture/dao"
 	"go_wallpaper/internal/picture/model"
+	"go_wallpaper/pkg"
 	"io/ioutil"
 	"net/http"
 	"os"
@@ -24,7 +25,7 @@ func NewUnsplashJob() *UnsplashJob {
 func (u *UnsplashJob) FetchPics() {
 	key := os.Getenv("UNSPLASH_ACCESS_KEY")
 
-	d := dao.NewPictureDao(model.InstanceDB())
+	d := dao.NewPictureDao(pkg.InstanceDB())
 
 	for i := 100; i < 200; i++ {
 		url := unsplash_base_url + "/photos/" + "?client_id=" + key + "&per_page=100" + "&page=" + strconv.Itoa(i)
