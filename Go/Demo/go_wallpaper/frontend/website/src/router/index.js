@@ -5,20 +5,23 @@ import Detail from '@/components/Detail';
 
 Vue.use(Router);
 
-const originalPush = Router.prototype.push
-Router.prototype.push = function push(location) {
-    return originalPush.call(this, location).catch(err => err)
-}
-
 export default new Router({
+    mode: 'history',
     routes: [
         {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
             path: '/home',
+            name: 'home',
             component: Home
         },
         {
             path: '/detail',
+            name: 'detail',
             component: Detail
         }
     ]
-});
+})

@@ -1,18 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from "@/App"
 import router from "./router";
+import store from './store'
 
 Vue.config.productionTip = false
-
-// 路由跳转
-Vue.prototype.$goRoute = function (index) {
-  console.log(index)
-  this.$router.push(index)
-}
 
 new Vue({
   el: '#app',
   router,
+  store,  // 全局使用vuex
   render: h => h(App)
 })
-

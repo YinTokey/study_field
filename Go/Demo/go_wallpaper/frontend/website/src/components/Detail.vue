@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h2 class="text-center">haha</h2>
+    <h2 class="text-center">Detail page</h2>
   </div>
 </template>
 
 <script>
+
+//import { mapGetters } from 'vuex'
+
+
 export default {
   name: 'Detail',
 
