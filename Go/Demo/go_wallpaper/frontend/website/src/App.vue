@@ -9,21 +9,17 @@
 import Home from './components/Home.vue'
 //import Detail from './components/Detail.vue'
 
-
 export default {
   name: 'app',
   components: {
     Home
   },
-  data(){
-    return{
-      inpMessage:'',
-      clickData:''
-    }
-  },
+
   methods : {
+    // 接收来自 Home发送的消息
     getData(val) {
       console.log(val)
+      this.$router.push(val)
     }
   }
 }

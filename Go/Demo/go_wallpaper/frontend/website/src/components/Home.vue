@@ -76,8 +76,8 @@ export default {
     },
 
 
-    detail: function (event) {
-      console.log(event)
+    detail: function () {
+      //console.log(event)
       //点击传值给父组件，通过$emit传递，第一个参数messageData相当于传播的媒介，Message为需要传递的值，后面也可以传递多个参数
       this.$emit('messageData',"/detail")
 
