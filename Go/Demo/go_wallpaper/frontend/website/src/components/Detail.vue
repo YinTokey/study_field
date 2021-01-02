@@ -1,16 +1,23 @@
 <template>
   <div>
-    <h2 class="text-center">Detail page</h2>
+    <img v-bind:src="info.image_url" />
+    <h4>{{info.name}}</h4>
+    <h4>Author: {{info.author}}</h4>
+
   </div>
 </template>
 
 <script>
 
-//import { mapGetters } from 'vuex'
+import {mapGetters} from 'vuex'
 
-
-export default {
+export default{
   name: 'Detail',
-
+  computed : mapGetters({
+    // 获取传递的json信息
+    info:'GET_INFO'
+  })
 }
+
+
 </script>

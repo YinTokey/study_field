@@ -79,8 +79,8 @@ export default {
 
 
     detail: function (v) {
-      console.log(v)
-      this.$router.push({path: '/detail'}) // 路由跳转到B
+      this.$store.commit('SET_INFO',v)
+      this.$router.push({path: '/detail'}) // 路由跳转到详情页
 
     }
 
