@@ -1,4 +1,4 @@
-package rollingNumber
+package main
 
 import (
 	"sort"

@@ -1,4 +1,4 @@
-package rollingNumber
+package main
 
 /// 环形队列
 type CycleQueue struct {

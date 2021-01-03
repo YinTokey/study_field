@@ -1,4 +1,4 @@
-package rollingNumber
+package main
 
 type Bucket struct {
 	// 标识是哪一秒的桶数据
