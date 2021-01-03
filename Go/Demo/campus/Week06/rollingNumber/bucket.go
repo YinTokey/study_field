@@ -2,17 +2,17 @@ package rollingNumber
 
 type Bucket struct {
 	// 标识是哪一秒的桶数据
-	windowStart int64
+	windowStart int
 	// 用于简单自增统计数据
-	adder []int64
+	adder []int
 	// 最大并发类的统计数据
-	maxUpdater []int64
+	maxUpdater []int
 }
 
-func NewBucket(windowStart int64) *Bucket {
+func NewBucket(windowStart int) *Bucket {
 
-	adder := make([]int64, EventCount)
-	maxUpdater := make([]int64, EventCount)
+	adder := make([]int, EventCount)
+	maxUpdater := make([]int, EventCount)
 	return &Bucket{
 		windowStart: windowStart,
 		adder:       adder,
@@ -20,14 +20,28 @@ func NewBucket(windowStart int64) *Bucket {
 	}
 }
 
-func (b *Bucket) GetAdder(event Event) int64 {
+func (b *Bucket) GetAdder(event Event) int {
 
 	return b.adder[event]
 
 }
 
-func (b *Bucket) GetMaxUpdater(event Event) int64 {
+func (b *Bucket) GetMaxUpdater(event Event) int {
 
 	return b.maxUpdater[event]
 
+}
+
+func (b *Bucket) increment(event Event) {
+	b.adder[event]++
+}
+
+func (b *Bucket) add(event Event, value int) {
+	b.adder[event] += value
+}
+
+func (b *Bucket) updateMaxUpdater(event Event, value int) {
+	if b.maxUpdater[event] < value {
+		b.maxUpdater[event] = value
+	}
 }

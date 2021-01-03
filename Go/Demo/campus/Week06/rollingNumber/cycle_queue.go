@@ -26,7 +26,7 @@ func (q *CycleQueue) Push(data interface{}) {
 	//尾部元素指向下一个空间位置
 	q.tail = (q.tail + 1) % q.maxSize
 
-	if q.IsFull() {
+	if q.isFull() {
 		//队列满时覆盖head
 		q.head = q.tail + 1
 	}
@@ -46,21 +46,31 @@ func (q *CycleQueue) Pop() interface{} {
 }
 
 // 队列是否满了
-func (q *CycleQueue) IsFull() bool {
+func (q *CycleQueue) isFull() bool {
 	return (q.tail+1)%q.maxSize == q.head
 }
 
 // 队列是否空了
-func (q *CycleQueue) IsEmpty() bool {
+func (q *CycleQueue) isEmpty() bool {
 	return q.tail == q.head
 }
 
 // 当前数量
-func (q *CycleQueue) CurSize() int {
+func (q *CycleQueue) curSize() int {
 	return (q.tail - q.head + q.maxSize) % q.maxSize
 }
 
 // 剩余数量
-func (q *CycleQueue) RemainSize() int {
-	return q.maxSize - 1 - q.CurSize()
+func (q *CycleQueue) remainSize() int {
+	return q.maxSize - 1 - q.curSize()
+}
+
+func (q *CycleQueue) getLast() interface{} {
+
+	if q.tail == q.head {
+		return nil
+	} else {
+
+		return q.data[(q.tail-1)/q.maxSize]
+	}
 }
