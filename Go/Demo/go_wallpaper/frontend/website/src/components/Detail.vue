@@ -3,6 +3,8 @@
     <img v-bind:src="info.image_url" />
     <h4>{{info.name}}</h4>
     <h4>Author: {{info.author}}</h4>
+    <h4>detail: {{info.detail}}</h4>
+
 
   </div>
 </template>
