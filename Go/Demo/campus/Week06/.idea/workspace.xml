@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="703e6470-55da-4378-b4b4-4b3283ce080f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollingNumber/bucket.go" beforeDir="false" afterPath="$PROJECT_DIR$/rollingNumber/bucket.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollingNumber/cycle_queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/rollingNumber/cycle_queue.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollingNumber/rolling_number.go" beforeDir="false" afterPath="$PROJECT_DIR$/rollingNumber/rolling_number.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../go_wallpaper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Nodes/micro_service.md" beforeDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,51 +10,112 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Go File" />
       </list>
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1mXhf6eb7pN9yAMw987XKnVazx8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
   </component>
+  <component name="ProjectId" id="1kNJuRVVVhMMf2bQHYEDV15SPFd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/rollingNumber" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/sample/message" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build client.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/sample/client.go" />
+      <package value="go_lottery" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Week06" />
+      <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="go_lottery" />
       <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build server.go" type="GoApplicationRunConfiguration" factoryName="Go Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/sample/server.go" />
+      <package value="go_lottery" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="Week02" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build client.go" />
+        <item itemvalue="Go Build.go build server.go" />
       </list>
     </recent_temporary>
   </component>
@@ -69,10 +123,65 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="149" y="48" key="SettingsEditor" timestamp="1609664533562">
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605933072338">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="149" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1609664533562" />
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1605933072338" />
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606049859480">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1606049859480" />
+    <state x="350" y="149" width="692" height="651" key="EditFileWatcherDialog" timestamp="1609678509493">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="350" y="149" width="692" height="651" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1609678509493" />
+    <state width="1238" height="166" key="GridCell.Tab.0.bottom" timestamp="1609676807677">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="166" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1609676807677" />
+    <state width="1238" height="166" key="GridCell.Tab.0.center" timestamp="1609676807676">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="166" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1609676807676" />
+    <state width="1238" height="166" key="GridCell.Tab.0.left" timestamp="1609676807675">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="166" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1609676807675" />
+    <state width="1238" height="166" key="GridCell.Tab.0.right" timestamp="1609676807676">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="166" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1609676807676" />
+    <state x="205" y="48" key="SettingsEditor" timestamp="1609678511848">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1609678511848" />
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1606658804166">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1606658804166" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1606027406693">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1606027406693" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <line>70</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/model/photo.go</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

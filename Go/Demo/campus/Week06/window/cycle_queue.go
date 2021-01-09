@@ -1,4 +1,4 @@
-package main
+package window
 
 /// 环形队列
 type CycleQueue struct {
@@ -50,27 +50,26 @@ func (q *CycleQueue) isFull() bool {
 	return (q.tail+1)%q.maxSize == q.head
 }
 
-// 队列是否空了
-func (q *CycleQueue) isEmpty() bool {
-	return q.tail == q.head
-}
-
 // 当前数量
 func (q *CycleQueue) curSize() int {
 	return (q.tail - q.head + q.maxSize) % q.maxSize
 }
 
-// 剩余数量
-func (q *CycleQueue) remainSize() int {
-	return q.maxSize - 1 - q.curSize()
-}
-
-func (q *CycleQueue) getLast() interface{} {
+// 获取队尾元素
+func (q *CycleQueue) GetLast() interface{} {
 
 	if q.tail == q.head {
 		return nil
 	} else {
 
 		return q.data[(q.tail-1)/q.maxSize]
+	}
+}
+
+// 清空队列
+func (q *CycleQueue) Clear() {
+	currentSize := q.curSize()
+	for i := 0; i < currentSize; i++ {
+		q.Pop()
 	}
 }
