@@ -1,28 +1,28 @@
-FROM golang:alpine AS builder
+FROM golang:alpine
 
-LABEL stage=gobuilder
+# 为我们的镜像设置必要的环境变量
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
 
-ENV CGO_ENABLED 0
-ENV GOOS linux
-ENV GOPROXY https://goproxy.cn,direct
+# 移动到工作目录：/build
+WORKDIR /build
 
-WORKDIR /build/zero
-
-ADD go.mod .
-ADD go.sum .
-RUN go mod download
+# 将代码复制到容器中
 COPY . .
-COPY go_wallpaper/hello/etc /app/etc
-RUN go build -ldflags="-s -w" -o /app/hello service/hello/hello.go
 
+# 将我们的代码编译成二进制可执行文件app
+RUN go build -o app .
 
-FROM alpine
+# 移动到用于存放生成的二进制文件的 /dist 目录
+WORKDIR /dist
 
-RUN apk update --no-cache && apk add --no-cache ca-certificates tzdata
-ENV TZ Asia/Shanghai
+# 将二进制文件从 /build 目录复制到这里
+RUN cp /build/app .
 
-WORKDIR /app
-COPY --from=builder /app/go_wallpaper /app/hello
-COPY --from=builder /app/go_wallpaper /app/etc
+# 声明服务端口
+EXPOSE 8888
 
-CMD ["./hello", "-f", "etc/config.yaml"]
+# 启动容器时运行的命令
+CMD ["/dist/app"]
