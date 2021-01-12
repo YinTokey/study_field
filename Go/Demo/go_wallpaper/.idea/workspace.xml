@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/.idea/Week06.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week06/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week06/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week06/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/bucket.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/cycle_queue.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../campus/Week06/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/rolling_number.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../campus/Week06/rolling_number_event.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Nodes/micro_service.md" beforeDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,8 +11,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -62,11 +51,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/website/src/assets" />
       <recent name="$PROJECT_DIR$/pkg" />
       <recent name="$PROJECT_DIR$/internal/picture" />
       <recent name="$PROJECT_DIR$/internal/server/grpc/configs" />
       <recent name="$PROJECT_DIR$/internal/server/http" />
-      <recent name="$PROJECT_DIR$/internal/server/grpc" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go (1)">
