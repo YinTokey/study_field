@@ -11,8 +11,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -167,26 +167,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1609642895198">
+    <state width="1195" height="148" key="GridCell.Tab.0.bottom" timestamp="1610461679810">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1609642895198" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1609642895197">
+    <state width="1195" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610461679810" />
+    <state width="1195" height="148" key="GridCell.Tab.0.center" timestamp="1610461679809">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1609642895197" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1609642895197">
+    <state width="1195" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610461679809" />
+    <state width="1195" height="148" key="GridCell.Tab.0.left" timestamp="1610461679808">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1609642895197" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1609642895198">
+    <state width="1195" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610461679808" />
+    <state width="1195" height="148" key="GridCell.Tab.0.right" timestamp="1610461679809">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1609642895198" />
+    <state width="1195" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610461679809" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -196,10 +196,10 @@
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607767793700" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1609480696897">
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610545335750">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1609480696897" />
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610545335750" />
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1608358807628">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -228,6 +228,12 @@
           <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
           <line>13</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/website/src/router/index.js</url>
+          <line>35</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
