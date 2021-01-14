@@ -1,8 +1,8 @@
 <template>
   <div class="contain">
+    <CommentList :comments="comments"></CommentList>
     <CommentBox :userInfo="userInfo" :reply-info="replyInfo"  @submit-box="submitBox" :showCancle="showCancle"></CommentBox>
 
-    <CommentList :comments="comments"></CommentList>
   </div>
 </template>
 <script>
@@ -43,16 +43,14 @@ export default {
               userName: "陌溪",
               avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
               content: '我是二级评论',
-              reply: [
-                {
-                  uid: 'uid002',
-                  userName: "陌溪",
-                  avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-                  content: '我是三级评论',
-                  reply: []
-                }
-              ]
+            },
+            {
+              uid: 'uid002',
+              userName: "陌溪",
+              avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+              content: '我是三级评论',
             }
+
           ]
         },
         {
