@@ -10,9 +10,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -200,11 +200,11 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610545335750" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1608358807628">
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1610670028967">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608358807628" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1606027406693" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1610670028967" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
