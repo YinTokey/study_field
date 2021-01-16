@@ -4,8 +4,10 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"go_wallpaper/internal/comment/comment_service"
 	"go_wallpaper/internal/picture/model"
 	"go_wallpaper/internal/picture/service"
+
 	"google.golang.org/grpc"
 	"strconv"
 )
@@ -13,7 +15,7 @@ import (
 // UserRegister 用户注册接口
 func Fetch500pxPapular(c *gin.Context) {
 	//fmt.Println("500px fetch .....")
-	//var service service.PxCollectService = service.NewPxCollectService()
+	//var comment_service comment_service.PxCollectService = comment_service.NewPxCollectService()
 	fmt.Println("unsplash fetch ...")
 
 	page, _ := strconv.Atoi(c.Query("page"))
@@ -24,7 +26,7 @@ func Fetch500pxPapular(c *gin.Context) {
 	// 基于grpc 获取
 	//fetchFromGRPC(c, page, pageSize)
 
-	// 基于单体架构 service 获取
+	// 基于单体架构 comment_service 获取
 	fetchFromServcie(c, page, pageSize)
 }
 
@@ -44,6 +46,10 @@ func PostComment(c *gin.Context) {
 	content := c.PostForm("content")
 
 	fmt.Println(obj_id, "\n", content)
+
+	service := comment_service.NewCommentService()
+
+	service.AddComment(obj_id, content)
 
 }
 

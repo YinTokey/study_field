@@ -18,7 +18,7 @@ func (us *UnPictureServiceImpl) GetUnPictureInfo(ctx context.Context, request *a
 	pageSize := request.PageSize
 	srv := service.NewUmCollectService()
 
-	fmt.Println("GetUnPictureInfo service start")
+	fmt.Println("GetUnPictureInfo comment_service start")
 
 	result, err := srv.Papular(int(page), int(pageSize))
 	if err != nil {

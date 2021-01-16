@@ -382,7 +382,7 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// UnPictureServiceClient is the client API for UnPictureService service.
+// UnPictureServiceClient is the client API for UnPictureService comment_service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UnPictureServiceClient interface {
@@ -406,7 +406,7 @@ func (c *unPictureServiceClient) GetUnPictureInfo(ctx context.Context, in *UnPic
 	return out, nil
 }
 
-// UnPictureServiceServer is the server API for UnPictureService service.
+// UnPictureServiceServer is the server API for UnPictureService comment_service.
 type UnPictureServiceServer interface {
 	GetUnPictureInfo(context.Context, *UnPictureRequest) (*UnPictureInfo, error)
 }

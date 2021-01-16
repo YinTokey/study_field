@@ -35,8 +35,6 @@ export default{
       param.append('id',this.info.picture_id);
       param.append('content',e.content);
 
-      console.log(param)
-      
       ax.post(url,param)
           .then(response => {
             //this.info = response.data.bpi
