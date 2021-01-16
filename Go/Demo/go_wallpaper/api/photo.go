@@ -34,9 +34,16 @@ func Fetch500pxDetail(c *gin.Context) {
 
 	fmt.Println("fetch  detail ...")
 
-	pictureId := c.Query("id")
-	fmt.Println(pictureId)
+	objId := c.Query("id")
 
+	service := comment_service.NewCommentService()
+
+	res, err := service.FetchComments(objId)
+	if err != nil {
+		c.JSON(200, "error happend")
+	} else {
+		c.JSON(200, res)
+	}
 }
 
 func PostComment(c *gin.Context) {

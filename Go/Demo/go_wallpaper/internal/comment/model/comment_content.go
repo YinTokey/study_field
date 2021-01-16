@@ -7,7 +7,7 @@ import (
 // 单条评论(一级，二级)
 type CommentContent struct {
 	gorm.Model
-	CommentId   string `json:"comment_id"`
+	CommentId   string `json:"id"`
 	AtMemberIds string `json:"at_member_ids"`
 	Ip          int64  `json:"ip"`
 	Platform    int8   `json:"platform"`

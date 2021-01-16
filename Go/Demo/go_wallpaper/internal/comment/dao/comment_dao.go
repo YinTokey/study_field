@@ -45,7 +45,7 @@ func (d *CommentDao) AppendSubject(subject *model.CommentSubject) error {
 // 插入index
 func (d *CommentDao) AppendIndex(index *model.CommentIndex) error {
 
-	err := d.db.Where(model.CommentIndex{ObjId: index.ObjId}).FirstOrCreate(&index).Error
+	err := d.db.Create(&index).Error
 
 	if err != nil {
 		fmt.Println("新增index数据错误 ", err)
@@ -58,7 +58,7 @@ func (d *CommentDao) AppendIndex(index *model.CommentIndex) error {
 // 插入content
 func (d *CommentDao) AppendContent(content *model.CommentContent) error {
 
-	err := d.db.Where(model.CommentContent{CommentId: content.CommentId}).FirstOrCreate(&content).Error
+	err := d.db.Create(&content).Error
 
 	if err != nil {
 		fmt.Println("新增content数据错误 ", err)
@@ -69,17 +69,26 @@ func (d *CommentDao) AppendContent(content *model.CommentContent) error {
 	return nil
 }
 
-func (d *CommentDao) GetIndexs(obj_id string) ([]model.CommentIndex, error) {
+func (d *CommentDao) GetIndexs(objId string) ([]model.CommentIndex, error) {
 
-	idxs := []model.CommentIndex{}
+	var idxes []model.CommentIndex
 
-	err := d.db.Where("obj_id <> ?", obj_id).Find(&idxs).Error
+	err := d.db.Where("obj_id = ?", objId).Find(&idxes).Error
 
 	if err != nil {
 		return nil, err
 	}
 
-	return idxs, nil
+	return idxes, nil
+}
+
+// 由主键查询content
+func (d *CommentDao) GetContent(id uint) (*model.CommentContent, error) {
+	fmt.Println("查询 content id = ", id)
+	var content = &model.CommentContent{}
+	err := d.db.First(&content, id).Error
+
+	return content, err
 }
 
 // 建表

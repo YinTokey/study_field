@@ -32,35 +32,35 @@ export default {
         avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
       },
       comments: [
-        {
-          uid: 'uid000',
-          userName: "陌溪",
-          avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-          content: '我是一级评论',
-          reply: [
-            {
-              uid: 'uid001',
-              userName: "陌溪",
-              avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-              content: '我是二级评论',
-            },
-            {
-              uid: 'uid002',
-              userName: "陌溪",
-              avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-              content: '我是三级评论',
-            }
-
-          ]
-        },
-        {
-          uid: 'uid004',
-          userName: "陌溪",
-          avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-          content: '我是一级评论',
-          reply: [
-          ]
-        },
+        // {
+        //   uid: 'uid000',
+        //   userName: "陌溪",
+        //   avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        //   content: '我是一级评论',
+        //   reply: [
+        //     {
+        //       uid: 'uid001',
+        //       userName: "陌溪",
+        //       avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        //       content: '我是二级评论',
+        //     },
+        //     {
+        //       uid: 'uid002',
+        //       userName: "陌溪",
+        //       avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        //       content: '我是三级评论',
+        //     }
+        //
+        //   ]
+        // },
+        // {
+        //   uid: 'uid004',
+        //   userName: "陌溪",
+        //   avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+        //   content: '我是一级评论',
+        //   reply: [
+        //   ]
+        // },
       ],
     };
   },

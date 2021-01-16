@@ -2,7 +2,6 @@ package comment_service
 
 import (
 	"fmt"
-	"github.com/satori/go.uuid"
 	"go_wallpaper/internal/comment/dao"
 	"go_wallpaper/internal/comment/model"
 	"go_wallpaper/pkg"
@@ -51,13 +50,11 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	count := int32(len(idxs)) + 1
 
-	fmt.Println("count .. ", count)
-
-	idxObjId := uuid.Must(uuid.NewV4(), err).String()
+	fmt.Println("count .. ", len(idxs))
 
 	// 构建index
 	index := &model.CommentIndex{
-		ObjId:     idxObjId,
+		ObjId:     objId,
 		ObjType:   objType,
 		MemberId:  0,
 		Root:      0,
@@ -79,7 +76,6 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	// 构建content
 	nContent := &model.CommentContent{
-		CommentId:   idxObjId,
 		AtMemberIds: "",
 		Ip:          0,
 		Platform:    0,
@@ -90,4 +86,35 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	d.AppendContent(nContent)
 
+}
+
+func (s *CommentService) FetchComments(id string) ([]model.CommentResponse, error) {
+	d := dao.NewCommentDao(pkg.InstanceDB())
+	d.CreatePicTable()
+
+	indeics, err := d.GetIndexs(id)
+	if err != nil {
+		fmt.Println("index getting error ", err)
+	}
+
+	var result []model.CommentResponse
+
+	for _, obj := range indeics {
+
+		content, _ := d.GetContent(obj.ID)
+
+		rsp := model.CommentResponse{
+			ObjId:    obj.ObjId,
+			ObjType:  obj.ObjType,
+			MemberId: obj.MemberId,
+			Root:     obj.Root,
+			Parent:   obj.Parent,
+			Floor:    obj.Floor,
+			Message:  content.Message,
+		}
+
+		result = append(result, rsp)
+	}
+
+	return result, nil
 }
