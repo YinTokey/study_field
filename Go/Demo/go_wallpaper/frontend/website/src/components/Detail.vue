@@ -44,38 +44,44 @@ export default{
             //this.info = response.data.bpi
             var info = response.data
             console.log(info)
+            this.fetchComents()
+          })
+          .catch(error => {
+            console.log(error)
+            //this.errored = true
+          })
+    },
+
+    fetchComents() {
+      var url = "http://localhost:8080/api/v1/detail"
+      var param = {"id":this.info.picture_id}
+
+      ax.get(url,{params:param})
+          .then(response => {
+            //this.info = response.data.bpi
+            let info = response.data
+
+            if (this.comments === undefined) {
+              this.comments = new Array()
+            }
+
+            this.comments = this.comments.concat(info)
+            console.log("准备传值")
+            console.log(this.comments)
 
           })
           .catch(error => {
             console.log(error)
             //this.errored = true
           })
-    }
+    },
   },
 
 
   mounted() {
-    var url = "http://localhost:8080/api/v1/detail"
-    var param = {"id":this.info.picture_id}
+    // 加载评论数据
+    this.fetchComents()
 
-    ax.get(url,{params:param})
-        .then(response => {
-          //this.info = response.data.bpi
-          let info = response.data
-
-          if (this.comments === undefined) {
-            this.comments = new Array()
-          }
-          
-          this.comments = this.comments.concat(info)
-          console.log("准备传值")
-          console.log(this.comments)
-
-        })
-        .catch(error => {
-          console.log(error)
-          //this.errored = true
-        })
   }
 }
 
