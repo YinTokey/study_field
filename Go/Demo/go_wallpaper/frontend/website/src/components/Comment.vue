@@ -10,7 +10,7 @@ import CommentList from "./CommentList.vue";
 import CommentBox from "./CommentBox.vue";
 
 // vuex中有mapState方法，相当于我们能够使用它的getset方法
-import {mapMutations} from 'vuex';
+//import {mapMutations} from 'vuex';
 
 export default {
   data() {
@@ -77,13 +77,15 @@ export default {
   },
   methods: {
     //拿到vuex中的写的两个方法
-    ...mapMutations(['SET_COMMENT_LIST', 'INCREMENT']),
+   // ...mapMutations(['SET_COMMENT_LIST', 'INCREMENT']),
     submitBox(e) {
-      var comments = this.$store.state.app.commentList;
-      e.uid = this.$store.state.app.id
-      comments.push(e);
-      this.$store.commit("SET_COMMENT_LIST", comments);
-      this.$store.commit("INCREMENT");
+      // var comments = this.$store.state.app.commentList;
+      // e.uid = this.$store.state.app.id
+      // comments.push(e);
+      // this.$store.commit("SET_COMMENT_LIST", comments);
+      // this.$store.commit("INCREMENT");
+      this.$emit("submit-comment", e)
+
     }
   },
 };

@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// 表示评论一层楼
 type CommentIndex struct {
 	gorm.Model
 	ObjId     int64 `json:"obj_id"`

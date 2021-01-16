@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// 整个评论列表概述
 type CommentSubject struct {
 	gorm.Model
 	ObjId     int64 `json:"obj_id"`

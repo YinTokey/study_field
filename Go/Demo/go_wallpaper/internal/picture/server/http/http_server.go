@@ -23,6 +23,7 @@ func NewRouter() *gin.Engine {
 		fmt.Println("getting reques ...t")
 		v1.GET("papular", api.Fetch500pxPapular)
 		v1.GET("detail", api.Fetch500pxDetail)
+		v1.POST("comment", api.PostComment)
 
 		// 需要登录保护的
 		//auth := v1.Group("")

@@ -47,10 +47,10 @@ export default {
   methods: {
     handleSubmit() {
       this.comments = {
-        uid: this.$store.state.app.id,
-        replyUid: this.replyInfo.replyUid,
-        userName: this.userInfo.userName,
-        avatar: this.userInfo.avatar,
+        // uid: this.$store.state.app.id,
+        // replyUid: this.replyInfo.replyUid,
+        // userName: this.userInfo.userName,
+        // avatar: this.userInfo.avatar,
         content: this.value,
         reply: []
       }

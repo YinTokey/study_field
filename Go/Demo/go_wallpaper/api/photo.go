@@ -37,6 +37,16 @@ func Fetch500pxDetail(c *gin.Context) {
 
 }
 
+func PostComment(c *gin.Context) {
+	fmt.Println("post comment ...")
+
+	obj_id := c.PostForm("id")
+	content := c.PostForm("content")
+
+	fmt.Println(obj_id, "\n", content)
+
+}
+
 func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 	service := service.NewUmCollectService()
 

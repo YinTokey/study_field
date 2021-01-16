@@ -4,6 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// 单条评论(一级，二级)
 type CommentContent struct {
 	gorm.Model
 	CommentId   int64  `json:"comment_id"`

@@ -4,7 +4,7 @@
     <h4>{{info.name}}</h4>
     <h4>Author: {{info.author}}</h4>
     <h4>{{info.detail}}</h4>
-    <Comment :comments="comments"></Comment>
+    <Comment :comments="comments" @submit-comment="submitComment"></Comment>
 
   </div>
 </template>
@@ -23,9 +23,38 @@ export default{
   components: {
     Comment,
   },
+
+  methods: {
+    //拿到vuex中的写的两个方法
+    submitComment(e) {
+      // 发送评论请求
+      var url = "http://localhost:8080/api/v1/comment"
+     // var param = {"id":this.info.picture_id,"content":e.content}
+
+      let param = new FormData();
+      param.append('id',this.info.picture_id);
+      param.append('content',e.content);
+
+      console.log(param)
+      
+      ax.post(url,param)
+          .then(response => {
+            //this.info = response.data.bpi
+            var info = response.data
+            console.log(info)
+
+          })
+          .catch(error => {
+            console.log(error)
+            //this.errored = true
+          })
+    }
+  },
+
+
   mounted() {
     var url = "http://localhost:8080/api/v1/detail"
-    var param = {"ID":this.info.picture_id}
+    var param = {"id":this.info.picture_id}
 
     ax.get(url,{params:param})
         .then(response => {
