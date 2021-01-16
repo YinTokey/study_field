@@ -21,8 +21,20 @@ func Fetch500pxPapular(c *gin.Context) {
 
 	fmt.Println("page %s , page sie %s", page, pageSize)
 
+	// 基于grpc 获取
 	//fetchFromGRPC(c, page, pageSize)
+
+	// 基于单体架构 service 获取
 	fetchFromServcie(c, page, pageSize)
+}
+
+func Fetch500pxDetail(c *gin.Context) {
+
+	fmt.Println("fetch  detail ...")
+
+	pictureId := c.Query("id")
+	fmt.Println(pictureId)
+
 }
 
 func fetchFromServcie(c *gin.Context, page int, pageSize int) {

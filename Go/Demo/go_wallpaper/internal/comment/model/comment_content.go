@@ -6,13 +6,11 @@ import (
 
 type CommentContent struct {
 	gorm.Model
-	CommentId   string  `json:"comment_id"`
-	AtMemberIds string  `json:"at_member_ids"`
-	Ip          string  `json:"ip"`
-	Platform    string  `json:"platform"`
-	Device      string  `json:"device"`
-	Message     string  `json:"message"`
-	Meta        float64 `json:"meta"`
-	UpdateTime  float64 `json:"update_time"`
-	CreateTime  float64 `json:"create_time"`
+	CommentId   int64  `json:"comment_id"`
+	AtMemberIds string `json:"at_member_ids"`
+	Ip          int64  `json:"ip"`
+	Platform    int8   `json:"platform"`
+	Device      string `json:"device"`
+	Message     string `json:"message"`
+	Meta        string `json:"meta"`
 }

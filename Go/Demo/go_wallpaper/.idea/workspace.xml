@@ -45,7 +45,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -83,6 +83,15 @@
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <package value="go_lottery" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <package value="go_wallpaper" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -137,13 +146,23 @@
       <list>
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build go_wallpaper" />
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build unsplash_server.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build go_wallpaper" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
+      <created>1610774906698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610774906698</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
@@ -167,44 +186,44 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1195" height="148" key="GridCell.Tab.0.bottom" timestamp="1610461679810">
+    <state width="1195" height="148" key="GridCell.Tab.0.bottom" timestamp="1610774874401">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1195" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610461679810" />
-    <state width="1195" height="148" key="GridCell.Tab.0.center" timestamp="1610461679809">
+    <state width="1195" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610774874401" />
+    <state width="1195" height="148" key="GridCell.Tab.0.center" timestamp="1610774874400">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1195" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610461679809" />
-    <state width="1195" height="148" key="GridCell.Tab.0.left" timestamp="1610461679808">
+    <state width="1195" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610774874400" />
+    <state width="1195" height="148" key="GridCell.Tab.0.left" timestamp="1610774874399">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1195" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610461679808" />
-    <state width="1195" height="148" key="GridCell.Tab.0.right" timestamp="1610461679809">
+    <state width="1195" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610774874399" />
+    <state width="1195" height="148" key="GridCell.Tab.0.right" timestamp="1610774874401">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1195" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610461679809" />
+    <state width="1195" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610774874401" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1607829811854">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607829811854" />
-    <state x="205" y="48" key="SettingsEditor" timestamp="1608361400546">
+    <state x="165" y="36" key="SettingsEditor" timestamp="1610775208237">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1607767793700" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610545335750">
+    <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1610775208237" />
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610775437714">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610545335750" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1610670028967">
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775437714" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1610775356143">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608358807628" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1610670028967" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775356143" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -229,10 +248,14 @@
           <line>13</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/comment/model/comment_subject.go</url>
+          <line>11</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/website/src/router/index.js</url>
           <line>35</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
