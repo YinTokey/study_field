@@ -24,6 +24,10 @@ export default{
     Comment,
   },
 
+  props: {
+    comments: Array,
+  },
+
   methods: {
     //拿到vuex中的写的两个方法
     submitComment(e) {
@@ -57,8 +61,15 @@ export default{
     ax.get(url,{params:param})
         .then(response => {
           //this.info = response.data.bpi
-          var info = response.data
-          console.log(info)
+          let info = response.data
+
+          if (this.comments === undefined) {
+            this.comments = new Array()
+          }
+          
+          this.comments = this.comments.concat(info)
+          console.log("准备传值")
+          console.log(this.comments)
 
         })
         .catch(error => {

@@ -13,6 +13,9 @@ import CommentBox from "./CommentBox.vue";
 //import {mapMutations} from 'vuex';
 
 export default {
+
+  props:['comments'],
+
   data() {
     return {
       showCancle: false,
@@ -31,7 +34,7 @@ export default {
         replyUid: 0,
         avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
       },
-      comments: [
+     // comments: [
         // {
         //   uid: 'uid000',
         //   userName: "陌溪",
@@ -61,7 +64,7 @@ export default {
         //   reply: [
         //   ]
         // },
-      ],
+      //],
     };
   },
   watch: {},
@@ -73,7 +76,7 @@ export default {
     CommentBox
   },
   mounted() {
-    this.setCommentList(this.comments);
+    //this.setCommentList(this.comments);
   },
   methods: {
     //拿到vuex中的写的两个方法
@@ -88,6 +91,7 @@ export default {
 
     }
   },
+
 };
 </script>
 <style>

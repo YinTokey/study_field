@@ -9,7 +9,7 @@
           :alt="item.userName"
       />
       <p slot="content">
-        {{item.content}}
+        {{item.message}}
       </p>
 
       <CommentBox class="comment" :userInfo="userInfo" :reply-info="replyInfo" :id="item.uid"
