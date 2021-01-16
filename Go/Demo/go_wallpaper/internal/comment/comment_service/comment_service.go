@@ -2,6 +2,7 @@ package comment_service
 
 import (
 	"fmt"
+	"github.com/satori/go.uuid"
 	"go_wallpaper/internal/comment/dao"
 	"go_wallpaper/internal/comment/model"
 	"go_wallpaper/pkg"
@@ -50,9 +51,13 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	count := int32(len(idxs)) + 1
 
+	fmt.Println("count .. ", count)
+
+	idxObjId := uuid.Must(uuid.NewV4(), err).String()
+
 	// 构建index
 	index := &model.CommentIndex{
-		ObjId:     objId,
+		ObjId:     idxObjId,
 		ObjType:   objType,
 		MemberId:  0,
 		Root:      0,
@@ -73,5 +78,16 @@ func (s *CommentService) AddComment(id string, content string) {
 	}
 
 	// 构建content
+	nContent := &model.CommentContent{
+		CommentId:   idxObjId,
+		AtMemberIds: "",
+		Ip:          0,
+		Platform:    0,
+		Device:      "",
+		Message:     content,
+		Meta:        "",
+	}
+
+	d.AppendContent(nContent)
 
 }

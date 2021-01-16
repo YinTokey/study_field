@@ -45,7 +45,7 @@ func (d *CommentDao) AppendSubject(subject *model.CommentSubject) error {
 // 插入index
 func (d *CommentDao) AppendIndex(index *model.CommentIndex) error {
 
-	err := d.db.Where(model.CommentSubject{ObjId: index.ObjId}).FirstOrCreate(&index).Error
+	err := d.db.Where(model.CommentIndex{ObjId: index.ObjId}).FirstOrCreate(&index).Error
 
 	if err != nil {
 		fmt.Println("新增index数据错误 ", err)
@@ -56,7 +56,7 @@ func (d *CommentDao) AppendIndex(index *model.CommentIndex) error {
 }
 
 // 插入content
-func (d *CommentDao) AppendContent(content model.CommentContent) error {
+func (d *CommentDao) AppendContent(content *model.CommentContent) error {
 
 	err := d.db.Where(model.CommentContent{CommentId: content.CommentId}).FirstOrCreate(&content).Error
 
@@ -64,6 +64,7 @@ func (d *CommentDao) AppendContent(content model.CommentContent) error {
 		fmt.Println("新增content数据错误 ", err)
 		return err
 	}
+	fmt.Println("插入content 成功", content.Message)
 
 	return nil
 }

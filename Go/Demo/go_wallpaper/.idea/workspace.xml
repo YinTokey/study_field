@@ -186,26 +186,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1195" height="148" key="GridCell.Tab.0.bottom" timestamp="1610788104921">
+    <state width="1195" height="209" key="GridCell.Tab.0.bottom" timestamp="1610792567704">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1195" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610788104921" />
-    <state width="1195" height="148" key="GridCell.Tab.0.center" timestamp="1610788104920">
+    <state width="1195" height="209" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610792567704" />
+    <state width="1195" height="209" key="GridCell.Tab.0.center" timestamp="1610792567701">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1195" height="148" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610788104920" />
-    <state width="1195" height="148" key="GridCell.Tab.0.left" timestamp="1610788104919">
+    <state width="1195" height="209" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610792567701" />
+    <state width="1195" height="209" key="GridCell.Tab.0.left" timestamp="1610792567700">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1195" height="148" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610788104919" />
-    <state width="1195" height="148" key="GridCell.Tab.0.right" timestamp="1610788104921">
+    <state width="1195" height="209" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610792567700" />
+    <state width="1195" height="209" key="GridCell.Tab.0.right" timestamp="1610792567703">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1195" height="148" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610788104921" />
+    <state width="1195" height="209" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610792567703" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -216,6 +216,10 @@
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
     <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1610775208237" />
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610792513597">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1280.775@0.25.1280.775" timestamp="1610792513597" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610775437714">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -251,8 +255,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/internal/comment/model/comment_subject.go</url>
-          <line>12</line>
+          <line>11</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/comment/model/comment_index.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/frontend/website/src/router/index.js</url>

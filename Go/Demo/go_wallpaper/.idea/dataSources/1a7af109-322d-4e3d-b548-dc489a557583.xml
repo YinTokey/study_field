@@ -942,7 +942,7 @@ SELECT|sys.sys_config:null
     </column>
     <column id="297" parent="287" name="comment_id">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <column id="298" parent="287" name="at_member_ids">
       <Position>6</Position>
@@ -997,7 +997,7 @@ SELECT|sys.sys_config:null
     </column>
     <column id="310" parent="288" name="obj_id">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <column id="311" parent="288" name="obj_type">
       <Position>6</Position>
@@ -1072,7 +1072,7 @@ SELECT|sys.sys_config:null
     </column>
     <column id="328" parent="289" name="obj_id">
       <Position>5</Position>
-      <DataType>bigint|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
     </column>
     <column id="329" parent="289" name="obj_type">
       <Position>6</Position>
