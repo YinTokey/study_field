@@ -19,6 +19,69 @@ func NewCommentDao(db *gorm.DB) *CommentDao {
 	return d
 }
 
+func (d *CommentDao) QueryCommentSubject(id string) (*model.CommentSubject, error) {
+
+	var subject *model.CommentSubject
+
+	result := d.db.Where("obj_id = ?", id).First(&subject)
+
+	return subject, result.Error
+}
+
+// 插入subject
+func (d *CommentDao) AppendSubject(subject *model.CommentSubject) error {
+
+	err := d.db.Where(model.CommentSubject{ObjId: subject.ObjId}).FirstOrCreate(&subject).Error
+
+	if err != nil {
+		fmt.Println("新增subject数据错误 ", err)
+		return err
+	}
+
+	return nil
+
+}
+
+// 插入index
+func (d *CommentDao) AppendIndex(index *model.CommentIndex) error {
+
+	err := d.db.Where(model.CommentSubject{ObjId: index.ObjId}).FirstOrCreate(&index).Error
+
+	if err != nil {
+		fmt.Println("新增index数据错误 ", err)
+		return err
+	}
+
+	return nil
+}
+
+// 插入content
+func (d *CommentDao) AppendContent(content model.CommentContent) error {
+
+	err := d.db.Where(model.CommentContent{CommentId: content.CommentId}).FirstOrCreate(&content).Error
+
+	if err != nil {
+		fmt.Println("新增content数据错误 ", err)
+		return err
+	}
+
+	return nil
+}
+
+func (d *CommentDao) GetIndexs(obj_id string) ([]model.CommentIndex, error) {
+
+	idxs := []model.CommentIndex{}
+
+	err := d.db.Where("obj_id <> ?", obj_id).Find(&idxs).Error
+
+	if err != nil {
+		return nil, err
+	}
+
+	return idxs, nil
+}
+
+// 建表
 func (d *CommentDao) CreatePicTable() {
 	//  subject 表
 	if !d.db.HasTable(&model.CommentSubject{}) {
