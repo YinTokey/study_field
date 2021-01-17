@@ -52,8 +52,11 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	fmt.Println("count .. ", len(idxs))
 
+	primaryId, _ := pkg.NewGuid()
+
 	// 构建index
 	index := &model.CommentIndex{
+		PID:       primaryId,
 		ObjId:     objId,
 		ObjType:   objType,
 		MemberId:  0,
@@ -76,6 +79,7 @@ func (s *CommentService) AddComment(id string, content string) {
 
 	// 构建content
 	nContent := &model.CommentContent{
+		CommentId:   primaryId,
 		AtMemberIds: "",
 		Ip:          0,
 		Platform:    0,
@@ -112,9 +116,7 @@ func (s *CommentService) FetchCommentsFromDB(id string) ([]model.CommentResponse
 
 	for _, obj := range indeics {
 
-		//content, _ := d.GetContent(obj.ID)
-
-		content, _ := d.GetContent(1)
+		content, _ := d.GetContent(obj.PID)
 
 		rsp := model.CommentResponse{
 			ObjId:    obj.ObjId,

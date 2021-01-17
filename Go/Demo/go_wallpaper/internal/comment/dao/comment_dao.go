@@ -83,10 +83,13 @@ func (d *CommentDao) GetIndexs(objId string) ([]model.CommentIndex, error) {
 }
 
 // 由主键查询content
-func (d *CommentDao) GetContent(id uint) (*model.CommentContent, error) {
+func (d *CommentDao) GetContent(id int64) (*model.CommentContent, error) {
 	fmt.Println("查询 content id = ", id)
 	var content = &model.CommentContent{}
-	err := d.db.First(&content, id).Error
+
+	err := d.db.Where("comment_id = ?", id).First(&content).Error
+
+	fmt.Println("查询content 结果 ", content, err)
 
 	return content, err
 }
