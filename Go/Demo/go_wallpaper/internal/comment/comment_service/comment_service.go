@@ -89,9 +89,14 @@ func (s *CommentService) AddComment(id string, content string) {
 		Message:     content,
 		Meta:        "",
 	}
-
+	// 插入content
 	d.AppendContent(nContent)
 
+	//生成response
+	rsp := s.GenResponse(*index, nContent)
+	fmt.Println(rsp)
+	// response 写入 redis
+	s.StoreResponseToCache(rsp)
 }
 
 func (s *CommentService) FetchComments(id string) ([]*model.CommentResponse, error) {
@@ -121,15 +126,7 @@ func (s *CommentService) FetchCommentsFromDB(id string) ([]*model.CommentRespons
 
 		content, _ := d.GetContent(obj.PID)
 
-		rsp := &model.CommentResponse{
-			ObjId:    obj.ObjId,
-			ObjType:  obj.ObjType,
-			MemberId: obj.MemberId,
-			Root:     obj.Root,
-			Parent:   obj.Parent,
-			Floor:    obj.Floor,
-			Message:  content.Message,
-		}
+		rsp := s.GenResponse(obj, content)
 
 		result = append(result, rsp)
 
@@ -199,6 +196,7 @@ func (s *CommentService) FetchCommentsFromCache(id string) ([]*model.CommentResp
 	return result, nil
 }
 
+// 获取匹配key
 func (s *CommentService) GetCacheKeys(id string) []string {
 
 	var cursor uint64
@@ -216,4 +214,19 @@ func (s *CommentService) GetCacheKeys(id string) []string {
 
 	return keys
 
+}
+
+func (s *CommentService) GenResponse(index model.CommentIndex, content *model.CommentContent) *model.CommentResponse {
+
+	rsp := &model.CommentResponse{
+		ObjId:    index.ObjId,
+		ObjType:  index.ObjType,
+		MemberId: index.MemberId,
+		Root:     index.Root,
+		Parent:   index.Parent,
+		Floor:    index.Floor,
+		Message:  content.Message,
+	}
+
+	return rsp
 }

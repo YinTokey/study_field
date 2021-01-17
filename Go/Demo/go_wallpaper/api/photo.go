@@ -39,6 +39,7 @@ func Fetch500pxDetail(c *gin.Context) {
 	service := comment_service.NewCommentService()
 
 	res, err := service.FetchComments(objId)
+	fmt.Println("返回给前端的结果 ", res)
 	if err != nil {
 		c.JSON(200, "error happend")
 	} else {

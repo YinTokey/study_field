@@ -53,21 +53,26 @@ export default{
     },
 
     fetchComents() {
-      var url = "http://localhost:8080/api/v1/detail"
-      var param = {"id":this.info.picture_id}
+      const url = "http://localhost:8080/api/v1/detail"
+      const param = {"id":this.info.picture_id}
 
-      ax.get(url,{params:param})
+      const headers = [
+        { key: 'Content-Type', value: 'application/x-www-form-urlencoded'},
+        { key: 'Cache-Control', value: 'no-store'}
+      ];
+
+      ax.get(url,{params:param,headers:headers})
           .then(response => {
-            //this.info = response.data.bpi
+
             let info = response.data
+            console.log(info)
 
-            if (this.comments === undefined) {
-              this.comments = new Array()
-            }
+            // 每次请求都置空 comment
+            this.comments = info
 
-            this.comments = this.comments.concat(info)
+           // this.comments = this.comments.concat(info)
             console.log("准备传值")
-            console.log(this.comments)
+            //console.log(info)
 
           })
           .catch(error => {
