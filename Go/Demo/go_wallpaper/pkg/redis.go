@@ -1,10 +1,9 @@
-package dao
+package pkg
 
 import (
 	"fmt"
 	"github.com/spf13/viper"
 
-	"go_wallpaper/pkg"
 	"strconv"
 
 	"github.com/go-redis/redis"
@@ -27,7 +26,7 @@ func Redis() {
 	_, err := client.Ping().Result()
 
 	if err != nil {
-		pkg.Log().Panic("连接Redis不成功", err)
+		Log().Panic("连接Redis不成功", err)
 	}
 
 	fmt.Println("Redis 连接成功")

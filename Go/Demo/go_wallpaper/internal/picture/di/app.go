@@ -5,7 +5,6 @@ import (
 	"github.com/spf13/viper"
 	"go_wallpaper/pkg"
 
-	"go_wallpaper/internal/picture/dao"
 	"go_wallpaper/internal/picture/server/http"
 	"os"
 )
@@ -58,5 +57,9 @@ func InitConfigs() {
 
 	// 连接数据库
 	pkg.Database(dsn)
-	dao.Redis()
+	pkg.Redis()
+
+	// 初始化发号器
+	pkg.GuidGeneratorInit()
+
 }

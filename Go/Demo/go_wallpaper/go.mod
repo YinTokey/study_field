@@ -16,6 +16,7 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/satori/go.uuid v1.2.0
+	github.com/sony/sonyflake v1.0.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.7.1
 	github.com/tal-tech/go-zero v1.1.1 // indirect

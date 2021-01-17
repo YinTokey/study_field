@@ -89,6 +89,17 @@ func (s *CommentService) AddComment(id string, content string) {
 }
 
 func (s *CommentService) FetchComments(id string) ([]model.CommentResponse, error) {
+
+	result, _ := s.FetchCommentsFromCache(id)
+
+	if len(result) == 0 {
+		result, _ = s.FetchCommentsFromDB(id)
+	}
+
+	return result, nil
+}
+
+func (s *CommentService) FetchCommentsFromDB(id string) ([]model.CommentResponse, error) {
 	d := dao.NewCommentDao(pkg.InstanceDB())
 	d.CreatePicTable()
 
@@ -101,7 +112,9 @@ func (s *CommentService) FetchComments(id string) ([]model.CommentResponse, erro
 
 	for _, obj := range indeics {
 
-		content, _ := d.GetContent(obj.ID)
+		//content, _ := d.GetContent(obj.ID)
+
+		content, _ := d.GetContent(1)
 
 		rsp := model.CommentResponse{
 			ObjId:    obj.ObjId,
@@ -117,4 +130,8 @@ func (s *CommentService) FetchComments(id string) ([]model.CommentResponse, erro
 	}
 
 	return result, nil
+}
+
+func (s *CommentService) FetchCommentsFromCache(id string) ([]model.CommentResponse, error) {
+	return nil, nil
 }
