@@ -11,9 +11,11 @@ require (
 	github.com/go-sql-driver/mysql v1.5.0 // indirect
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/protobuf v1.4.2
+	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/hbagdi/go-unsplash v0.0.0-20200312040621-7a236cda8703
 	github.com/jinzhu/gorm v1.9.10
 	github.com/joho/godotenv v1.3.0
+	github.com/nitishm/go-rejson v2.0.0+incompatible // indirect
 	github.com/onsi/ginkgo v1.8.0 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/sony/sonyflake v1.0.0

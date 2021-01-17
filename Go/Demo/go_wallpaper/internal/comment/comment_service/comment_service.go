@@ -1,7 +1,9 @@
 package comment_service
 
 import (
+	"encoding/json"
 	"fmt"
+	"github.com/gomodule/redigo/redis"
 	"go_wallpaper/internal/comment/dao"
 	"go_wallpaper/internal/comment/model"
 	"go_wallpaper/pkg"
@@ -92,18 +94,19 @@ func (s *CommentService) AddComment(id string, content string) {
 
 }
 
-func (s *CommentService) FetchComments(id string) ([]model.CommentResponse, error) {
+func (s *CommentService) FetchComments(id string) ([]*model.CommentResponse, error) {
 
 	result, _ := s.FetchCommentsFromCache(id)
-
+	fmt.Println("直接从redis 获取数据 ", result)
 	if len(result) == 0 {
+		fmt.Println("从 db 获取数据 ", result)
 		result, _ = s.FetchCommentsFromDB(id)
 	}
 
 	return result, nil
 }
 
-func (s *CommentService) FetchCommentsFromDB(id string) ([]model.CommentResponse, error) {
+func (s *CommentService) FetchCommentsFromDB(id string) ([]*model.CommentResponse, error) {
 	d := dao.NewCommentDao(pkg.InstanceDB())
 	d.CreatePicTable()
 
@@ -112,13 +115,13 @@ func (s *CommentService) FetchCommentsFromDB(id string) ([]model.CommentResponse
 		fmt.Println("index getting error ", err)
 	}
 
-	var result []model.CommentResponse
+	var result []*model.CommentResponse
 
 	for _, obj := range indeics {
 
 		content, _ := d.GetContent(obj.PID)
 
-		rsp := model.CommentResponse{
+		rsp := &model.CommentResponse{
 			ObjId:    obj.ObjId,
 			ObjType:  obj.ObjType,
 			MemberId: obj.MemberId,
@@ -129,11 +132,88 @@ func (s *CommentService) FetchCommentsFromDB(id string) ([]model.CommentResponse
 		}
 
 		result = append(result, rsp)
+
+		// 写入redis
+		s.StoreResponseToCache(rsp)
 	}
 
 	return result, nil
 }
 
-func (s *CommentService) FetchCommentsFromCache(id string) ([]model.CommentResponse, error) {
-	return nil, nil
+func (s *CommentService) StoreIndexToCache(index *model.CommentIndex) {
+
+}
+
+func (s *CommentService) StoreContentToCache(index *model.CommentContent) {
+
+}
+
+func (s *CommentService) StoreResponseToCache(resp *model.CommentResponse) {
+
+	key := fmt.Sprintf("%s_%v", resp.ObjId, resp.Floor)
+
+	buf, err := json.Marshal(resp)
+	if err != nil {
+		fmt.Println("json.Marshal(resp) 失败", err)
+		return
+	}
+
+	// 0 表示不会过期
+	pkg.RedisClient.Set(key, buf, 0)
+	fmt.Println("写入redis, key = ", key)
+
+	// 使用sorted set
+	//z := redis.Z{Score: float64(resp.Floor), Member: resp}
+	//pkg.RedisClient.ZAdd(key, z)
+
+}
+
+func (s *CommentService) FetchCommentsFromCache(id string) ([]*model.CommentResponse, error) {
+
+	keys := s.GetCacheKeys(id)
+
+	var result []*model.CommentResponse
+
+	for _, key := range keys {
+
+		redis.Bytes(pkg.RedisClient.Get(key).Result())
+
+		buf, err := redis.Bytes(pkg.RedisClient.Get(key).Result())
+
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+
+		rsp := &model.CommentResponse{}
+		err = json.Unmarshal(buf, rsp)
+
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+
+		result = append(result, rsp)
+	}
+
+	return result, nil
+}
+
+func (s *CommentService) GetCacheKeys(id string) []string {
+
+	var cursor uint64
+	var keys []string
+	var err error
+	for {
+		//*扫描所有key，每次20条
+		pattern := fmt.Sprintf("%s*", id)
+		keys, cursor, err = pkg.RedisClient.Scan(cursor, pattern, 20).Result()
+		fmt.Println("match keys start , err ", keys, err)
+		if cursor == 0 {
+			break
+		}
+	}
+
+	return keys
+
 }
