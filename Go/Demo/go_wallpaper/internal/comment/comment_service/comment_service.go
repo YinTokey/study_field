@@ -141,8 +141,18 @@ func (s *CommentService) StoreIndexToCache(index *model.CommentIndex) {
 
 }
 
-func (s *CommentService) StoreContentToCache(index *model.CommentContent) {
+func (s *CommentService) StoreContentToCache(content *model.CommentContent) {
 
+	key := fmt.Sprintf("%s", content.CommentId)
+
+	buf, err := json.Marshal(content)
+	if err != nil {
+		fmt.Println("json.Marshal(content) 失败", err)
+		return
+	}
+
+	// 0 表示不会过期
+	pkg.RedisClient.Set(key, buf, 0)
 }
 
 func (s *CommentService) StoreResponseToCache(resp *model.CommentResponse) {
