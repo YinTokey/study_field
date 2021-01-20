@@ -3,6 +3,7 @@ module go_wallpaper
 go 1.14
 
 require (
+	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/fsnotify/fsnotify v1.4.7
 	github.com/gin-contrib/cors v1.3.0
 	github.com/gin-contrib/sessions v0.0.0-20190512062852-3cb4c4f2d615

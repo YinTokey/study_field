@@ -51,11 +51,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/picture/job" />
       <recent name="$PROJECT_DIR$/pkg" />
       <recent name="$PROJECT_DIR$/frontend/website/src/assets" />
       <recent name="$PROJECT_DIR$/internal/picture" />
       <recent name="$PROJECT_DIR$/internal/server/grpc/configs" />
-      <recent name="$PROJECT_DIR$/internal/server/http" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go (1)">
@@ -186,26 +186,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1195" height="159" key="GridCell.Tab.0.bottom" timestamp="1610862352554">
+    <state width="1238" height="159" key="GridCell.Tab.0.bottom" timestamp="1611102164022">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1195" height="159" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1610862352554" />
-    <state width="1195" height="159" key="GridCell.Tab.0.center" timestamp="1610862352554">
+    <state width="1238" height="159" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611102164022" />
+    <state width="1238" height="159" key="GridCell.Tab.0.center" timestamp="1611102164021">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1195" height="159" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1610862352554" />
-    <state width="1195" height="159" key="GridCell.Tab.0.left" timestamp="1610862352553">
+    <state width="1238" height="159" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611102164021" />
+    <state width="1238" height="159" key="GridCell.Tab.0.left" timestamp="1611102164020">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1195" height="159" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1610862352553" />
-    <state width="1195" height="159" key="GridCell.Tab.0.right" timestamp="1610862352554">
+    <state width="1238" height="159" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611102164020" />
+    <state width="1238" height="159" key="GridCell.Tab.0.right" timestamp="1611102164022">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1195" height="159" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1610862352554" />
+    <state width="1238" height="159" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611102164022" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
       <screen x="0" y="25" width="1280" height="775" />
     </state>

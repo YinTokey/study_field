@@ -5,6 +5,7 @@ import (
 	"github.com/spf13/viper"
 	"go_wallpaper/pkg"
 
+	"go_wallpaper/internal/picture/job"
 	"go_wallpaper/internal/picture/server/http"
 	"os"
 )
@@ -62,4 +63,8 @@ func InitConfigs() {
 	// 初始化发号器
 	pkg.GuidGeneratorInit()
 
+	j := job.NewRandomAcgJob()
+	for i := 0; i < 10; i++ {
+		j.FetchLink_1()
+	}
 }
