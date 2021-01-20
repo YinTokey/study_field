@@ -2,9 +2,8 @@ package job
 
 import (
 	"fmt"
+	"github.com/disintegration/imageorient"
 	"image"
-	"io/ioutil"
-	"log"
 	"net/http"
 )
 
@@ -20,58 +19,43 @@ func NewRandomAcgJob() *RandomAcgJob {
 
 func (j *RandomAcgJob) FetchLink_1() {
 
-	img, err := j.GetImage(url_2)
-	if err != nil {
-		fmt.Println("解码图片错误 ", err)
-	}
-	fmt.Println(img)
+	location := j.GetReadImageUrl(url_2)
+
+	fmt.Println(location)
 }
 
 // RedirectFunc 重定向禁止
 func RedirectFunc(req *http.Request, via []*http.Request) error {
-	fmt.Println(req.RequestURI)
+	//fmt.Println(req.RequestURI)
 	// 如果返回 非nil 则禁止向下重定向 返回nil 则 一直向下请求 10 次 重定向
 	return http.ErrUseLastResponse
 }
 
-func (j *RandomAcgJob) GetImage(url string) (image.Image, error) {
+func (j *RandomAcgJob) GetReadImageUrl(url string) string {
 	// 禁止重定向
 	client := &http.Client{CheckRedirect: RedirectFunc}
 	rep, err := client.Get(url)
 	if err != nil {
 		fmt.Println(err)
 	}
-	//读取响应的结果
-	data, err := ioutil.ReadAll(rep.Body)
-	if err != nil {
-		log.Panic(err)
-	}
-	fmt.Println(string(data[:]))
-	//输出响应的头
-	for k, v := range rep.Header {
-		fmt.Println(k, v)
-	}
 	defer rep.Body.Close()
-	url1, err := rep.Location()
+
+	//读取响应的结果
+	localtion := fmt.Sprintf("%s", rep.Header["Location"])
+
+	return localtion
+
+}
+
+func GetImage(url string) (image.Image, error) {
+	resp, err := http.Get(url)
+	defer resp.Body.Close()
 	if err != nil {
-		log.Panic(err)
+		return nil, err
 	}
-	fmt.Println(url1.Host)
-
-	//var r interface{}
-	//
-	//body, err := ioutil.ReadAll(resp.Body)
-	//if err == nil {
-	//	err = json.Unmarshal(body, &r)
-	//}
-	//
-	//fmt.Println(resp.Header)
-
-	return nil, nil
-
-	//img, _, err := imageorient.Decode(resp.Body)
-	//if err != nil {
-	//	return nil, err
-	//}
-	//return img, nil
+	img, _, err := imageorient.Decode(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+	return img, nil
 }
