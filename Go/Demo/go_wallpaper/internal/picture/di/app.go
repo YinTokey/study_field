@@ -64,7 +64,8 @@ func InitConfigs() {
 	pkg.GuidGeneratorInit()
 
 	j := job.NewRandomAcgJob()
+
 	for i := 0; i < 10; i++ {
-		j.FetchLink_1()
+		j.FetchJob_2()
 	}
 }

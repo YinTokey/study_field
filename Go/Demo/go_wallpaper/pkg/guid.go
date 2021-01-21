@@ -1,7 +1,6 @@
 package pkg
 
 import (
-	"fmt"
 	"github.com/sony/sonyflake"
 )
 
@@ -21,7 +20,7 @@ func InstanceGuidGenerator() *sonyflake.Sonyflake {
 }
 
 func NewGuid() (int64, error) {
-	fmt.Println("start new guid ", sf)
+	//fmt.Println("start new guid ", sf)
 	id, err := sf.NextID()
 	result := int64(id)
 	return result, err
