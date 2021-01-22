@@ -33,9 +33,9 @@ func (d *AcgDao) GetPictures(page int, pageSize int) ([]model.Picture, error) {
 }
 
 /*添加*/
-func (d *AcgDao) AddAcg(data model.Acg) error {
-
-	err := d.db.Where(model.Acg{PictureId: data.PictureId}).FirstOrCreate(&data).Error
+func (d *AcgDao) AddAcg(data *model.Acg) error {
+	// 以image url 为key 去重
+	err := d.db.Where(model.Acg{ImageUrl: data.ImageUrl}).FirstOrCreate(&data).Error
 
 	if err != nil {
 		fmt.Println("新增照片数据错误 ", err)

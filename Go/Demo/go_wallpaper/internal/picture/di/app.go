@@ -65,7 +65,9 @@ func InitConfigs() {
 
 	j := job.NewRandomAcgJob()
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 10000; i++ {
 		j.FetchJob_2()
 	}
+
+	//select {}
 }

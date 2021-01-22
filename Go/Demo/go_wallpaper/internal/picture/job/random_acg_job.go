@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/disintegration/imageorient"
+	"go_wallpaper/internal/picture/dao"
 	"go_wallpaper/internal/picture/model"
 	"go_wallpaper/pkg"
 	"image"
@@ -52,8 +53,11 @@ func (j *RandomAcgJob) FetchLink(url string) {
 
 	// 写入redis
 	j.StoreRedis(model)
-
 	fmt.Println("写入 redis ", model.PictureId)
+
+	// 写入mysql
+	j.StoreMysql(model)
+	fmt.Println("写入 mysql ", model.PictureId)
 }
 
 // RedirectFunc 重定向禁止
@@ -131,5 +135,7 @@ func (j *RandomAcgJob) StoreRedis(model *model.Acg) {
 }
 
 func (j *RandomAcgJob) StoreMysql(model *model.Acg) {
+	d := dao.NewAcgDao(pkg.InstanceDB())
 
+	d.AddAcg(model)
 }
