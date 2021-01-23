@@ -6,7 +6,6 @@ import (
 	"go_wallpaper/pkg"
 
 	"go_wallpaper/internal/picture/job"
-	"go_wallpaper/internal/picture/server/http"
 	"os"
 )
 
@@ -19,8 +18,8 @@ func InitApp() error {
 	//grpc.Serve()
 
 	// 装载路由
-	r := http.NewRouter()
-	r.Run(":8080")
+	//r := http.NewRouter()
+	//r.Run(":8080")
 
 	return nil
 }
@@ -65,8 +64,12 @@ func InitConfigs() {
 
 	j := job.NewRandomAcgJob()
 
-	for i := 0; i < 10000; i++ {
-		j.FetchJob_2()
+	//for i := 0; i < 10000; i++ {
+	//	j.FetchJob_2()
+	//}
+
+	for i := 1000; i < 4000; i++ {
+		j.FetchJob_3(i)
 	}
 
 	//select {}
