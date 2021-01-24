@@ -64,7 +64,7 @@ func (d *PicsumDao) CreatePicsumTable() {
 		//还可以通过 db.Set 设置一些额外的表属性,
 		fmt.Println("尝试建表 ")
 
-		if err := d.db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4").CreateTable(&model.Acg{}).Error; err != nil {
+		if err := d.db.Set("gorm:table_options", "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4").CreateTable(&model.Picsum{}).Error; err != nil {
 			fmt.Println("建表错误,err", err)
 		}
 	}

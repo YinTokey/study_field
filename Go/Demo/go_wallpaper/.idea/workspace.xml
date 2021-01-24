@@ -186,26 +186,26 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1611451488524">
+    <state width="1238" height="151" key="GridCell.Tab.0.bottom" timestamp="1611457236277">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611451488524" />
-    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1611451488523">
+    <state width="1238" height="151" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611457236277" />
+    <state width="1238" height="151" key="GridCell.Tab.0.center" timestamp="1611457236275">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1238" height="228" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611451488523" />
-    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1611451488522">
+    <state width="1238" height="151" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611457236275" />
+    <state width="1238" height="151" key="GridCell.Tab.0.left" timestamp="1611457236274">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1238" height="228" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611451488522" />
-    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1611451488523">
+    <state width="1238" height="151" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611457236274" />
+    <state width="1238" height="151" key="GridCell.Tab.0.right" timestamp="1611457236276">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1238" height="228" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611451488523" />
+    <state width="1238" height="151" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611457236276" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -216,10 +216,10 @@
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
     <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1610775208237" />
-    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610847719695">
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611456975203">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1280.775@0.25.1280.775" timestamp="1610847719695" />
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1280.775@0.25.1280.775" timestamp="1611456975203" />
     <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610775437714">
       <screen x="0" y="25" width="1280" height="775" />
     </state>

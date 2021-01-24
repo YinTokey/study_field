@@ -3,7 +3,7 @@ package di
 import (
 	"fmt"
 	"github.com/spf13/viper"
-	"go_wallpaper/internal/picture/job/acg"
+	"go_wallpaper/internal/picture/job/picsum"
 	"go_wallpaper/pkg"
 
 	"os"
@@ -62,11 +62,15 @@ func InitConfigs() {
 	// 初始化发号器
 	pkg.GuidGeneratorInit()
 
-	j := acg.NewRandomAcgJob()
+	j := picsum.NewPicsumJob()
 
-	for i := 0; i < 10000; i++ {
-		j.FetchJob_2()
-	}
+	j.StartWork()
+
+	//j := acg.NewRandomAcgJob()
+	//
+	//for i := 0; i < 10000; i++ {
+	//	j.FetchJob_2()
+	//}
 
 	//for i := 1000; i < 4000; i++ {
 	//	j.FetchJob_3(i)
