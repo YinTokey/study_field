@@ -101,15 +101,15 @@ func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 
 	for _, data := range result.Piclist {
 		var pic = &model.Picture{}
-		pic.PictureId = data.PictureId
-		pic.ImageUrl = data.ImageUrl
-		pic.LargeImageUrl = data.LargeImageUrl
-		pic.Author = data.Author
-		pic.Width = float64(data.Width)
-		pic.Height = float64(data.Height)
-		pic.Likes = float64(data.Likes)
+		//pic.PictureId = data.PictureId
+		//pic.ImageUrl = data.ImageUrl
+		//pic.LargeImageUrl = data.LargeImageUrl
+		//pic.Author = data.Author
+		//pic.Width = float64(data.Width)
+		//pic.Height = float64(data.Height)
+		//pic.Likes = float64(data.Likes)
 		pic.Name = data.Name
-		pic.Description = data.Description
+		//pic.Description = data.Description
 		list = append(list, pic)
 	}
 
