@@ -45,18 +45,17 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/go/app/comment/internal/model" />
-      <recent name="$PROJECT_DIR$/backend/go/app/comment/internal/service" />
-      <recent name="$PROJECT_DIR$/backend/go/app/comment/internal/dao" />
-      <recent name="$PROJECT_DIR$/backend/go/app/account/internal/pkg" />
-      <recent name="$PROJECT_DIR$/backend/go/app/account/api" />
+      <recent name="$PROJECT_DIR$/internal/picture/job/px" />
+      <recent name="$PROJECT_DIR$/internal/picture/job/acg" />
+      <recent name="$PROJECT_DIR$/internal/picture/job" />
+      <recent name="$PROJECT_DIR$/pkg" />
+      <recent name="$PROJECT_DIR$/frontend/website/src/assets" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build main.go (1)">
@@ -183,10 +182,6 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1609566276794" />
-    <state x="395" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611487485529">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="395" y="309" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1280.775@0.25.1280.775" timestamp="1611487485529" />
     <state x="350" y="194" key="EditFileWatcherDialog" timestamp="1607759852956">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
@@ -239,27 +234,27 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/go/app/internal/picture/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>69</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/go/app/internal/picture/model/px/photo.go</url>
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/go/app/configs/conf.go</url>
+          <url>file://$PROJECT_DIR$/configs/conf.go</url>
           <line>50</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/go/app/account/internal/dao/user_dao.go</url>
+          <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
           <line>13</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/backend/go/app/comment/internal/model/comment_subject.go</url>
+          <url>file://$PROJECT_DIR$/internal/comment/model/comment_subject.go</url>
           <line>11</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
