@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/dataSources/1a7af109-322d-4e3d-b548-dc489a557583.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/dataSources/1a7af109-322d-4e3d-b548-dc489a557583/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/go_lottery.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/api/photo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/api/unsp.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/api/unsp.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/api/unsplash_client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/api/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/cmd/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/conf.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/grpc.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/http.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/i18n.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/configs/locales/zh-cn.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/dump.rdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/assets/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/assets/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/assets/login-cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/assets/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/Comment.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/CommentBox.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/CommentList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/Detail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/Loading.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/components/Login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/frontend/website/src/store/mutation-types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/dao/user_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/model/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/serializer/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/serializer/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/service/user_login_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/service/user_register_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/account/service/user_serializer.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/comment_service/comment_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/dao/comment_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/model/comment_content.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/model/comment_index.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/model/comment_response.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/comment/model/comment_subject.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/dao/acg_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/dao/photo_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/dao/picsum_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/dao/picture_dao.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/di/app.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/di/wire.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/job/acg/random_acg_job.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/job/picsum/picsum_job.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/job/px/px_job.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/job/unsplash/unsplash_job.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/acg.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/migration.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/picsum.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/picture.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/px/fillswitch.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/px/page.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/model/px/photo.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/server/grpc/configs/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/server/grpc/unsplash_server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/server/http/http_server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/service/pe_collect_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/service/px_collect_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/internal/picture/service/um_collect_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/middleware/auth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/middleware/cors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/middleware/session.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/pkg/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/pkg/db.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/pkg/guid.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/pkg/logger.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/pkg/redis.go" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1kNJuRVVVhMMf2bQHYEDV15SPFd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$PROJECT_DIR$/internal/picture/job/px" />
+      <recent name="$PROJECT_DIR$/internal/picture/job/acg" />
+      <recent name="$PROJECT_DIR$/internal/picture/job" />
+      <recent name="$PROJECT_DIR$/pkg" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build go_wallpaper/cmd">
+    <configuration name="go build go_wallpaper" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/unsplash_server.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go_wallpaper/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <package value="go_wallpaper/cmd" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="go_lottery" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/cmd/main.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/server/unsplash_server.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/internal/server/grpc/unsplash_server.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build unsplash_server.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go_lottery" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/unsplash_server.go" />
+      <package value="go_wallpaper" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build go_wallpaper/cmd" />
+        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build unsplash_server.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
+      <created>1610774906698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610774906698</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607832912113">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607832912113" />
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611655045626">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1611655045626" />
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609566276794">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1609566276794" />
+    <state x="350" y="194" key="EditFileWatcherDialog" timestamp="1607759852956">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
+    <state width="1238" height="134" key="GridCell.Tab.0.bottom" timestamp="1611655072985">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
+    <state width="1238" height="134" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611655072985" />
+    <state width="1238" height="134" key="GridCell.Tab.0.center" timestamp="1611655072984">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
+    <state width="1238" height="134" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
+    <state width="1238" height="134" key="GridCell.Tab.0.left" timestamp="1611655072984">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
+    <state width="1238" height="134" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
+    <state width="1238" height="134" key="GridCell.Tab.0.right" timestamp="1611655072984">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
+    <state width="1238" height="134" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
+    <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607829811854" />
+    <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775@0.25.1280.775" timestamp="1610782585953" />
+    <state x="165" y="36" key="SettingsEditor" timestamp="1611655788957">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
+    <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1611655788957" />
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611458495378">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1280.775@0.25.1280.775" timestamp="1611458495378" />
+    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610775437714">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775437714" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1610775356143">
+      <screen x="0" y="25" width="1280" height="775" />
+    </state>
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608358807628" />
+    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775356143" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
+          <line>69</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/configs/conf.go</url>
+          <line>50</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/internal/comment/model/comment_subject.go</url>
+          <line>11</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/website/src/router/index.js</url>
+          <line>35</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
