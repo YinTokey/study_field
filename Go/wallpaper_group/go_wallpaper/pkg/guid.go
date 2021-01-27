@@ -12,7 +12,6 @@ func GuidGeneratorInit() {
 	flake := sonyflake.NewSonyflake(st)
 
 	sf = flake
-
 }
 
 func InstanceGuidGenerator() *sonyflake.Sonyflake {

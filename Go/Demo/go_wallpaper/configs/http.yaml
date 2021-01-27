@@ -1,7 +1,0 @@
-#MYSQL_DSN="root:12345678@tcp(127.0.0.1:3306)/wallpaper_db?charset=utf8&parseTime=True&loc=Local" # Mysql连接配置
-runmode: debug                 # 开发模式, debug, release, test
-addr: :8080                  # HTTP绑定端口
-name: go_wallpaper              # API Server的名字
-url: http://127.0.0.1:8080   # pingServer函数请求的API服务器的ip:port
-max_ping_count: 10           # pingServer函数try的次数
-session_secre: "fRJ%KVZVoq4Du4#*Rx"  # Seesion密钥，必须设置而且不要泄露

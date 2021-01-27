@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/go_lottery.iml" filepath="$PROJECT_DIR$/.idea/go_lottery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../wallpaper_group/go_wallpaper/.idea/go_lottery.iml" filepath="$PROJECT_DIR$/../../wallpaper_group/go_wallpaper/.idea/go_lottery.iml" />
     </modules>
   </component>
 </project>

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Demo/campus/Week09/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Demo/campus/Week09/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Demo/campus/Week09/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Demo/go_wallpaper/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
@@ -135,8 +138,8 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.data.extractors.current.export.id" value="CSV-Groovy.csv.groovy" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
@@ -351,11 +354,6 @@
           <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/configs/conf.go</url>
-          <line>50</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
