@@ -7,6 +7,7 @@
     "declarations": true
   },
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "egg": "^2.15.1",
     "egg-scripts": "^2.11.0"
   },
