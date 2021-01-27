@@ -7,10 +7,8 @@ import (
 	"log"
 	"net"
 	"strconv"
-	"sync"
 	"time"
 )
-
 
 type User struct {
 	ID             int64
@@ -20,15 +18,14 @@ type User struct {
 }
 
 var (
-	globalID int
-	idLocker sync.Mutex
 	sf *sonyflake.Sonyflake
-
 )
 
 func main()  {
-
+	// 初始化Id生成器
 	FlakeInit()
+
+	// 服务监听
 	startServer()
 
 }
@@ -42,7 +39,6 @@ func FlakeInit() {
 }
 
 func NewGuid() int64 {
-	//fmt.Println("start new guid ", sf)
 	id, err := sf.NextID()
 	result := int64(id)
 	if err != nil {
@@ -63,7 +59,6 @@ func startServer() {
 			log.Printf("accept error: %v\n", err)
 			continue
 		}
-		// 开始goroutine监听连接
 		fmt.Println("开始goroutine监听连接")
 		go handleConn(conn)
 	}
@@ -72,7 +67,10 @@ func startServer() {
 
 func sendMessage(conn net.Conn, ch <-chan string) {
 	for msg := range ch {
-		fmt.Fprintln(conn, msg)
+		str := fmt.Sprintf("reply from server : %s",msg)
+		
+		fmt.Fprintln(conn, str)
+
 	}
 }
 
@@ -85,13 +83,11 @@ func handleConn(conn net.Conn) {
 		MessageChannel: make(chan string, 8),
 	}
 
-	//启动写 conn 的协程
 	go sendMessage(conn, user.MessageChannel)
 
 	input := bufio.NewScanner(conn)
 	for input.Scan() {
-		fmt.Println("id:" + strconv.FormatInt(user.ID,10) + "  message:" + input.Text())
-		//通过 chan 可以传递 message，客户端发来什么消息就回什么消息
+		fmt.Println("from client id:" + strconv.FormatInt(user.ID,10) + "  message:" + input.Text())
 		user.MessageChannel <- input.Text()
 	}
 

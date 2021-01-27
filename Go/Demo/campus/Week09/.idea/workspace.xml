@@ -2,110 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08305241-ce16-435a-b36b-ebe457a39b03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/dataSources/1a7af109-322d-4e3d-b548-dc489a557583.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/dataSources/1a7af109-322d-4e3d-b548-dc489a557583/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/go_lottery.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../go_wallpaper/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/watcherTasks.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/api/photo.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/api/unsp.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/api/unsp.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/api/unsplash_client.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/api/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/cmd/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/conf.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/grpc.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/http.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/i18n.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/configs/locales/zh-cn.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/dump.rdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/assets/icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/assets/login-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/assets/login-cloud.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/assets/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/Comment.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/CommentBox.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/CommentList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/Detail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/Loading.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/components/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/frontend/website/src/store/mutation-types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/dao/user_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/model/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/serializer/common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/serializer/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/service/user_login_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/service/user_register_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/account/service/user_serializer.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/comment_service/comment_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/dao/comment_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/model/comment_content.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/model/comment_index.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/model/comment_response.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/comment/model/comment_subject.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/dao/acg_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/dao/photo_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/dao/picsum_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/dao/picture_dao.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/di/app.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/di/wire.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/job/acg/random_acg_job.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/job/picsum/picsum_job.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/job/px/px_job.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/job/unsplash/unsplash_job.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/acg.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/migration.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/picsum.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/picture.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/px/fillswitch.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/px/page.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/model/px/photo.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/server/grpc/configs/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/server/grpc/unsplash_server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/server/http/http_server.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/service/pe_collect_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/service/px_collect_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/internal/picture/service/um_collect_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/middleware/auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/middleware/cors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/middleware/session.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/pkg/common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/pkg/db.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/pkg/guid.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/pkg/logger.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../go_wallpaper/pkg/redis.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../wallpaper_group/go_wallpaper/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../wallpaper_group/go_wallpaper/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../wallpaper_group/go_wallpaper/pkg/guid.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../../wallpaper_group/go_wallpaper/pkg/guid.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,21 +81,21 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="440" y="250" key="#Go_Modules/0.25.1280.775@0.25.1280.775" timestamp="1611724953045" />
-    <state width="1238" height="130" key="GridCell.Tab.0.bottom" timestamp="1611725293597">
+    <state width="1238" height="130" key="GridCell.Tab.0.bottom" timestamp="1611727516529">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="130" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611725293597" />
-    <state width="1238" height="130" key="GridCell.Tab.0.center" timestamp="1611725293596">
+    <state width="1238" height="130" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611727516529" />
+    <state width="1238" height="130" key="GridCell.Tab.0.center" timestamp="1611727516528">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="130" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611725293596" />
-    <state width="1238" height="130" key="GridCell.Tab.0.left" timestamp="1611725293596">
+    <state width="1238" height="130" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611727516528" />
+    <state width="1238" height="130" key="GridCell.Tab.0.left" timestamp="1611727516527">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="130" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611725293596" />
-    <state width="1238" height="130" key="GridCell.Tab.0.right" timestamp="1611725293597">
+    <state width="1238" height="130" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611727516527" />
+    <state width="1238" height="130" key="GridCell.Tab.0.right" timestamp="1611727516529">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
-    <state width="1238" height="130" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611725293597" />
+    <state width="1238" height="130" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611727516529" />
   </component>
 </project>
