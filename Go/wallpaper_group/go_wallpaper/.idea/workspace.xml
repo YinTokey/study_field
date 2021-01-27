@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Demo/campus/Week09/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demo/campus/Week09/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +47,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -195,36 +197,36 @@
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="134" key="GridCell.Tab.0.bottom" timestamp="1611655072985">
+    <state width="1238" height="134" key="GridCell.Tab.0.bottom" timestamp="1611747198577">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1238" height="134" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611655072985" />
-    <state width="1238" height="134" key="GridCell.Tab.0.center" timestamp="1611655072984">
+    <state width="1238" height="134" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611747198577" />
+    <state width="1238" height="134" key="GridCell.Tab.0.center" timestamp="1611747198575">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1238" height="134" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
-    <state width="1238" height="134" key="GridCell.Tab.0.left" timestamp="1611655072984">
+    <state width="1238" height="134" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611747198575" />
+    <state width="1238" height="134" key="GridCell.Tab.0.left" timestamp="1611747198575">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1238" height="134" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
-    <state width="1238" height="134" key="GridCell.Tab.0.right" timestamp="1611655072984">
+    <state width="1238" height="134" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611747198575" />
+    <state width="1238" height="134" key="GridCell.Tab.0.right" timestamp="1611747198576">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1238" height="134" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611655072984" />
+    <state width="1238" height="134" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611747198576" />
     <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607829811854" />
     <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775@0.25.1280.775" timestamp="1610782585953" />
-    <state x="165" y="36" key="SettingsEditor" timestamp="1611655788957">
+    <state x="165" y="36" key="SettingsEditor" timestamp="1611750068124">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
     <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
-    <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1611655788957" />
+    <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1611750068124" />
     <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611458495378">
       <screen x="0" y="25" width="1280" height="775" />
     </state>
