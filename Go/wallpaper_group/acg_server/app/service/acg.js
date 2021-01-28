@@ -1,26 +1,28 @@
 'use strict';
 
-const parseLocalAcg = require('../task/local_json_task.js');
+// const parseLocalAcg = require('../task/local_json_task.js');
 
 const Service = require('egg').Service;
 
 class AcgService extends Service {
+
     async restoreJSON() {
-        const data = await parseLocalAcg();
+        console.log('开始导出本地json测试 1 ');
 
-        console.log(data);
+        // const data = await parseLocalAcg();
 
-        for (const i in data) {
-            const obj = data[i];
-            const po = await this.createPO(obj);
-            this.ctx.model.Acg.create(po);
-        }
+        // for (const i in data) {
+        //     const obj = data[i];
+        //     const po = await this.createPO(obj);
+        //     this.ctx.model.Acg.create(po);
+        //     console.log(i);
+        // }
     }
     // 构建持久化模型
     async createPO(obj) {
         const po = {
             pictureId: obj.picture_id,
-            imageUrl: obj.picture_id,
+            imageUrl: obj.image_url,
             largeImageUrl: obj.large_image_url,
             name: obj.name,
             description: obj.description,

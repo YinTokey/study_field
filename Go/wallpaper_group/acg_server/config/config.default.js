@@ -24,11 +24,8 @@ module.exports = appInfo => {
     };
 
     config.mongoose = {
-        client: {
-        url: 'mongodb://127.0.0.1/acg_server',
+        url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1/acg_server',
         options: {},
- 
-      },
     };
 
     return {
@@ -36,4 +33,3 @@ module.exports = appInfo => {
         ...userConfig,
     };
 };
-

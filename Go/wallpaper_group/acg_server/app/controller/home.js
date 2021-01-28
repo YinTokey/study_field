@@ -7,8 +7,7 @@ class HomeController extends Controller {
         const {
             ctx,
         } = this;
-        ctx.body = 'hi, egg';
-        ctx.service.acg.restoreJSON();
+        ctx.body = 'hi, egg hha';
     }
 }
 
