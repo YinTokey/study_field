@@ -33,9 +33,15 @@ module.exports = app => {
         categories: {
             type: String,
         },
-        columnId: {
-            type: Schema.Types.ObjectId,
-        },
+        // columnId: {
+        //     type: Schema.Types.ObjectId,
+        // },
     });
-    return mongoose.model('Acg', PostSchema);
+    console.log('------- model 操作检查');
+
+    const acg = mongoose.model('Acg', PostSchema);
+    
+    console.log(acg);
+
+    return acg;
 };
