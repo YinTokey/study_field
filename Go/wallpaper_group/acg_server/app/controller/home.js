@@ -1,14 +1,16 @@
 'use strict';
 
 const Controller = require('egg').Controller;
-const parserCSV = require('../task/csv_task.js');
+const parseLocalAcg = require('../task/local_json_task.js');
 
 class HomeController extends Controller {
-  async index() {
-    const { ctx } = this;
-    ctx.body = 'hi, egg';
-    parserCSV();
-  }
+    async index() {
+        const {
+            ctx,
+        } = this;
+        ctx.body = 'hi, egg';
+        parseLocalAcg();
+    }
 }
 
 module.exports = HomeController;
