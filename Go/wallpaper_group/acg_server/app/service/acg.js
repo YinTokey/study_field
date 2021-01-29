@@ -6,6 +6,19 @@ const Service = require('egg').Service;
 
 class AcgService extends Service {
 
+    async listData(page, pageSize) {
+        // string to number
+        const pageNum = parseInt(page, 10);
+        const pageSizeNum = parseInt(pageSize, 10);
+
+
+        const data = this.ctx.model.Acg.find({})
+            .skip(pageNum * pageSizeNum)
+            .limit(pageSizeNum)
+            .exec();
+        return data;
+    }
+
     async restoreJSON() {
         console.log('开始导出本地json测试 1 ');
 
@@ -37,4 +50,3 @@ class AcgService extends Service {
 }
 
 module.exports = AcgService;
-

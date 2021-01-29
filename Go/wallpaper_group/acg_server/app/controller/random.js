@@ -2,13 +2,13 @@
 
 const Controller = require('egg').Controller;
 
-class HomeController extends Controller {
+class RandomController extends Controller {
     async index() {
         const {
             ctx,
         } = this;
-        ctx.body = 'home page';
+        ctx.body = 'hi, random';
     }
 }
 
-module.exports = HomeController;
+module.exports = RandomController;
