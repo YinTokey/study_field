@@ -11,7 +11,6 @@ class AcgService extends Service {
         const pageNum = parseInt(page, 10);
         const pageSizeNum = parseInt(pageSize, 10);
 
-
         const data = this.ctx.model.Acg.find({})
             .skip(pageNum * pageSizeNum)
             .limit(pageSizeNum)
