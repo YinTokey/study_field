@@ -9,13 +9,27 @@ class AcgService extends Service {
     async listData(page, pageSize) {
         // string to number
         const pageNum = parseInt(page, 10);
+
         const pageSizeNum = parseInt(pageSize, 10);
 
-        const data = this.ctx.model.Acg.find({})
+        return this.ctx.model.Acg.find({})
             .skip(pageNum * pageSizeNum)
             .limit(pageSizeNum)
             .exec();
-        return data;
+    }
+
+    async random(n) {
+
+        const min = 1
+        const max = await this.ctx.model.Acg.find({}).count().exec();
+        const nums = this.randomNums(n, min, max);
+
+        var arr = []
+        for (var i = 0; i < nums.length; i++) {
+            arr[i] = await this.ctx.model.Acg.find({}).skip(nums[i]).limit(1).exec();
+        }
+
+        return arr
     }
 
     async restoreJSON() {
@@ -30,6 +44,7 @@ class AcgService extends Service {
         //     console.log(i);
         // }
     }
+
     // 构建持久化模型
     async createPO(obj) {
         const po = {
@@ -46,6 +61,30 @@ class AcgService extends Service {
         };
         return po;
     }
+
+
+    randomNums(n, min, max) {
+        var arr = [];
+        for (var i = 0; i < n; i++) {
+            var ran = Math.ceil(Math.random() * (max - min) + min);
+            while (this.isExist(arr, ran)) {
+                ran = Math.ceil(Math.random() * (max - min) + min);
+            }
+            arr[i] = ran;
+        }
+        return arr;
+    }
+
+
+    isExist(arr, ran) {
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] == ran) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 
 module.exports = AcgService;
