@@ -7,13 +7,17 @@
     "declarations": true
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.2.5",
+    "async-redis": "^1.1.7",
     "csvtojson": "^2.0.10",
     "egg": "^2.15.1",
     "egg-mongoose": "^3.3.1",
     "egg-scripts": "^2.11.0",
-    "mongoose": "^5.11.13"
+    "mongoose": "^5.11.13",
+    "redis": "^3.0.2"
   },
   "devDependencies": {
+    "@grpc/proto-loader": "^0.5.6",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "egg-bin": "^4.11.0",

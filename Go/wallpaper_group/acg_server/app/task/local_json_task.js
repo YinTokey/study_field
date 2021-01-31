@@ -15,6 +15,5 @@ async function parseLocalAcg() {
     return JSON.parse(data.toString());
 }
 
-
 module.exports = parseLocalAcg;
 
