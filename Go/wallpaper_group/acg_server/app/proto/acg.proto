@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package acg;
+package acgPackage;
 
-service FetchData {
+service AcgService {
   rpc List (ListRequest) returns (ListResponse) {}
   rpc Random (RandomRequest) returns (RandomResponse) {}
 }

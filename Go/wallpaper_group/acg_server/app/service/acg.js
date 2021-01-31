@@ -17,6 +17,7 @@ class AcgService extends Service {
             .limit(pageSizeNum)
             .exec();
     }
+    
 
     async random(n) {
 
@@ -31,7 +32,8 @@ class AcgService extends Service {
 
         return arr
     }
-
+    
+    
     async restoreJSON() {
         console.log('开始导出本地json测试 1 ');
 
@@ -47,7 +49,7 @@ class AcgService extends Service {
 
     // 构建持久化模型
     async createPO(obj) {
-        const po = {
+        return {
             pictureId: obj.picture_id,
             imageUrl: obj.image_url,
             largeImageUrl: obj.large_image_url,
@@ -59,7 +61,6 @@ class AcgService extends Service {
             likes: obj.likes,
             categories: obj.categories,
         };
-        return po;
     }
 
 
@@ -87,4 +88,7 @@ class AcgService extends Service {
 
 }
 
-module.exports = AcgService;
+module.exports = {
+    AcgService,
+    
+};

@@ -6,9 +6,14 @@ module.exports = {
     static: {
         enable: true,
     },
-
+    
     mongoose: {
         enable: true,
         package: 'egg-mongoose',
+    },
+    
+    grpc: {
+        enable: true,
+        package: 'egg-grpc',
     },
 };
