@@ -10,8 +10,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
     defaults: true,
     oneofs: true
 })
-const protoDescriptor = grpc.loadPackageDefinition(packageDefinition)
 
-const hello_proto = protoDescriptor.hello
+const acg_proto = grpc.loadPackageDefinition(packageDefinition).acg
 
-module.exports = hello_proto
+module.exports = acg_proto

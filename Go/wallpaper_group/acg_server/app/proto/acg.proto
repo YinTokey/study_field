@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package acg;
+
+service FetchData {
+  rpc List (ListRequest) returns (ListResponse) {}
+  rpc Random (RandomRequest) returns (RandomResponse) {}
+}
+
+/*
+列表请求
+*/
+message ListRequest {
+  int32 page = 1; // 页
+  int32 pageSize = 2; // 每页数据量
+}
+
+
+message RandomRequest {
+  int32 count = 1; // 随机数量，如果不传，默认返回一个。
+}
+
+message ListResponse {
+  string message = 1;
+}
+
+message RandomResponse {
+  string message = 1;
+}

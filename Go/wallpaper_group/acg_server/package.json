@@ -10,21 +10,29 @@
     "@grpc/grpc-js": "^1.2.5",
     "async-redis": "^1.1.7",
     "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
     "egg": "^2.15.1",
     "egg-mongoose": "^3.3.1",
     "egg-scripts": "^2.11.0",
+    "google-protobuf": "^3.14.0",
+    "grpc": "^1.24.4",
     "mongoose": "^5.11.13",
+    "protobufjs": "^6.10.2",
     "redis": "^3.0.2"
   },
   "devDependencies": {
     "@grpc/proto-loader": "^0.5.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/google-protobuf": "^3.7.4",
+    "@types/node": "^14.14.22",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
     "eslint": "^5.13.0",
-    "eslint-config-egg": "^7.1.0"
+    "eslint-config-egg": "^7.1.0",
+    "typescript": "^4.1.3"
   },
   "engines": {
     "node": ">=10.0.0"
