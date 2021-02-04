@@ -17,23 +17,23 @@ class AcgService extends Service {
             .limit(pageSizeNum)
             .exec();
     }
-    
+
 
     async random(n) {
 
-        const min = 1
+        const min = 1;
         const max = await this.ctx.model.Acg.find({}).count().exec();
         const nums = this.randomNums(n, min, max);
 
-        var arr = []
-        for (var i = 0; i < nums.length; i++) {
-            arr[i] = await this.ctx.model.Acg.find({}).skip(nums[i]).limit(1).exec();
+        const arr = [];
+        for (let i = 0; i < nums.length; i++) {
+            arr[i] = await this.ctx.model.Acg.find({}).skip(nums[i]).limit(1)
+                .exec();
         }
 
-        return arr
+        return arr;
     }
-    
-    
+
     async restoreJSON() {
         console.log('开始导出本地json测试 1 ');
 
@@ -65,9 +65,9 @@ class AcgService extends Service {
 
 
     randomNums(n, min, max) {
-        var arr = [];
-        for (var i = 0; i < n; i++) {
-            var ran = Math.ceil(Math.random() * (max - min) + min);
+        const arr = [];
+        for (let i = 0; i < n; i++) {
+            let ran = Math.ceil(Math.random() * (max - min) + min);
             while (this.isExist(arr, ran)) {
                 ran = Math.ceil(Math.random() * (max - min) + min);
             }
@@ -78,8 +78,9 @@ class AcgService extends Service {
 
 
     isExist(arr, ran) {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] == ran) {
+        for (let i = 0; i < arr.length; i++) {
+            // eslint-disable-next-line eqeqeq
+            if (arr[i] === ran) {
                 return true;
             }
         }
@@ -90,5 +91,5 @@ class AcgService extends Service {
 
 module.exports = {
     AcgService,
-    
+
 };

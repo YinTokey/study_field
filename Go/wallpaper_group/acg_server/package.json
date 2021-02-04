@@ -8,21 +8,25 @@
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.2.5",
+    "app-root-path": "^3.0.0",
     "async-redis": "^1.1.7",
     "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
     "egg": "^2.15.1",
     "egg-grpc": "^1.0.3",
     "egg-mongoose": "^3.3.1",
+    "egg-plugin-grpc-server": "^1.0.49",
     "egg-scripts": "^2.11.0",
     "google-protobuf": "^3.14.0",
     "grpc": "^1.24.4",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
+    "morgan": "^1.10.0",
     "protobufjs": "^6.10.2",
     "redis": "^3.0.2",
     "source-map-loader": "^2.0.0",
-    "ts-loader": "^8.0.14"
+    "ts-loader": "^8.0.14",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@grpc/proto-loader": "^0.5.6",

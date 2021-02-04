@@ -6,7 +6,6 @@ const fs = require('fs').promises;
 const path = require('path');
 const defPath = path.join(__dirname, '../');
 
-
 async function parseLocalAcg() {
     console.log('开始导出本地json测试');
 
