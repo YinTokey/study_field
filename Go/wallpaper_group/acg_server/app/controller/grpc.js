@@ -4,8 +4,13 @@ const dbConfig = require('../../config/db');
 const MongoClient = require('mongodb').MongoClient;
 
 module.exports = app => {
+    console.log('grpcListIMP 验证---');
+    // const grpcListIMP = function(call, callback) {
+    //     callback(null, { message: 'random resp a' });
+    // };
 
-    // const grpcList = function(call, callback) {
+    // return function grpcListIMP(call, callback) {
+    //     console.log('grpcListIMP ---');
     //     callback(null, { message: 'random resp a' });
     // };
 

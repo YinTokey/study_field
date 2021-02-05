@@ -12,6 +12,15 @@ class ListController extends Controller {
 
         ctx.body = data;
     }
+
+    async grpcList(call, callback) {
+        callback(null, { message: 'grpcList request' });
+        // const { ctx } = this;
+        // console.log('grpcList request' + ctx);
+        //
+        // callback(null, { message: 'grpcList request' });
+    }
+
 }
 
 module.exports = ListController;

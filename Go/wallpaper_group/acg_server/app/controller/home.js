@@ -11,7 +11,7 @@ class HomeController extends Controller {
         // 从redis中获取
         // const result = await client().get('hello');
 
-        ctx.body = 'home page';
+        ctx.body = 'home page hahah';
     }
 }
 

@@ -6,6 +6,10 @@ const acgImpService = new (require('../../controller/grpc'))();
 const listImp = require('../../proto/acg_list');
 // const List = require('../../proto/acg_imp')
 
+module.exports = app => {
+    app.logger.info('------ 暴躁验证');
+};
+
 
 function main() {
     const server = new grpc.Server();
