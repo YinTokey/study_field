@@ -8,8 +8,7 @@ class ListController extends Controller {
         const pageSize = ctx.queries.pageSize;
         const page = ctx.queries.page;
 
-        const data = await ctx.service.acg.listData(page,pageSize);
-
+        const data = await ctx.service.acg.listData(page, pageSize);
 
         ctx.body = data;
     }

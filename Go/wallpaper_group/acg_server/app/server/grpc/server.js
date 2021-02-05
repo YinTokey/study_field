@@ -3,13 +3,14 @@ const grpc = require('@grpc/grpc-js');
 const acgProto = require('../../proto/acg_proto');
 const config = require('../../../config/grpc');
 const acgImpService = new (require('../../proto/acg_imp'))();
+const listImp = require('../../proto/acg_list');
 // const List = require('../../proto/acg_imp')
 
 
 function main() {
     const server = new grpc.Server();
     server.addService(acgProto.AcgService.service, {
-        List: acgImpService.List,
+        List: listImp.List,
         Random: acgImpService.Random,
     });
 
