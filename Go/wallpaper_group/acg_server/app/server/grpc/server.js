@@ -2,7 +2,7 @@
 const grpc = require('@grpc/grpc-js');
 const acgProto = require('../../proto/acg_proto');
 const config = require('../../../config/grpc');
-const acgImpService = new (require('../../proto/acg_imp'))();
+const acgImpService = new (require('../../controller/grpc'))();
 const listImp = require('../../proto/acg_list');
 // const List = require('../../proto/acg_imp')
 
