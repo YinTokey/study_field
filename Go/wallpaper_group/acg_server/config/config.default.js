@@ -32,17 +32,8 @@ module.exports = appInfo => {
         endPoint: '0.0.0.0:50051',
     };
 
-    config.grpcServer = {
-        port: 50051, // grpc监听端口
-        host: '127.0.0.1', // 监听地址
-        timeOut: 5000, // 超时时间
-        protoDir: 'app/proto', // proto文件所在文件夹
-        grpcDir: 'app/grpc', // 接口实现所在文件夹
-        errorHandle(error) { // 全局统一错误处理
-            // TODO
-            // this 为ctx，接受error参数
-        }
-    };
+    config.default_page = 1;
+    config.default_limit = 20;
 
     return {
         ...config,

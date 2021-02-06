@@ -4,10 +4,15 @@ const Controller = require('egg').Controller;
 
 class RandomController extends Controller {
     async index() {
-        const { ctx } = this;
-        const count = ctx.queries.count;
+        const { ctx, service } = this;
 
-        const data = await ctx.service.acg.random(count);
+        let count = ctx.queries.count;
+
+        if (count === undefined) {
+            count = '1';
+        }
+
+        const data = await service.acg.random(count);
 
         ctx.body = data;
     }

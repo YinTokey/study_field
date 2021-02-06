@@ -4,11 +4,14 @@ const Controller = require('egg').Controller;
 
 class ListController extends Controller {
     async index() {
-        const { ctx } = this;
-        const pageSize = ctx.queries.pageSize;
-        const page = ctx.queries.page;
+        const { ctx, service } = this;
 
-        const data = await ctx.service.acg.listData(page, pageSize);
+        const limit = ctx.pagination.limit;
+        const page = ctx.pagination.page;
+
+        console.log('list 请求' + page + limit);
+
+        const data = await service.acg.listData(page, limit);
 
         ctx.body = data;
     }

@@ -3,7 +3,7 @@ const grpc = require('@grpc/grpc-js');
 const acgProto = require('../proto/acg_proto');
 
 module.exports = app => {
-    const { controller, config } = app;
+    const { config } = app;
 
     const server = new grpc.Server();
 
@@ -11,8 +11,6 @@ module.exports = app => {
     server.addService(acgProto.AcgService.service, {
         List: (call, callback) => {
             app.logger.info('===> list request');
-            const listC = require('../controller/list');
-            listC.grpcList();
 
             callback(null, { message: '===> list request' });
         },

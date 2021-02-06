@@ -11,8 +11,8 @@ class AcgService extends Service {
         const pageNum = parseInt(page, 10);
 
         const pageSizeNum = parseInt(pageSize, 10);
-
-        return this.ctx.model.Acg.find({})
+        // 查询时不返回 '_id' ，'__V' 字段
+        return this.ctx.model.Acg.find({}, { _id: 0, __v: 0 })
             .skip(pageNum * pageSizeNum)
             .limit(pageSizeNum)
             .exec();
@@ -27,7 +27,7 @@ class AcgService extends Service {
 
         const arr = [];
         for (let i = 0; i < nums.length; i++) {
-            arr[i] = await this.ctx.model.Acg.find({}).skip(nums[i]).limit(1)
+            arr[i] = await this.ctx.model.Acg.find({}, { _id: 0 }).skip(nums[i]).limit(1)
                 .exec();
         }
 
@@ -89,7 +89,4 @@ class AcgService extends Service {
 
 }
 
-module.exports = {
-    AcgService,
-
-};
+module.exports = AcgService;

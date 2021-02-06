@@ -12,6 +12,11 @@ module.exports = {
         package: 'egg-mongoose',
     },
 
+    routerPlus: {
+        enable: true,
+        package: 'egg-router-plus',
+    },
+
     grpc: {
         enable: true,
         package: 'egg-grpc',
