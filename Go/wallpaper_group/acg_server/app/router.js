@@ -5,7 +5,7 @@
  */
 module.exports = app => {
     require('./router/http')(app);
-    require('./router/grpc')(app);
+    // require('./router/grpc')(app);
 
 };
 
