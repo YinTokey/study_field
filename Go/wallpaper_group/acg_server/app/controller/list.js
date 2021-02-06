@@ -13,13 +13,15 @@ class ListController extends Controller {
         ctx.body = data;
     }
 
-    async grpcList(call, callback) {
-        callback(null, { message: 'grpcList request' });
-        // const { ctx } = this;
-        // console.log('grpcList request' + ctx);
-        //
-        // callback(null, { message: 'grpcList request' });
-    }
+    // async grpcList() {
+    //     console.log('---- 空炮');
+    //     // callback(null, { message: 'grpcList request' });
+    //     // const { ctx } = this;
+    //     // console.log('grpcList request' + ctx);
+    //     //
+    //     // callback(null, { message: 'grpcList request' });
+    // }
+
 
 }
 

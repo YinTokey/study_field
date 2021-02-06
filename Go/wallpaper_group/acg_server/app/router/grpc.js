@@ -1,11 +1,9 @@
 'use strict';
 const grpc = require('@grpc/grpc-js');
 const acgProto = require('../proto/acg_proto');
-const config = require('../../config/grpc');
 
 module.exports = app => {
-    console.log('=== grpc router');
-    const { controller } = app;
+    const { controller, config } = app;
 
     const server = new grpc.Server();
 
@@ -13,6 +11,9 @@ module.exports = app => {
     server.addService(acgProto.AcgService.service, {
         List: (call, callback) => {
             app.logger.info('===> list request');
+            const listC = require('../controller/list');
+            listC.grpcList();
+
             callback(null, { message: '===> list request' });
         },
         Random: (call, callback) => {
@@ -21,10 +22,10 @@ module.exports = app => {
         },
     });
 
-    server.bindAsync(config.rpc.address + ':' + config.rpc.port, grpc.ServerCredentials.createInsecure(), () => {
+    server.bindAsync(config.grpc.endPoint, grpc.ServerCredentials.createInsecure(), () => {
         server.start();
         app.logger.info('grpc server started');
-        app.logger.info(controller);
+        // app.logger.info(controller);
 
     });
 
