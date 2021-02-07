@@ -3,6 +3,7 @@
 // const acgProto = require('./app/proto/acg_proto');
 // const config = require('./config/grpc');
 // const grpcController = new (require('./app/controller/grpc'))();
+const consul = require('./app/server/grpc/consulReg');
 
 module.exports = app => {
 
@@ -15,6 +16,8 @@ module.exports = app => {
     app.ready(async () => {
         // 启动grpc
 
+        // 微服务注册到consul
+        // consul.register();
     });
 
     app.beforeClose(async () => {

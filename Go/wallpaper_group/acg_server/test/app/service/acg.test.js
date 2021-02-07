@@ -15,7 +15,7 @@ describe('get()', () => {
 
         // 创建 ctx
         const ctx = app.mockContext();
-        // 通过 ctx 访问到 service.user
+        // 通过 ctx 访问到 service.acg
 
         const page = '1';
         const limit = '20';

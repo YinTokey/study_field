@@ -1,0 +1,53 @@
+version: '3'
+services:
+  acgserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7002:7002
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - EGG_MONGODB_URL=mongodb://127.0.0.1/acg_server
+      - SERVER_PORT=7002
+    depends_on:
+      - mongodb
+    networks:
+      - acg_server
+    command: npm run dev
+
+
+#  redis:
+#    image: redis:3.2-alpine
+#    command: redis-server --appendonly yes --requirepass acg_server
+#    volumes:
+#      - egg-redis:/data
+#    networks:
+#      - docker_acgserver
+#    ports:
+#      - 6379:6379
+
+  mongodb:
+    image: mongo:3.2
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=mongodb
+      - MONGO_INITDB_DATABASE=acg_server
+    volumes:
+      - egg-mongo:/data/db
+      - ./init.d/mongo/:/docker-entrypoint-initdb.d/
+    networks:
+      - acg_server
+    ports:
+      - 27017:27017
+
+volumes:
+  egg-mongo:
+ # egg-redis:
+
+networks:
+  acg_server:
+    driver: bridge
