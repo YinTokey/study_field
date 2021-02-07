@@ -3,7 +3,6 @@ package di
 import (
 	"fmt"
 	"github.com/spf13/viper"
-	"go_wallpaper/internal/picture/job/acg"
 	"go_wallpaper/internal/picture/server/http"
 	"go_wallpaper/pkg"
 	"os"
@@ -57,7 +56,7 @@ func InitConfigs() {
 
 	// 连接数据库
 	pkg.Database(dsn)
-	pkg.Redis()
+	//pkg.Redis()
 
 	// 初始化发号器
 	pkg.GuidGeneratorInit()
@@ -65,12 +64,12 @@ func InitConfigs() {
 	//j := unsplash.NewUnsplashJob()
 	//
 	//j.FetchPics()
-
-	j := acg.NewRandomAcgJob()
-
-	for i := 0; i < 10000; i++ {
-		j.FetchJob_2()
-	}
+	//
+	//j := acg.NewRandomAcgJob()
+	//
+	//for i := 0; i < 10000; i++ {
+	//	j.FetchJob_2()
+	//}
 
 	//for i := 1000; i < 4000; i++ {
 	//	j.FetchJob_3(i)

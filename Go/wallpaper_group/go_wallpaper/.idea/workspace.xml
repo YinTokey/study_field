@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Demo/campus/Week09/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demo/campus/Week09/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +19,14 @@
   <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
@@ -47,20 +53,20 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/.." />
       <recent name="$PROJECT_DIR$/internal/picture/job/px" />
       <recent name="$PROJECT_DIR$/internal/picture/job/acg" />
       <recent name="$PROJECT_DIR$/internal/picture/job" />
-      <recent name="$PROJECT_DIR$/pkg" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_wallpaper/cmd">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build go_wallpaper" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_lottery" />
       <working_directory value="$PROJECT_DIR$" />
@@ -155,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build go_wallpaper/cmd" />
         <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build unsplash_server.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
@@ -180,67 +186,6 @@
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607832912113">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="401" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607832912113" />
-    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611655045626">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="293" y="209" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1280.775@0.25.1280.775" timestamp="1611655045626" />
-    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609566276794">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="378" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1280.775@0.25.1280.775" timestamp="1609566276794" />
-    <state x="350" y="194" key="EditFileWatcherDialog" timestamp="1607759852956">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="350" y="194" key="EditFileWatcherDialog/0.25.1280.775@0.25.1280.775" timestamp="1607759852956" />
-    <state width="1238" height="134" key="GridCell.Tab.0.bottom" timestamp="1611747198577">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151782" />
-    <state width="1238" height="134" key="GridCell.Tab.0.bottom/0.25.1280.775@0.25.1280.775" timestamp="1611747198577" />
-    <state width="1238" height="134" key="GridCell.Tab.0.center" timestamp="1611747198575">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151780" />
-    <state width="1238" height="134" key="GridCell.Tab.0.center/0.25.1280.775@0.25.1280.775" timestamp="1611747198575" />
-    <state width="1238" height="134" key="GridCell.Tab.0.left" timestamp="1611747198575">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151779" />
-    <state width="1238" height="134" key="GridCell.Tab.0.left/0.25.1280.775@0.25.1280.775" timestamp="1611747198575" />
-    <state width="1238" height="134" key="GridCell.Tab.0.right" timestamp="1611747198576">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1609476151781" />
-    <state width="1238" height="134" key="GridCell.Tab.0.right/0.25.1280.775@0.25.1280.775" timestamp="1611747198576" />
-    <state width="229" height="539" key="HiddenNamespacesPopup" timestamp="1610782585953">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1607829811854" />
-    <state width="229" height="539" key="HiddenNamespacesPopup/0.25.1280.775@0.25.1280.775" timestamp="1610782585953" />
-    <state x="165" y="36" key="SettingsEditor" timestamp="1611750068124">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="205" y="48" key="SettingsEditor/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608361400546" />
-    <state x="165" y="36" key="SettingsEditor/0.25.1280.775@0.25.1280.775" timestamp="1611750068124" />
-    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611458495378">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="491" y="254" width="337" height="301" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.25.1280.775@0.25.1280.775" timestamp="1611458495378" />
-    <state x="398" y="122" width="595" height="580" key="find.popup" timestamp="1610775437714">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="398" y="122" width="595" height="580" key="find.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775437714" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1610775356143">
-      <screen x="0" y="25" width="1280" height="775" />
-    </state>
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775/1280.25.1020.739@0.25.1280.775" timestamp="1608358807628" />
-    <state x="268" y="124" width="670" height="676" key="search.everywhere.popup/0.25.1280.775@0.25.1280.775" timestamp="1610775356143" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -253,11 +198,6 @@
           <url>file://$PROJECT_DIR$/internal/picture/model/px/photo.go</url>
           <line>46</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/internal/account/dao/user_dao.go</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/internal/comment/model/comment_subject.go</url>
