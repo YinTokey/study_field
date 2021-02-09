@@ -8,6 +8,7 @@ client.connect(config.mongodb.url, function(err, db) {
     if (err) throw err;
     console.log('数据库已创建');
     console.info('ni');
+
     _db = db.db(config.mongodb.name);
 });
 
