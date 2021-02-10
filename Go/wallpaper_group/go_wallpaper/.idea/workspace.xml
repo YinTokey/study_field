@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../acg_server/test/app/mongodb/tutorial.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../acg_server/test/app/mongodb/tutorial.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../account_server/conf/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/conf/conf.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/conf/conf.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

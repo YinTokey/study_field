@@ -1,0 +1,20 @@
+runmode: debug                 # 开发模式, debug, release, test
+addr: :8080                  # HTTP绑定端口
+name: account_server              # API Server的名字
+url: http://127.0.0.1:8080   # pingServer函数请求的API服务器的ip:port
+max_ping_count: 10           # pingServer函数try的次数
+session_secre: "fRJ%KVZVoq4Du4#*Rx"  # Seesion密钥，必须设置而且不要泄露
+
+
+db:
+  name: "account_server"
+  addr: 127.0.0.1:3306
+  #addr: docker.for.mac.localhost:3306
+  username: root
+  password: 12345678
+  config: "charset=utf8&parseTime=True&loc=Local"
+
+redis:
+  addr: 127.0.0.1:6379 # Redis端口和地址
+  pw: "" # Redis连接密码
+  db: "" # Redis库从0到10，不填即为0
