@@ -11,6 +11,7 @@ require (
 	github.com/joho/godotenv v1.3.0
 	github.com/spf13/viper v1.7.1
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
+	google.golang.org/grpc v1.21.1
 	gopkg.in/go-playground/validator.v8 v8.18.2
 	gopkg.in/yaml.v2 v2.2.4
 )
