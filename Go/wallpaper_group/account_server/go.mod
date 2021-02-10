@@ -1,13 +1,15 @@
 module account_server
 
-go 1.13
+go 1.15
 
 require (
-	github.com/go-kratos/kratos v0.6.1-0.20210110073301-6e49fe9ac61e
-	github.com/gogo/protobuf v1.3.1
-	github.com/golang/protobuf v1.3.5
-	github.com/google/wire v0.5.0
-	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
-	google.golang.org/genproto v0.0.0-20200402124713-8ff61da6d932
-	google.golang.org/grpc v1.29.1
+	github.com/gin-contrib/cors v1.3.0
+	github.com/gin-contrib/sessions v0.0.0-20190512062852-3cb4c4f2d615
+	github.com/gin-gonic/gin v1.4.0
+	github.com/go-redis/redis v6.15.3+incompatible
+	github.com/jinzhu/gorm v1.9.10
+	github.com/joho/godotenv v1.3.0
+	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4
+	gopkg.in/go-playground/validator.v8 v8.18.2
+	gopkg.in/yaml.v2 v2.2.2
 )
