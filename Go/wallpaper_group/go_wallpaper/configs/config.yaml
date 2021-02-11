@@ -9,8 +9,9 @@ session_secre: "fRJ%KVZVoq4Du4#*Rx"  # Seesion密钥，必须设置而且不要�
 
 db:
   name: "wallpaper_db"
-  #addr: 127.0.0.1:3306
-  addr: docker.for.mac.localhost:3306
+  # TODO：addr 需要处理调试模式和docker模式的兼容
+  addr: 127.0.0.1:3306
+  #addr: docker.for.mac.localhost:3306
   username: root
   password: 12345678
   config: "charset=utf8&parseTime=True&loc=Local"

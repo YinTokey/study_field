@@ -1,5 +1,5 @@
 syntax = "proto3";
-package message;
+package unsplashPackage;
 
 //请求参数
 message UnPictureRequest {

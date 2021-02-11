@@ -12,10 +12,10 @@ func main() {
 
 	// grpc 服务启动
 	s := server.NewGrpcServer()
-	go s.Start()
+	s.Start()
 
-	// 装载路由
-	r := server.NewRouter()
-	r.Run(":3000")
+	// http 服务 装载路由
+	//r := server.NewRouter()
+	//r.Run(":3000")
 
 }

@@ -1,14 +1,11 @@
 package api
 
 import (
-	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go_wallpaper/internal/comment/comment_service"
-	"go_wallpaper/internal/picture/model"
 	"go_wallpaper/internal/picture/service"
 
-	"google.golang.org/grpc"
 	"strconv"
 )
 
@@ -80,39 +77,39 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 
 func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 
-	//1、Dail连接
-	conn, err := grpc.Dial("localhost:8090", grpc.WithInsecure())
-	if err != nil {
-		panic(err.Error())
-	}
-	defer conn.Close()
-
-	client := NewUnPictureServiceClient(conn)
-
-	request := &UnPictureRequest{Page: 1, PageSize: 10}
-
-	result, err := client.GetUnPictureInfo(context.Background(), request)
-
-	if err != nil {
-		fmt.Println("grpc 请求错误", err)
-	}
-
-	var list []*model.Picture
-
-	for _, data := range result.Piclist {
-		var pic = &model.Picture{}
-		//pic.PictureId = data.PictureId
-		//pic.ImageUrl = data.ImageUrl
-		//pic.LargeImageUrl = data.LargeImageUrl
-		//pic.Author = data.Author
-		//pic.Width = float64(data.Width)
-		//pic.Height = float64(data.Height)
-		//pic.Likes = float64(data.Likes)
-		pic.Name = data.Name
-		//pic.Description = data.Description
-		list = append(list, pic)
-	}
-
-	c.JSON(200, list)
+	////1、Dail连接
+	//conn, err := grpc.Dial("localhost:8090", grpc.WithInsecure())
+	//if err != nil {
+	//	panic(err.Error())
+	//}
+	//defer conn.Close()
+	//
+	//client := NewUnPictureServiceClient(conn)
+	//
+	//request := &UnPictureRequest{Page: 1, PageSize: 10}
+	//
+	//result, err := client.GetUnPictureInfo(context.Background(), request)
+	//
+	//if err != nil {
+	//	fmt.Println("grpc 请求错误", err)
+	//}
+	//
+	//var list []*model.Picture
+	//
+	//for _, data := range result.Piclist {
+	//	var pic = &model.Picture{}
+	//	//pic.PictureId = data.PictureId
+	//	//pic.ImageUrl = data.ImageUrl
+	//	//pic.LargeImageUrl = data.LargeImageUrl
+	//	//pic.Author = data.Author
+	//	//pic.Width = float64(data.Width)
+	//	//pic.Height = float64(data.Height)
+	//	//pic.Likes = float64(data.Likes)
+	//	pic.Name = data.Name
+	//	//pic.Description = data.Description
+	//	list = append(list, pic)
+	//}
+	//
+	//c.JSON(200, list)
 
 }

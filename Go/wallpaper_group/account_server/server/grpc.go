@@ -45,7 +45,7 @@ func NewGrpcServer() *GrpcServer {
 
 func (s *GrpcServer) Start() {
 
-	fmt.Println("go micro 服务启动中。。")
+	fmt.Println("go micro 服务启动")
 
 	service := grpc.NewService(
 		micro.Name("go.micro.service.account"),
