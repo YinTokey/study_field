@@ -39,3 +39,21 @@ func (service *UserLoginService) Login(c *gin.Context) serializer.Response {
 
 	return serializer.BuildUserResponse(user)
 }
+
+func (service *UserLoginService) LoginFromGrpc() serializer.Response {
+	var user model.User
+
+	if err := model.DB.Where("user_name = ?", service.UserName).First(&user).Error; err != nil {
+		return serializer.ParamErr("账号或密码错误", nil)
+	}
+
+	if user.CheckPassword(service.Password) == false {
+		return serializer.ParamErr("账号或密码错误", nil)
+	}
+
+	resp := serializer.BuildUserResponse(user)
+	resp.Code = 0
+	resp.Msg = "登陆成功"
+
+	return resp
+}

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../account_server/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account_server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account_server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../account_server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/server/grpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/server/grpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/service/user_login_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/service/user_login_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/service/user_register_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/service/user_register_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/util/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/util/common.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
