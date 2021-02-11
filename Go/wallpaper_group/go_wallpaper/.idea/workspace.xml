@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../singo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/api/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/cache/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/cache/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/model/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/model/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/model/migration.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/model/migration.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/model/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/serializer/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/serializer/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/server/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/server/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/service/user_login_service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/service/user_register_service.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"unsplash_server/conf"
-	"unsplash_server/model"
 	"unsplash_server/serializer"
 
 	"github.com/gin-gonic/gin"
@@ -17,16 +16,6 @@ func Ping(c *gin.Context) {
 		Code: 0,
 		Msg:  "Pong",
 	})
-}
-
-// CurrentUser 获取当前用户
-func CurrentUser(c *gin.Context) *model.User {
-	if user, _ := c.Get("user"); user != nil {
-		if u, ok := user.(*model.User); ok {
-			return u
-		}
-	}
-	return nil
 }
 
 // ErrorResponse 返回错误消息

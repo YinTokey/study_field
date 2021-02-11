@@ -1,8 +1,8 @@
 package model
 
 import (
-	"unsplash_server/util"
 	"time"
+	"unsplash_server/util"
 
 	"github.com/jinzhu/gorm"
 
@@ -32,4 +32,8 @@ func Database(connString string) {
 	DB = db
 
 	migration()
+}
+
+func InstanceDB() *gorm.DB {
+	return DB
 }
