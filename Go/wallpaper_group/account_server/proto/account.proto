@@ -29,18 +29,16 @@ message LogoutRequest {
   int64 id = 1;
 }
 
+// response
 message RegisterResponse {
-  int64  id = 1;
-  string username = 2;
-  string nickname = 3;
-  string status = 4;
+  int32 code = 1;
+  string message = 2;
 }
 
 message LoginResponse {
-  int64  id = 1;
-  string username = 2;
-  string nickname = 3;
-  string status = 4;
+  int32 code = 1;
+  string token = 2;
+  string message = 3;
 }
 
 message MeResponse {
@@ -53,6 +51,7 @@ message MeResponse {
 }
 
 message LogoutResponse {
-    string message = 1;
+  int32 code = 1;
+  string message = 2;
 }
 
