@@ -22,26 +22,37 @@ message LoginRequest {
 }
 
 message MeRequest {
-
+  int64 id = 1;
 }
 
 message LogoutRequest {
-
+  int64 id = 1;
 }
 
 message RegisterResponse {
-
+  int64  id = 1;
+  string username = 2;
+  string nickname = 3;
+  string status = 4;
 }
 
 message LoginResponse {
-
+  int64  id = 1;
+  string username = 2;
+  string nickname = 3;
+  string status = 4;
 }
 
 message MeResponse {
-
+  int64  id = 1;
+  string username = 2;
+  string nickname = 3;
+  string status = 4;
+  string avatar = 5;
+  int64 created_at = 6;
 }
 
 message LogoutResponse {
-
+    string message = 1;
 }
 
