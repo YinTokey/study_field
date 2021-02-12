@@ -75,6 +75,5 @@ func (a *Account) Logout(ctx context.Context, req *proto.LogoutRequest, res *pro
 	fmt.Println("Logout -- grpc -- imp")
 
 
-
 	return nil
 }

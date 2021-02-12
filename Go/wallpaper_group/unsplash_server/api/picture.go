@@ -1,11 +1,16 @@
 package api
 
 import (
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"strconv"
+	proto "unsplash_server/proto"
 	"unsplash_server/service"
 )
+
+// UnPicture : 用于实现UnPictureServiceServiceHandler接口的对象
+type UnPicture struct{}
 
 func FetchPapular(c *gin.Context) {
 
@@ -32,4 +37,43 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 		c.JSON(200, err)
 	}
 
+}
+
+
+func (a *UnPicture) GetUnPictureInfo(ctx context.Context, req *proto.UnPictureRequest, res *proto.UnPictureInfo) error {
+
+	fmt.Println("Register -- grpc -- imp")
+
+	page := int(req.Page)
+	pageSize := int(req.PageSize)
+
+	service := service.NewPictureService()
+	serviceRes, err := service.Papular(page, pageSize)
+
+	if err != nil {
+		return err
+	}
+
+	var list []*proto.UnPictureInfo_Picture
+
+	for _, data := range serviceRes {
+		pic := &proto.UnPictureInfo_Picture {
+			PictureId: data.PictureId,
+			ImageUrl: data.ImageUrl,
+			LargeImageUrl: data.LargeImageUrl,
+			Author: data.Author,
+			Width: int32(data.Width),
+			Height: int32(data.Height),
+			Likes: data.Likes,
+			Name: data.Name,
+			Description: data.Description,
+			Tags: data.Tags,
+		}
+
+		list = append(list, pic)
+
+	}
+	res.Piclist = list
+
+	return nil
 }

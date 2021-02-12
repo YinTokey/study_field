@@ -16,5 +16,5 @@ type Picture struct {
 	Width         int    `json:"width"`
 	Height        int    `json:"height"`
 	Likes         int32  `json:"likes"`
-	Tags    	  string `json:"categories"`
+	Tags    	  string `json:"tags"`
 }
