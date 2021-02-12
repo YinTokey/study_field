@@ -1,15 +1,37 @@
 package api
 
 import (
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"github.com/micro/go-micro/service/grpc"
 	"go_wallpaper/internal/comment/comment_service"
 	"go_wallpaper/internal/picture/service"
-
+	unsplashProto "go_wallpaper/protos/unsplash_server"
+	"log"
+	"net/http"
 	"strconv"
 )
 
-// UserRegister 用户注册接口
+var (
+	unsplashCli unsplashProto.UnPictureService
+)
+
+func PictureInit() {
+	service := grpc.NewService(
+	//micro.Flags(cmn.CustomFlags...),
+	)
+	// 初始化， 解析命令行参数等
+	service.Init()
+
+	cli := service.Client()
+
+	// 初始化一个account服务的客户端
+	unsplashCli = unsplashProto.NewUnPictureService("go.micro.service.unsplash", cli)
+	// 初始化一个upload服务的客户端
+
+}
+
 func Fetch500pxPapular(c *gin.Context) {
 	//fmt.Println("500px fetch .....")
 	//var comment_service comment_service.PxCollectService = comment_service.NewPxCollectService()
@@ -21,10 +43,10 @@ func Fetch500pxPapular(c *gin.Context) {
 	fmt.Println("page %s , page sie %s", page, pageSize)
 
 	// 基于grpc 获取
-	//fetchFromGRPC(c, page, pageSize)
+	fetchFromGRPC(c, page, pageSize)
 
 	// 基于单体架构 comment_service 获取
-	fetchFromServcie(c, page, pageSize)
+	//fetchFromServcie(c, page, pageSize)
 }
 
 func Fetch500pxDetail(c *gin.Context) {
@@ -77,39 +99,17 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 
 func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 
-	////1、Dail连接
-	//conn, err := grpc.Dial("localhost:8090", grpc.WithInsecure())
-	//if err != nil {
-	//	panic(err.Error())
-	//}
-	//defer conn.Close()
-	//
-	//client := NewUnPictureServiceClient(conn)
-	//
-	//request := &UnPictureRequest{Page: 1, PageSize: 10}
-	//
-	//result, err := client.GetUnPictureInfo(context.Background(), request)
-	//
-	//if err != nil {
-	//	fmt.Println("grpc 请求错误", err)
-	//}
-	//
-	//var list []*model.Picture
-	//
-	//for _, data := range result.Piclist {
-	//	var pic = &model.Picture{}
-	//	//pic.PictureId = data.PictureId
-	//	//pic.ImageUrl = data.ImageUrl
-	//	//pic.LargeImageUrl = data.LargeImageUrl
-	//	//pic.Author = data.Author
-	//	//pic.Width = float64(data.Width)
-	//	//pic.Height = float64(data.Height)
-	//	//pic.Likes = float64(data.Likes)
-	//	pic.Name = data.Name
-	//	//pic.Description = data.Description
-	//	list = append(list, pic)
-	//}
-	//
-	//c.JSON(200, list)
+	resp, err := unsplashCli.GetUnPictureInfo(context.TODO(), &unsplashProto.UnPictureRequest{
+		Page:     int64(page),
+		PageSize: int64(pageSize),
+	})
+
+	if err != nil {
+		log.Println(err.Error())
+		c.Status(http.StatusInternalServerError)
+		return
+	}
+
+	c.JSON(200, resp)
 
 }

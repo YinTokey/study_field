@@ -13,6 +13,7 @@ func NewRouter() *gin.Engine {
 	r := gin.Default()
 
 	api.AccountInit()
+	api.PictureInit()
 
 	// 中间件, 顺序不能改
 	r.Use(middleware.Session(os.Getenv("SESSION_SECRET")))
