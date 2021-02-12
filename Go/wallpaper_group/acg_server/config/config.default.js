@@ -28,6 +28,11 @@ module.exports = appInfo => {
         options: {},
     };
 
+    config.mongodb = {
+        url: 'mongodb://127.0.0.1/acg_server',
+        name: 'acg_server',
+    };
+
     config.grpc = {
         endPoint: '0.0.0.0:50051',
     };

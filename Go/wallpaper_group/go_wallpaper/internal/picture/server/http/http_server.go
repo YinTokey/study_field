@@ -25,6 +25,7 @@ func NewRouter() *gin.Engine {
 	{
 		fmt.Println("getting reques ...t")
 		v1.GET("papular", api.Fetch500pxPapular)
+		v1.GET("acg", api.FetchAcgList)
 		v1.GET("detail", api.Fetch500pxDetail)
 		v1.POST("comment", api.PostComment)
 
