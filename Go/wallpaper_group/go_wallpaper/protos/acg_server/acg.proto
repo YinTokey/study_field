@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package acgPackage;
+
+service AcgService {
+  rpc List (ListRequest) returns (ListResponse) {}
+  rpc Random (RandomRequest) returns (RandomResponse) {}
+}
+
+/*
+列表请求
+*/
+message ListRequest {
+  int32 page = 1; // 页
+  int32 pageSize = 2; // 每页数据量
+}
+
+
+message RandomRequest {
+  int32 count = 1; // 随机数量，如果不传，默认返回一个。
+}
+
+message Picture {
+  int64 pictureId = 1;
+  string imageUrl = 2;
+  string largeImageUrl = 3;
+  string description = 4;
+  string author = 5;
+  string name = 6;
+  int32  width = 7;
+  int32  height = 8;
+  int32  likes = 9;
+  string tags = 10;
+}
+
+message ListResponse {
+  int32 code = 1;
+  string message = 2;
+  repeated Picture data = 3;
+
+}
+
+message RandomResponse {
+  int32 code = 1;
+  string message = 2;
+  repeated Picture data = 3;
+
+}

@@ -66,10 +66,6 @@ func Fetch500pxDetail(c *gin.Context) {
 	}
 }
 
-func FetchAcgList(c *gin.Context) {
-
-}
-
 func PostComment(c *gin.Context) {
 	fmt.Println("post comment ...")
 

@@ -11,7 +11,6 @@ require (
 	github.com/dchest/siphash v1.2.1 // indirect
 	github.com/disintegration/imageorient v0.0.0-20180920195336-8147d86e83ec
 	github.com/emicklei/proto v1.9.0 // indirect
-	github.com/envoyproxy/go-control-plane v0.9.4 // indirect
 	github.com/fatih/color v1.9.0 // indirect
 	github.com/fatih/structtag v1.2.0 // indirect
 	github.com/frankban/quicktest v1.7.2 // indirect
@@ -25,7 +24,7 @@ require (
 	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/goinggo/mapstructure v0.0.0-20140717182941-194205d9b4a9
 	github.com/golang/mock v1.4.4 // indirect
-	github.com/golang/protobuf v1.4.2
+	github.com/golang/protobuf v1.4.3
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/google/go-cmp v0.5.1 // indirect
 	github.com/google/gops v0.3.7 // indirect
@@ -79,6 +78,7 @@ require (
 	google.golang.org/api v0.15.1 // indirect
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/grpc v1.26.0
+	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.1.0 // indirect
 	google.golang.org/protobuf v1.23.0
 	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2

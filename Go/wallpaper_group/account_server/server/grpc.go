@@ -2,6 +2,7 @@ package server
 
 import (
 	"account_server/api"
+	proto "account_server/proto"
 	"fmt"
 	"github.com/micro/cli"
 	"github.com/micro/go-micro"
@@ -9,7 +10,6 @@ import (
 	"github.com/micro/go-micro/service/grpc"
 	"log"
 	"time"
-	proto "account_server/proto"
 )
 
 // CustomFlags : 自定义命令行参数
@@ -52,6 +52,7 @@ func (s *GrpcServer) Start() {
 		micro.RegisterTTL(time.Second*10),
 		micro.RegisterInterval(time.Second*5),
 		micro.Flags(CustomFlags...),
+		//micro.Registry(reg),
 		)
 	//service.Init(server.Address("127.0.0.1:10086"))
 	service.Server().Init(

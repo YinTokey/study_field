@@ -17,6 +17,7 @@
     "egg-grpc": "^1.0.3",
     "egg-mongoose": "^3.3.1",
     "egg-plugin-grpc-server": "^1.0.49",
+    "egg-redis": "^2.4.0",
     "egg-router-plus": "^1.3.1",
     "egg-scripts": "^2.11.0",
     "egg-swagger-doc": "^2.3.2",

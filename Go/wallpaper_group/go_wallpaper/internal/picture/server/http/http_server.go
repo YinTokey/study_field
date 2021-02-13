@@ -14,6 +14,7 @@ func NewRouter() *gin.Engine {
 
 	api.AccountInit()
 	api.PictureInit()
+	api.AcgInit()
 
 	// 中间件, 顺序不能改
 	r.Use(middleware.Session(os.Getenv("SESSION_SECRET")))
@@ -25,7 +26,9 @@ func NewRouter() *gin.Engine {
 	{
 		fmt.Println("getting reques ...t")
 		v1.GET("papular", api.Fetch500pxPapular)
-		v1.GET("acg", api.FetchAcgList)
+		v1.GET("acgList", api.FetchAcgList)
+		v1.GET("acgRandom", api.FetchAcgRandom)
+
 		v1.GET("detail", api.Fetch500pxDetail)
 		v1.POST("comment", api.PostComment)
 

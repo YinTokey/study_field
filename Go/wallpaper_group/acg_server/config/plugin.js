@@ -17,6 +17,11 @@ module.exports = {
         package: 'egg-router-plus',
     },
 
+    redis: {
+        enable: true,
+        package: 'egg-redis',
+    },
+
     grpc: {
         enable: true,
         package: 'egg-grpc',
