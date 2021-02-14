@@ -7,8 +7,9 @@ class RandomController extends Controller {
         const { ctx, service } = this;
 
         const count = ctx.query.count > 0 ? ctx.query.count : 1;
+        const tagId = ctx.query.tag;
 
-        const result = await service.acg.random(count);
+        const result = await service.acg.random(count, tagId);
 
         ctx.status = 200;
         ctx.body = {

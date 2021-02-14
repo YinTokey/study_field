@@ -21,10 +21,37 @@ class AcgService extends Service {
     }
 
 
-    async random(n) {
-        const num = parseInt(n, 10);
+    async random(n, tagId) {
+        n = parseInt(n, 10);
+        tagId = parseInt(tagId, 10);
         // 随机获取
-        const query = [{ $sample: { size: num } }];
+        let query;
+
+        if (tagId === undefined) {
+            query = [{ $sample: { size: n } }];
+        } else {
+            query = [
+                {
+                    $match: {
+                        tags: {
+                            $exists: true
+                        }
+                    }
+                }, {
+                    $unwind: {
+                        path: '$tags'
+                    }
+                }, {
+                    $match: {
+                        'tags.id': tagId
+                    }
+                }, {
+                    $sample: {
+                        size: n
+                    }
+                }
+            ];
+        }
 
         const arr = await this.ctx.model.Acg.aggregate(query).exec();
 
