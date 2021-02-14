@@ -6,18 +6,52 @@ const Service = require('egg').Service;
 
 class AcgService extends Service {
 
-    async listData(page, pageSize) {
+    async listData(page, pageSize, tagId) {
         // string to number
-        const pageNum = parseInt(page, 10);
-        const pageSizeNum = parseInt(pageSize, 10);
+        page = parseInt(page, 10);
+        pageSize = parseInt(pageSize, 10);
+        tagId = parseInt(tagId, 10);
 
-        const query = {};
-        const filter = { _id: 0, __v: 0 };
-        const opt = { skip: pageNum * pageSizeNum, limit: pageSizeNum };
+        let query;
+        let result;
 
-        // 查询时不返回 '_id' ，'__V' 字段
-        return this.ctx.model.Acg.find(query, filter, opt).exec();
+        if (tagId === undefined) {
+            query = {};
+            const opt = { skip: page * pageSize, limit: pageSize };
+            result = await this.ctx.model.Acg.find(query, opt).exec();
+        } else {
+            query = [
+                {
+                    $match: {
+                        tags: {
+                            $exists: true
+                        }
+                    }
+                }, {
+                    $unwind: {
+                        path: '$tags'
+                    }
+                }, {
+                    $match: {
+                        'tags.id': tagId
+                    }
+                }, {
+                    $skip: page * pageSize
+                }, {
+                    $limit: pageSize
+                }
+            ];
 
+            result = await this.ctx.model.Acg.aggregate(query).exec();
+
+        }
+
+        return result.map(acg => {
+            // 删除不必要的字段
+            delete acg._id;
+            delete acg.__v;
+            return acg;
+        });
     }
 
 
