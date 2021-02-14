@@ -15,7 +15,7 @@ class CacheService extends Service {
         return data;
     }
 
-    async setex(key, value, seconds) {
+    async set(key, value, seconds) {
         const { redis, logger } = this.app;
         const t = Date.now();
         value = JSON.stringify(value);

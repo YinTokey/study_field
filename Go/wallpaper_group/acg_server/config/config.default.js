@@ -25,6 +25,15 @@ module.exports = appInfo => {
         // myAppName: 'egg',
     };
 
+    config.redis = {
+        client: {
+            host: process.env.EGG_REDIS_HOST || '127.0.0.1',
+            port: process.env.EGG_REDIS_PORT || 6379,
+            password: process.env.EGG_REDIS_PASSWORD || '',
+            db: process.env.EGG_REDIS_DB || '0',
+        },
+    };
+
     config.mongoose = {
         url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1/acg_server',
         options: {},
@@ -39,10 +48,13 @@ module.exports = appInfo => {
         endPoint: '0.0.0.0:50051',
     };
 
-    // config.upload = {
-    //     path: path.join(__dirname, '../app/public/upload/'),
-    //     url: '/public/upload/',
-    // };
+    config.upload = {
+        path: path.join(__dirname, '../app/public/upload/'),
+        // url: '/public/upload/',
+        // 图床上传地址
+        requestUrl: 'https://sm.ms/api/v2/upload',
+        token: process.env.UPLOAD_TOKEN
+    };
     config.security = {
         csrf: {
             // 调试模式 关闭 csrf
