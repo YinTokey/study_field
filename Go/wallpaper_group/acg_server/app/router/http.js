@@ -6,7 +6,7 @@ module.exports = app => {
     const httpRouter = app.router;
     const { controller, middleware } = app;
 
-    const { home, list, random } = controller;
+    const { home, list, random, tag } = controller;
 
     const pagination = middleware.pagination();
 
@@ -14,5 +14,6 @@ module.exports = app => {
     httpRouter.get('/', home.index);
     httpRouter.get('/list', pagination, list.index);
     httpRouter.get('/random', random.index);
+    httpRouter.get('/tags', tag.index);
 
 };

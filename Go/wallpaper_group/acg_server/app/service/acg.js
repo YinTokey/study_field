@@ -37,8 +37,48 @@ class AcgService extends Service {
 
     }
 
+    async tags() {
+        // 获取tags列表
+        const query = [
+            {
+                $match: {
+                    tags: {
+                        $exists: true
+                    }
+                }
+            }, {
+                $unwind: {
+                    path: '$tags'
+                }
+            }, {
+                $group: {
+                    _id: '$tags.name',
+                    tags: {
+                        $push: '$tags'
+                    },
+                    count: {
+                        $sum: 1
+                    }
+                }
+            }
+        ];
+
+        const arr = await this.ctx.model.Acg.aggregate(query).exec();
+
+        return arr.map(tag => {
+            // 删除不必要的字段
+            const first = tag.tags[0];
+            tag.name = first.name;
+            tag.id = first.id;
+            delete tag._id;
+            delete tag.tags;
+            return tag;
+        });
+    }
+
+
     async restoreJSON() {
-        console.log('开始导出本地json测试 1 ');
+        // console.log('开始导出本地json测试 1 ');
 
         // const data = await parseLocalAcg();
 
@@ -64,30 +104,6 @@ class AcgService extends Service {
             likes: obj.likes,
             categories: obj.categories,
         };
-    }
-
-
-    randomNums(n, min, max) {
-        const arr = [];
-        for (let i = 0; i < n; i++) {
-            let ran = Math.ceil(Math.random() * (max - min) + min);
-            while (this.isExist(arr, ran)) {
-                ran = Math.ceil(Math.random() * (max - min) + min);
-            }
-            arr[i] = ran;
-        }
-        return arr;
-    }
-
-
-    isExist(arr, ran) {
-        for (let i = 0; i < arr.length; i++) {
-            // eslint-disable-next-line eqeqeq
-            if (arr[i] === ran) {
-                return true;
-            }
-        }
-        return false;
     }
 
 }
