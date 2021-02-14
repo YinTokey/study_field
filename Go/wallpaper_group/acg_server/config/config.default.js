@@ -2,6 +2,8 @@
 
 'use strict';
 
+const path = require('path');
+
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -35,6 +37,17 @@ module.exports = appInfo => {
 
     config.grpc = {
         endPoint: '0.0.0.0:50051',
+    };
+
+    // config.upload = {
+    //     path: path.join(__dirname, '../app/public/upload/'),
+    //     url: '/public/upload/',
+    // };
+    config.security = {
+        csrf: {
+            // 调试模式 关闭 csrf
+            enable: false,
+        },
     };
 
     config.default_page = 1;

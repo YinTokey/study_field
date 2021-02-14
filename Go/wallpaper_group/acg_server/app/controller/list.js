@@ -1,6 +1,12 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+const _ = require('lodash');
+const path = require('path');
+const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
+const awaitWriteStream = require('await-stream-ready').write;
+const sendToWormhole = require('stream-wormhole');
 
 class ListController extends Controller {
     async index() {
@@ -22,14 +28,29 @@ class ListController extends Controller {
 
     }
 
-    // async grpcList() {
-    //     console.log('---- 空炮');
-    //     // callback(null, { message: 'grpcList request' });
-    //     // const { ctx } = this;
-    //     // console.log('grpcList request' + ctx);
-    //     //
-    //     // callback(null, { message: 'grpcList request' });
-    // }
+    async upload() {
+        const { ctx, config, service } = this;
+        const uid = uuidv4();
+        const stream = await ctx.getFileStream();
+        const filename = uid + path.extname(stream.filename).toLowerCase();
+
+        ctx.logger.info('upload file ' + stream);
+
+        const folderPath = path.join(__dirname, '../public/upload');
+
+        const target = path.join(folderPath, filename);
+        const writeStream = fs.createWriteStream(target);
+        try {
+            await awaitWriteStream(stream.pipe(writeStream));
+            ctx.body = {
+                success: true,
+                url: filename,
+            };
+        } catch (err) {
+            await sendToWormhole(stream);
+            throw err;
+        }
+    }
 
 
 }

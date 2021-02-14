@@ -15,5 +15,5 @@ module.exports = app => {
     httpRouter.get('/list', pagination, list.index);
     httpRouter.get('/random', random.index);
     httpRouter.get('/tags', tag.index);
-
+    httpRouter.post('/upload', list.upload);
 };

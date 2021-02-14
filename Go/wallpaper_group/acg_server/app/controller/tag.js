@@ -13,7 +13,6 @@ class TagController extends Controller {
             success: true,
             data: result
         };
-
     }
 }
 
