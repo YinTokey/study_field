@@ -6,10 +6,10 @@ class ListController extends Controller {
     async index() {
         const { ctx, service } = this;
 
-        const limit = ctx.pagination.limit;
-        const page = ctx.pagination.page;
+        const limit = ctx.query.limit;
+        const page = ctx.query.page;
 
-        console.log('list 请求' + page + limit);
+        ctx.logger.info('list 请求' + page + '  ' + limit);
 
         const data = await service.acg.listData(page, limit);
 

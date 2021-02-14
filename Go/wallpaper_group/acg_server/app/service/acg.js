@@ -9,29 +9,32 @@ class AcgService extends Service {
     async listData(page, pageSize) {
         // string to number
         const pageNum = parseInt(page, 10);
-
         const pageSizeNum = parseInt(pageSize, 10);
+
+        const query = {};
+        const filter = { _id: 0, __v: 0 };
+        const opt = { skip: pageNum * pageSizeNum, limit: pageSizeNum };
+
         // 查询时不返回 '_id' ，'__V' 字段
-        return this.ctx.model.Acg.find({}, { _id: 0, __v: 0 })
-            .skip(pageNum * pageSizeNum)
-            .limit(pageSizeNum)
-            .exec();
+        return this.ctx.model.Acg.find(query, filter, opt).exec();
+
     }
 
 
     async random(n) {
+        const num = parseInt(n, 10);
+        // 随机获取
+        const query = [{ $sample: { size: num } }];
 
-        const min = 1;
-        const max = await this.ctx.model.Acg.find({}).count().exec();
-        const nums = this.randomNums(n, min, max);
+        const arr = await this.ctx.model.Acg.aggregate(query).exec();
 
-        const arr = [];
-        for (let i = 0; i < nums.length; i++) {
-            arr[i] = await this.ctx.model.Acg.find({}, { _id: 0 }).skip(nums[i]).limit(1)
-                .exec();
-        }
+        return arr.map(acg => {
+            // 删除不必要的字段
+            delete acg._id;
+            delete acg.__v;
+            return acg;
+        });
 
-        return arr;
     }
 
     async restoreJSON() {
