@@ -6,15 +6,16 @@ class RandomController extends Controller {
     async index() {
         const { ctx, service } = this;
 
-        let count = ctx.queries.count;
+        const count = ctx.query.count > 0 ? ctx.query.count : 1;
 
-        if (count === undefined) {
-            count = '1';
-        }
+        const result = await service.acg.random(count);
 
-        const data = await service.acg.random(count);
+        ctx.status = 200;
+        ctx.body = {
+            success: true,
+            data: result
+        };
 
-        ctx.body = data;
     }
 }
 

@@ -6,14 +6,19 @@ class ListController extends Controller {
     async index() {
         const { ctx, service } = this;
 
-        const limit = ctx.query.limit;
-        const page = ctx.query.page;
+        const limit = ctx.query.limit > 0 ? ctx.query.limit : ctx.pagination.limit;
+        const page = ctx.query.page > 0 ? ctx.query.page : ctx.pagination.skip;
 
         ctx.logger.info('list 请求' + page + '  ' + limit);
 
-        const data = await service.acg.listData(page, limit);
+        const result = await service.acg.listData(page, limit);
 
-        ctx.body = data;
+        ctx.status = 200;
+        ctx.body = {
+            success: true,
+            data: result
+        };
+
     }
 
     // async grpcList() {
