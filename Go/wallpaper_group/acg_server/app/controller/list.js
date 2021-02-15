@@ -7,7 +7,6 @@ const fs = require('fs');
 const promiseFs = require('fs').promises;
 const { v4: uuidv4 } = require('uuid');
 const awaitWriteStream = require('await-stream-ready').write;
-
 const superagent = require('superagent');
 
 const sendToWormhole = require('stream-wormhole');
@@ -55,7 +54,7 @@ class ListController extends Controller {
             };
 
             // 异步更新数据
-            this.updateFileCache(target, filename);
+            await this.updateFileCache(target, filename);
 
         } catch (err) {
             await sendToWormhole(stream);
@@ -79,53 +78,52 @@ class ListController extends Controller {
     }
 
     // 上传到图床
-    async uploadToCloud(target, filename) {
-        const { ctx, config } = this;
-        console.log('请求开始 +' + config.upload.requestUrl);
-
+    async uploadToCloud(key, target, filename) {
+        const { config } = this;
+        // 上传图床，写入 redis 和 mongodb
+        const expire = 3600 * 24;
         const res = await superagent.post(config.upload.requestUrl)
             .timeout(5000)
             .set('origin', config.upload.requestUrl)
             .set('refer', config.upload.requestUrl)
             .attach('image', target);
 
-        ctx.logger.info(res.text);
+        // 存入缓存
+        await this.service.cache.set(key, String(res.text), expire);
 
-        // 存入redis
-        const expire = 3600; // 1小时过期
-        // await this.service.cache.set(key, filename, expire);
+        // 写入 mongodb
+        this.writeToDB(res.text, target);
+
+        // 删除临时文件地址
+        await promiseFs.unlink(target);
+
     }
 
     async updateFileCache(target, filename) {
-        const { ctx, config } = this;
         const hash = await this.fileHash(target);
         const key = keyPrefix + hash;
 
-        const expire = 3600 * 24; // 24小时过期
-
+        // 读取缓存
         const value = await this.service.cache.get(key);
-        console.log('value 查询 ' + value);
 
         if (value !== undefined) {
+            const expire = 3600 * 24; // 24小时过期
             // 延长缓存时间
-            await this.service.cache.incr(key, expire);
+            this.service.cache.incr(key, expire);
         } else {
             // 上传图床，写入 redis 和 mongodb
-            const res = await superagent.post(config.upload.requestUrl)
-                .timeout(5000)
-                .set('origin', config.upload.requestUrl)
-                .set('refer', config.upload.requestUrl)
-                .attach('image', target);
-
-            // 存入缓存
-            await this.service.cache.set(key, String(res.text), expire);
-
-            // 删除临时文件地址
-            await promiseFs.unlink(target);
+            await this.uploadToCloud(key, target, filename);
 
         }
 
     }
+
+    writeToDB(url, target) {
+        const acg = this.service.acg.newAcg(url, target);
+        acg.save();
+    }
+
+
 }
 
 module.exports = ListController;

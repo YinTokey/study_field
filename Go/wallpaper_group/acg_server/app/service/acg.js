@@ -1,7 +1,8 @@
 'use strict';
 
 // const parseLocalAcg = require('../task/local_json_task.js');
-
+const sizeOf = require('image-size');
+const { v4: uuidv4 } = require('uuid');
 const Service = require('egg').Service;
 
 class AcgService extends Service {
@@ -137,6 +138,18 @@ class AcgService extends Service {
         });
     }
 
+    newAcg(url, filePath) {
+        const imgSize = sizeOf(filePath);
+
+        const acg = new this.ctx.model.Acg();
+        acg.imageUrl = url;
+        acg.largeImageUrl = url;
+        acg.categories = 'acg';
+        acg.width = imgSize.width;
+        acg.height = imgSize.height;
+        acg.pictureId = uuidv4();
+        return acg;
+    }
 
     async restoreJSON() {
         // console.log('开始导出本地json测试 1 ');
@@ -152,20 +165,20 @@ class AcgService extends Service {
     }
 
     // 构建持久化模型
-    async createPO(obj) {
-        return {
-            pictureId: obj.picture_id,
-            imageUrl: obj.image_url,
-            largeImageUrl: obj.large_image_url,
-            name: obj.name,
-            description: obj.description,
-            author: obj.author,
-            width: obj.width,
-            height: obj.height,
-            likes: obj.likes,
-            categories: obj.categories,
-        };
-    }
+    // async createPO(obj) {
+    //     return {
+    //         pictureId: obj.picture_id,
+    //         imageUrl: obj.image_url,
+    //         largeImageUrl: obj.large_image_url,
+    //         name: obj.name,
+    //         description: obj.description,
+    //         author: obj.author,
+    //         width: obj.width,
+    //         height: obj.height,
+    //         likes: obj.likes,
+    //         categories: obj.categories,
+    //     };
+    // }
 
 }
 
