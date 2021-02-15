@@ -52,7 +52,7 @@ module.exports = appInfo => {
         path: path.join(__dirname, '../app/public/upload/'),
         // url: '/public/upload/',
         // 图床上传地址
-        requestUrl: 'https://sm.ms/api/v2/upload',
+        requestUrl: 'https://img.vim-cn.com',
         token: process.env.UPLOAD_TOKEN
     };
     config.security = {
