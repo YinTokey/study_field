@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.2.5",
+    "amqplib": "^0.6.0",
     "app-root-path": "^3.0.0",
     "async-redis": "^1.1.7",
     "await-stream-ready": "^1.0.1",
