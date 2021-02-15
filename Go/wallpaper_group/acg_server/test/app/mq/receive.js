@@ -12,10 +12,10 @@ function main() {
                 throw error1;
             }
 
-            const queue = 'hello';
+            const queue = 'acg.transfer';
 
             channel.assertQueue(queue, {
-                durable: false
+                durable: true
             });
 
             console.log(' [*] Waiting for messages in %s. To exit press CTRL+C', queue);
