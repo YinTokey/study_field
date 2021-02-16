@@ -80,6 +80,7 @@ class ListController extends Controller {
     // 上传到图床
     async uploadToCloud(key, target, filename) {
         const { config } = this;
+
         // 上传图床，写入 redis 和 mongodb
         const expire = 3600 * 24;
         const res = await superagent.post(config.upload.requestUrl)
@@ -96,6 +97,7 @@ class ListController extends Controller {
 
         // 删除临时文件地址
         await promiseFs.unlink(target);
+
 
     }
 

@@ -4,8 +4,7 @@
 // const config = require('./config/grpc');
 // const grpcController = new (require('./app/controller/grpc'))();
 const consul = require('./app/server/grpc/consulReg');
-const consumer = require('./app/mq/consumer');
-const producer = require('./app/mq/producer');
+const transfer = require('./app/mq/transfer');
 
 module.exports = app => {
 
@@ -22,8 +21,7 @@ module.exports = app => {
         // consul.register();
 
         // 消息队列初始化
-        // producer.initMqProducer();
-        consumer.initMqConsumer();
+        // transfer.initMqConsumer();
 
     });
 
