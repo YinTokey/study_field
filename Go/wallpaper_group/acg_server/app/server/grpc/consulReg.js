@@ -7,7 +7,7 @@ class ConsulReg {
 
     static register() {
         const consul = new Consul({
-            host: '192.168.6.128',
+            host: '127.0.0.1',
             port: 8500,
             promisify: true,
         });
@@ -16,13 +16,8 @@ class ConsulReg {
 
         consul.agent.service.register({
             name: 'acg.service',
-            address: '192.168.20.193',
-            port: 3000,
-            check: {
-                http: 'http://192.168.20.193:3000/health',
-                interval: '10s',
-                timeout: '5s',
-            }
+            address: '127.0.0.1',
+            port: 50051,
         }, function(err, result) {
             if (err) {
                 console.log('acg.service 注册失败');
