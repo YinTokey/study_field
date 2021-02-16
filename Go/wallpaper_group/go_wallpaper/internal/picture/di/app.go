@@ -61,18 +61,4 @@ func InitConfigs() {
 	// 初始化发号器
 	pkg.GuidGeneratorInit()
 
-	//j := unsplash.NewUnsplashJob()
-	//
-	//j.FetchPics()
-	//
-	//j := acg.NewRandomAcgJob()
-	//
-	//for i := 0; i < 10000; i++ {
-	//	j.FetchJob_2()
-	//}
-
-	//for i := 1000; i < 4000; i++ {
-	//	j.FetchJob_3(i)
-	//}
-
 }

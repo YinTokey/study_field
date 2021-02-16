@@ -1,34 +1,30 @@
 package api
 
 import (
-	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/micro/go-micro/service/grpc"
 	"go_wallpaper/internal/comment/comment_service"
 	"go_wallpaper/internal/picture/service"
-	unsplashProto "go_wallpaper/protos/unsplash_server"
-	"log"
-	"net/http"
+
 	"strconv"
 )
 
 var (
-	unsplashCli unsplashProto.UnPictureService
+// unsplashCli unsplashProto.UnPictureService
 )
 
 func PictureInit() {
-	service := grpc.NewService(
-	//micro.Flags(cmn.CustomFlags...),
-	)
-	// 初始化， 解析命令行参数等
-	service.Init()
-
-	cli := service.Client()
-
-	// 初始化一个account服务的客户端
-	unsplashCli = unsplashProto.NewUnPictureService("go.micro.service.unsplash", cli)
-	// 初始化一个upload服务的客户端
+	//service := grpc.NewService(
+	////micro.Flags(cmn.CustomFlags...),
+	//)
+	//// 初始化， 解析命令行参数等
+	//service.Init()
+	//
+	//cli := service.Client()
+	//
+	//// 初始化一个account服务的客户端
+	//unsplashCli = unsplashProto.NewUnPictureService("go.micro.service.unsplash", cli)
+	//// 初始化一个upload服务的客户端
 
 }
 
@@ -99,17 +95,17 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 
 func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
 
-	resp, err := unsplashCli.GetUnPictureInfo(context.TODO(), &unsplashProto.UnPictureRequest{
-		Page:     int64(page),
-		PageSize: int64(pageSize),
-	})
-
-	if err != nil {
-		log.Println(err.Error())
-		c.Status(http.StatusInternalServerError)
-		return
-	}
-
-	c.JSON(200, resp)
+	//resp, err := unsplashCli.GetUnPictureInfo(context.TODO(), &unsplashProto.UnPictureRequest{
+	//	Page:     int64(page),
+	//	PageSize: int64(pageSize),
+	//})
+	//
+	//if err != nil {
+	//	log.Println(err.Error())
+	//	c.Status(http.StatusInternalServerError)
+	//	return
+	//}
+	//
+	//c.JSON(200, resp)
 
 }

@@ -14,7 +14,6 @@ func NewRouter() *gin.Engine {
 
 	api.AccountInit()
 	api.PictureInit()
-	api.AcgInit()
 
 	// 中间件, 顺序不能改
 	r.Use(middleware.Session(os.Getenv("SESSION_SECRET")))
