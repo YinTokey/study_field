@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="" />
+    <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../account_server/proto/account.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/proto/account.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/proto/account.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account_server/proto/account.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../account_server/proto/account.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/api/picture.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/api/picture.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/proto/unsp.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/proto/unsp.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/proto/unsp.pb.micro.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/proto/unsp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/proto/unsp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/server/grpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/server/grpc.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

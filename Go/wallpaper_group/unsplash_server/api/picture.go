@@ -39,10 +39,10 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 
 }
 
-
+// 该方法用于实现 go-micro 生成的接口
 func (a *UnPicture) GetUnPictureInfo(ctx context.Context, req *proto.UnPictureRequest, res *proto.UnPictureInfo) error {
 
-	fmt.Println("Register -- grpc -- imp")
+	fmt.Println(" Register -- grpc -- imp")
 
 	page := int(req.Page)
 	pageSize := int(req.PageSize)
@@ -77,3 +77,5 @@ func (a *UnPicture) GetUnPictureInfo(ctx context.Context, req *proto.UnPictureRe
 
 	return nil
 }
+
+
