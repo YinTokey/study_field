@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66e8f1af-14bf-4c18-80ef-8f8adec950b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/2b9fec74-58c0-4dbc-9d82-fedde761b43d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/2e13462f-72ba-40d2-82a1-c81bb3ae21ca.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/747e384f-7448-4321-8c39-691ed1c56ca1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/9c243d3e-d848-41f6-9b3e-148b8c4d690e.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/af0cf148-f5c4-4893-8794-95f50f6a2e04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../acg_server/app/public/upload/dc8aee29-7bdf-4f06-8674-1d2184a056b6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acg_server/app/controller/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/../acg_server/app/controller/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../acg_server/config/config.default.js" beforeDir="false" afterPath="$PROJECT_DIR$/../acg_server/config/config.default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../unsplash_server/server/grpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/../unsplash_server/server/grpc.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build go_wallpaper/cmd" />
-        <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build unsplash_server.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build go_wallpaper/cmd" />
+        <item itemvalue="Go Build.go build go_wallpaper" />
       </list>
     </recent_temporary>
   </component>

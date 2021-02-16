@@ -2,10 +2,12 @@ package server
 
 import (
 	"fmt"
+//	"github.com/go-kit/kit/sd/consul"
 	"github.com/micro/cli"
 	"github.com/micro/go-micro"
 	"github.com/micro/go-micro/server"
 	"github.com/micro/go-micro/service/grpc"
+	"github.com/micro/go-plugins/registry/consul"
 	"log"
 	"time"
 	"unsplash_server/api"
@@ -47,11 +49,14 @@ func (s *GrpcServer) Start() {
 
 	fmt.Println("go micro 服务启动")
 
+	reg := consul.NewRegistry()
+
 	service := grpc.NewService(
 		micro.Name("go.micro.service.unsplash"),
 		micro.RegisterTTL(time.Second*10),
 		micro.RegisterInterval(time.Second*5),
 		micro.Flags(CustomFlags...),
+		micro.Registry(reg),
 	)
 	//service.Init(server.Address("127.0.0.1:10086"))
 	service.Server().Init(
