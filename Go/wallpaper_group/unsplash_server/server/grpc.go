@@ -12,7 +12,7 @@ import (
 const (
 	consulAddress = "127.0.0.1:8500"
 	localIp       = "127.0.0.1"
-	localPort     = 10087
+	localPort     = 10088
 	localServiceName = "service.unsplash"
 )
 
@@ -25,16 +25,15 @@ func NewGrpcServer() *GrpcServer {
 
 func (s *GrpcServer) Start() {
 
-	fmt.Println("grpc 服务启动")
+	//s.ConsulRegister()
 
 	s.GrpcRegister()
-
-	s.ConsulRegister()
 
 }
 
 // 注册到consul
 func (s *GrpcServer) ConsulRegister () {
+	fmt.Println("consul 开始服务注册")
 	// 创建连接consul服务配置
 	config := consulapi.DefaultConfig()
 	config.Address = consulAddress
@@ -45,31 +44,34 @@ func (s *GrpcServer) ConsulRegister () {
 
 	// 创建注册到consul的服务到
 	registration := new(consulapi.AgentServiceRegistration)
-	//registration.ID = "337"
+	registration.ID = "unsplash_1"
 	registration.Name = localServiceName
 	registration.Port = localPort
-	//registration.Tags = []string{"testService"}
+	registration.Tags = []string{"unsplash"}
 	registration.Address = localIp
 
 	// 增加consul健康检查回调函数
-	check := new(consulapi.AgentServiceCheck)
-	check.HTTP = fmt.Sprintf("http://%s:%d", registration.Address, registration.Port)
-	check.Timeout = "5s"
-	check.Interval = "5s"
-	check.DeregisterCriticalServiceAfter = "30s" // 故障检查失败30s后 consul自动将注册服务删除
-	registration.Check = check
+	registration.Check = &consulapi.AgentServiceCheck{ // 健康检查
+		//HTTP:                           fmt.Sprintf("http://%s:%d%s", registration.Address, checkPort, "/check"),
+		Timeout:                        "3s",
+		Interval:                       "5s",  // 健康检查间隔
+		DeregisterCriticalServiceAfter: "30s", //check失败后30秒删除本服务，注销时间，相当于过期时间
+		GRPC:     fmt.Sprintf("%v:%v/%v", localIp, localPort, localServiceName),// grpc 支持，执行健康检查的地址，service 会传到 Health.Check 函数中
+	}
 
 	// 注册服务到consul
 	err = client.Agent().ServiceRegister(registration)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("consul 注册失败 ", err)
 	}
+	fmt.Println("consul 注册完成 ")
+
 }
 
 // grpc 注册
 func (s *GrpcServer) GrpcRegister() {
 	addr := fmt.Sprintf("%v:%v",localIp,localPort)
-	fmt.Println(addr)
+	fmt.Println("gprc 服务注册 ", addr)
 	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		fmt.Println("failed to listen: %v", err)

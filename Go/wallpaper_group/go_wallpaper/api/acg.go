@@ -64,7 +64,7 @@ func AcgServiceEndPoint() string {
 
 	firstService := services[0]
 
-	endPoint := fmt.Sprintf("%v:%v",firstService.Service.Address,firstService.Service.Port)
+	endPoint := fmt.Sprintf("%v:%v", firstService.Service.Address, firstService.Service.Port)
 
 	for _, service := range services {
 		fmt.Println("service.Service.Address:", service.Service.Address, "service.Service.Port:", service.Service.Port)

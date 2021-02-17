@@ -1,11 +1,13 @@
 package api
 
 import (
+	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go_wallpaper/internal/comment/comment_service"
 	"go_wallpaper/internal/picture/service"
-
+	timestamppb "go_wallpaper/protos/acg_server"
+	"google.golang.org/grpc"
 	"strconv"
 )
 
@@ -94,7 +96,33 @@ func fetchFromServcie(c *gin.Context, page int, pageSize int) {
 }
 
 func fetchFromGRPC(c *gin.Context, page int, pageSize int) {
+	// 基于原始 grpc 服务调用
 
+	target := "127.0.0.1:10087"
+
+	conn, err := grpc.Dial(target, grpc.WithInsecure())
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer conn.Close()
+
+	client := timestamppb.NewAcgServiceClient(conn)
+
+	request := &timestamppb.ListRequest{
+		PageSize: int32(pageSize),
+		Page:     int32(page),
+	}
+
+	result, err := client.List(context.Background(), request)
+
+	if err != nil {
+		fmt.Println("grpc 请求错误", err)
+	}
+
+	//fmt.Println(result)
+	c.JSON(200, result)
+
+	// 基于 Go micro 服务调用
 	//resp, err := unsplashCli.GetUnPictureInfo(context.TODO(), &unsplashProto.UnPictureRequest{
 	//	Page:     int64(page),
 	//	PageSize: int64(pageSize),
