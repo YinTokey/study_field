@@ -28,7 +28,10 @@ services:
 #      - docker_acgserver
 #    ports:
 #      - 6379:6379
-
+  mongo-seed:
+    build: ./docker_seed.Dockerfile
+    links:
+      - mongodb
   mongodb:
     image: mongo:3.2
     restart: always
