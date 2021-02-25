@@ -85,6 +85,15 @@ function foo() {
 }
 export = foo;
 ```
+#### 模块导入
+```
+// 对于原js模块
+import fs = require('fs');
+
+// 导入选定的类，函数，属性等 （module里导出了 A, B , C，import 的时候要同名）
+import { A , B , C} from './module'
+
+```
 
 #### 类型转换
 和swift 一样
@@ -169,6 +178,7 @@ map 和 set 遍历也可以这么写
 ```
 export interface StringValidator {
     isAcceptable(s: string): boolean;
+    
 }
 ```
 
