@@ -12,5 +12,11 @@ Unknown file extension ".ts"
 解决方法参照官方的
 https://github.com/TypeStrong/ts-node/issues/935
 
+## 代码格式化
+tslint已经不使用了，都统一使用 eslint
+主要参考这个，再结合具体需要的规则进行补充
+https://ts.xcatliu.com/engineering/lint.html
 
+
+// https://www.cnblogs.com/ssaylo/p/12806757.html
 

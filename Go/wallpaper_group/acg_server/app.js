@@ -41,5 +41,6 @@ module.exports = app => {
         // await app.grpcServer.close();
         app.logger.error(err);
     });
+
 };
 

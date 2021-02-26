@@ -90,6 +90,10 @@ export = foo;
 // 对于原js模块
 import fs = require('fs');
 
+// 等价于 原 require 写法
+import * as ws from 'ws';
+
+
 // 导入选定的类，函数，属性等 （module里导出了 A, B , C，import 的时候要同名）
 import { A , B , C} from './module'
 
@@ -152,6 +156,9 @@ let list: number[] = [1, 2, 3];
 enum Color {Red = 1, Green, Blue}
 let c: Color = Color.Green;
 ```
+
+枚举有类型枚举，和常量型枚举。要注意 加 const
+https://github.com/microsoft/TypeScript/issues/16671
 
 #### object
 object表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。
