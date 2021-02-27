@@ -189,3 +189,14 @@ export interface StringValidator {
 }
 ```
 
+#### 闭包
+闭包回调给外部，可以参照swift的写法
+```
+class x {
+	onInfoGet?: (info: Info) => Info;
+
+}
+
+```
+注意可选型的使用。
+
