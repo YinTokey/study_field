@@ -18,7 +18,7 @@ module.exports = app => {
         // 启动grpc
 
         // 微服务注册到consul
-        consul.register();
+        // consul.register();
 
         // 消息队列初始化
         // transfer.initMqConsumer();
