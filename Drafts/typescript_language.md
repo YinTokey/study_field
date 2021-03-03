@@ -1,3 +1,33 @@
+#### 类型
+##### any
+any 可以运行时修改变量类型。
+```
+var a: any = 'aaa';
+a = 7;
+```
+像这样改变类型是可以的。 如果不加any , 它会因为第一次赋值，被当成 string，第二次数字赋值，就报错。
+```
+let a = 'aaa';
+a = 7; //  报错
+```
+但是有一种方式，可以不报错，默认推断为 any，如下
+```
+let something;
+something = 'seven';
+something = 7;
+```
+一开始直接声明，但是不赋值。
+##### 联合类型
+联合类型，表示一个变量又多个类型，不是联合体数据结构。
+```
+let myFavoriteNumber: string | number;
+myFavoriteNumber = 'seven';
+myFavoriteNumber = 7;
+
+```
+访问属性时，如果没有被推断，那么只能访问共用属性。如果已经被推断，就可以访问被推断的类型的属性。
+
+
 #### interface
 ```
 interface Person {
@@ -52,6 +82,20 @@ let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
 
 ```
 
+可选参数必须放必选参数之后。
+
+=> 和 es6的箭头函数有一些区别，左边表示函数参数，右边表示返回值。
+```
+let mySum: (x: number, y: number) => number = function (x: number, y: number): number {
+    return x + y;
+};
+
+```
+
+函数也可以被interface 约束，这点相对于其他语言比较特殊。
+
+
+
 #### 类
 ```
 注意构造函数
@@ -71,14 +115,14 @@ class Dog extends Animal {
 ```
 
 #### 模块导出
-原先这么写
+原先这么写 (commonJS)
 ```
 function foo() {
     // ...
 }
 module.exports = foo;
 ```
-现在这么写 export = xxx;
+现在这么写 export = xxx; (es6 module)
 ```
 function foo() {
     // ...
@@ -87,10 +131,10 @@ export = foo;
 ```
 #### 模块导入
 ```
-// 对于原js模块
+// 对于原js模块 (commonJS)
 import fs = require('fs');
 
-// 等价于 原 require 写法
+// 等价于 原 require 写法 (ES6 module)
 import * as ws from 'ws';
 
 

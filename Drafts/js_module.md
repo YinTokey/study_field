@@ -108,7 +108,6 @@ const app = express.default();
 ```
 
 
-
 ## commonjs 加载 ES6 模块
 
 按照正常姿势使用即可。
@@ -119,7 +118,7 @@ const app = express.default();
 
 ES6 module 比 commonJS  更新，还有一种模块规范，AMD，很少用。
 
-CommonJS模块输出的是一个值的复制，ES6输出的是值的引用。和其他语言一样，值复制就是改变了状态后，再次require使用，还是拿到原始状态，因为是两个东西，内存地址不一样。
+CommonJS模块输出的是一个值的`复制`，ES6输出的是值的`引用`。和其他语言一样，值复制就是改变了状态后，再次require使用，还是拿到原始状态，因为是两个东西，内存地址不一样。
 
 commonJS 是一次性加载, 第一次require 会生成一个对象，并缓存起来。再次requrie使用时，直接从缓存中拿，反正值复制嘛，每次拿的都是新的。
 
