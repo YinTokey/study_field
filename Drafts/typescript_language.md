@@ -57,6 +57,26 @@ class Clock implements ClockInterface {
 
 ```
 
+**特别点**：typescritp 的接口可以继承类。
+```
+class Point {
+    x: number;
+    y: number;
+    constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+interface Point3d extends Point {
+    z: number;
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3};
+
+```
+
+
 #### 函数
 ```
 注意参照和返回值写法，有冒号
@@ -110,6 +130,33 @@ class Student {
 继承， 还是 extends
 class Dog extends Animal {
     breed: string;
+}
+
+```
+类 自带 `name` 属性。
+
+`protected` 关键字：子类可以访问，外部不可以访问。
+
+```
+class Animal {
+  public name;
+  protected constructor(name) {
+    this.name = name;
+  }
+}
+
+```
+当构造函数被声明 protected，它相当于是一个抽象类，不能直接使用，必须有子类基础它，然后使用子类。
+
+**正统的抽象类**
+如下，使用 abstract 关键字
+```
+abstract class Animal {
+  public name;
+  public constructor(name) {
+    this.name = name;
+  }
+  public abstract sayHi();
 }
 
 ```
@@ -243,4 +290,26 @@ class x {
 
 ```
 注意可选型的使用。
+
+#### 类型别名
+和其他语言的 typedef 差不多
+```
+type Name = string;
+type NameResolver = () => string;
+type NameOrResolver = Name | NameResolver;
+function getName(n: NameOrResolver): Name {
+    if (typeof n === 'string') {
+        return n;
+    } else {
+        return n();
+    }
+}
+
+```
+
+规定 EventNames 变量只能取这几种类型。
+```
+type EventNames = 'click' | 'scroll' | 'mousemove';
+
+```
 
