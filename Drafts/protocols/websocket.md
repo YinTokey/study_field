@@ -1,5 +1,5 @@
 # 1. 历史演进 
-鱼骨图绘制。。。
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gogbgk2vbhj30u605u0t4.jpg)
 
 ## 1.1 HTTP1.0/1.1
 
@@ -14,6 +14,7 @@
 
 
 # 2. 优缺点
+
 
 # 3. 连接管理
 
@@ -31,4 +32,6 @@
 https://tools.ietf.org/html/rfc6455
 HTML5 WebSocket权威指南
 极客时间 抓包。。
+
+https://en.wikipedia.org/wiki/WebSocket#References
 
