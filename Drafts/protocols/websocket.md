@@ -29,30 +29,58 @@
 
 ![](https://tva1.sinaimg.cn/large/008eGmZEgy1goig5qmrt9j30hq0m8jsc.jpg)
 
-HTTP Stream 存在的缺点是和灵活的全双工通信还存在着距离，还是以单向通信为主，服务端可以自由地发数据给客户端，但客户端缺没办法。
+HTTP Stream 存在的**缺点**是和灵活的全双工通信还存在着距离，还是以单向通信为主，服务端可以自由地发数据给客户端，但客户端缺没办法。
 
 ## 1.5 Websocket
+Websocket 是一种**全双工**，**高实时**，**双向**，单套接字**长连接**。由一次HTTP请求可升级为 WebSocket 连接，可重用客户端到服务端，服务端到客户端的同一连接。它和 HTTP 同属于计算机网络七层模型的应用层，二者的差异性如下。
 
 
+特性 |HTTP | WebSocket
+----|------- | -------
+内容 | MIME 消息 | 文本、二进制消息
+传输 | 半双工 | 全双工
 
-# 2. 优缺点
-优点：
+
+# 2. 连接管理
+WebSocket 协议的具体运作主要分为两部分：**握手建立连接**和**数据传输**。
+
+## 2.1 握手建立
+### 2.1.1 HTTP 请求升级
+
+在上方图中可以看到 WebSocket 连接建立的大致流程为一次HTTP的请求与响应，然后便可建立连接。在这一次请求与响应中，客户端和服务端如何交换消息以建立连接，可看下图的 Request Header 和 Response Header。
+
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx84wxcj20pa0msaku.jpg)
+
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx8gjvoj20nw0kytk9.jpg)
+
+握手建立一开始由客户端发送一个 HTTP 请求，在 Header 中携带信息告知服务端升级为 WebSocket。
 
 
-# 3. 连接管理
-## 3.1 握手建立
-### 3.1.1 HTTP 请求升级
-### 3.1.2 Server response
+`Sec-WebSocket-Key` 是一个必选字段，需要确保它是随机的。这个字段的是做什么用的呢？
 
+
+### 2.1.2 Server response
+服务端响应
+```
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+
+```
 ### 3.1.3 连接成功
 
-## 3.2 连接关闭流程
+
+## 3.2 消息传输
+
+
+## 3.3 关闭连接
 
 ### 3.2.1 收到关闭帧，进入closing状态
 此时可以接受数据，但是无法发送
 
 
-# 4. 会话管理
+# 3. 会话管理
 
 
 # 5. 数据格式
