@@ -73,8 +73,16 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 ## 3.2 消息传输
 
+### 3.2.1 消息和帧
 
-## 3.3 关闭连接
+### 3.2.2 帧数据
+
+### 3.3.3 掩码
+
+## 3.3 心跳管理
+
+
+## 3.4 关闭连接
 
 ### 3.2.1 收到关闭帧，进入closing状态
 此时可以接受数据，但是无法发送
@@ -83,7 +91,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 # 3. 会话管理
 
 
-# 5. 数据格式
+# 4. 数据格式
 
 
 
