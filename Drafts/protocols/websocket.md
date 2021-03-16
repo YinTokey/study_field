@@ -76,6 +76,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 ### 3.2.1 消息和帧
 
 ### 3.2.2 帧数据
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1gom2suygcej21aw0myasu.jpg)
 
 ### 3.3.3 掩码
 
