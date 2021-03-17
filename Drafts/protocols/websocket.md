@@ -31,8 +31,8 @@
 
 HTTP Stream 存在的**缺点**是和灵活的全双工通信还存在着距离，还是以单向通信为主，服务端可以自由地发数据给客户端，但客户端缺没办法。
 
-## 1.5 Websocket
-Websocket 是一种**全双工**，**高实时**，**双向**，单套接字**长连接**。由一次HTTP请求可升级为 WebSocket 连接，可重用客户端到服务端，服务端到客户端的同一连接。它和 HTTP 同属于计算机网络七层模型的应用层，二者的差异性如下。
+## 1.5 WebSocket
+WebSocket 是一种**全双工**，**高实时**，**双向**，单套接字**长连接**。由一次HTTP请求可升级为 WebSocket 连接，可重用客户端到服务端，服务端到客户端的同一连接。它和 HTTP 同属于计算机网络七层模型的应用层，基于TCP传输，二者的差异性如下。
 
 
 特性 |HTTP | WebSocket
@@ -42,32 +42,48 @@ Websocket 是一种**全双工**，**高实时**，**双向**，单套接字**�
 
 
 # 2. 连接管理
-WebSocket 协议的具体运作主要分为两部分：**握手建立连接**和**数据传输**。
+WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，**数据传输**，**关闭连接**。
 
 ## 2.1 握手建立
 ### 2.1.1 HTTP 请求升级
 
-在上方图中可以看到 WebSocket 连接建立的大致流程为一次HTTP的请求与响应，然后便可建立连接。在这一次请求与响应中，客户端和服务端如何交换消息以建立连接，可看下图的 Request Header 和 Response Header。
+在上方图中可以看到 WebSocket 连接建立的大致流程为一次HTTP的请求与响应，然后便可建立连接。
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gon7y9o5woj30ni0tg40b.jpg)
+
+初始阶段客户端客户端发送 HTTP Upgrade Request，在 Request Header 中告知服务端将升级为 WebSocket。
 
 ![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx84wxcj20pa0msaku.jpg)
 
-![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx8gjvoj20nw0kytk9.jpg)
+其中红色字段为必选
 
-握手建立一开始由客户端发送一个 HTTP 请求，在 Header 中携带信息告知服务端升级为 WebSocket。
+握手建立一开始由客户端发送一个 HTTP 请求，在 Header 中携带信息告知服务端升级为 WebSocket。其中红色和绿色为必选信息。
 
+`Connection` 告知服务端为长连接，且需要升级
+`Upgrade` 告知服务端升级为 WebSocket。
+`Sec-WebSocket-Version`指定使用的 WebSocket 版本，一般是使用最新的版本，具体有哪些版本，可以参考这里 [WebSocket 版本](https://www.iana.org/assignments/websocket/websocket.xml#version-number)，当前最新版本为 13，所以这里指定该字段的值为 13。
 
-`Sec-WebSocket-Key` 是一个必选字段，需要确保它是随机的。这个字段的是做什么用的呢？
+`Sec-WebSocket-Key` 是一个必选字段，它是一个随机数。这个字段主要和后面服务端返回的`Sec-WebSocket-Accept` 配套使用，减少一些恶意连接和以外连接。后面会详细介绍
 
 
 ### 2.1.2 Server response
 服务端响应
-```
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
-Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
-```
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx8gjvoj20nw0kytk9.jpg)
+
+`Sec-WebSocket-Accept` 是基于客户端传递的 `Sec-WebSocket-Key` 计算而来。它有一个公开的算法
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1gon7fdujfhj30x00godi1.jpg)
+
+首先将 `Sec-WebSocket-Key` 和一个固定的字符串常量 GUID 拼接起来。
+
+拼接后的字符串经过 SHA1 计算，并转成 Base64 编码，即为`Sec-WebSocket-Accept` 值。
+
+算法都是公开的，这种处理方式并不是为了加密以保证数据安全。它主要是为了减少一些意外和恶意连接，更具体的可概括为如下：
+
+1. 前端使用 Ajax 发送请求时，请求头中是无法设置 `Sec-WebSocket-Key` 字段的，这样子可以避免 使用 Ajax 发送HTTP 请求时意外升级为 WebSocket。
+2. 
+
+
 ### 3.1.3 连接成功
 
 
@@ -103,4 +119,9 @@ HTML5 WebSocket权威指南
 极客时间 抓包。。
 
 https://en.wikipedia.org/wiki/WebSocket#References
+
+https://www.iana.org/assignments/websocket/websocket.xml#version-number
+
+
+https://www.cnblogs.com/chyingp/p/websocket-deep-in.html
 
