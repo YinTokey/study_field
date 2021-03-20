@@ -44,7 +44,7 @@ WebSocket 是一种**全双工**，**高实时**，**双向**，单套接字**�
 # 2. 连接管理
 WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，**数据传输**，**关闭连接**。
 
-## 2.1 握手建立
+## 2.1 握手建立 (补充 URI， ws wss)
 ### 2.1.1 HTTP 请求升级
 
 在上方图中可以看到 WebSocket 连接建立的大致流程为一次HTTP的请求与响应，然后便可建立连接。
@@ -108,24 +108,33 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 
 **如果一条消息只有一个帧组成，那么 opcode 取值必然大于0，FIN的值固定为 1。**
 
-`Payload len`
-
+`Payload len`: 用于表示数据长度，一共7位，即取值范围可以是 0~ 2^7(127) 。
+数据长度小于等于 125字节，则使用红色圈出的区域即可，剩余的 Extened payload不使用。
+数据长度 126~2^16-1 字节，`Payload len`值为 126。
+数据长度 2^16 ~ 2^64-1， `Payload len` 值为 127。
 
 ### 3.3.3 掩码
+客户端发送的消息必须基于掩码来编码。
 
 ## 3.3 心跳管理
+通信双端之间需要通过心跳确保对方还处于连接状态，心跳本质上也是一条消息，它含有一个心跳帧。如果识别心跳帧？基于**opcode**。
+`opcode = 9`：这是一个ping，可以和普通的帧一样携带数据。
+`opcode = A`：这是一个pong (当一端收到 ping 之后，会回复一个 pong 给对方，且必须与ping数据相同)。
 
 
 ## 3.4 关闭连接
 
-### 3.2.1 收到关闭帧，进入closing状态
+![](https://tva1.sinaimg.cn/large/008eGmZEly1goqfsnlzd4j30za0n6ab6.jpg)
+
+WebSocket 是基于 TCP 的，
+
+收到关闭帧，进入closing状态
 此时可以接受数据，但是无法发送
 
 
-# 3. 会话管理
-
-
-# 4. 数据格式
+# 4. 常见问题
+socket 和 websocket 是什么关系
+多久没收到心跳就断开连接
 
 
 
@@ -141,4 +150,9 @@ https://www.iana.org/assignments/websocket/websocket.xml#version-number
 
 
 https://www.cnblogs.com/chyingp/p/websocket-deep-in.html
+
+
+http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf
+
+http://websocket.org/quantum.html
 
