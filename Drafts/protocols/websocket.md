@@ -124,6 +124,9 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 
 ## 3.4 关闭连接
 
+
+发送关闭帧后，不能再发送消息。
+
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1goqfsnlzd4j30za0n6ab6.jpg)
 
 WebSocket 是基于 TCP 的，
@@ -141,18 +144,13 @@ socket 和 websocket 是什么关系
 
 # 参考资料
 https://tools.ietf.org/html/rfc6455
-HTML5 WebSocket权威指南
-极客时间 抓包。。
-
+https://time.geekbang.org/course/detail/175-93596
 https://en.wikipedia.org/wiki/WebSocket#References
-
 https://www.iana.org/assignments/websocket/websocket.xml#version-number
-
-
 https://www.cnblogs.com/chyingp/p/websocket-deep-in.html
-
-
 http://www.adambarth.com/papers/2011/huang-chen-barth-rescorla-jackson.pdf
-
 http://websocket.org/quantum.html
+https://halfrost.com/websocket/
+《HTML5 WebSocket权威指南》
+
 
