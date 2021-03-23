@@ -114,7 +114,8 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 数据长度 2^16 ~ 2^64-1， `Payload len` 值为 127。
 
 ### 3.3.3 掩码
-客户端发送的消息必须基于掩码来编码。
+客户端发送的消息必须基于掩码来编码。服务端发送的不需要。
+`Masking-key` 是一个32位随机数
 
 ## 3.3 心跳管理
 通信双端之间需要通过心跳确保对方还处于连接状态，心跳本质上也是一条消息，它含有一个心跳帧。如果识别心跳帧？基于**opcode**。
@@ -129,6 +130,8 @@ WebSocket 是基于 TCP 的，需要先关闭上层 WebSocket连接，才会关�
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1goqfsnlzd4j30za0n6ab6.jpg)
 
 要关闭 WebSocket 连接时，A 端 一个`opcode = 8`的关闭帧发送给对方。关闭帧可以携带数据，说明连接关闭的原因。发送关闭帧后，进入closing状态，此时可以接受数据，但是无法发送。B 端收到关闭帧后，会回复一个关闭帧，此时不再接受任何消息。A端收到回复后，进入 closed 状态，此时 WebSocket 彻底关闭。
+
+![](https://tva1.sinaimg.cn/large/008eGmZEly1gou6ove8c1j30pc0ng75n.jpg)
 
 关闭帧的 payload 数据前2个字节可以表示关闭会话的原因。
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1got1gjsphkj31cy0t24qp.jpg)
