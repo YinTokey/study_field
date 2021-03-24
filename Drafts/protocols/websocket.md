@@ -25,7 +25,7 @@
 ![](https://tva1.sinaimg.cn/large/008eGmZEgy1goig5r42y2j30nu0liabi.jpg)
 
 ## 1.4 HTTP Streaming
-前面设计的轮询，每一次请求响应结束后，都会关闭连接。下一次请求，客户端依然需要在请求头中携带大量信息。而 HTTP Streaming 流化技术的实现机制是客户端发送一个请求，服务端发送一个持续更新和保持打开的开放响应。每当服务端有客户端可用信息时，就更新响应，但是连接始终保持打开。通过这种方式来规避频繁请求带来的不必要开销。
+前面涉及的轮询，每一次请求响应结束后，都会关闭连接。下一次请求，客户端依然需要在请求头中携带大量信息。而 HTTP Streaming 流化技术的实现机制是客户端发送一个请求，服务端发送一个持续更新和保持打开的开放响应。每当服务端有客户端可用信息时，就更新响应，但是连接始终保持打开。通过这种方式来规避频繁请求带来的不必要开销。
 
 ![](https://tva1.sinaimg.cn/large/008eGmZEgy1goig5qmrt9j30hq0m8jsc.jpg)
 
@@ -44,10 +44,10 @@ WebSocket 是一种**全双工**，**高实时**，**双向**，单套接字**�
 # 2. 连接管理
 WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，**数据传输**，**关闭连接**。
 
-## 2.1 握手建立 (补充 URI， ws wss)
+## 2.1 握手建立
 ### 2.1.1 HTTP 请求升级
 
-在上方图中可以看到 WebSocket 连接建立的大致流程为一次HTTP的请求与响应，然后便可建立连接。
+在上方图中可以看到 WebSocket 连接建立的大致流程为一次 HTTP的请求与响应，然后便可建立连接。
 
 ![](https://tva1.sinaimg.cn/large/008eGmZEgy1gon7y9o5woj30ni0tg40b.jpg)
 
@@ -55,7 +55,7 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 
 ![](https://tva1.sinaimg.cn/large/e6c9d24egy1gojpx84wxcj20pa0msaku.jpg)
 
-其中红色字段为必选
+其中红色字段为必选。
 
 握手建立一开始由客户端发送一个 HTTP 请求，在 Header 中携带信息告知服务端升级为 WebSocket。其中红色和绿色为必选信息。
 
@@ -64,7 +64,6 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 `Sec-WebSocket-Version`指定使用的 WebSocket 版本，一般是使用最新的版本，具体有哪些版本，可以参考这里 [WebSocket 版本](https://www.iana.org/assignments/websocket/websocket.xml#version-number)，当前最新版本为 13，所以这里指定该字段的值为 13。
 
 `Sec-WebSocket-Key` 是一个必选字段，它是一个随机数。这个字段主要和后面服务端返回的`Sec-WebSocket-Accept` 配套使用，减少一些恶意连接和以外连接。后面会详细介绍
-
 
 ### 2.1.2 Server response
 服务端响应
@@ -113,33 +112,24 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 数据长度 126~2^16-1 字节，`Payload len`值为 126。
 数据长度 2^16 ~ 2^64-1， `Payload len` 值为 127。
 
-### 3.3.3 掩码
-客户端发送的消息必须基于掩码来编码。服务端发送的不需要。
-`Masking-key` 是一个32位随机数
-
-## 3.3 心跳管理
+## 2.3 心跳管理
 通信双端之间需要通过心跳确保对方还处于连接状态，心跳本质上也是一条消息，它含有一个心跳帧。如果识别心跳帧？基于**opcode**。
 `opcode = 9`：这是一个ping，可以和普通的帧一样携带数据。
 `opcode = A`：这是一个pong (当一端收到 ping 之后，会回复一个 pong 给对方，且必须与ping数据相同)。
 
 
-## 3.4 关闭连接
+## 2.4 关闭连接
 
-WebSocket 是基于 TCP 的，需要先关闭上层 WebSocket连接，才会关闭 TCP。
+WebSocket 是基于 TCP 的，需要先关闭上层 WebSocket 连接，才会关闭 TCP。
 
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1goqfsnlzd4j30za0n6ab6.jpg)
 
-要关闭 WebSocket 连接时，A 端 一个`opcode = 8`的关闭帧发送给对方。关闭帧可以携带数据，说明连接关闭的原因。发送关闭帧后，进入closing状态，此时可以接受数据，但是无法发送。B 端收到关闭帧后，会回复一个关闭帧，此时不再接受任何消息。A端收到回复后，进入 closed 状态，此时 WebSocket 彻底关闭。
+要关闭 WebSocket 连接时，A 端 一个`opcode = 8`的关闭帧发送给对方。关闭帧可以携带数据，说明连接关闭的原因。发送关闭帧后，进入 closing 状态，此时可以接受数据，但是无法发送。B 端收到关闭帧后，会回复一个关闭帧，此时不再接受任何消息。A端收到回复后，进入 closed 状态，此时 WebSocket 彻底关闭。
 
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1gou6ove8c1j30pc0ng75n.jpg)
 
 关闭帧的 payload 数据前2个字节可以表示关闭会话的原因。
 ![](https://tva1.sinaimg.cn/large/008eGmZEly1got1gjsphkj31cy0t24qp.jpg)
-
-# 4. 常见问题
-socket 和 websocket 是什么关系
-多久没收到心跳就断开连接
-
 
 
 # 参考资料
