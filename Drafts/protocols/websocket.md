@@ -63,7 +63,7 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 `Upgrade` 告知服务端升级为 WebSocket。
 `Sec-WebSocket-Version`指定使用的 WebSocket 版本，一般是使用最新的版本，具体有哪些版本，可以参考这里 [WebSocket 版本](https://www.iana.org/assignments/websocket/websocket.xml#version-number)，当前最新版本为 13，所以这里指定该字段的值为 13。
 
-`Sec-WebSocket-Key` 是一个必选字段，它是一个随机数。这个字段主要和后面服务端返回的`Sec-WebSocket-Accept` 配套使用，减少一些恶意连接和以外连接。后面会详细介绍
+`Sec-WebSocket-Key` 是一个必选字段，它是一个随机数。这个字段主要和后面服务端返回的`Sec-WebSocket-Accept` 配套使用，减少一些恶意连接和意外连接。后面会详细介绍
 
 ### 2.1.2 Server response
 服务端响应
@@ -122,7 +122,7 @@ WebSocket 协议的具体运作主要分为三部分：**握手建立连接**，
 
 WebSocket 是基于 TCP 的，需要先关闭上层 WebSocket 连接，才会关闭 TCP。
 
-![](https://tva1.sinaimg.cn/large/008eGmZEly1goqfsnlzd4j30za0n6ab6.jpg)
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1govyfg9logj30mw0lumya.jpg)
 
 要关闭 WebSocket 连接时，A 端 一个`opcode = 8`的关闭帧发送给对方。关闭帧可以携带数据，说明连接关闭的原因。发送关闭帧后，进入 closing 状态，此时可以接受数据，但是无法发送。B 端收到关闭帧后，会回复一个关闭帧，此时不再接受任何消息。A端收到回复后，进入 closed 状态，此时 WebSocket 彻底关闭。
 
