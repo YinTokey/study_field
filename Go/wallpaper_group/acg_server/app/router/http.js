@@ -10,7 +10,6 @@ module.exports = app => {
 
     const pagination = middleware.pagination();
 
-
     httpRouter.get('/', home.index);
     httpRouter.get('/list', pagination, list.index);
     httpRouter.get('/random', random.index);

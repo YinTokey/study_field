@@ -11,16 +11,17 @@ class AcgService extends Service {
         // string to number
         page = parseInt(page, 10);
         pageSize = parseInt(pageSize, 10);
-        tagId = parseInt(tagId, 10);
 
         let query;
         let result;
 
         if (tagId === undefined) {
-            query = {};
-            const opt = { skip: page * pageSize, limit: pageSize };
-            result = await this.ctx.model.Acg.find(query, opt).exec();
+
+            result = await this.ctx.model.Acg.find({}).skip(page * pageSize).limit(pageSize).exec();
+
         } else {
+            tagId = parseInt(tagId, 10);
+
             query = [
                 {
                     $match: {
@@ -58,13 +59,14 @@ class AcgService extends Service {
 
     async random(n, tagId) {
         n = parseInt(n, 10);
-        tagId = parseInt(tagId, 10);
         // 随机获取
         let query;
 
         if (tagId === undefined) {
             query = [{ $sample: { size: n } }];
         } else {
+            tagId = parseInt(tagId, 10);
+
             query = [
                 {
                     $match: {
@@ -88,9 +90,9 @@ class AcgService extends Service {
             ];
         }
 
-        const arr = await this.ctx.model.Acg.aggregate(query).exec();
+        const result = await this.ctx.model.Acg.aggregate(query).exec();
 
-        return arr.map(acg => {
+        return result.map(acg => {
             // 删除不必要的字段
             delete acg._id;
             delete acg.__v;
