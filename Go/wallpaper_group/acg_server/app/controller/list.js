@@ -125,7 +125,6 @@ class ListController extends Controller {
         acg.save();
     }
 
-
 }
 
 module.exports = ListController;
