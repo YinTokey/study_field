@@ -17,7 +17,18 @@ class AcgService extends Service {
 
         if (tagId === undefined) {
 
-            result = await this.ctx.model.Acg.find({}).skip(page * pageSize).limit(pageSize).exec();
+            const key = `list_${page}_${pageSize}`;
+
+            const cacheResult = await this.ctx.service.cache.get(key);
+            if (!cacheResult) {
+                result = await this.ctx.model.Acg.find({}).skip(page * pageSize).limit(pageSize).exec();
+                // 回填 cache
+                this.ctx.service.cache.set(key, JSON.stringify(result), 3600 * 24);
+            } else {
+                // redis 数据处理
+                result = JSON.parse(cacheResult);
+            }
+
 
         } else {
             tagId = parseInt(tagId, 10);
