@@ -21,7 +21,7 @@ class AcgService extends Service {
 
             const cacheResult = await this.ctx.service.cache.get(key);
             if (!cacheResult) {
-                result = await this.ctx.model.Acg.find({}).skip(page * pageSize).limit(pageSize).exec();
+                result = await this.ctx.model.Acg.find({}, { _id: 0, __v: 0 }).skip(page * pageSize).limit(pageSize).exec();
                 // 回填 cache
                 this.ctx.service.cache.set(key, JSON.stringify(result), 3600 * 24);
             } else {
@@ -55,16 +55,11 @@ class AcgService extends Service {
                 }
             ];
 
-            result = await this.ctx.model.Acg.aggregate(query).exec();
+            result = await this.ctx.model.Acg.aggregate(query, { _id: 0, __v: 0 }).exec();
 
         }
 
-        return result.map(acg => {
-            // 删除不必要的字段
-            delete acg._id;
-            delete acg.__v;
-            return acg;
-        });
+        return result;
     }
 
 
