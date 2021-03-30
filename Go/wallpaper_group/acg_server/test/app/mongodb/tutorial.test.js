@@ -1,15 +1,17 @@
 'use strict';
 
 const { app } = require('egg-mock/bootstrap');
-const config = require('../../../config/db');
 const client = require('mongodb').MongoClient;
 
 async function dataOperate() {
+    const config = app.config;
+
     let conn = null;
     try {
         conn = await client.connect(config.mongodb.url);
         app.logger.info('数据库已连接');
-        const test = conn.db(config.mongodb.name).collection('yin_collection');
+        // const test = conn.db(config.mongodb.name).collection('yin_collection');
+
         // 查询
         // const arr = await test.findOne({ name: 'mike3' });
         // app.logger.info(arr);

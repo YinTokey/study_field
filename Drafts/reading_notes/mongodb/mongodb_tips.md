@@ -64,7 +64,21 @@ Read concern: 对数据一致性要求高的场景适当使用
 
 禁止使用 count
 
-避免使用  skit/ limit 分页，使用查询 + 排序 `find + sort + limit`  (ObjectId 是有规律自增的)
+避免使用  skit/ limit 分页，使用查询 + 排序 `find + sort + limit`  (ObjectId 是有规律自增的.
+
+几种分页思路：
+
+1. 基于时间排序结果。
+```
+// 第一页
+find().sort({"date":-1}).limit(100)
+// 后续
+获取到 last date
+find("date":{"$gt":lastdate}).sort({"date":-1}).limit(100)
+
+```
+
+
 
 ## 8 事务
 
