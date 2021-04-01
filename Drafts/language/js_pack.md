@@ -9,7 +9,7 @@
 
 ## ncc
 
-是pkg的作者又开的项目，把node.js 工程打包成仅一个 js 文件。
+是pkg的作者又开的项目，把node.js 工程打包成仅一个 js 文件。如果打包ts，那么取决于 tsconfig 的配置。
 
 ## webpack
 
@@ -34,11 +34,12 @@ SPA，目前最强大的打包工具，但是过于臃肿，如何单纯打包js
 
  https://blog.csdn.net/huzhenv5/article/details/103925804
 
+一般来说，可以把它和 babel 结合起来。
 
 
 ## Rollup
 
-相当于轻量化 webpack，打出来的包更小。但是功能不够完善
+相当于轻量化 webpack，打出来的包更小。但是功能不够完善. 它也可以实现 ts 打包成一个文件。但是相对于ncc 会有一些坑。
 
 ## browserify
 
