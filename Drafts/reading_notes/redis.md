@@ -115,3 +115,13 @@ I: 隔离性
 D: 持久性
 主要是通过 Lua 脚本来实现。
 
+
+
+## EX 5 运维工具推荐
+- INFO 命令
+- Prometheus 的 Redis-exporter, 结合 Grafana
+- 轻量级 redis-stat,  Redis Live
+- 迁移工具 Redis-shake
+- 数据一致性对比工具 Redis-full-check
+- 集群管理工具 CacheCloud
+
