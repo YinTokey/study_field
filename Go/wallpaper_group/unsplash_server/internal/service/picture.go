@@ -1,6 +1,7 @@
 package service
 
 import (
+	"unsplash_server/global"
 	"unsplash_server/internal/dao"
 	"unsplash_server/internal/model"
 )
@@ -19,7 +20,7 @@ func (service *PictureService) Papular(page int, pageSize int) ([]model.Picture,
 
 	//job := unsplash.NewUnsplashJob()
 	//job.FetchPics()
-	d := dao.NewPictureDao(model.InstanceDB())
+	d := dao.NewPictureDao(global.DBEngine)
 
 	return d.GetPictures(page, pageSize)
 }

@@ -6,9 +6,7 @@ import (
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"time"
-	"unsplash_server/cache"
 	"unsplash_server/global"
-	"unsplash_server/internal/model"
 	"unsplash_server/pkg/logger"
 )
 
@@ -47,9 +45,9 @@ func Init() {
 
 	_ = setupLogger()
 
-	// 连接数据库
-	model.Database(dsn)
-	cache.Redis()
+	//// 连接数据库
+	//model.Database(dsn)
+	//cache.Redis()
 }
 
 func setupLogger() error {

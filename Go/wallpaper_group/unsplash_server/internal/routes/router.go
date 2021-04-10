@@ -3,7 +3,7 @@ package routes
 import (
 	"github.com/gin-gonic/gin"
 	"os"
-	"unsplash_server/api"
+	"unsplash_server/internal/routes/api"
 	"unsplash_server/internal/middleware"
 )
 
