@@ -3,11 +3,21 @@ package conf
 import (
 	"fmt"
 	"github.com/spf13/viper"
-	"os"
+	"gopkg.in/natefinch/lumberjack.v2"
+	"log"
+	"time"
 	"unsplash_server/cache"
-	"unsplash_server/model"
-	"unsplash_server/util"
+	"unsplash_server/global"
+	"unsplash_server/internal/model"
+	"unsplash_server/pkg/logger"
 )
+
+type AppSettingS struct {
+	defaultContextTimeout time.Duration
+	logSavePath           string
+	logFileName           string
+	logFileExt            string
+}
 
 // Init 初始化配置项
 func Init() {
@@ -25,13 +35,6 @@ func Init() {
 		fmt.Println("配置文件加载失败", err)
 	}
 
-	// 设置日志级别
-	util.BuildLogger(os.Getenv("LOG_LEVEL"))
-
-	// 读取翻译文件
-	if err := LoadLocales("conf/locales/zh-cn.yaml"); err != nil {
-		util.Log().Panic("翻译文件加载失败", err)
-	}
 
 	dbUsername := viper.Get("db.username")
 	dbPassword := viper.Get("db.password")
@@ -42,7 +45,27 @@ func Init() {
 
 	fmt.Println(dsn)
 
+	_ = setupLogger()
+
 	// 连接数据库
 	model.Database(dsn)
 	cache.Redis()
+}
+
+func setupLogger() error {
+
+	logSavePath := viper.Get("app.logSavePath").(string)
+	logFileName := viper.Get("app.logFileName").(string)
+	logFileExt := viper.Get("app.logFileExt").(string)
+
+	fileName := logSavePath + "/" + logFileName + logFileExt
+
+	global.Logger = logger.NewLogger(&lumberjack.Logger{
+		Filename:  fileName,
+		MaxSize:   500,
+		MaxAge:    10,
+		LocalTime: true,
+	}, "", log.LstdFlags).WithCaller(2)
+
+	return nil
 }

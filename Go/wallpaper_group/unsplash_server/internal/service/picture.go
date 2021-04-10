@@ -1,13 +1,12 @@
 package service
 
 import (
-	"unsplash_server/dao"
-	"unsplash_server/model"
+	"unsplash_server/internal/dao"
+	"unsplash_server/internal/model"
 )
 
-
 // https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
-var unsplash_base_url string = "https://api.unsplash.com"
+// var unsplash_base_url string = "https://api.unsplash.com"
 
 type PictureService struct {
 }

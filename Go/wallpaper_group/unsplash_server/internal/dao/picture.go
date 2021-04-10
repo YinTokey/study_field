@@ -3,7 +3,7 @@ package dao
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
-	"unsplash_server/model"
+	"unsplash_server/internal/model"
 )
 
 type PictureDao struct {

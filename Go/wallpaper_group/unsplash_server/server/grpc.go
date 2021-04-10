@@ -5,7 +5,7 @@ import (
 	consulapi "github.com/hashicorp/consul/api"
 	"google.golang.org/grpc"
 	"net"
-	"unsplash_server/api"
+	"unsplash_server/internal/routes/api"
 	pb "unsplash_server/proto"
 )
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"strconv"
+	"unsplash_server/internal/service"
 	proto "unsplash_server/proto"
-	"unsplash_server/service"
 )
 
 // UnPicture : 用于实现UnPictureServiceServiceHandler接口的对象

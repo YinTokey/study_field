@@ -1,9 +1,9 @@
 package api
 
 import (
-	proto "unsplash_server/proto"
 	"context"
-	"unsplash_server/service"
+	"unsplash_server/internal/service"
+	proto "unsplash_server/proto"
 )
 
 type UnsplashServer struct{

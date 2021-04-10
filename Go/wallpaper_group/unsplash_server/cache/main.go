@@ -1,11 +1,9 @@
 package cache
 
 import (
+	"github.com/go-redis/redis"
 	"os"
 	"strconv"
-	"unsplash_server/util"
-
-	"github.com/go-redis/redis"
 )
 
 // RedisClient Redis缓存客户端单例
@@ -24,7 +22,8 @@ func Redis() {
 	_, err := client.Ping().Result()
 
 	if err != nil {
-		util.Log().Panic("连接Redis不成功", err)
+
+		panic("连接Redis不成功")
 	}
 
 	RedisClient = client

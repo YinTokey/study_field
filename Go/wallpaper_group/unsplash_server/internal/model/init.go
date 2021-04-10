@@ -2,8 +2,6 @@ package model
 
 import (
 	"time"
-	"unsplash_server/util"
-
 	"github.com/jinzhu/gorm"
 
 	//
@@ -19,7 +17,7 @@ func Database(connString string) {
 	db.LogMode(true)
 	// Error
 	if err != nil {
-		util.Log().Panic("连接数据库不成功", err)
+		panic("连接数据库不成功")
 	}
 	//设置连接池
 	//空闲
