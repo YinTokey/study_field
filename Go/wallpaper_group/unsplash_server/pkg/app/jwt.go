@@ -2,11 +2,9 @@ package app
 
 import (
 	"time"
-
-	"github.com/go-programming-tour-book/blog-service/pkg/util"
-
+	"unsplash_server/pkg/util"
 	"github.com/dgrijalva/jwt-go"
-	"github.com/go-programming-tour-book/blog-service/global"
+	"unsplash_server/global"
 )
 
 type Claims struct {

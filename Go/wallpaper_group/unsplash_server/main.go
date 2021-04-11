@@ -1,10 +1,11 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
-	"github.com/go-redis/redis"
+	"github.com/go-redis/redis/v8"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"log"
 	"net/http"
@@ -21,7 +22,6 @@ import (
 	"unsplash_server/pkg/setting"
 	"unsplash_server/pkg/tracer"
 	"unsplash_server/pkg/validator"
-	"context"
 )
 
 var (
@@ -190,9 +190,10 @@ func setupRedisClient() error {
 		MaxRetries: global.RedisSetting.MaxRetry,
 	})
 
-	_, err := client.Ping().Result()
+	//_, err := client.Ping().Result()
+	global.RedisClient = client
 
-	return err
+	return nil
 
 }
 
