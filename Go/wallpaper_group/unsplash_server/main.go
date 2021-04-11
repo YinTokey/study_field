@@ -69,7 +69,7 @@ func main() {
 	gin.SetMode(global.ServerSetting.RunMode)
 
 	// 从配置文件读取配置
-	//conf.Init()
+	//configs.Init()
 
 	// grpc 服务启动
 	//s := server.NewGrpcServer()

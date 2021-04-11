@@ -1,4 +1,4 @@
-package conf
+package configs
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func Init() {
 	//  配置文件加载到 viper中
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath("conf")
+	viper.AddConfigPath("configs")
 	viper.AutomaticEnv()
 	viper.SetEnvPrefix("unsplash_server") // TODO: 后面数据调整后，要改为 unsplash_server
 

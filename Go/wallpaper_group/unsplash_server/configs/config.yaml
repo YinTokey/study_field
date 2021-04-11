@@ -1,7 +1,7 @@
 
 Server:
   Runmode: debug                 # 开发模式, debug, release, test
-  HttpPort: 8000
+  HttpPort: 3000
   ReadTimeout: 60
   WriteTimeout: 60
 
