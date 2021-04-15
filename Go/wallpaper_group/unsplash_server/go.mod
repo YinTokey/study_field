@@ -13,6 +13,8 @@ require (
 	github.com/go-programming-tour-book/blog-service v0.0.0-20200719042655-e337d72c5bc0 // indirect
 	github.com/go-redis/redis/v8 v8.8.0 // indirect
 	github.com/golang/protobuf v1.5.0 // indirect
+	github.com/grpc-ecosystem/go-grpc-middleware v1.2.2 // indirect
+	github.com/hashicorp/consul/api v1.1.0 // indirect
 	github.com/jinzhu/gorm v1.9.16 // indirect
 	github.com/juju/ratelimit v1.0.1 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect

@@ -57,17 +57,17 @@ func (a *UnPicture) GetUnPictureInfo(ctx context.Context, req *proto.UnPictureRe
 	var list []*proto.UnPictureInfo_Picture
 
 	for _, data := range serviceRes {
-		pic := &proto.UnPictureInfo_Picture {
-			PictureId: data.PictureId,
-			ImageUrl: data.ImageUrl,
+		pic := &proto.UnPictureInfo_Picture{
+			PictureId:     data.PictureId,
+			ImageUrl:      data.ImageUrl,
 			LargeImageUrl: data.LargeImageUrl,
-			Author: data.Author,
-			Width: int32(data.Width),
-			Height: int32(data.Height),
-			Likes: data.Likes,
-			Name: data.Name,
-			Description: data.Description,
-			Tags: data.Tags,
+			Author:        data.Author,
+			Width:         int32(data.Width),
+			Height:        int32(data.Height),
+			Likes:         data.Likes,
+			Name:          data.Name,
+			Description:   data.Description,
+			Tags:          data.Tags,
 		}
 
 		list = append(list, pic)
@@ -77,5 +77,3 @@ func (a *UnPicture) GetUnPictureInfo(ctx context.Context, req *proto.UnPictureRe
 
 	return nil
 }
-
-

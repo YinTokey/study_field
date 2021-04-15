@@ -6,7 +6,7 @@ import (
 	proto "unsplash_server/proto"
 )
 
-type UnsplashServer struct{
+type UnsplashServer struct {
 	proto.UnimplementedUnPictureServiceServer
 }
 
@@ -18,23 +18,23 @@ func (u *UnsplashServer) GetUnPictureInfo(ctx context.Context, req *proto.UnPict
 	serviceRes, err := service.Papular(page, pageSize)
 
 	if err != nil {
-		return nil,err
+		return nil, err
 	}
 
 	var list []*proto.UnPictureInfo_Picture
 
 	for _, data := range serviceRes {
-		pic := &proto.UnPictureInfo_Picture {
-			PictureId: data.PictureId,
-			ImageUrl: data.ImageUrl,
+		pic := &proto.UnPictureInfo_Picture{
+			PictureId:     data.PictureId,
+			ImageUrl:      data.ImageUrl,
 			LargeImageUrl: data.LargeImageUrl,
-			Author: data.Author,
-			Width: int32(data.Width),
-			Height: int32(data.Height),
-			Likes: data.Likes,
-			Name: data.Name,
-			Description: data.Description,
-			Tags: data.Tags,
+			Author:        data.Author,
+			Width:         int32(data.Width),
+			Height:        int32(data.Height),
+			Likes:         data.Likes,
+			Name:          data.Name,
+			Description:   data.Description,
+			Tags:          data.Tags,
 		}
 
 		list = append(list, pic)
@@ -45,6 +45,5 @@ func (u *UnsplashServer) GetUnPictureInfo(ctx context.Context, req *proto.UnPict
 
 	res.Piclist = list
 
-	return res,nil
+	return res, nil
 }
-

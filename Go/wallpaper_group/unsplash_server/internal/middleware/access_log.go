@@ -13,7 +13,7 @@ type AccessLogWriter struct {
 	body *bytes.Buffer
 }
 
-func (w AccessLogWriter) Write(p []byte) (int, error)  {
+func (w AccessLogWriter) Write(p []byte) (int, error) {
 	if n, err := w.body.Write(p); err != nil {
 		return n, err
 	}
@@ -23,7 +23,7 @@ func (w AccessLogWriter) Write(p []byte) (int, error)  {
 func AccessLog() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		bodyWriter := &AccessLogWriter{
-			body: bytes.NewBufferString(""),
+			body:           bytes.NewBufferString(""),
 			ResponseWriter: c.Writer,
 		}
 
@@ -48,6 +48,5 @@ func AccessLog() gin.HandlerFunc {
 		)
 
 	}
-
 
 }

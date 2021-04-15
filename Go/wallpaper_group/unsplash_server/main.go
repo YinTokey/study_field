@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
@@ -15,6 +14,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
+	"context"
 	"unsplash_server/global"
 	"unsplash_server/internal/model"
 	"unsplash_server/internal/routes"
@@ -22,6 +22,7 @@ import (
 	"unsplash_server/pkg/setting"
 	"unsplash_server/pkg/tracer"
 	"unsplash_server/pkg/validator"
+	"unsplash_server/server"
 )
 
 var (
@@ -68,13 +69,13 @@ func main() {
 
 	gin.SetMode(global.ServerSetting.RunMode)
 
-	// 从配置文件读取配置
-	//configs.Init()
+	runGrpcServer()
+	runHttpServer()
 
-	// grpc 服务启动
-	//s := server.NewGrpcServer()
-	//s.Start()
+}
 
+
+func runHttpServer() {
 	// 装载路由
 	router := routes.NewRouter()
 	s := &http.Server{
@@ -105,6 +106,15 @@ func main() {
 	log.Println("Server exiting")
 }
 
+func runGrpcServer() {
+	go func() {
+		// grpc 服务启动
+		s := server.NewGrpcServer()
+		s.Start()
+	}()
+
+}
+
 func setupFlag() error {
 	flag.StringVar(&port, "port", "", "启动端口")
 	flag.StringVar(&runMode, "mode", "", "启动模式")
@@ -113,7 +123,6 @@ func setupFlag() error {
 	flag.Parse()
 
 	return nil
-
 }
 
 func setupSetting() error {
@@ -206,7 +215,7 @@ func setupValidator() error {
 }
 
 func setupTracer() error {
-	jaegerTracer, _, err := tracer.NewJaegerTracer("blog-service", "127.0.0.1:6831")
+	jaegerTracer, _, err := tracer.NewJaegerTracer("unsplash-service", "127.0.0.1:6831")
 	if err != nil {
 		return err
 	}

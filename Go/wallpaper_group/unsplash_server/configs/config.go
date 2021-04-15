@@ -33,7 +33,6 @@ func Init() {
 		fmt.Println("配置文件加载失败", err)
 	}
 
-
 	dbUsername := viper.Get("db.username")
 	dbPassword := viper.Get("db.password")
 	dbName := viper.Get("db.name")

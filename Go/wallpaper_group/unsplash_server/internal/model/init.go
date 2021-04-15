@@ -1,13 +1,13 @@
 package model
 
 import (
-	"time"
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+	otgorm "github.com/smacker/opentracing-gorm"
+	"time"
 	"unsplash_server/global"
 	"unsplash_server/pkg/setting"
-	otgorm "github.com/smacker/opentracing-gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 const (

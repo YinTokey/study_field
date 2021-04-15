@@ -1,19 +1,20 @@
-
 package server
 
 import (
 	"fmt"
+	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	consulapi "github.com/hashicorp/consul/api"
 	"google.golang.org/grpc"
 	"net"
+	"unsplash_server/internal/middleware"
 	"unsplash_server/internal/routes/api"
 	pb "unsplash_server/proto"
 )
 
 const (
-	consulAddress = "127.0.0.1:8500"
-	localIp       = "127.0.0.1"
-	localPort     = 10088
+	consulAddress    = "127.0.0.1:8500"
+	localIp          = "127.0.0.1"
+	localPort        = 10088
 	localServiceName = "service.unsplash"
 )
 
@@ -26,14 +27,14 @@ func NewGrpcServer() *GrpcServer {
 
 func (s *GrpcServer) Start() {
 
-	//s.ConsulRegister()
+	s.ConsulRegister()
 
 	s.GrpcRegister()
 
 }
 
 // 注册到consul
-func (s *GrpcServer) ConsulRegister () {
+func (s *GrpcServer) ConsulRegister() {
 	fmt.Println("consul 开始服务注册")
 	// 创建连接consul服务配置
 	config := consulapi.DefaultConfig()
@@ -55,9 +56,9 @@ func (s *GrpcServer) ConsulRegister () {
 	registration.Check = &consulapi.AgentServiceCheck{ // 健康检查
 		//HTTP:                           fmt.Sprintf("http://%s:%d%s", registration.Address, checkPort, "/check"),
 		Timeout:                        "3s",
-		Interval:                       "5s",  // 健康检查间隔
-		DeregisterCriticalServiceAfter: "30s", //check失败后30秒删除本服务，注销时间，相当于过期时间
-		GRPC:     fmt.Sprintf("%v:%v/%v", localIp, localPort, localServiceName),// grpc 支持，执行健康检查的地址，service 会传到 Health.Check 函数中
+		Interval:                       "5s",                                                          // 健康检查间隔
+		DeregisterCriticalServiceAfter: "30s",                                                         //check失败后30秒删除本服务，注销时间，相当于过期时间
+		GRPC:                           fmt.Sprintf("%v:%v/%v", localIp, localPort, localServiceName), // grpc 支持，执行健康检查的地址，service 会传到 Health.Check 函数中
 	}
 
 	// 注册服务到consul
@@ -71,13 +72,22 @@ func (s *GrpcServer) ConsulRegister () {
 
 // grpc 注册
 func (s *GrpcServer) GrpcRegister() {
-	addr := fmt.Sprintf("%v:%v",localIp,localPort)
+	addr := fmt.Sprintf("%v:%v", localIp, localPort)
 	fmt.Println("gprc 服务注册 ", addr)
 	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		fmt.Println("failed to listen: %v", err)
 	}
-	server := grpc.NewServer()
+
+	opts := []grpc.ServerOption{
+		grpc.UnaryInterceptor(grpc_middleware.ChainUnaryServer(
+			middleware.GRPCAccessLog,
+			middleware.GRPCRecovery,
+			middleware.GPRCServerTracing,
+		)),
+	}
+
+	server := grpc.NewServer(opts)
 	pb.RegisterUnPictureServiceServer(server, &api.UnsplashServer{})
 	if err := server.Serve(lis); err != nil {
 		fmt.Println("failed to serve: %v", err)
@@ -108,4 +118,3 @@ func (s *GrpcServer) RegToGoMicro() {
 	//	log.Println(err)
 	//}
 }
-

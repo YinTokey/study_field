@@ -4,8 +4,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"os"
 	"unsplash_server/global"
-	"unsplash_server/internal/routes/api"
 	"unsplash_server/internal/middleware"
+	"unsplash_server/internal/routes/api"
 )
 
 // NewRouter 路由配置

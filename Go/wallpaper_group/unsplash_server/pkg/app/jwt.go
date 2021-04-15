@@ -1,10 +1,10 @@
 package app
 
 import (
-	"time"
-	"unsplash_server/pkg/util"
 	"github.com/dgrijalva/jwt-go"
+	"time"
 	"unsplash_server/global"
+	"unsplash_server/pkg/util"
 )
 
 type Claims struct {

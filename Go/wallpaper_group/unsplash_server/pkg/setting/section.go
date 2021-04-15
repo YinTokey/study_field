@@ -54,10 +54,10 @@ type DatabaseSettingS struct {
 }
 
 type RedisSettingS struct {
-	Address   string
-	Password  string
-	DB		  string
-	MaxRetry  int
+	Address  string
+	Password string
+	DB       string
+	MaxRetry int
 }
 
 var sections = make(map[string]interface{})
