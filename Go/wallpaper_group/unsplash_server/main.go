@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
@@ -14,7 +15,6 @@ import (
 	"strings"
 	"syscall"
 	"time"
-	"context"
 	"unsplash_server/global"
 	"unsplash_server/internal/model"
 	"unsplash_server/internal/routes"
@@ -223,3 +223,4 @@ func setupTracer() error {
 	return nil
 
 }
+
