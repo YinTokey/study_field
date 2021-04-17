@@ -2,11 +2,9 @@ package server
 
 import (
 	"fmt"
-	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
 	consulapi "github.com/hashicorp/consul/api"
 	"google.golang.org/grpc"
 	"net"
-	"unsplash_server/internal/middleware"
 	"unsplash_server/internal/routes/api"
 	pb "unsplash_server/proto"
 )
@@ -79,15 +77,15 @@ func (s *GrpcServer) GrpcRegister() {
 		fmt.Println("failed to listen: %v", err)
 	}
 
-	opts := []grpc.ServerOption{
-		grpc.UnaryInterceptor(grpc_middleware.ChainUnaryServer(
-			middleware.GRPCAccessLog,
-			middleware.GRPCRecovery,
-			middleware.GPRCServerTracing,
-		)),
-	}
+	//opts := []grpc.ServerOption{
+	//	grpc.UnaryInterceptor(grpc_middleware.ChainUnaryServer(
+	//		middleware.GRPCAccessLog,
+	//		middleware.GRPCRecovery,
+	//		middleware.GPRCServerTracing,
+	//	)),
+	//}
 
-	server := grpc.NewServer(opts)
+	server := grpc.NewServer()
 	pb.RegisterUnPictureServiceServer(server, &api.UnsplashServer{})
 	if err := server.Serve(lis); err != nil {
 		fmt.Println("failed to serve: %v", err)

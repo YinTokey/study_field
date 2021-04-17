@@ -31,14 +31,15 @@ Email:
     - xxx
 
 JWT:
-  Secret: eddycjy
-  Issuer: blog-service
+  Secret: yintokey
+  Issuer: unsplash-service
   Expire: 7200
 
 Database:
   DBType: mysql
   DBName: "wallpaper_db"
   Host: 127.0.0.1:3306
+  #Host: docker.for.mac.localhost:3306
   #addr: docker.for.mac.localhost:3306
   Username: root
   Password: 12345678

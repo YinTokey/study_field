@@ -69,7 +69,7 @@ func main() {
 
 	gin.SetMode(global.ServerSetting.RunMode)
 
-	runGrpcServer()
+	// runGrpcServer()
 	runHttpServer()
 
 }

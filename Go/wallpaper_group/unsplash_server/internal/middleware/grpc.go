@@ -10,7 +10,6 @@ import (
 	"runtime/debug"
 	"time"
 	"unsplash_server/global"
-	"unsplash_server/pkg/errcode"
 	"unsplash_server/pkg/metatext"
 )
 
@@ -46,15 +45,15 @@ func GRPCAccessLog(ctx context.Context, req interface{}, info *grpc.UnaryServerI
 }
 
 
-func GRPCErrorLog(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
-	resp, err := handler(ctx, req)
-	if err != nil {
-		errLog := "error log: method: %s, code: %v, message: %v, details: %v"
-		s := errcode.FromError(err)
-		log.Printf(errLog, info.FullMethod, s.Code(), s.Err().Error(), s.Details())
-	}
-	return resp, err
-}
+//func GRPCErrorLog(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
+//	resp, err := handler(ctx, req)
+//	if err != nil {
+//		errLog := "error log: method: %s, code: %v, message: %v, details: %v"
+//		s := errcode.FromError(err)
+//		log.Printf(errLog, info.FullMethod, s.Code(), s.Err().Error(), s.Details())
+//	}
+//	return resp, err
+//}
 
 func GRPCRecovery(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
 	defer func() {
