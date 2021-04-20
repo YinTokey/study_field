@@ -138,3 +138,35 @@ D: 持久性
 - 数据一致性对比工具 Redis-full-check
 - 集群管理工具 CacheCloud
 
+
+## 实战 -- 各大数据结构
+### 基础操作
+mset
+mget
+
+### String
+
+适用于缓存，计算器，分布式锁。
+
+### Hash
+
+以 h 开头，比如 hset,  hget。
+
+hash 适合存储json型数据，比如用户信息（key: userId,  value: 用户json）
+
+### List
+
+以 l 开头， 比如 ，lpush(左侧插入) ，rpush（右侧插入），lpop，rpop，llen，lset
+
+用途：主要用来做消息队列
+
+### Set
+
+以 s 开头。集合是无序，且不重复的。 
+
+使用场景：抽奖， 计算用户感兴趣的商品。
+
+### ZSet
+
+z 开头，有序集合，元素不重复。 适合用于 各种排行榜
+
