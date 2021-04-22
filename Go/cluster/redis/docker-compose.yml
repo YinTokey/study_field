@@ -28,6 +28,19 @@ services:
       - master
     networks:
       - sentinel-master
+  redis-cluster:
+    image: redis:latest
+    container_name: redis-cluster
+    tty: true
+    build:
+      context: .
+    hostname: server
+    depends_on:
+      - master
+      - slave1
+      - slave2
+    networks:
+      - sentinel-master
 
 volumes:
   my-datavolume:
