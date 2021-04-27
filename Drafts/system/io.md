@@ -6,7 +6,7 @@
 
 ### Select
 
-### Epoll
+### Epoll, poll , kqueue
 
 ### 信号驱动 I/O
 
@@ -17,6 +17,8 @@
 ## References
 
 https://en.wikipedia.org/wiki/Epoll
+
+《深入浅出 Node.js》
 
 
 
