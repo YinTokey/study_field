@@ -11,6 +11,7 @@ logs/
 *.lock
 *.js
 !.autod.conf.js
+.vscode
 
 app/**/*.js
 test/**/*.js

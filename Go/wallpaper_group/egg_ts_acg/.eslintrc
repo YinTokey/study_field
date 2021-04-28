@@ -1,6 +1,94 @@
 {
-  "extends": "eslint-config-egg/typescript",
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "env": {
+    "mocha": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser":"@typescript-eslint/parser",  //ESLint的解析器换成 @typescript-eslint/parser 用于解析ts文件
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "ecmaVersion": 2018
+  },
+  "root": true,
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-inferrable-types": [
+      "warn", {
+        "ignoreParameters": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+
+    "indent": [
+        "error",
+        4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "lines-between-class-members": 1,
+    "multiline-comment-style": ["error", "starred-block"],
+    // 使用单引号
+    "quotes": [
+        "error",
+        "single"
+    ],
+    "semi": [
+        "error",
+        "always"
+    ],
+    "comma-dangle": [
+        0,
+        "never"
+    ],
+    "eol-last": 0,
+    "linebreak-style": [
+        "error",
+        "unix"
+    ],
+    "no-unused-vars": [
+        1,
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": false
+      }
+    ],
+   // "no-console": 2,
+    "spaced-comment": 2,
+    "no-trailing-spaces": 2,
+    "no-use-before-define": 0,
+    "no-undef": 2,
+    "no-redeclare": 2,
+    "no-multi-spaces": 1,
+    "space-before-function-paren": [
+        "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "newline-per-chained-call": [
+        "error",
+      {
+        "ignoreChainWithDepth": 4
+      }
+    ],
+    // "node/no-deprecated-api": 1,
+    "camelcase": [
+        "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true
+      }
+    ],
+    "prefer-promise-reject-errors": 1
   }
 }
