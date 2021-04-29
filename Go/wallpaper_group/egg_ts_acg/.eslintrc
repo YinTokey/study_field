@@ -18,6 +18,8 @@
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/explicit-module-boundary-types" : 0,
+    //"@typescript-eslint/multiline-comment-style": ["error","separate-lines"],
     "@typescript-eslint/no-inferrable-types": [
       "warn", {
         "ignoreParameters": true
