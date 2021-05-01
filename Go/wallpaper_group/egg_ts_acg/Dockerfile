@@ -16,7 +16,7 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app/
 
 # 在工作目录中安装项目所需要的依赖
-RUN npm i --save
+RUN npm i
 
 # RUN npm i --production --registry=https://registry.npm.taobao.org
 
@@ -28,3 +28,4 @@ EXPOSE 7002
 
 # 在容器中运行程序
 CMD npm run dev
+#CMD npm start

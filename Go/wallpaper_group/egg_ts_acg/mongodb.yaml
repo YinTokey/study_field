@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels: &ref_0
+    app: mongodb
+  name: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels: *ref_0
+  template:
+    metadata:
+      labels: *ref_0
+    spec:
+      containers:
+        - name: container-ur9rxw
+          image: mongo
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http-mongo
+              protocol: TCP
+              containerPort: 27017
+          volumeMounts:
+            - readOnly: false
+              mountPath: /data/db
+              name: mongodb
+      serviceAccount: default
+      volumes:
+        - hostPath:
+            path: /data/db
+            type: DirectoryOrCreate
+          name: mongodb-pvc
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate

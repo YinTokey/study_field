@@ -1,0 +1,22 @@
+version: '3'
+services:
+  egg_ts_acg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 7002:7002
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - EGG_MONGODB_URL=mongodb://127.0.0.1/acg_server
+      - SERVER_PORT=7002
+
+    networks:
+      - acg_server
+    command: npm run dev
+
+networks:
+  acg_server:
+    driver: bridge
