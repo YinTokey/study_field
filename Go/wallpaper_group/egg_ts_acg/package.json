@@ -22,6 +22,8 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
     "egg": "^2.6.1",
     "egg-cluster": "^1.27.0",
     "egg-mongoose": "^3.3.1",
@@ -34,6 +36,8 @@
     "uuid": "^3.4.0"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.28",
     "@types/image-size": "^0.8.0",
     "@types/mocha": "^2.2.40",
     "@types/node": "^7.0.12",
