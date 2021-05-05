@@ -40,6 +40,7 @@ async function fetchList(page:number) {
         const detailUrl = `https://wallhaven.cc/w/${dataWallpaperId}`;
 
         const picture = new PictureObject();
+        picture.tags = [];
         picture.fileSize = fileSize;
         picture.thumbUrl = smallUrl;
         picture.detailHtmlUrl = detailUrl;
@@ -50,10 +51,10 @@ async function fetchList(page:number) {
     });
 }
 
-async function fetchDetail(url:string,item:PictureObject) {
-    const websiteHtml = await axiosRequest.get(url) as string;
+async function fetchDetail(item:PictureObject) {
+    const websiteHtml = await axiosRequest.get(item.detailHtmlUrl) as string;
     const $ = cheerio.load(websiteHtml);
-    // console.log($);
+
     $('.scrollbox img').each((_, v) => {
         const width = v['attribs']['data-wallpaper-width'];
         const height = v['attribs']['data-wallpaper-height'];
@@ -66,6 +67,22 @@ async function fetchDetail(url:string,item:PictureObject) {
         item.description = desc;
 
     });
+
+    // 读取tag
+    const map = new Map();
+    $('li').each(function(_, v) {
+        const attribsClass = v.parent['attribs']['id'] as string;
+        if (attribsClass === 'tags') {
+            // const tag = v['children'][0].attribs.title;
+            const tag = v['children'][0]['children'][0].data as string;
+            map.set(tag,tag);
+        }
+    });
+
+    for (const key of map.keys()) {
+        item.tags.push(key);
+    }
+
 }
 
 async function start() {
@@ -79,14 +96,15 @@ async function start() {
     for (const item of itemList) {
         if (item.detailHtmlUrl) {
             try {
-                await fetchDetail(item.detailHtmlUrl,item);
-            }catch (e) {
-                console.log(e);
+                await fetchDetail(item);
+            }catch (_) {
             }
         }
     }
+
     // 打印结果
     console.log(itemList);
+
 }
 
 start();
