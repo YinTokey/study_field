@@ -31,8 +31,11 @@ export default (app: Application) => {
         likes: {
             type: Number,
         },
-        categories: {
+        category: {
             type: String,
+        },
+        tags: {
+            type: [Object],
         },
         columnId: {
             type: Schema.Types.ObjectId,

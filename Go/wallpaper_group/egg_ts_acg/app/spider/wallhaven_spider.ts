@@ -1,8 +1,20 @@
 import {axiosRequest} from '../util/axios_request';
 import * as cheerio from 'cheerio';
+import {UniqueID} from 'nodejs-snowflake';
+import {mongoClient} from '../database/mongodb';
 
 const toplistBaseUrl = 'https://wallhaven.cc/toplist?';
 const maxPage = 1;
+
+const uid = new UniqueID({
+    returnNumber: false
+});
+
+class Tag {
+    id:string|bigint;
+
+    name:string;
+}
 
 class PictureObject {
     detailHtmlUrl: string;
@@ -19,10 +31,15 @@ class PictureObject {
 
     fileName:string;
 
-    tags:string[];
+    tags:Tag[];
 
     description:string;
+
+    category:string;
+
+    likes:string;
 }
+
 
 const itemList:PictureObject[] = [];
 
@@ -74,18 +91,66 @@ async function fetchDetail(item:PictureObject) {
         const attribsClass = v.parent['attribs']['id'] as string;
         if (attribsClass === 'tags') {
             // const tag = v['children'][0].attribs.title;
-            const tag = v['children'][0]['children'][0].data as string;
-            map.set(tag,tag);
+            const tagName = v['children'][0]['children'][0].data as string;
+            const tagObj:Tag = {
+                id:uid.getUniqueID(),
+                name:tagName,
+            };
+            map.set(tagName,tagObj);
         }
     });
 
-    for (const key of map.keys()) {
-        item.tags.push(key);
+    for (const v of map.values()) {
+        item.tags.push(v);
     }
+
+    // 获取点赞信息
+    $('.sidebar-section dt').each(function(_, v) {
+        // 分类
+        if(v['children'][0].data === 'Category' && v.next) {
+            const category = v.next['children'][0].data;
+            item.category = category;
+        }
+
+        // 点赞数
+        if(v['children'][0].data === 'Favorites' && v.next) {
+            if (v.next['children'][0].attribs.title === 'User Favorites') {
+                item.likes = v.next['children'][0].children[0].data;
+            }
+
+        }
+    });
 
 }
 
+async function storeToDB() {
+    for (const item of itemList) {
+        if (!item.width || !item.height || item.tags.length === 0) {
+            continue;
+        }
+
+        const acg = {
+            pictureId: uid.getUniqueID(),
+            name:item.fileName,
+            description : item.description,
+            width : item.width,
+            height : item.height,
+            imageURL : item.thumbUrl,
+            largeImageUrl : item.fullUrl,
+            category : item.category,
+            tags : item.tags,
+            author:''
+        };
+
+        mongoClient().collection('acgs').insertOne(acg, (err, _)=> {
+            if (err) throw err;
+            console.log('文档插入成功');
+        });
+    }
+}
+
 async function start() {
+    console.log(uid.getUniqueID());
     // 爬取略缩图数据
     let i:number;
     for (i = 1; i <= maxPage; i++) {
@@ -102,9 +167,13 @@ async function start() {
         }
     }
 
-    // 打印结果
-    console.log(itemList);
+    /*
+     * 打印结果
+     * console.log(itemList);
+     */
 
+    // 存到db
+    await storeToDB();
 }
 
 start();

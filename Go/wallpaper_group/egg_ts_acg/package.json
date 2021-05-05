@@ -32,8 +32,9 @@
     "image-size": "^1.0.0",
     "mongodb": "^3.6.6",
     "mongoose": "^5.12.6",
+    "nodejs-snowflake": "^1.6.2",
     "redis": "^3.1.2",
-    "uuid": "^3.4.0"
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
