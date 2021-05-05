@@ -2,6 +2,7 @@ import {axiosRequest} from '../util/axios_request';
 import * as cheerio from 'cheerio';
 import {UniqueID} from 'nodejs-snowflake';
 import {mongoClient} from '../database/mongodb';
+import {redisClient} from '../database/redis';
 
 const toplistBaseUrl = 'https://wallhaven.cc/toplist?';
 const maxPage = 1;
@@ -90,13 +91,22 @@ async function fetchDetail(item:PictureObject) {
     $('li').each(function(_, v) {
         const attribsClass = v.parent['attribs']['id'] as string;
         if (attribsClass === 'tags') {
-            // const tag = v['children'][0].attribs.title;
-            const tagName = v['children'][0]['children'][0].data as string;
-            const tagObj:Tag = {
-                id:uid.getUniqueID(),
-                name:tagName,
-            };
-            map.set(tagName,tagObj);
+
+            (async ()=>{
+                // const tag = v['children'][0].attribs.title;
+                const tagName = v['children'][0]['children'][0].data as string;
+                let tagId = await redisClient().get(tagName);
+                if (!tagId) {
+                    tagId = uid.getUniqueID();
+                    redisClient().set(tagName,tagId);
+                }
+                const tagObj:Tag = {
+                    id:tagId,
+                    name:tagName,
+                };
+                map.set(tagName,tagObj);
+            })();
+
         }
     });
 
@@ -144,7 +154,7 @@ async function storeToDB() {
 
         mongoClient().collection('acgs').insertOne(acg, (err, _)=> {
             if (err) throw err;
-            console.log('文档插入成功');
+            // console.log('文档插入成功');
         });
     }
 }

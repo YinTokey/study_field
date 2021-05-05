@@ -22,6 +22,7 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "async-redis": "^1.1.7",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.6",
     "egg": "^2.6.1",
