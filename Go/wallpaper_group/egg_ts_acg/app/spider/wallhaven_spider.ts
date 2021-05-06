@@ -66,6 +66,8 @@ async function fetchList(page:number) {
 
         itemList.push(picture);
 
+        redisClient().set(fileName,fileName);
+
     });
 }
 
@@ -139,6 +141,12 @@ async function storeToDB() {
             continue;
         }
 
+        // 以filename 为唯一标识符，避免重复存入到db
+        if (redisClient().get(item.fileName)) {
+            console.log('哟');
+            continue;
+        }
+
         const acg = {
             pictureId: uid.getUniqueID(),
             name:item.fileName,
@@ -176,11 +184,6 @@ async function start() {
             }
         }
     }
-
-    /*
-     * 打印结果
-     * console.log(itemList);
-     */
 
     // 存到db
     await storeToDB();
