@@ -47,6 +47,7 @@ const itemList:PictureObject[] = [];
 async function fetchList(page:number) {
     const htmlUrl = toplistBaseUrl + 'page=' + page;
     const websiteHtml = await axiosRequest.get(htmlUrl) as string;
+
     const $ = cheerio.load(websiteHtml);
     $('.thumb img').each((i, v) => {
 
@@ -63,6 +64,8 @@ async function fetchList(page:number) {
         picture.thumbUrl = smallUrl;
         picture.detailHtmlUrl = detailUrl;
         picture.fileName = fileName;
+
+        fileSize.sp
 
         itemList.push(picture);
 
@@ -85,6 +88,7 @@ async function fetchDetail(item:PictureObject) {
         item.height = height;
         item.fullUrl= fullUrl;
         item.description = desc;
+
 
     });
 
@@ -120,8 +124,7 @@ async function fetchDetail(item:PictureObject) {
     $('.sidebar-section dt').each(function(_, v) {
         // 分类
         if(v['children'][0].data === 'Category' && v.next) {
-            const category = v.next['children'][0].data;
-            item.category = category;
+            item.category = v.next['children'][0].data;
         }
 
         // 点赞数
@@ -136,14 +139,16 @@ async function fetchDetail(item:PictureObject) {
 }
 
 async function storeToDB() {
+    console.log('store to db ');
     for (const item of itemList) {
-        if (!item.width || !item.height || item.tags.length === 0) {
+        if (!item.width || !item.height) {
+            console.log('invalid data');
             continue;
         }
 
         // 以filename 为唯一标识符，避免重复存入到db
         if (redisClient().get(item.fileName)) {
-            console.log('哟');
+            // console.log('哟');
             continue;
         }
 
@@ -160,20 +165,24 @@ async function storeToDB() {
             author:''
         };
 
+        console.log('开始写入');
         mongoClient().collection('acgs').insertOne(acg, (err, _)=> {
             if (err) throw err;
-            // console.log('文档插入成功');
+            console.log('文档插入成功');
         });
     }
 }
 
 async function start() {
-    console.log(uid.getUniqueID());
+
     // 爬取略缩图数据
     let i:number;
     for (i = 1; i <= maxPage; i++) {
-        console.log(i);
-        await fetchList(i);
+
+        try {
+            await fetchList(i);
+        }catch (_) {
+        }
     }
     // 爬取详情页数据
     for (const item of itemList) {

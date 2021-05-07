@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: egg-example-pod
+spec:
+  containers:
+    - image: egg_example
+      name: egg-example
+      ports:
+        - containerPort: 7001
+          protocol: TCP

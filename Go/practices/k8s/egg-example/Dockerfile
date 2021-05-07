@@ -19,7 +19,7 @@ COPY . /usr/src/app
 RUN npm install
 
 # 端口
-EXPOSE 7002
+EXPOSE 7001
 
 # 在容器中运行程序
 CMD npm run dev
