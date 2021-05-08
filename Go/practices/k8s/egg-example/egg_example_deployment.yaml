@@ -1,17 +1,39 @@
+#apiVersion: extensions/v1beta1
+#kind: Deployment
+#metadata:
+#  name: egg-example
+#spec:
+#  replicas: 2
+#  template:
+#    metadata:
+#      labels:
+#        app: egg-example-deployment
+#    spec:
+#      containers:
+#        - image: egg_example
+#          imagePullPolicy: IfNotPresent
+#          name: egg-example
+#          ports:
+#            - containerPort: 7001
+
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  labels:
+    app.kubernetes.io/name: load-balancer-example
   name: egg-example
 spec:
-  replicas: 2
+  replicas: 5
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: load-balancer-example
   template:
     metadata:
       labels:
-        app: egg-example-deployment
+        app.kubernetes.io/name: load-balancer-example
     spec:
       containers:
         - image: egg_example
-          imagePullPolicy: IfNotPresent
           name: egg-example
           ports:
             - containerPort: 7001
