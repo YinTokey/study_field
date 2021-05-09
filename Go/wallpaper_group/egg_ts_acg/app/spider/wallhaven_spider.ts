@@ -5,7 +5,7 @@ import {mongoClient} from '../database/mongodb';
 import {redisClient} from '../database/redis';
 
 const toplistBaseUrl = 'https://wallhaven.cc/toplist?';
-const maxPage = 1;
+const maxPage = 20;
 
 const uid = new UniqueID({
     returnNumber: false
@@ -20,11 +20,9 @@ class Tag {
 class PictureObject {
     detailHtmlUrl: string;
 
-    fileSize:string | null;
+    width:number;
 
-    width:string;
-
-    height:string;
+    height:number;
 
     thumbUrl:string;
 
@@ -41,6 +39,7 @@ class PictureObject {
     likes:string;
 }
 
+const tagMap = new Map();
 
 const itemList:PictureObject[] = [];
 
@@ -60,12 +59,17 @@ async function fetchList(page:number) {
 
         const picture = new PictureObject();
         picture.tags = [];
-        picture.fileSize = fileSize;
         picture.thumbUrl = smallUrl;
         picture.detailHtmlUrl = detailUrl;
         picture.fileName = fileName;
 
-        fileSize.sp
+        if (fileSize) {
+            const sizeArray = fileSize.split(' x ');
+            const width = Number(sizeArray[0]);
+            const height = Number(sizeArray[1]);
+            picture.width = width;
+            picture.height = height;
+        }
 
         itemList.push(picture);
 
@@ -79,13 +83,13 @@ async function fetchDetail(item:PictureObject) {
     const $ = cheerio.load(websiteHtml);
 
     $('.scrollbox img').each((_, v) => {
-        const width = v['attribs']['data-wallpaper-width'];
-        const height = v['attribs']['data-wallpaper-height'];
+        /*
+         * const width = v['attribs']['data-wallpaper-width'];
+         * const height = v['attribs']['data-wallpaper-height'];
+         */
         const fullUrl = v['attribs']['src'];
         const desc = v['attribs']['alt'];
 
-        item.width = width;
-        item.height = height;
         item.fullUrl= fullUrl;
         item.description = desc;
 
@@ -98,27 +102,29 @@ async function fetchDetail(item:PictureObject) {
         const attribsClass = v.parent['attribs']['id'] as string;
         if (attribsClass === 'tags') {
 
-            (async ()=>{
-                // const tag = v['children'][0].attribs.title;
-                const tagName = v['children'][0]['children'][0].data as string;
-                let tagId = await redisClient().get(tagName);
-                if (!tagId) {
-                    tagId = uid.getUniqueID();
-                    redisClient().set(tagName,tagId);
-                }
-                const tagObj:Tag = {
-                    id:tagId,
-                    name:tagName,
-                };
-                map.set(tagName,tagObj);
-            })();
+            const tagName = v['children'][0]['children'][0].data as string;
+            let tagId = tagMap.get(tagName);
+            if (!tagId) {
+                tagId = uid.getUniqueID();
+                tagMap.set(tagName,tagId);
+            }
+            const tagObj:Tag = {
+                id:tagId,
+                name:tagName,
+            };
+            console.log('tag name ' + tagName + '  tag obj' + tagObj.id,tagObj.name);
+            map.set(tagName,tagObj);
 
         }
     });
 
-    for (const v of map.values()) {
-        item.tags.push(v);
-    }
+    map.forEach((value,key)=> {
+        console.log(value);
+        console.log(key);
+        item.tags.push(value);
+    });
+
+    console.log(item.tags);
 
     // 获取点赞信息
     $('.sidebar-section dt').each(function(_, v) {
@@ -132,7 +138,6 @@ async function fetchDetail(item:PictureObject) {
             if (v.next['children'][0].attribs.title === 'User Favorites') {
                 item.likes = v.next['children'][0].children[0].data;
             }
-
         }
     });
 
@@ -148,7 +153,12 @@ async function storeToDB() {
 
         // 以filename 为唯一标识符，避免重复存入到db
         if (redisClient().get(item.fileName)) {
-            // console.log('哟');
+            console.log('哟');
+            // continue;
+        }
+
+        if (!item.fullUrl) {
+            console.log('无大图');
             continue;
         }
 
@@ -177,11 +187,12 @@ async function start() {
 
     // 爬取略缩图数据
     let i:number;
+
     for (i = 1; i <= maxPage; i++) {
 
         try {
             await fetchList(i);
-        }catch (_) {
+        } catch (_) {
         }
     }
     // 爬取详情页数据
@@ -189,7 +200,7 @@ async function start() {
         if (item.detailHtmlUrl) {
             try {
                 await fetchDetail(item);
-            }catch (_) {
+            } catch (_) {
             }
         }
     }
