@@ -1,4 +1,4 @@
-import {MongoClient} from 'mongodb';
+import {Db, MongoClient} from 'mongodb';
 const url = 'mongodb://127.0.0.1/acg_server';
 const name = 'acg_server';
 let _db;
@@ -9,7 +9,6 @@ MongoClient.connect(url,(err,db)=>{
     _db = db.db(name);
 });
 
-export function mongoClient() {
-
+export function mongoClient() :Db{
     return _db;
 }
