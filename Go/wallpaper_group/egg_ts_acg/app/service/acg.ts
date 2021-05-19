@@ -31,32 +31,16 @@ export default class Acg extends Service {
 
 
         } else {
-            tagId = parseInt(tagId, 10);
 
             query = [
                 {
                     $match: {
-                        tags: {
-                            $exists: true
-                        }
-                    }
-                }, {
-                    $unwind: {
-                        path: '$tags'
-                    }
-                }, {
-                    $match: {
                         'tags.id': tagId
                     }
-                }, {
-                    $skip: page * pageSize
-                }, {
-                    $limit: pageSize
                 }
             ];
 
             result = await this.ctx.model.Acg.aggregate(query).exec();
-
         }
 
         return result;
