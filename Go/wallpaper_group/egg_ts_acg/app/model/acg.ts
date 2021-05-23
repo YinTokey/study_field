@@ -30,17 +30,32 @@ export default (app: Application) => {
         },
         likes: {
             type: Number,
+            index: true
         },
         category: {
             type: String,
         },
         tags: {
-            type: [Object],
+            type: [{
+                id: {
+                    type: Number,
+                    index: true
+                },
+                name: {
+                    type: String
+                }
+            }],
+        },
+        createAt: {
+            type: Date,
+            default: Date.now,
+            index: true
         },
         columnId: {
             type: Schema.Types.ObjectId,
         },
     });
+
 
     return mongoose.model('Acg', PostSchema);
 

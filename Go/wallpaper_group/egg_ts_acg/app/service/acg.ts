@@ -19,28 +19,24 @@ export default class Acg extends Service {
 
             const key = `list_${page}_${pageSize}`;
 
-            const cacheResult = await this.ctx.service.cache.get(key);
-            if (!cacheResult) {
-                result = await this.ctx.model.Acg.find({}, { _id: 0, __v: 0 }).skip(page * pageSize).limit(pageSize).exec();
-                // 回填 cache
-                this.ctx.service.cache.set(key, JSON.stringify(result), 3600 * 24);
-            } else {
-                // redis 数据处理
-                result = JSON.parse(cacheResult);
-            }
+            // const cacheResult = await this.ctx.service.cache.get(key);
+            // if (!cacheResult) {
+            //     result = await this.ctx.model.Acg.find({}, { _id: 0, __v: 0 }).skip(page * pageSize).limit(pageSize).exec();
+            //     // 回填 cache
+            //     this.ctx.service.cache.set(key, JSON.stringify(result), 3600 * 24);
+            // } else {
+            //     // redis 数据处理
+            //     result = JSON.parse(cacheResult);
+            // }
 
 
         } else {
 
-            query = [
-                {
-                    $match: {
-                        'tags.id': tagId
-                    }
-                }
-            ];
-
-            result = await this.ctx.model.Acg.aggregate(query).exec();
+            result = await this.ctx.model.Acg.find(
+                {'tags.id':tagId},
+                { _id: 0, __v: 0 },
+                {explain:'executionStats'}
+            );
         }
 
         return result;
@@ -148,31 +144,27 @@ export default class Acg extends Service {
 
         // const data = await parseLocalAcg();
 
-        /*
-         * for (const i in data) {
-         *     const obj = data[i];
-         *     const po = await this.createPO(obj);
-         *     this.ctx.model.Acg.create(po);
-         *     console.log(i);
-         * }
-         */
+        // for (const i in data) {
+        //     const obj = data[i];
+        //     const po = await this.createPO(obj);
+        //     this.ctx.model.Acg.create(po);
+        //     console.log(i);
+        // }
     }
 
-    /*
-     * 构建持久化模型
-     * async createPO(obj) {
-     *     return {
-     *         pictureId: obj.picture_id,
-     *         imageUrl: obj.image_url,
-     *         largeImageUrl: obj.large_image_url,
-     *         name: obj.name,
-     *         description: obj.description,
-     *         author: obj.author,
-     *         width: obj.width,
-     *         height: obj.height,
-     *         likes: obj.likes,
-     *         categories: obj.categories,
-     *     };
-     * }
-     */
+    // 构建持久化模型
+    // async createPO(obj) {
+    //     return {
+    //         pictureId: obj.picture_id,
+    //         imageUrl: obj.image_url,
+    //         largeImageUrl: obj.large_image_url,
+    //         name: obj.name,
+    //         description: obj.description,
+    //         author: obj.author,
+    //         width: obj.width,
+    //         height: obj.height,
+    //         likes: obj.likes,
+    //         categories: obj.categories,
+    //     };
+    // }
 }

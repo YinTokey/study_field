@@ -35,7 +35,7 @@
       }
     ],
     "lines-between-class-members": 1,
-    "multiline-comment-style": ["error", "starred-block"],
+    "multiline-comment-style": ["error", "separate-lines"],
     // 使用单引号
     "quotes": [
         "error",
