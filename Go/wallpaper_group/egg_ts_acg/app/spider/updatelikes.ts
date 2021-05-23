@@ -16,18 +16,27 @@ function update() {
         if (err) throw err;
         console.log('数据库已创建');
         _db = db.db(name);
+        const mp = new Map();
         _db.collection('acgs').find().forEach( item => {
-            const likes = getRandomIntInclusive(0,1000);
-            /*
-             * _db.updateOne({_id:item._id},{$set:{'likes':likes}},(re)=>{
-             *     console.log(re);
-             * });
-             */
-            _db.collection('acgs').updateOne({_id:item._id},{$set:{'likes':likes}});
-            item.likes = likes;
-            console.log(item._id);
+            // const likes = getRandomIntInclusive(0,1000);
+
+            // _db.collection('acgs').updateOne({_id:item._id},{$set:{'likes':likes}});
+            // item.likes = likes;
+            // console.log(item._id);
+            for (const tg of item.tags) {
+                mp.set(tg.id,tg);
+            }
+
         });
 
+        setTimeout(()=>{
+
+            mp.forEach((value,key)=> {
+                console.log('key ' + key);
+                _db.collection('tags').insert(value);
+            });
+
+        }, 10000);
 
     });
 
