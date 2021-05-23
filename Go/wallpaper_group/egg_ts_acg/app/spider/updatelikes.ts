@@ -33,7 +33,7 @@ function update() {
 
             mp.forEach((value,key)=> {
                 console.log('key ' + key);
-                _db.collection('tags').insert(value);
+               // _db.collection('tags').insert(value);
             });
 
         }, 10000);

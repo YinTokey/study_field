@@ -31,7 +31,6 @@ export default (appInfo: EggAppInfo) => {
         },
     };
 
-    config.default_page = 1;
     config.default_limit = 20;
 
     // add your special config in here

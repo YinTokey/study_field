@@ -7,17 +7,28 @@ import { imageSize } from 'image-size';
  */
 export default class Acg extends Service {
 
-    async listData(page, pageSize, tagId) {
-        // string to number
-        page = parseInt(page, 10);
+    async listData(startId, pageSize, tagId) {
+
         pageSize = parseInt(pageSize, 10);
 
-        let query;
         let result;
+        let nextId;
+        let hasNext;
 
         if (tagId === undefined) {
 
-            const key = `list_${page}_${pageSize}`;
+            if (startId) {
+                result = await this.ctx.model.Acg.find({_id:{$gt:startId}}).sort({createAt:-1}).limit(pageSize);
+            } else {
+                result = await this.ctx.model.Acg.find({}).limit(pageSize);
+            }
+
+            const lastObj = result[result.length-1];
+            hasNext = result.length === pageSize;
+            if (hasNext) {
+                nextId = lastObj._id;
+            }
+            // const key = `list_${page}_${pageSize}`;
 
             // const cacheResult = await this.ctx.service.cache.get(key);
             // if (!cacheResult) {
@@ -39,7 +50,11 @@ export default class Acg extends Service {
             );
         }
 
-        return result;
+        return {
+            data: result,
+            startId: nextId,
+            hasNext: hasNext
+        };
     }
 
 
