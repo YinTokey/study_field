@@ -7,5 +7,7 @@ export default (app: Application) => {
     router.get('/list', controller.list.index);
     router.get('/random', controller.random.index);
     router.get('/tags', controller.tag.index);
+    router.get('/clip', controller.clip.index);
+    router.get('/clipQuery', controller.clip.query);
 
 };

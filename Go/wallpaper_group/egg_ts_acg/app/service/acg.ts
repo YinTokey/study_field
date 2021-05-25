@@ -1,6 +1,7 @@
 import { Service } from 'egg';
 import { v4 } from 'uuid';
 import { imageSize } from 'image-size';
+import * as amqp from 'amqplib';
 
 /**
  * Acg Service
@@ -139,6 +140,57 @@ export default class Acg extends Service {
             delete tag.tags;
             return tag;
         });
+    }
+
+    async clip() {
+        try {
+            console.log('clip');
+            const { config } = this;
+
+            const conn = await amqp.connect(config.rabbitmq,'heartbeat=60');
+            const ch = await conn.createChannel();
+            const queue = 'acg.ts.task_1';
+            const exch = 'acg.ts.exchange';
+            const rkey = 'acg.ts.route.key';
+            const msg = {
+                type:'clip_task',
+                data:'image_resize'
+            };
+            await ch.assertExchange(exch,'direct',{durable:true}).catch(console.error);
+            await ch.assertQueue(queue,{durable:true});
+            await ch.bindQueue(queue,exch,rkey);
+            await ch.publish(exch,rkey,Buffer.from(JSON.stringify(msg)));
+            // await ch.sendToQueue(queue,Buffer.from(JSON.stringify(msg)),{persistent:true});
+            setTimeout(()=>{
+                ch.close();
+                conn.close();
+            },500);
+        } catch (e) {
+            console.log('error catch ' + e);
+        }
+    }
+
+    async query() {
+        console.log('query');
+        const { config } = this;
+
+        const conn = await amqp.connect(config.rabbitmq,'heartbeat=60');
+        const ch = await conn.createChannel();
+        const queue = 'acg.ts.task';
+
+        await ch.assertQueue(queue,{durable:true});
+        const msg = await ch.consume(queue,msg => {
+            console.log(msg.content.toString());
+            ch.ack(msg);
+            // ch.cancel('me');
+
+        });
+        console.log('here msg',msg);
+        setTimeout(()=>{
+            ch.close();
+            conn.close();
+        },500);
+
     }
 
     newAcg(url, filePath) {

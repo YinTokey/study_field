@@ -22,6 +22,7 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "amqplib": "^0.8.0",
     "async-redis": "^1.1.7",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.6",
@@ -38,6 +39,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/amqplib": "^0.5.17",
     "@types/axios": "^0.14.0",
     "@types/cheerio": "^0.22.28",
     "@types/image-size": "^0.8.0",

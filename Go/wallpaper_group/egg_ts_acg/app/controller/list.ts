@@ -21,4 +21,5 @@ export default class RandomController extends Controller {
         };
 
     }
+
 }

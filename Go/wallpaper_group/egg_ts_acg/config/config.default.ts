@@ -3,10 +3,8 @@ import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 export default (appInfo: EggAppInfo) => {
     const config = {} as PowerPartial<EggAppConfig>;
 
-    /*
-     * override config from framework / plugin
-     * use for cookie sign key, should change to your own and keep security
-     */
+    // override config from framework / plugin
+    // use for cookie sign key, should change to your own and keep security
     config.keys = appInfo.name + '_1619527448210_4424';
 
     // add your egg config in here
@@ -29,6 +27,10 @@ export default (appInfo: EggAppInfo) => {
             password: process.env.EGG_REDIS_PASSWORD || '',
             db: 0 ,
         },
+    };
+
+    config.rabbitmq = {
+        host: 'amqp://localhost'
     };
 
     config.default_limit = 20;
