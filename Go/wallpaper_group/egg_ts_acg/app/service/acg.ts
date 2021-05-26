@@ -179,6 +179,7 @@ export default class Acg extends Service {
         const queue = 'acg.ts.task';
 
         await ch.assertQueue(queue,{durable:true});
+        await ch.prefetch(1);
         const msg = await ch.consume(queue,msg => {
             console.log(msg.content.toString());
             ch.ack(msg);
