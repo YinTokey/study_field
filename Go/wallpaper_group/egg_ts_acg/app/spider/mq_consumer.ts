@@ -65,5 +65,48 @@ async function topicConsumer() :Promise<void> {
     console.log('消费端启动成功！');
 }
 
+async function fanoutConsumer(): Promise<void> {
+
+    // 创建链接对象
+    const connection = await amqp.connect(host,'heartbeat=60');
+
+    // 获取通道
+    const channel = await connection.createChannel();
+
+    // 声明参数
+    const exchangeName = 'fanout_exchange_name';
+    const queueName = 'fanout_queue';
+    const routingKey = '';
+
+    // 声明一个交换机
+    await channel.assertExchange(exchangeName, 'fanout', { durable: true });
+
+    // 声明一个队列
+    await channel.assertQueue(queueName);
+
+    // 绑定关系（队列、交换机、路由键）
+    await channel.bindQueue(queueName, exchangeName, routingKey);
+
+    // 消费
+    await channel.consume(queueName, msg => {
+        console.log('Consumer 1 fanout：', msg.content.toString());
+        channel.ack(msg);
+    });
+
+    await channel.assertQueue('q2');
+
+    // 绑定关系（队列、交换机、路由键）
+    await channel.bindQueue('q2', exchangeName, routingKey);
+
+    // 消费
+    await channel.consume('q2', msg => {
+        console.log('Consumer 2 fanout：', msg.content.toString());
+        channel.ack(msg);
+    });
+
+    console.log('消费端启动成功！');
+}
+
 // directConsumer();
-topicConsumer();
+// topicConsumer();
+fanoutConsumer();

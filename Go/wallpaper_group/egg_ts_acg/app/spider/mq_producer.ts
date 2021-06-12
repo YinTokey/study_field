@@ -66,5 +66,35 @@ async function topicProducer(): Promise<void> {
     await connection.close();
 }
 
+async function fanoutProducer(): Promise<void> {
+    // 创建链接对象
+    const connection = await amqp.connect(host,'heartbeat=60');
+
+    // 获取通道
+    const channel = await connection.createChannel();
+
+    // 声明参数
+    const exchangeName = 'fanout_exchange_name';
+    const routingKey = '';
+    const msg = 'hello world fanout';
+
+    // 交换机
+    await channel.assertExchange(exchangeName, 'fanout', {
+        durable: true,
+    });
+
+    // 发送消息
+    await channel.publish(exchangeName, routingKey, Buffer.from(msg));
+
+    // 关闭链接
+    await channel.close();
+    await connection.close();
+
+
+}
+
+
+
 // directProducer();
-topicProducer();
+// topicProducer();
+fanoutProducer();
