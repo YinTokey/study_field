@@ -93,8 +93,35 @@ async function fanoutProducer(): Promise<void> {
 
 }
 
+async function producerDLX(): Promise<void> {
+    const connection = await amqp.connect(host,'heartbeat=60');
+
+    const testExchange = 'testEx';
+    const testQueue = 'testQu';
+    const testExchangeDLX = 'testExDLX';
+    const testRoutingKeyDLX = 'testRoutingKeyDLX';
+
+    const ch = await connection.createChannel();
+    await ch.assertExchange(testExchange, 'direct', { durable: true });
+    const queueResult = await ch.assertQueue(testQueue, {
+        exclusive: false,
+        deadLetterExchange: testExchangeDLX,
+        deadLetterRoutingKey: testRoutingKeyDLX,
+    });
+    await ch.bindQueue(queueResult.queue, testExchange,testRoutingKeyDLX);
+    const msg = 'hello world! death';
+    console.log('producer msg：', msg);
+    await ch.sendToQueue(queueResult.queue, Buffer.from(msg), {
+        expiration: '10000'
+    });
+
+    ch.close();
+
+}
+
 
 
 // directProducer();
 // topicProducer();
-fanoutProducer();
+// fanoutProducer();
+producerDLX();

@@ -107,6 +107,33 @@ async function fanoutConsumer(): Promise<void> {
     console.log('消费端启动成功！');
 }
 
+async function DLXConsumer(): Promise<void> {
+
+    // 创建链接对象
+    const connection = await amqp.connect(host,'heartbeat=60');
+
+    // 获取通道
+    const channel = await connection.createChannel();
+
+    const testExchange = 'testEx';
+    const testQueueDLX = 'testQueueDLX';
+    const testExchangeDLX = 'testExDLX';
+    const testRoutingKeyDLX = 'testRoutingKeyDLX';
+
+    await channel.assertExchange(testExchangeDLX, 'direct', { durable: true });
+    const queueResult = await channel.assertQueue(testQueueDLX, {
+        exclusive: false,
+    });
+
+    await channel.bindQueue(queueResult.queue, testExchangeDLX, testRoutingKeyDLX);
+    await channel.consume(queueResult.queue, msg => {
+        console.log('consumer msg：dlx ', msg.content.toString());
+    }, { noAck: true });
+
+    await channel.get
+}
+
 // directConsumer();
 // topicConsumer();
-fanoutConsumer();
+// fanoutConsumer();
+DLXConsumer();
