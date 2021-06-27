@@ -37,7 +37,6 @@
       <option name="extraTypeScriptOptions" value="" />
       <option name="scriptName" value="$PROJECT_DIR$/client.ts" />
       <option name="programParameters" value="" />
-      <option name="tsnodePackage" value="~/YinTokey/my_source/study_field/Projects/demo/socketio/typescript/node_modules/ts-node" />
       <method v="2" />
     </configuration>
     <configuration name="server.ts" type="TypeScriptProgramRunner" factoryName="TypeScript" temporary="true">
@@ -49,7 +48,6 @@
       <option name="extraTypeScriptOptions" value="" />
       <option name="scriptName" value="$PROJECT_DIR$/server.ts" />
       <option name="programParameters" value="" />
-      <option name="tsnodePackage" value="~/YinTokey/my_source/study_field/Projects/demo/socketio/typescript/node_modules/ts-node" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -67,7 +65,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624187154421</updated>
-      <workItem from="1624187156037" duration="1218000" />
+      <workItem from="1624187156037" duration="1767000" />
+      <workItem from="1624632718806" duration="506000" />
     </task>
     <servers />
   </component>
