@@ -1,0 +1,111 @@
+{
+    "company": "shopee",
+    "easy": [
+        {
+            "num": 1030,
+            "persent": "71%",
+            "difficulty": "简单",
+            "title": "距离顺序排列矩阵单元格"
+        },
+        {
+            "num": 607,
+            "persent": "67%",
+            "difficulty": "简单",
+            "title": "销售员"
+        },
+        {
+            "num": 303,
+            "persent": "65%",
+            "difficulty": "简单",
+            "title": "区域和检索 - 数组不可变"
+        },
+        {
+            "num": 704,
+            "persent": "56%",
+            "difficulty": "简单",
+            "title": "二分查找"
+        },
+        {
+            "num": 746,
+            "persent": "55%",
+            "difficulty": "简单",
+            "title": "使用最小花费爬楼梯"
+        },
+        {
+            "num": 415,
+            "persent": "52%",
+            "difficulty": "简单",
+            "title": "字符串相加"
+        }
+    ],
+    "medium": [
+        {
+            "num": 445,
+            "persent": "58%",
+            "difficulty": "中等",
+            "title": "两数相加 II"
+        },
+        {
+            "num": 394,
+            "persent": "54%",
+            "difficulty": "中等",
+            "title": "字符串解码"
+        },
+        {
+            "num": 470,
+            "persent": "53%",
+            "difficulty": "中等",
+            "title": "用 Rand7() 实现 Rand10()"
+        },
+        {
+            "num": 1262,
+            "persent": "51%",
+            "difficulty": "中等",
+            "title": "可被三整除的最大和"
+        },
+        {
+            "num": 560,
+            "persent": "45%",
+            "difficulty": "中等",
+            "title": "和为K的子数组"
+        },
+        {
+            "num": 322,
+            "persent": "43%",
+            "difficulty": "中等",
+            "title": "零钱兑换"
+        },
+        {
+            "num": 402,
+            "persent": "33%",
+            "difficulty": "中等",
+            "title": "移掉K位数字"
+        },
+        {
+            "num": 556,
+            "persent": "31%",
+            "difficulty": "中等",
+            "title": "下一个更大元素 III"
+        }
+    ],
+    "hard": [
+        {
+            "num": 410,
+            "persent": "54%",
+            "difficulty": "困难",
+            "title": "分割数组的最大值"
+        },
+        {
+            "num": 315,
+            "persent": "42%",
+            "difficulty": "困难",
+            "title": "计算右侧小于当前元素的个数"
+        },
+        {
+            "num": 887,
+            "persent": "29%",
+            "difficulty": "困难",
+            "title": "鸡蛋掉落"
+        }
+    ]
+}

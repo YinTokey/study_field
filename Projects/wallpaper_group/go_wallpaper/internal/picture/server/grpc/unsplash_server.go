@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"google.golang.org/grpc"
+	"net"
 	//"go_wallpaper/configs"
 	//"go_wallpaper/internal/picture/service"
 	//"google.golang.org/grpc"
@@ -51,21 +53,21 @@ type UnPictureServiceImpl struct {
 
 func Serve() error {
 
-	//fmt.Println("grpc 服务启动中。。")
-	//
-	//server := grpc.NewServer()
-	//
-	//api.RegisterUnPictureServiceServer(server, new(UnPictureServiceImpl))
-	//
-	//lis, err := net.Listen("tcp", "localhost:8090")
-	//if err != nil {
-	//	fmt.Println("监听错误")
-	//	panic(err.Error())
-	//	return err
-	//}
-	//server.Serve(lis)
-	//
-	//fmt.Println("grpc 服务启动完成")
+	fmt.Println("grpc 服务启动中。。")
+
+	server := grpc.NewServer()
+
+	api.RegisterUnPictureServiceServer(server, new(UnPictureServiceImpl))
+
+	lis, err := net.Listen("tcp", "localhost:8090")
+	if err != nil {
+		fmt.Println("监听错误")
+		panic(err.Error())
+		return err
+	}
+	server.Serve(lis)
+
+	fmt.Println("grpc 服务启动完成")
 
 	return nil
 }

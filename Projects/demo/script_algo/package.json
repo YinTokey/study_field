@@ -1,0 +1,8 @@
+{
+  "name": "script_algo",
+  "version": "1.0.0",
+  "dependencies": {
+    "json2csv": "^5.0.6",
+    "json2xls": "^0.1.2"
+  }
+}

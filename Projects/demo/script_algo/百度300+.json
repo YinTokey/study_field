@@ -1,0 +1,205 @@
+{
+    "company": "百度",
+    "easy": [
+        {
+            "num": 771,
+            "persent": "85%",
+            "difficulty": "简单",
+            "title": "宝石与石头"
+        },
+        {
+            "num": 349,
+            "persent": "74%",
+            "difficulty": "简单",
+            "title": "两个数组的交集"
+        },
+        {
+            "num": 905,
+            "persent": "70%",
+            "difficulty": "简单",
+            "title": "按奇偶排序数组"
+        },
+        {
+            "num": 1114,
+            "persent": "65%",
+            "difficulty": "简单",
+            "title": "按序打印"
+        },
+        {
+            "num": 448,
+            "persent": "61%",
+            "difficulty": "简单",
+            "title": "找到所有数组中消失的数字"
+        },
+        {
+            "num": 704,
+            "persent": "56%",
+            "difficulty": "简单",
+            "title": "二分查找"
+        },
+        {
+            "num": 506,
+            "persent": "56%",
+            "difficulty": "简单",
+            "title": "相对名次"
+        },
+        {
+            "num": 746,
+            "persent": "55%",
+            "difficulty": "简单",
+            "title": "使用最小花费爬楼梯"
+        }
+    ],
+    "medium": [
+        {
+            "num": 921,
+            "persent": "73%",
+            "difficulty": "中等",
+            "title": "使括号有效的最少添加"
+        },
+        {
+            "num": 386,
+            "persent": "73%",
+            "difficulty": "中等",
+            "title": "字典序排数"
+        },
+        {
+            "num": 983,
+            "persent": "63%",
+            "difficulty": "中等",
+            "title": "最低票价"
+        },
+        {
+            "num": 1143,
+            "persent": "61%",
+            "difficulty": "中等",
+            "title": "最长公共子序列"
+        },
+        {
+            "num": 946,
+            "persent": "61%",
+            "difficulty": "中等",
+            "title": "验证栈序列"
+        },
+        {
+            "num": 382,
+            "persent": "59%",
+            "difficulty": "中等",
+            "title": "链表随机节点"
+        },
+        {
+            "num": 445,
+            "persent": "58%",
+            "difficulty": "中等",
+            "title": "两数相加 II"
+        },
+        {
+            "num": 1004,
+            "persent": "56%",
+            "difficulty": "中等",
+            "title": "最大连续1的个数 III"
+        },
+        {
+            "num": 416,
+            "persent": "49%",
+            "difficulty": "中等",
+            "title": "分割等和子集"
+        },
+        {
+            "num": 319,
+            "persent": "49%",
+            "difficulty": "中等",
+            "title": "灯泡开关"
+        },
+        {
+            "num": 743,
+            "persent": "47%",
+            "difficulty": "中等",
+            "title": "网络延迟时间"
+        },
+        {
+            "num": 395,
+            "persent": "46%",
+            "difficulty": "中等",
+            "title": "至少有K个重复字符的最长子串"
+        },
+        {
+            "num": 542,
+            "persent": "45%",
+            "difficulty": "中等",
+            "title": "01 矩阵"
+        },
+        {
+            "num": 978,
+            "persent": "43%",
+            "difficulty": "中等",
+            "title": "最长湍流子数组"
+        },
+        {
+            "num": 322,
+            "persent": "43%",
+            "difficulty": "中等",
+            "title": "零钱兑换"
+        },
+        {
+            "num": 622,
+            "persent": "42%",
+            "difficulty": "中等",
+            "title": "设计循环队列"
+        },
+        {
+            "num": 849,
+            "persent": "42%",
+            "difficulty": "中等",
+            "title": "到最近的人的最大距离"
+        },
+        {
+            "num": 443,
+            "persent": "42%",
+            "difficulty": "中等",
+            "title": "压缩字符串"
+        },
+        {
+            "num": 907,
+            "persent": "30%",
+            "difficulty": "中等",
+            "title": "子数组的最小值之和"
+        }
+    ],
+    "hard": [
+        {
+            "num": 312,
+            "persent": "68%",
+            "difficulty": "困难",
+            "title": "戳气球"
+        },
+        {
+            "num": 530,
+            "persent": "61%",
+            "title": "二叉搜索树的最小绝对差  0"
+        },
+        {
+            "num": 415,
+            "persent": "55%",
+            "title": "字符串相加"
+        },
+        {
+            "num": 301,
+            "persent": "50%",
+            "difficulty": "困难",
+            "title": "删除无效的括号"
+        },
+        {
+            "num": 460,
+            "persent": "43%",
+            "difficulty": "困难",
+            "title": "LFU 缓存"
+        },
+        {
+            "num": 871,
+            "persent": "32%",
+            "difficulty": "困难",
+            "title": "最低加油次数"
+        }
+    ]
+}
